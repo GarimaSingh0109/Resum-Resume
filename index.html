@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Resume Builder - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #0073b1;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+        }
+
+        .content h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .content p {
+            font-size: 18px;
+            color: #555;
+            text-align: center;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #0073b1;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .cta-button:hover {
+            background-color: #005f8c;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: #666;
+            background-color: #f4f4f9;
+        }
+        /* Navbar Styles */
+        .navbar {
+            background-color: #0073b1;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar h1 {
+            color: white;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar ul li {
+            display: inline;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .navbar ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content Placeholder */
+        .content {
+            padding: 20px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .navbar h1 {
+                margin-bottom: 10px;
+            }
+        }
+
+        /* Features Section */
+        .features {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .features h2 {
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .features-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .features-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .features-card img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 15px;
+        }
+
+        .features-card h3 {
+            color: #0073b1;
+            margin: 15px 0;
+            font-size: 20px;
+        }
+
+        .features-card p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .features-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .testimonials h2 {
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .testimonial-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .testimonial-card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .testimonial-card img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-card h3 {
+            color: #0073b1;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .testimonial-card p {
+            color: #666;
+            font-size: 16px;
+            font-style: italic;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .testimonial-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1>Resum Resume</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Build Resume</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="login.html">Log In</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="content">
+        <h2>Build Your Resume in Seconds from LinkedIn</h2>
+        <p>
+            Easily generate a professional resume using your LinkedIn profile. Select a template, enter your LinkedIn URL,
+            and get a downloadable resume in a few clicks. Save time and create a resume that stands out.
+        </p>
+        <a href="signup.html" class="cta-button">Get Started</a>
+    </div>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Our Features</h2>
+        <div class="features-cards">
+            <div class="features-card">
+                <img src="https://source.unsplash.com/60x60/?job" alt="Easy to Use">
+                <h3>Easy to Use</h3>
+                <p>Create a professional resume effortlessly with our user-friendly interface.</p>
+            </div>
+            <div class="features-card">
+                <img src="https://source.unsplash.com/60x60/?analytics" alt="Instant Resume">
+                <h3>Instant Resume</h3>
+                <p>Generate a polished resume in seconds using your LinkedIn profile data.</p>
+            </div>
+            <div class="features-card">
+                <img src="https://source.unsplash.com/60x60/?security" alt="Secure Data">
+                <h3>Secure Data</h3>
+                <p>Your personal information is safe with our secure and encrypted platform.</p>
+            </div>
+            <div class="features-card">
+                <img src="https://source.unsplash.com/60x60/?support" alt="24/7 Support">
+                <h3>24/7 Support</h3>
+                <p>Our dedicated support team is available round the clock to assist you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Users Say</h2>
+        <div class="testimonial-cards">
+            <div class="testimonial-card">
+                <img src="https://source.unsplash.com/60x60/?portrait" alt="User 1">
+                <h3>Jane Doe</h3>
+                <p>"This resume builder transformed my LinkedIn profile into a professional resume effortlessly. Highly recommended!"</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="https://source.unsplash.com/60x60/?portrait" alt="User 2">
+                <h3>John Smith</h3>
+                <p>"I was amazed at how quickly I was able to generate a resume. The process was smooth and the result was perfect."</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="https://source.unsplash.com/60x60/?portrait" alt="User 3">
+                <h3>Emily Johnson</h3>
+                <p>"The platform is user-friendly and secure. I felt confident that my data was protected. Great service!"</p>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="footer">
+        <p>Powered by Resume Builder &copy; 2024</p>
+    </div>
+
+</body>
+</html>

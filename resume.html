@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder from LinkedIn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 5px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        input[type="url"], select, button {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            outline: none;
+        }
+
+        input[type="url"]:focus, select:focus {
+            border-color: #0073b1;
+        }
+
+        button {
+            background-color: #0073b1;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005f8c;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        .navbar {
+            background-color: #0073b1;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar h1 {
+            color: white;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar ul li {
+            display: inline;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .navbar ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content Placeholder */
+        .content {
+            padding: 20px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .navbar h1 {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1>Resume Builder</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Build Resume</a></li>
+        </ul>
+    </nav>
+    <form id="resumeForm">
+        <label for="linkedin-url">LinkedIn Profile URL</label>
+        <input type="url" id="linkedin-url" name="linkedin-url" placeholder="Enter your LinkedIn URL" required>
+
+        <label for="template">Choose a Resume Template</label>
+        <select id="template" name="template" required>
+            <option value="classic">Classic Template</option>
+            <option value="modern">Modern Template</option>
+            <option value="minimalist">Minimalist Template</option>
+        </select>
+
+        <button type="submit">Generate Resume</button>
+    </form>
+
+    <div class="footer">
+        <p>Powered by Resume Builder &copy; 2024</p>
+    </div>
+</div>
+
+<script>
+    document.getElementById('resumeForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const linkedInUrl = document.getElementById('linkedin-url').value;
+        const template = document.getElementById('template').value;
+
+        if (linkedInUrl && template) {
+            alert(`Generating resume using ${template} template for LinkedIn profile: ${linkedInUrl}`);
+            // Here you would add logic to send this data to your backend for processing
+        }
+    });
+</script>
+
+</body>
+</html>
