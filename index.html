@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LinkedIn Resume Builder - Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -235,6 +236,37 @@
                 align-items: center;
             }
         }
+        .container {
+            padding: 20px;
+        }
+        .content {
+            flex: 1;
+        }
+        .text {
+            padding-right: 20px; /* Space between text and image */
+            max-width: 50%; /* Adjust to ensure content and image fit well */
+        }
+        .image {
+            max-width: 50%; /* Adjust to ensure content and image fit well */
+        }
+        .image img {
+            width: 100%; /* Ensure the image fills the container */
+            height: auto;
+            border-radius: 8px; /* Optional: for rounded corners */
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+
+
     </style>
 </head>
 <body>
@@ -251,15 +283,27 @@
     </nav>
 
 
-    <div class="content">
-        <h2>Build Your Resume in Seconds from LinkedIn</h2>
-        <p>
-            Easily generate a professional resume using your LinkedIn profile. Select a template, enter your LinkedIn URL,
-            and get a downloadable resume in a few clicks. Save time and create a resume that stands out.
-        </p>
-        <a href="signup.html" class="cta-button">Get Started</a>
+    <div class="container d-flex">
+        <div class="content d-flex align-items-center">
+            <div class="text">
+                <h2>Build Your Resume in Seconds from LinkedIn</h2>
+                <p>
+                    Easily generate a professional resume using your LinkedIn profile. Select a template, enter your LinkedIn URL,
+                    and get a downloadable resume in a few clicks. Save time and create a resume that stands out. 
+                </p>
+                <a href="signup.html" class="cta-button">Get Started</a>
+            </div>
+            <div class="image">
+                <img src="Hero Section.jpg" alt="Resume Builder Image">
+            </div>
+        </div>
     </div>
 
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
     <!-- Features Section -->
     <section class="features">
         <h2>Our Features</h2>
@@ -309,7 +353,7 @@
         </div>
     </section>
 
-    <!--Footer-->
+
     <div class="footer">
         <p>Powered by Resume Builder &copy; 2024</p>
     </div>
