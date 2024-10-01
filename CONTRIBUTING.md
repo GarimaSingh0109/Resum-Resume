@@ -1,3 +1,6 @@
+Here's the revised `CONTRIBUTING.md` file with your additional instructions:
+
+---
 
 # Contributing to LinkedIn Resume Builder 🤝
 
@@ -28,22 +31,6 @@ Thank you for your interest in contributing to the LinkedIn Resume Builder proje
    cd linkedin-resume-builder
    ```
 
-## Setting Up the Development Environment 🛠️
-
-1. Ensure you have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed on your machine.
-2. Install the project dependencies:
-
-   ```bash
-   npm install
-   ```
-
-3. Start the development server:
-
-   ```bash
-   npm start
-   ```
-
-4. Open your browser and visit `http://localhost:3000` to see the application running.
 
 ## Submitting Issues 🐛
 
@@ -51,39 +38,48 @@ If you find a bug or have a feature request, please submit an issue by following
 
 1. Navigate to the **Issues** tab of the repository.
 2. Click on the **New Issue** button.
-3. Fill out the issue template with the necessary details.
+3. Fill out the issue template with the necessary details. Please include:
+   - A brief description of the issue.
+   - Screenshots (if applicable) to illustrate the problem.
 
 ## Submitting Pull Requests 🔄
 
 To submit a pull request:
 
-1. Ensure your fork is up to date with the main repository:
+1. **Star the Repository** ⭐: If you find this project helpful, please star the repository to show your support!
+
+2. Ensure your fork is up to date with the main repository:
 
    ```bash
    git checkout main
    git pull upstream main
    ```
 
-2. Create a new branch for your feature or fix:
+3. Create a new branch for your feature or fix:
 
    ```bash
    git checkout -b your-branch-name
    ```
 
-3. Make your changes and commit them:
+4. Make your changes and commit them:
 
    ```bash
    git add .
    git commit -m "Add a brief description of your changes"
    ```
 
-4. Push your branch to your forked repository:
+5. Push your branch to your forked repository:
 
    ```bash
    git push origin your-branch-name
    ```
 
-5. Go to the original repository and create a pull request.
+6. Go to the original repository and create a pull request. In your pull request:
+   - Write a brief description of the changes.
+   - Include before and after screenshots (if applicable).
+   - Mention the issue number that your pull request addresses.
+
+7. After your pull request is merged, please delete your forked repository and fork it again to avoid clashes when merging other issues.
 
 ## Coding Style and Best Practices 💻
 
@@ -91,13 +87,7 @@ To submit a pull request:
 - Write clear and concise commit messages.
 - Ensure your code is well-documented and easy to understand.
 
-## Running Tests 🧪
 
-If applicable, run the tests to ensure your changes do not break existing functionality:
-
-```bash
-npm test
-```
 
 ## Code of Conduct 📜
 
