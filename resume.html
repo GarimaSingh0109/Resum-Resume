@@ -9,6 +9,10 @@
       rel="stylesheet"
     />
     <style>
+
+      :root {
+        --purple: #aca7eb;
+      }
       body {
         font-family: "Roboto", sans-serif;
         background-color: #f4f4f9;
@@ -53,18 +57,18 @@
 
       input[type="url"]:focus,
       select:focus {
-        border-color: #0073b1;
+        border-color: var(--purple);
       }
 
       button {
-        background-color: #0073b1;
+        background-color: var(--purple);
         color: white;
         border: none;
         cursor: pointer;
       }
 
       button:hover {
-        background-color: #005f8c;
+        background-color: var(--purple);
       }
 
       .footer {
@@ -74,7 +78,7 @@
         color: #666;
       }
       .navbar {
-        background-color: #0073b1;
+        background-color: var(--purple);
         padding: 15px 20px;
         display: flex;
         justify-content: space-between;
