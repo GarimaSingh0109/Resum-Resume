@@ -79,3 +79,5 @@ The project uses Bootstrap’s grid system to ensure the website is fully respon
 
 This project is licensed under the MIT License. See the `LICENSE` file for more information.
 
+Thank you for visiting this......
+
