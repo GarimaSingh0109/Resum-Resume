@@ -7,181 +7,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <link rel="icon" href="images/favicon-removebg-preview.png">
+
+    <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f0f4f8;
-            margin: 0;
-            padding: 0;
-        }
-
-
-        .header {
-            background-color: #0073b1;
-            padding: 20px;
-            text-align: center;
-            color: white;
-        }
-
-        .header h1 {
-            margin: 0;
-            font-size: 36px;
-        }
-
-        .content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 80vh;
-        }
-
-        .content h2 {
-            font-size: 28px;
-            color: #333;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .content p {
-            font-size: 18px;
-            color: #555;
-            text-align: center;
-            max-width: 600px;
-            margin-bottom: 30px;
-        }
-
-        .text{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .cta-button {
-            padding: 15px 30px;
-            font-size: 18px;
-            color: white;
-            background-color: #0073b1;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-            margin: auto;
-            margin-bottom: 40px;
-        }
-
-        .cta-button:hover {
-            background-color: #005f8c;
-            color: white;
-            text-decoration: none;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-            color: #666;
-            background-color: #f4f4f9;
-        }
-
-        /* Navbar Styles */
-        .navbar {
-        background-color: #0073b1;
-        overflow: hidden;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 1000;
-    }
-
-        .navbar h1 {
-            color: white;
-            margin: 0;
-            font-size: 24px;
-        }
-
-        .navbar ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 20px;
-        }
-
-        .navbar ul li {
-            display: inline;
-        }
-
-        .navbar ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            transition: color 0.3s ease;
-        }
-
-        .navbar ul li a:hover {
-            color: #e0e0e0;
-            text-decoration: underline;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 60px 20px;
-            background-color: #ffffff;
-        }
-
-        .hero-content {
-            display: flex;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .hero-text {
-            flex: 1;
-            padding-right: 40px;
-        }
-
-        .hero-text h2 {
-            font-size: 36px;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        .hero-text p {
-            font-size: 18px;
-            color: #555;
-            margin-bottom: 30px;
-        }
-
-        .hero-image {
-            flex: 1;
-        }
-
-        .hero-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: #0073b1;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 18px;
-            transition: background-color 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background-color: #005f8c;
-        }
 
         /* Features Section */
         .features {
@@ -226,7 +56,7 @@
         }
 
         .features-card h3 {
-            color: #0073b1;
+            color: #aca7eb;
             margin: 15px 0;
             font-size: 22px;
         }
@@ -275,7 +105,7 @@
         }
 
         .testimonial-card h3 {
-            color: #0073b1;
+            color: #aca7eb;
             margin: 10px 0;
             font-size: 20px;
         }
@@ -288,7 +118,7 @@
 
         /* Footer Styles */
         .footer {
-            background-color: #0073b1;
+            background-color: #aca7eb;
             color: #ffffff;
             padding: 40px 0;
         }
@@ -394,34 +224,47 @@
     </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <h1>Resum Resume</h1>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="resume.html">Build Resume</a></li>
-            <li><a href="signup.html">Sign Up</a></li>
-            <li><a href="login.html">Log In</a></li>
-        </ul>
-    </nav>
+   <!-- header section starts -->
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h2>Build Your Resume in Seconds from LinkedIn</h2>
-                <p>
-                    Easily generate a professional resume using your LinkedIn profile. Select a template, enter your LinkedIn URL,
-                    and get a downloadable resume in a few clicks. Save time and create a resume that stands out. 
-                </p>
-                <a href="signup.html" class="cta-button">Get Started</a>
+<header>
+        
+    <input type="checkbox" name="" id="toggler">
+    <label for="toggler" class="fas fa-bars"></label>
+    <a href="#" class="logo">Resum Resume<span>.</span></a>
+             
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="about.html">About</a>
+                <a href="resume.html">Build Resume</a>
+                <a href="signup.html">Sign Up</a>
+                <a href="login.html">Login</a>
+            </nav>
+    
+            <div class="icons">
+                <a href="about.html" class="fas fa-info-circle"></a>
+                <a href="#" class="fas fa-envelope"></a>
+                <a href="login.html" id="loginIcon" class="fas fa-user"></a>
             </div>
-            <div class="hero-image">
-                <img src="Hero Section.jpg" alt="Resume Builder Image">
+    
+        </header> 
+        
+        <!-- header section ends -->
+    
+    
+        <!-- home section starts -->
+    
+        <section class="home" id="Home">
+    
+            <div class="content">
+                <h3>Build Your Resume in Seconds from LinkedIn</h3>
+                <p>Easily generate a professional resume using your LinkedIn profile. Select a template, enter your LinkedIn URL,
+                    and get a downloadable resume in a few clicks. Save time and create a resume that stands out. </p>
+                <a href="signup.html" class="btn">Get Started</a>
             </div>
-        </div>
-    </section>
+    
+        </section>
+    
+        <!-- home section ends-->
 
     <!-- Features Section -->
     <section class="features">
