@@ -38,7 +38,7 @@
         input[type="text"],
         input[type="email"],
         input[type="password"] {
-            width: 25em;
+            width: 100%;
             padding: 12px;
             margin: 10px 0;
             border: 1px solid #ccc;
@@ -46,7 +46,7 @@
         }
 
         button {
-            width: 12em;
+            width: 100%;
             padding: 15px;
             background-color: var(--purple);
             color: white;
@@ -83,11 +83,12 @@
 
     <div class="container">
         <h2>Create Your Account</h2>
-        <form action="#" method="POST">
+        <form id = "signupForm"action="#" method="POST">
             <input type="text" placeholder="Full Name" required>
             <input type="email" placeholder="Email Address" required>
-            <input type="password" placeholder="Password" required>
+            <input type="password" id="password"placeholder="Password(8+ chars, upper, lower, special char)" required>
             <input type="password" placeholder="Confirm Password" required>
+            <span id="errorMessage" class="error"></span>
             <button type="submit">Sign Up</button>
         </form>
         <div class="footer">
@@ -98,7 +99,20 @@
     <script>
         document.getElementById('signupForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent the default form submission
-
+            const password = document.getElementById('password').value;
+            const confirmPassword= document.getElementById('confirmPassword').value;
+            const errorMessage= document.getElementById('errorMessage');
+            //password validation regex:8+ characters, uppercase, lowercase, special characters
+            const passwordPattern=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            if(!passwordPattern.test(password)){
+                errorMessage.textContent = "Password must be atleast 8 characters, include uppercase, lowercase, a number, and a special character."
+                return;
+            }
+            if(password!== confirmPassword){
+                errorMessage.textContent ="Passwords do not match."
+            }
+            //if everything is fine, proceed with form submission
+            errorMessage.textContent="";//clear the error message
             var formData = new FormData(this);
             
             fetch('signup-process.php', {
