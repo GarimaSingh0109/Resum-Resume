@@ -32,8 +32,8 @@ The website consists of the following key sections:
 
 ### Prerequisites
 
-- A modern web browser (Chrome, Firefox, Safari, etc.)
-- Internet connection to load external resources (Bootstrap, fonts)
+- Modern web browser (e.g., Chrome, Firefox, Safari)
+- Internet connection for loading external resources such as Bootstrap and web fonts
 
 ### Installation
 
