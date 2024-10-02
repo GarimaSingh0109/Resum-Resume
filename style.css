@@ -115,6 +115,25 @@ header .fa-bars{
     border: .1rem solid rgba(0,0,0,0.3);
     display: none;
 }
+/* Default light mode styles */
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Dark mode styles */
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode button {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+/* Add more styles as needed for other elements */
+
 
 .home{
     display: flex;
