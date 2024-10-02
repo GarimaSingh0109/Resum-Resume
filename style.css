@@ -67,12 +67,18 @@ header{
 
 header .logo{
     font-size: 3rem;
-    color: #333;
+    color: #3f10ea;
     font-weight: bolder;
+}
+header .logo:hover{
+    font-size: 3rem;
+    color: #f03c0b;
+    font-weight: bolder;
+    text-decoration: none;
 }
 
 header .logo span{
-    color: var(--purple);
+    color: var(--#3f10ea);
 }
 
 header .navbar a{
@@ -82,7 +88,8 @@ header .navbar a{
 }
 
 header .navbar a:hover{
-    color: var(--purple);
+    color: var(--red);
+    text-decoration: none;
 }
 
 header .icons a{
