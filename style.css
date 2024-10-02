@@ -223,7 +223,7 @@ header .fa-bars {
   }
 }
 /*Sidebar Style*/
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   .navbar,
   .icons {
     display: none;
@@ -236,24 +236,21 @@ header .fa-bars {
     left: 0;
     width: 250px;
     height: 100%;
-    background: linear-gradient(
-      90deg,
-      rgba(32, 32, 32, 0.8),
-      rgba(2, 105, 248, 0.8)
-    );
+    background-color: #9F86C0;
+     
     padding: 20px;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
     padding-top: 20px;
-  }
+}
 
-  .sidebar.active {
+.sidebar.active {
     transform: translateX(0);
-  }
+}
 
-  .sidebar a {
-    color: rgb(172, 172, 172);
+.sidebar a {
+    color: #231942;
     text-decoration: none !important;
     margin-top: 25px;
     padding-top: 20px;
@@ -263,36 +260,36 @@ header .fa-bars {
     padding: 10px;
     border-radius: 8px;
     transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
-  }
+}
 
-  .sidebar a:hover {
+.sidebar a:hover {
     color: rgb(255, 255, 255);
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(190, 149, 196, 0.2); /* #BE95C4 */
     backdrop-filter: blur(6px);
     filter: brightness(1.2);
-  }
+}
 
-  .sidebar-icons {
+.sidebar-icons {
     display: flex;
     flex-direction: row;
     margin-top: 30px;
     gap: 15px;
-  }
+}
 
-  .sidebar-icons a {
+.sidebar-icons a {
     margin-bottom: 15px;
-    color: rgb(145, 145, 145);
+    color: #E0B1CB;
     font-size: 22px;
     transition: transform 0.3s, filter 0.3s;
-  }
+}
 
-  .sidebar-icons a:hover {
+.sidebar-icons a:hover {
     transform: scale(1.1);
     filter: blur(1px);
     color: white;
-  }
+}
 
-  .close-btn {
+.close-btn {
     color: white;
     font-size: 30px;
     position: absolute;
@@ -300,23 +297,23 @@ header .fa-bars {
     right: 15px;
     cursor: pointer;
     transition: transform 0.3s ease;
-  }
+}
 
-  .close-btn:hover {
+.close-btn:hover {
     transform: rotate(180deg);
-    color: #ffcccc;
-  }
+    color: rgb(224, 177, 203); /* #E0B1CB */
 }
 
 #toggler:checked ~ .sidebar {
-  transform: translateX(0);
+    transform: translateX(0);
 }
 
 #toggler:checked ~ body {
-  filter: blur(5px);
+    filter: blur(5px);
 }
-@media (min-width: 401px) {
-  .sidebar {
-    display: none;
-  }
+}
+@media (min-width: 769px) {
+    .sidebar {
+        display: none;
+    }
 }
