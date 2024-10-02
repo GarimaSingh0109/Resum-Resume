@@ -9,7 +9,6 @@
       rel="stylesheet"
     />
     <style>
-
       :root {
         --purple: #aca7eb;
       }
@@ -132,6 +131,25 @@
 
         .navbar h1 {
           margin-bottom: 10px;
+        }
+      }
+      @media (max-width: 400px) {
+        .navbar ul {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          width: 100%;
+        }
+        .navbar ul li {
+          justify-content: space-evenly !important;
+        }
+        .navbar ul li a {
+          color: #eee7e7;
+          font-size: 20px;
+        }
+        .navbar ul li a:hover {
+          color: #ffffff;
+          font-size: 22px;
         }
       }
     </style>
