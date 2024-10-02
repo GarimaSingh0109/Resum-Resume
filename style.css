@@ -52,6 +52,12 @@ section {
 .btn:hover {
     background: var(--purple);
 }
+.logo-image{
+    height: 140px;
+    width: min-content;
+    margin-left: 0px;
+    vertical-align: middle;
+}
 
 header {
     position: fixed;
@@ -59,7 +65,7 @@ header {
     left: 0;
     right: 0;
     background: #fff;
-    padding: 2rem 9%;
+    padding: 1rem 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -68,7 +74,7 @@ header {
 }
 
 header .logo {
-    font-size: 3rem;
+    font-size: 1.5rem;
     color: #3f10ea;
     font-weight: bolder;
 }
@@ -331,7 +337,7 @@ textarea {
     }
 
     header .navbar a {
-        margin: 1.5rem;
+        margin: 1rem;
         padding: 1.5rem;
         background: #fff;
         border: 0.1rem solid rgba(0, 0, 0, 0.1);
