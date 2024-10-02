@@ -1,9 +1,9 @@
-:root{
+:root {
     --purple: #aca7eb;
 }
 
 * {
-    margin: 0; 
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -14,31 +14,31 @@
     transition: .2s linear;
 }
 
-html{
+html {
     font-size: 62.5%;
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
     overflow-x: hidden;
 }
 
-section{
+section {
     padding: 2rem 9%;
 }
 
-.heading{
+.heading {
     text-align: center;
     font-size: 4rem;
     color: #333;
     padding: 1rem;
     margin: 2rem 0;
-    background: rgba(255,51,153,0.05);
+    background: rgba(255, 51, 153, 0.05);
 }
 
-.heading span{
+.heading span {
     color: var(--pink);
 }
 
-.btn{
+.btn {
     display: inline-block;
     margin-top: 1rem;
     border-radius: 5rem;
@@ -49,72 +49,76 @@ section{
     font-size: 1.7rem;
 }
 
-.btn:hover{
+.btn:hover {
     background: var(--purple);
 }
 
-header{
+header {
     position: fixed;
-    top: 0; left: 0; right: 0;
+    top: 0;
+    left: 0;
+    right: 0;
     background: #fff;
     padding: 2rem 9%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.1);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
-header .logo{
+header .logo {
     font-size: 3rem;
     color: #3f10ea;
     font-weight: bolder;
 }
-header .logo:hover{
+
+header .logo:hover {
     font-size: 3rem;
     color: #f03c0b;
     font-weight: bolder;
     text-decoration: none;
 }
 
-header .logo span{
+header .logo span {
     color: var(--#3f10ea);
 }
 
-header .navbar a{
+header .navbar a {
     font-size: 2rem;
     padding: 0 1.5rem;
     color: #666;
 }
 
-header .navbar a:hover{
+header .navbar a:hover {
     color: var(--red);
     text-decoration: none;
 }
 
-header .icons a{
+header .icons a {
     font-size: 2.5rem;
     color: #333;
     margin-left: 1.5rem;
 }
 
-header .icons a:hover{
+header .icons a:hover {
     color: var(--purple);
 }
 
-header #toggler{
+header #toggler {
     display: none;
 }
 
-header .fa-bars{
+header .fa-bars {
     font-size: 3rem;
-    color:#333;
+    color: #333;
     border-radius: .5rem;
     padding: .5rem 1.5rem;
     cursor: pointer;
-    border: .1rem solid rgba(0,0,0,0.3);
+    border: .1rem solid rgba(0, 0, 0, 0.3);
     display: none;
 }
+
 /* Default light mode styles */
 body {
     background-color: #ffffff;
@@ -135,7 +139,7 @@ body {
 /* Add more styles as needed for other elements */
 
 
-.home{
+.home {
     display: flex;
     align-items: center;
     min-height: 100vh;
@@ -144,23 +148,23 @@ body {
     background-position: center;
 }
 
-.home .content{
+.home .content {
     max-width: 50rem;
 }
 
-.home .content h3{
+.home .content h3 {
     font-size: 5rem;
     color: #333;
 }
 
-.home .content span{
+.home .content span {
     font-size: 3.5rem;
     color: var(--purple);
     padding: 1rem 0;
     line-height: 1.5;
 }
 
-.home .content p{
+.home .content p {
     font-size: 1.5rem;
     color: #999;
     padding: 1rem 0;
@@ -280,79 +284,75 @@ button {
 
 
 /* media queries */
-@media (max-width:991px){
+@media (max-width:991px) {
 
-    html{
+    html {
         font-size: 55%;
     }
 
-    header{
+    header {
         padding: 2rem;
     }
 
-    section{
+    section {
         padding: 2rem;
     }
 
-    .home{
+    .home {
         background-position: left;
     }
-    
+
 }
 
-@media (max-width:768px){
+@media (max-width:768px) {
 
-    html .fa-bars{
+    html .fa-bars {
         display: block;
     }
 
-    header .navbar{
+    header .navbar {
         position: absolute;
-        top: 100%; left: 0; right: 0;
+        top: 100%;
+        left: 0;
+        right: 0;
         background: #eee;
-        border-top: 0.1rem solid rgba(0,0,0,0.1);
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
 
-    header #toggler:checked ~ .navbar{
+    header #toggler:checked~.navbar {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
 
-    header .navbar a{
+    header .navbar a {
         margin: 1.5rem;
         padding: 1.5rem;
         background: #fff;
-        border: 0.1rem solid rgba(0,0,0,0.1);
+        border: 0.1rem solid rgba(0, 0, 0, 0.1);
         display: block;
     }
 
-    .home .content h3{
-        font-size: 5rem;
-    }
 
-    .home .content span{
-        font-size: 2.5rem;
-    }
 
-    .icons-container .icons h3{
+    .icons-container .icons h3 {
         font-size: 2rem;
     }
-    
-    .icons-container .icons span{
+
+    .icons-container .icons span {
         font-size: 1.7rem;
     }
-     
+
 
 }
 
-@media (max-width:450px){
+@media (max-width:450px) {
 
-    html{
+    html {
         font-size: 50%;
     }
 
-    .heading{
+    .heading {
         font-size: 3rem;
     }
-    
+
 }
