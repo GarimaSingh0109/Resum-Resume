@@ -130,7 +130,9 @@ header .fa-bars {
     border: .1rem solid rgba(0, 0, 0, 0.3);
     display: none;
 }
-
+/* ________________________________________ */
+/* _____________Media Query for responsiveness____________ */
+/* ________________________________________ */
 @media (max-width: 768px) {
     header {
         padding: 2rem 4%;
