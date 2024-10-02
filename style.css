@@ -66,13 +66,13 @@ header{
 }
 
 header .logo{
-    font-size: 3rem;
-    color: #3f10ea;
+    font-size: 2rem;
+    color: #00ff00;
     font-weight: bolder;
 }
 header .logo:hover{
-    font-size: 3rem;
-    color: #f03c0b;
+    font-size: 2rem;
+    color: #00c6ff;
     font-weight: bolder;
     text-decoration: none;
 }
