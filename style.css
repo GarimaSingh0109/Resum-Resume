@@ -178,16 +178,22 @@ body {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    align-items: center;
+    justify-content: center;
 }
 
 textarea {
     width: 100%;
     height: 100px;
     margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
-button {
+.btn{
     padding: 10px 15px;
+    background-color: #00c6ff;
+    border-radius: 15px;
 }
 
 
