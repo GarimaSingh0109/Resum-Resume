@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - LinkedIn Resume Builder</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -108,8 +109,20 @@
         }
 
         /* body {
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --purple: #7c7ae6;
+            --purple-light: #aca7eb;
+            --purple-dark: #5654a2;
+        }
+        
+        body {
+
             font-family: 'Roboto', sans-serif;
             background-color: #f0f4f8;
+            background-image: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
             margin: 0;
             padding: 0;
             display: flex;
@@ -281,10 +294,11 @@
 
 
         }
-
+        
         .container {
             font-family: 'Roboto', sans-serif;
             background-color: white;
+
             padding: 60px;
             font-family: 'Roboto', sans-serif;
             font-size: 15px;
@@ -294,8 +308,17 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 
             width: 35%;
+
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 90%;
+
             text-align: center;
+            transition: all 0.3s ease;
         }
+
 
         .login-heading {
             font-size: 30px;
@@ -303,31 +326,88 @@
             font-family: 'Roboto', sans-serif;
             color: #333;
             margin-bottom: 20px;
-        }
 
+        
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        h2 {
+            color: var(--purple-dark);
+            margin-bottom: 30px;
+            font-weight: 700;
+            font-size: 28px;
+
+        }
+        
         input[type="email"],
         input[type="password"] {
+
             width: 100%;
+            padding: 15px;
+            margin: 15px 0;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            border-color: var(--purple);
+            outline: none;
+
+            width: 25em;
             padding: 12px;
             margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 4px;
-        }
 
+        }
+        
         button {
-            width: 100%;
+            width: 12em;
             padding: 15px;
-            background-color: #aca7eb;
+            background-color: var(--purple);
             color: white;
             border: none;
-            border-radius: 4px;
+            border-radius: 8px;
             font-size: 18px;
+            font-weight: 500;
             cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        button:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                120deg,
+                transparent,
+                rgba(255, 255, 255, 0.3),
+                transparent
+            );
+            transition: all 0.6s;
+        }
+        
+        button:hover:before {
+            left: 100%;
+        }
+        
+        button:hover {
+            background-color: var(--purple-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(172, 167, 235, 0.4);
         }
 
-        button:hover {
-            background-color: var(--purple);
-        }
     </style>
 </head>
 
@@ -353,6 +433,32 @@
         </div>
 
     </header>
+
+        
+        .footer {
+            margin-top: 30px;
+        }
+        
+        .footer p {
+            color: #666;
+            font-size: 16px;
+        }
+        
+        .footer a {
+            color: var(--purple);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .footer a:hover {
+            color: var(--purple-dark);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
     <div class="container">
         <div class="login-heading">Log In to Your Account</div>
         <form action="#" method="POST">
@@ -408,7 +514,7 @@
     <script>
         document.getElementById('loginForm').addEventListener('submit', function (event) {
             event.preventDefault(); // Prevent the default form submission
-
+            
             var formData = new FormData(this);
 
             fetch('login-process.php', {
@@ -426,7 +532,6 @@
                 .catch(error => console.error('Error:', error));
         });
     </script>
-
 </body>
 
 </html>
