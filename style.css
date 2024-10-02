@@ -190,7 +190,7 @@ textarea {
     align-items: center;
 }
 
-.btn{
+.btn {
     padding: 10px 15px;
     background-color: #00c6ff;
     border-radius: 15px;
@@ -271,94 +271,246 @@ textarea {
     color: #ccc;
 }
 
-/* Responsive Footer */
-@media (max-width: 768px) {
-    .footer .footer-content {
-        flex-direction: column;
-        align-items: center;
+
+
+
+
+
+/* Features Section */
+.features {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+.features h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.features-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.features-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 30px);
+    text-align: center;
+
+
+    .features-card:hover {
+        transform: translateY(-10px) scale(1.1);
+        box-shadow: 0 4px 8px #0073b1;
+        z-index: 3;
     }
 
-    .footer .footer-section {
-        flex-basis: 100%;
+    .features-card img {
+        width: 260px;
+        height: 260px;
+        margin-bottom: 15px;
+        height: 50%;
+        /* Set height to 50% of the card */
+        /* /* object-fit: cover;  */
+        border-radius: 10px;
+
+
+        transition: transform 0.3s, box-shadow 0.3s, z-index 0.3s;
+        position: relative;
+        z-index: 1;
+    }
+
+    .features-card:hover {
+        transform: translateY(-10px) scale(1.1);
+        box-shadow: 0 4px 8px #0073b1;
+        z-index: 3;
+    }
+
+    .features-card img {
+        width: 260px;
+        height: 260px;
+        margin-bottom: 15px;
+        height: 50%;
+        /* Set height to 50% of the card */
+        /* /* object-fit: cover;  */
+        border-radius: 10px;
+
+
+        transition: transform 0.3s ease;
+    }
+
+    .features-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .features-card img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 20px;
+    }
+
+    .features-card h3 {
+        color: #aca7eb;
+        margin: 15px 0;
+        font-size: 22px;
+    }
+
+    .features-card p {
+        color: #666;
+        font-size: 16px;
+    }
+
+    /* Testimonials Section */
+    .testimonials {
+        padding: 60px 20px;
+        background-color: #ffffff;
+    }
+
+    .testimonials h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 40px;
+        font-size: 32px;
+    }
+
+    .testimonial-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .testimonial-card {
+        background-color: #f9f9f9;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: calc(33.33% - 30px);
         text-align: center;
     }
 
-    .footer .footer-section ul li {
-        margin-bottom: 8px;
-    }
-}
-
-
-/* media queries */
-@media (max-width:991px) {
-
-    html {
-        font-size: 55%;
+    .testimonial-card img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-bottom: 20px;
     }
 
-    header {
-        padding: 2rem;
+    .testimonial-card h3 {
+        color: #aca7eb;
+        margin: 10px 0;
+        font-size: 20px;
     }
 
-    section {
-        padding: 2rem;
-    }
-
-    .home {
-        background-position: left;
-    }
-
-}
-
-@media (max-width:768px) {
-
-    html .fa-bars {
-        display: block;
-    }
-
-    header .navbar {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: #eee;
-        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    }
-
-    header #toggler:checked~.navbar {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    }
-
-    header .navbar a {
-        margin: 1.5rem;
-        padding: 1.5rem;
-        background: #fff;
-        border: 0.1rem solid rgba(0, 0, 0, 0.1);
-        display: block;
+    .testimonial-card p {
+        color: #666;
+        font-size: 16px;
+        font-style: italic;
     }
 
 
 
-    .icons-container .icons h3 {
-        font-size: 2rem;
+
+
+
+    /* Responsive Footer */
+    @media (max-width: 768px) {
+        .footer .footer-content {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer .footer-section {
+            flex-basis: 100%;
+            text-align: center;
+        }
+
+        .footer .footer-section ul li {
+            margin-bottom: 8px;
+        }
     }
 
-    .icons-container .icons span {
-        font-size: 1.7rem;
+
+    /* media queries */
+    @media (max-width:991px) {
+
+        html {
+            font-size: 55%;
+        }
+
+        header {
+            padding: 2rem;
+        }
+
+        section {
+            padding: 2rem;
+        }
+
+        .home {
+            background-position: left;
+        }
+
     }
 
+    @media (max-width:768px) {
 
-}
+        html .fa-bars {
+            display: block;
+        }
 
-@media (max-width:450px) {
+        header .navbar {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #eee;
+            border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        }
 
-    html {
-        font-size: 50%;
+        header #toggler:checked~.navbar {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+
+        header .navbar a {
+            margin: 1.5rem;
+            padding: 1.5rem;
+            background: #fff;
+            border: 0.1rem solid rgba(0, 0, 0, 0.1);
+            display: block;
+        }
+
+
+
+        .icons-container .icons h3 {
+            font-size: 2rem;
+        }
+
+        .icons-container .icons span {
+            font-size: 1.7rem;
+        }
+
+
     }
 
-    .heading {
-        font-size: 3rem;
-    }
+    @media (max-width:450px) {
 
-}
+        html {
+            font-size: 50%;
+        }
+
+        .heading {
+            font-size: 3rem;
+        }
+
+    }
