@@ -5,119 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - LinkedIn Resume Builder</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        :root{
-         --purple: #aca7eb;
+        :root {
+            --purple: #aca7eb;
+            --dark-gray: #555;
+            --light-gray: #f4f4f9;
+            --white: #fff;
         }
 
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #acb4bc;
+           
             margin: 0;
             padding: 0;
         }
 
+        .header, .navbar {
+            background-color: var(--purple);
+            color: var(--white);
+        }
+
         .header {
-            background-color: #aca7eb;
-            padding: 20px;
             text-align: center;
-            color: white;
+            padding: 20px;
         }
 
         .header h1 {
-            margin: 0;
             font-size: 36px;
         }
-        .content1{
-            display: flex;
-            justify-content: flex-start;
-        }
-        .gif{
-            margin-left: 100px;
-        }
-        .content {
-            max-width: 800px;
-            margin: 50px auto;
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-            box-shadow: 0 12px 12px;
-        }
 
-        .content:hover{
-            transform:scale(1.1);
-            transform: 0.5s ease;
-        }
-
-        .content h2 {
-            font-size: 28px;
-            color: white;
-            border-radius: 5px;
-            padding: 2px 5px;
-            margin-bottom: 20px;
-            background-color: black;
-            text-align: center;
-        }
-
-        .content h2:hover{
-            background-color: #0073b1;
-        }
-
-
-        .content p {
-            font-size: 18px;
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-
-        .content ul {
-            padding-left: 20px;
-            margin-bottom: 20px;
-        }
-
-        .content ul li {
-            font-size: 18px;
-            color: #555;
-            margin-bottom: 10px;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 15px;
-            font-size: 24px;
-            color: #666;
-            background-color: #f4f4f9;
-            margin-top: 45px;
-            
-        }
-        .footer p{
-            margin-bottom: 0;
-        }
-
-        .back-button {
-            display: block;
-            text-align: center;
-            margin-top: 35px;
-            margin-bottom: 0px;
-        }
-
-        .back-button a {
-            padding: 10px 20px;
-            background-color: #aca7eb;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        .back-button a:hover {
-            background-color: var(--purple);
-        }
         .navbar {
-            background-color: #aca7eb;
             padding: 15px 20px;
             display: flex;
             justify-content: space-between;
@@ -125,17 +43,17 @@
         }
 
         .navbar h1 {
-            color: white;
             margin: 0;
-            font-size: 24px;
+            font-size: 30px;
+            
         }
 
         .navbar ul {
             list-style-type: none;
-            margin: 0;
-            padding: 0;
             display: flex;
             gap: 20px;
+            padding: 0;
+            margin: 0;
         }
 
         .navbar ul li {
@@ -143,7 +61,7 @@
         }
 
         .navbar ul li a {
-            color: white;
+            color: black;
             text-decoration: none;
             font-size: 18px;
         }
@@ -152,16 +70,126 @@
             text-decoration: underline;
         }
 
-        /* Main Content Placeholder */
-        .content {
+        .content-full {
+            width: 100%;
+            padding: 50px;
+            background-color: var(--white);
+        }
+
+        .content-full h2 {
+            font-size: 28px;
+            text-align: center;
+            background-color: black;
+            color: var(--white);
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .flowchart {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+        }
+
+        .flowchart div {
+            text-align: center;
+            background-color: var(--light-gray);
             padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            width: 30%;
+        }
+
+        .flowchart div:hover {
+            transform: scale(1.05);
+        }
+
+        .flowchart div img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 15px;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            margin: 50px 0;
+        }
+
+        .feature-card {
+            background-color: var(--light-gray);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 23%;
+        }
+
+        .feature-card:hover {
+            transform: scale(1.05);
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            font-size: 16px;
+            color: var(--dark-gray);
+        }
+
+        .about-section {
+            padding: 50px;
+            background-color: #0073b1;
+            color: var(--white);
+        }
+
+        .about-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .back-button {
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        .back-button a {
+            padding: 10px 20px;
+            background-color: #148fd1;
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .back-button a:hover {
+            background-color: #0073b1;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 15px;
+            font-size: 24px;
+            color: var(--dark-gray);
+            background-color: var(--light-gray);
+            margin-top: 45px;
         }
 
         /* Responsive adjustments */
         @media (max-width: 768px) {
-            .navbar {
+            .flowchart, .features {
                 flex-direction: column;
-                align-items: flex-start;
+                align-items: center;
             }
 
             .navbar ul {
@@ -172,6 +200,11 @@
             .navbar h1 {
                 margin-bottom: 10px;
             }
+
+            .flowchart div, .feature-card {
+                width: 80%;
+            }
+            
         }
     </style>
 </head>
@@ -179,55 +212,163 @@
 
    <!-- Navbar -->
    <nav class="navbar">
-    <h1>Resume Builder</h1>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="resume.html">Build Resume</a></li>
-    </ul>
-</nav>
-    <div class="content1">
-        <img src="Li.gif" alt="" height="150px">
-        <div class="content">
-            <div class="action">
+        <h1 style=" text:rgb(173, 35, 242),
+                ">Resume Builder</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Build Resume</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Us section  -->
+
+    <section class="text-black bg-white body-font">
+        <div class="container mx-auto flex px-5 py-12 items-center justify-center flex-col">
+         
+          <div class="text-center lg:w-2/3 w-full">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-purple-800">Our Mission</h1>
+            <p class="mb-8 leading-relaxed">The LinkedIn Resume Builder is designed to make your job search easier and faster by transforming your LinkedIn profile into a polished, professional resume. 
+                We understand the challenges of job hunting and the importance of having an up-to-date resume. Our mission is to provide a simple, fast, and reliable solution 
+                that saves you time and effort.</p>
+          
+          </div>
+        </div>
+      </section>
+
+    <!-- How It Works Section -->
     
-                <h2>Our Mission</h2>
-                <p>
-                    The LinkedIn Resume Builder is designed to make your job search easier and faster by transforming your LinkedIn profile into a polished, professional resume. 
-                    We understand the challenges of job hunting and the importance of having an up-to-date resume. Our mission is to provide a simple, fast, and reliable solution 
-                    that saves you time and effort.
-                </p>
+
+    <section class="text-gray-600 bg-purple-100 body-font px-12 ">
+        <h1 class="text-purple-800 font-medium text-3xl text-center pt-6 ">How it Works?</h1>
+        <div class="container px-5 py-10 mx-auto">
+          <div class="flex flex-wrap justify-center -mx-4">
+            <!-- Step 1 -->
+            <div class="flex relative pt-10 pb-10 sm:items-center w-full md:w-1/4 px-4 bg-white">
+              <div class="flex-shrink-0 w-6 h-6 rounded-full inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">1</div>
+              
+              <div class="ml-6 mt-4 sm:mt-0 ">
+                <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Enter LinkedIn URL</h2>
+                <p class="leading-relaxed">Copy and paste your LinkedIn profile URL to get started.</p>
+              </div>
+            </div>
+      
+            <!-- Step 2 -->
+            <div class="flex relative pt-10 pb-10 sm:items-center w-full md:w-1/4 px-4 bg-white">
+              <div class="flex-shrink-0 w-6 h-6 rounded-full inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">2</div>
+             
+              <div class="ml-6 mt-4 sm:mt-0">
+                <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Choose Template</h2>
+                <p class="leading-relaxed">Select from a variety of professional resume templates.</p>
+              </div>
+            </div>
+      
+            <!-- Step 3 -->
+            <div class="flex relative pt-10 pb-10 sm:items-center w-full md:w-1/4 px-4 bg-white">
+              <div class="flex-shrink-0 w-6 h-6 rounded-full inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">3</div>
+              
+              <div class="ml-6 mt-4 sm:mt-0">
+                <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Download Resume</h2>
+                <p class="leading-relaxed">Easily download your resume in PDF format for any job application.</p>
+              </div>
+            </div>
+      
+            <!-- Step 4 -->
+            <div class="flex relative pt-10 pb-10 sm:items-center w-full md:w-1/4 px-4 bg-white">
+              <div class="flex-shrink-0 w-6 h-6 rounded-full inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">4</div>
+              
+              <div class="ml-6 mt-4 sm:mt-0">
+                <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Update Anytime</h2>
+                <p class="leading-relaxed">You can always update your resume later with a new LinkedIn profile URL.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+    <!-- Why Use Section -->
+    <section class="text-gray-600 body-font px-12 bg-white">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-wrap -m-4">
+            <!-- Feature 1 -->
+            <div class="p-4 lg:w-1/2 md:w-full">
+              <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col">
+                <div class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-8 h-8" viewBox="0 0 24 24">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <div class="flex-grow">
+                  <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Automated Documentation</h2>
+                  <p class="leading-relaxed text-base">Automatically generate detailed and structured documentation with ease.</p>
+                  
+                </div>
+              </div>
             </div>
             
-            <h2>How It Works</h2>
-            <p>
-                Our tool integrates with LinkedIn to gather essential details from your profile, including your work experience, education, and skills. 
-                With just a few clicks, you can convert your profile into a beautifully formatted resume. Here’s a simple breakdown of how it works:
-            </p>
-            <ul>
-                <li>Enter your LinkedIn profile URL in our resume form.</li>
-                <li>Choose a resume template from our professionally designed options.</li>
-                <li>Generate a downloadable resume in PDF format within seconds.</li>
-            </ul>
-    
-            <h2>Why Use LinkedIn Resume Builder?</h2>
-            <p>
-                Here are a few reasons why professionals prefer our tool:
-            </p>
-            <ul>
-                <li><strong>Time-saving:</strong> No need to manually update or format your resume.</li>
-                <li><strong>Professional templates:</strong> Choose from various modern and classic designs.</li>
-                <li><strong>Easy to use:</strong> Generate resumes in just a few clicks.</li>
-                <li><strong>Accurate data:</strong> Directly pulls information from your LinkedIn profile.</li>
-            </ul>
+            <!-- Feature 2 -->
+            <div class="p-4 lg:w-1/2 md:w-full">
+              <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col">
+                <div class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
+                    <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <div class="flex-grow">
+                  <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Customizable Templates</h2>
+                  <p class="leading-relaxed text-base">Choose from a variety of professionally designed templates that suit your needs.</p>
+                  
+                </div>
+              </div>
+            </div>
+            
+            <!-- Feature 3 -->
+            <div class="p-4 lg:w-1/2 md:w-full">
+              <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col">
+                <div class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-8 h-8" viewBox="0 0 24 24">
+                    <circle cx="12" cy="5" r="3"></circle>
+                    <path d="M12 22V8M5 12H2a10 10 0 0020 0h-3"></path>
+                  </svg>
+                </div>
+                <div class="flex-grow">
+                  <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Seamless Integration</h2>
+                  <p class="leading-relaxed text-base">Easily integrate the system with your existing tools for a smoother workflow.</p>
+                  
+                </div>
+              </div>
+            </div>
+            
+            <!-- Feature 4 -->
+            <div class="p-4 lg:w-1/2 md:w-full">
+              <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col">
+                <div class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
+                    <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <div class="flex-grow">
+                  <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Real-Time Collaboration</h2>
+                  <p class="leading-relaxed text-base">Collaborate with team members in real time to create and edit documents.</p>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <img src="Li.gif" alt="" height="150px">
-    </div>
-    <div class="back-button">
-        <a href="index.html">Go Back to Home</a>
+      </section>
+      
+
+    <!-- Back Button -->
+    <div class="back-button ">
+        <a href="index.html" class="bg-purple-600">Go Back to Home</a>
     </div>
 
-    <div class="footer">
+    <!-- Footer -->
+    <div class="footer bg-purple-300">
         <p>Powered by Resume Builder &copy; 2024</p>
     </div>
 
