@@ -73,10 +73,15 @@ header .logo {
     font-weight: bolder;
 }
 
-header .logo:hover {
+/* header .logo:hover {
     font-size: 3rem;
     color: #f03c0b;
     font-weight: bolder;
+    text-decoration: none;
+} */
+
+header .logo:hover {
+    color: #f03c0b;
     text-decoration: none;
 }
 
@@ -95,10 +100,17 @@ header .navbar a:hover {
     text-decoration: none;
 }
 
+header .icons {
+    display: flex;
+    align-items: center;
+}
+
 header .icons a {
     font-size: 2.5rem;
     color: #333;
     margin-left: 1.5rem;
+    /* display: flex;
+    align-items: center; */
 }
 
 header .icons a:hover {
@@ -117,6 +129,49 @@ header .fa-bars {
     cursor: pointer;
     border: .1rem solid rgba(0, 0, 0, 0.3);
     display: none;
+}
+/* ________________________________________ */
+/* _____________Media Query for responsiveness____________ */
+/* ________________________________________ */
+@media (max-width: 768px) {
+    header {
+        padding: 2rem 4%;
+    }
+
+    header .fa-bars {
+        display: block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: .1rem solid rgba(0, 0, 0, 0.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: .2s linear;
+    }
+
+    header #toggler:checked ~ .navbar {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a {
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #f9f9f9;
+        border: .1rem solid rgba(0, 0, 0, 0.1);
+        display: block;
+    }
+
+    header .icons {
+        margin-left: auto;
+    }
+
+    header .icons a {
+        margin-left: 1rem;
+    }
 }
 
 /* Default light mode styles */
