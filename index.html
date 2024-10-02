@@ -143,89 +143,105 @@
         }
 
         /* Footer Styles */
-        .footer {
-            background-color: #aca7eb;
-            color: #ffffff;
-            padding: 40px 0;
-        }
+.footer {
+    background-color: #aca7eb; /* Keeping the existing background color */
+    color: #ffffff;
+    padding: 40px 0;
+}
 
-        .footer-content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-        .footer-section {
-            flex: 1;
-            margin-bottom: 20px;
-            min-width: 200px;
-        }
+.footer-section {
+    flex: 1;
+    margin-bottom: 20px;
+    min-width: 200px;
+}
 
-        .text {
-            padding-right: 20px; 
-            max-width: 50%; 
-        }
-        .image {
-            max-width: 50%; 
-        }
-        .image img {
-            width: 100%; 
-            height: auto;
-            border-radius: 5px; 
+/* Making the text section more responsive */
+.text {
+    padding-right: 20px; 
+    max-width: 50%; 
+}
 
+.image {
+    max-width: 50%; 
+}
 
-        .footer-section h3 {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: #ffffff;
-        }
+.image img {
+    width: 100%; 
+    height: auto;
+    border-radius: 5px; 
+}
 
-        .footer-section ul {
-            list-style-type: none;
-            padding: 0;
-        }
+/* Footer headings */
+.footer-section h3 {
+    font-size: 20px; /* Increased font size for better readability */
+    font-weight: 800; /* Bolder text for stronger emphasis */
+    margin-bottom: 15px;
+    color: #ffffff;
+}
 
-        .footer-section ul li {
-            margin-bottom: 8px;
+/* Footer links */
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
 
-        }
+.footer-section ul li {
+    margin-bottom: 10px; /* Added some extra space between links */
+}
 
-        .footer-section ul li a {
-            color: #e0e0e0;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
+.footer-section ul li a {
+    color: #ffffff; /* Brighter color to make links stand out */
+    text-decoration: none;
+    font-weight: 600; /* Bolder links */
+    transition: color 0.3s ease, font-size 0.3s ease; /* Smooth transition for hover effect */
+}
 
-        .footer-section ul li a:hover {
-            color: #ffffff;
-            text-decoration: underline;
-        }
+.footer-section ul li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    font-size: 1.1em; /* Slight size increase on hover */
+}
 
-        .social-icons {
-            margin-top: 15px;
-        }
+/* Social media icons styling */
+.social-icons {
+    margin-top: 15px;
+}
 
-        .social-icons a {
-            color: #ffffff;
-            font-size: 20px;
-            margin-right: 15px;
-            transition: color 0.3s ease;
-        }
+.social-icons a {
+    color: #ffffff;
+    font-size: 24px; /* Increased size for more visibility */
+    margin-right: 15px;
+    transition: color 0.3s ease, transform 0.3s ease; /* Adding hover effect transition */
+}
 
-        .social-icons a:hover {
-            color: #e0e0e0;
-        }
+.social-icons a:hover {
+    color: #ffdd57; /* Hover effect on social media icons */
+    transform: scale(1.2); /* Slight zoom effect on hover */
+}
 
-        .footer-bottom {
-            text-align: center;
-            padding-top: 20px;
-            margin-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
+/* Footer bottom section (copyright) */
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Making the border more visible */
+}
+
+.footer-bottom p {
+    font-size: 16px; /* Increased font size for better readability */
+    font-weight: 600; /* Bolder text for emphasis */
+    color: #ffffff;
+}
+
 
         /* Responsive Styles */
         @media (max-width: 768px) {
