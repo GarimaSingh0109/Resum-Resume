@@ -95,54 +95,95 @@
       }
 
       /* Testimonials Section */
-      .testimonials {
-        padding: 60px 20px;
-        background-color: #ffffff;
-      }
-
       .testimonials h2 {
         text-align: center;
         color: #333;
         margin-bottom: 40px;
         font-size: 32px;
       }
-
+      
+      .testimonial-container {
+        position: relative; /* for positioning the buttons */
+        overflow: hidden; /* hide vertical scroll */
+        max-width: 1200px;
+        
+        width:100%;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      
       .testimonial-cards {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: row; 
+        justify-content: flex-start;
         gap: 30px;
-        max-width: 1200px;
-        margin: 0 auto;
+        height: min-content;
+        overflow-x: auto; /* horizontal scroll */
+        scroll-behavior: smooth; /* for smooth scrolling */
       }
-
+      
       .testimonial-card {
         background-color: #f9f9f9;
         padding: 30px;
         border-radius: 8px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        width: calc(33.33% - 30px);
+        min-width: 300px; /* Fixed card width */
         text-align: center;
+        transition: transform 0.3s ease-in-out;
       }
-
+      
+      .testimonial-card:hover {
+        transform: scale(1.05); /* animate on hover */
+      }
+      
       .testimonial-card img {
         width: 80px;
         height: 80px;
         border-radius: 50%;
         margin-bottom: 20px;
       }
-
+      
       .testimonial-card h3 {
         color: #aca7eb;
         margin: 10px 0;
         font-size: 20px;
       }
-
+      
       .testimonial-card p {
         color: #666;
         font-size: 16px;
         font-style: italic;
       }
+      
+      /* Arrow button styling */
+      .scroll-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #aca7eb;
+        border: none;
+        padding: 10px;
+        width:45px;
+        cursor: pointer;
+        color: #fff;
+        border-radius: 50%;
+        font-size: 20px;
+        z-index:99;
+      }
+      
+      #prev-btn {
+        left: 10px;
+      }
+      
+      #next-btn {
+        right: 10px;
+      }
+      
+      /* Hide scrollbar */
+      .testimonial-cards::-webkit-scrollbar {
+        display: none;
+      }
+      
 
       /* Footer Styles */
       .footer {
@@ -367,33 +408,14 @@
     <!-- Testimonials Section -->
     <section class="testimonials">
       <h2>What Our Users Say</h2>
-      <div class="testimonial-cards">
-        <div class="testimonial-card">
-          <img src="assets/jondoe.jpg" alt="User 1" />
-          <h3>Jane Doe</h3>
-          <p>
-            "This resume builder transformed my LinkedIn profile into a
-            professional resume effortlessly. Highly recommended!"
-          </p>
-        </div>
-        <div class="testimonial-card">
-          <img src="assets/john_smith.jpg" alt="User 2" />
-          <h3>John Smith</h3>
-          <p>
-            "I was amazed at how quickly I was able to generate a resume. The
-            process was smooth and the result was perfect."
-          </p>
-        </div>
-        <div class="testimonial-card">
-          <img src="assets/emily_johnson.jpg" alt="User 3" />
-          <h3>Emily Johnson</h3>
-          <p>
-            "The platform is user-friendly and secure. I felt confident that my
-            data was protected. Great service!"
-          </p>
-        </div>
+      <div class="testimonial-container">
+        <button id="prev-btn" class="scroll-btn">‹</button> <!-- Left button -->
+        <div class="testimonial-cards"></div> 
+        <!-- Dynamic content will be inserted here -->
+        <button id="next-btn" class="scroll-btn">›</button> <!-- Right button -->
       </div>
     </section>
+
 
     <!-- Footer -->
     <footer class="footer">
@@ -457,6 +479,61 @@
           body.classList.remove("sidebar-active");
         }
       });
+
+      <!-- Testimonial Section  -->
+
+      const reviewsContent = [
+        { img: 'assets/jondoe.jpg', name: 'Jane Doe', review: 'This resume builder transformed my LinkedIn profile into a professional resume effortlessly. Highly recommended!' },
+        { img: 'assets/john_smith.jpg', name: 'John Smith', review: 'I was amazed at how quickly I was able to generate a resume. The process was smooth and the result was perfect.' },
+        { img: 'assets/emily_johnson.jpg', name: 'Emily Johnson', review: 'The platform is user-friendly and secure. I felt confident that my data was protected. Great service!' },
+        { img: 'assets/Olivia Wilson.jpg', name: 'Olivia Wilson', review: 'I had tried several other resume builders, but none were as easy and efficient as this one. ' },
+        { img: 'assets/Richard Sanchez.jpg', name: 'Richard Sanchez', review: 'The best resume builder I’ve used! It saved me so much time and produced a high-quality, professional resume. ' }
+      ];
+
+      function addReviews() {
+        let testimonialContent = ''; 
+        reviewsContent.forEach(obj => {
+          testimonialContent += `
+          <div class="testimonial-card">
+            <img src="${obj.img}" alt="${obj.name}" />
+            <h3>${obj.name}</h3>
+            <p>
+              "${obj.review}"
+            </p>
+          </div>`;
+        });
+        
+        document.querySelector('.testimonial-cards').innerHTML = testimonialContent;
+      }
+
+      // Scroll functions
+      function scrollReviews(direction) {
+        const container = document.querySelector('.testimonial-cards');
+        const scrollAmount = 300; // Adjust the amount to scroll by
+        if (direction === 'left') {
+          container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        } else {
+          container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+      }
+
+      function autoScrollReviews() {
+        const container = document.querySelector('.testimonial-cards');
+        const scrollAmount = 300; // Adjust the amount to scroll by
+        container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      }
+
+      // Attach event listeners to buttons
+      document.getElementById('prev-btn').addEventListener('click', () => scrollReviews('left'));
+      document.getElementById('next-btn').addEventListener('click', () => scrollReviews('right'));
+
+      // Auto-scroll interval (scrolls every 3 seconds)
+      setInterval(autoScrollReviews, 3000);
+
+      // Add reviews dynamically
+      addReviews();
+
+
     </script>
   </body>
 </html>
