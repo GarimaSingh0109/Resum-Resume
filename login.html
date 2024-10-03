@@ -15,6 +15,7 @@
     <style>
         :root {
             --purple: #aca7eb;
+
         }
 
         * {
@@ -116,8 +117,7 @@
             --purple: #7c7ae6;
             --purple-light: #aca7eb;
             --purple-dark: #5654a2;
-        }
-        
+      }
         body {
 
             font-family: 'Roboto', sans-serif;
@@ -303,6 +303,9 @@
             font-family: 'Roboto', sans-serif;
             font-size: 15px;
             border-radius: 8px;
+
+            
+
             margin-top: 150px;
             margin-bottom: 20px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -311,7 +314,7 @@
 
             padding: 40px;
             border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
             max-width: 400px;
             width: 90%;
 
@@ -325,6 +328,11 @@
             font-weight: bold;
             font-family: 'Roboto', sans-serif;
             color: #333;
+            margin-bottom: 24px;
+            font-family: Montserrat, sans-serif;
+        }
+
+        .form-group {
             margin-bottom: 20px;
 
         
@@ -339,8 +347,19 @@
             font-weight: 700;
             font-size: 28px;
 
+
+        label {
+            display: flex;
+            margin-bottom: -5px;
+            font-weight: 500;
+            color: #333;
+            font-family: Lato, sans-serif;
+            justify-content: flex-start;
         }
+
+
         
+
         input[type="email"],
         input[type="password"] {
 
@@ -361,25 +380,31 @@
             width: 25em;
             padding: 12px;
             margin: 10px 0;
-            border: 1px solid #ccc;
             border-radius: 4px;
 
         }
         
         button {
-            width: 12em;
+
+            width: 57vh;
             padding: 15px;
             background-color: var(--purple);
+
             color: white;
             border: none;
             border-radius: 8px;
             font-size: 18px;
             font-weight: 500;
             cursor: pointer;
+
+            background-color: #8f7aea;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
             transition: all 0.3s ease;
             margin-top: 20px;
             position: relative;
             overflow: hidden;
+
         }
         
         button:before {
@@ -403,9 +428,13 @@
         }
         
         button:hover {
+
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+
             background-color: var(--purple-dark);
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(172, 167, 235, 0.4);
+     
+
         }
 
     </style>
@@ -440,12 +469,17 @@
         }
         
         .footer p {
-            color: #666;
+
+            color: #363535;
+            font-family: 'Roboto', sans-serif;
+
             font-size: 16px;
         }
         
         .footer a {
-            color: var(--purple);
+
+            color: #337ab7;
+
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
@@ -457,13 +491,21 @@
         }
     </style>
 </head>
+
 <body>
 
     <div class="container">
         <div class="login-heading">Log In to Your Account</div>
         <form action="#" method="POST">
-            <input type="email" placeholder="Email Address" required>
-            <input type="password" placeholder="Password" required>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Email Address" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="password" required>
+            </div>
             <button type="submit">Log In</button>
         </form>
         <div class="footer-login">
@@ -514,7 +556,6 @@
     <script>
         document.getElementById('loginForm').addEventListener('submit', function (event) {
             event.preventDefault(); // Prevent the default form submission
-            
             var formData = new FormData(this);
 
             fetch('login-process.php', {
