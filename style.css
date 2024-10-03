@@ -87,11 +87,48 @@ header .navbar a {
   font-size: 2rem;
   padding: 0 1.5rem;
   color: #666;
+  font-weight: bold;
+}
+.navbar {
+  background-color: #aca7eb;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header .navbar a:hover {
   color: var(--red);
   text-decoration: none;
+}
+
+header .navbar a {
+  font-size: 2rem;
+  padding: 0 1.5rem;
+  color: #ffffff;
+  position: relative; 
+}
+
+header .navbar a::after {
+  content: ''; 
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: var(--blue);
+  position: absolute;
+  left: 50%; 
+  bottom: -5px;
+  transition: width 0.3s ease, left 0.3s ease; 
+}
+
+header .navbar a:hover::after {
+  width: 100%; 
+  left: 0;
+  text-decoration: none;
+}
+
+header .navbar a:hover {
+  color: var(--blue);
 }
 
 header .icons a {
