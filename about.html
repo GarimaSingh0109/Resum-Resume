@@ -5,7 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - LinkedIn Resume Builder</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <link rel="icon" href="images/favicon-removebg-preview.png" />
+
+    <link rel="stylesheet" href="style.css" />
+   <style>
         :root{
          --purple: #aca7eb;
         }
@@ -31,6 +47,7 @@
         .content1{
             display: flex;
             justify-content: flex-start;
+            margin-top: 120px;
         }
         .gif{
             margin-left: 100px;
@@ -172,20 +189,109 @@
             .navbar h1 {
                 margin-bottom: 10px;
             }
+            .navbar ul li a {
+            color: rgb(53, 52, 52);
+            text-decoration: none;
+            font-size: 18px;
         }
+        }
+     /* Responsive Styles */
+@media (max-width: 1200px) {
+    .content {
+        padding: 20px;
+    }
+
+    .content1 {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .content1 {
+        flex-direction: column;
+    }
+
+    .content h2 {
+        font-size: 24px;
+    }
+
+    .content p, .content ul li {
+        font-size: 16px;
+    }
+
+    img {
+        margin: 10px 0;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .content {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .content h2 {
+        font-size: 20px;
+    }
+
+    .content p, .content ul li {
+        font-size: 14px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .back-button a {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .footer {
+        font-size: 16px;
+    }
+}
+@media (max-width: 769px) {
+.navbar,
+  .icons {
+    display: none;
+  }
+}
     </style>
 </head>
 <body>
 
-   <!-- Navbar -->
-   <nav class="navbar">
-    <h1>Resume Builder</h1>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="resume.html">Build Resume</a></li>
-    </ul>
-</nav>
+ <header>  <!-- Navbar -->
+    <input type="checkbox" name="" id="toggler" />
+    <label for="toggler" class="fas fa-bars"></label>
+    <a href="#" class="logo">Resume Builder</a>
+    <nav class="navbar">
+     <ul>
+         <li><a href="index.html">Home</a>
+         <li><a href="about.html">About</a>
+         <li><a href="resume.html">Build Resume</a>
+     </ul>
+ </nav>
+ <div class="sidebar">
+     <span class="close-btn">&times;</span>
+     <a href="index.html">Home</a></li>
+         <a href="about.html">About</a></li>
+         <a href="resume.html">Build Resume</a>
+ 
+     <!-- Sidebar icons -->
+     <div class="sidebar-icons">
+       <a href="about.html" class="fas fa-info-circle"></a>
+       <a href="#" class="fas fa-envelope"></a>
+       <a href="login.html" id="loginIcon" class="fas fa-user"></a>
+     </div>
+   </div></header>
     <div class="content1">
         <img src="Li.gif" alt="" height="150px">
         <div class="content">
@@ -230,6 +336,22 @@
     <div class="footer">
         <p>Powered by Resume Builder &copy; 2024</p>
     </div>
-
+    <script>
+        const toggler = document.getElementById("toggler");
+        const body = document.body;
+        const closeBtn = document.querySelector(".close-btn");
+  
+        closeBtn.addEventListener("click", function () {
+          toggler.checked = false;
+          body.classList.remove("sidebar-active");
+        });
+        toggler.addEventListener("change", function () {
+          if (toggler.checked) {
+            body.classList.add("sidebar-active");
+          } else {
+            body.classList.remove("sidebar-active");
+          }
+        });
+      </script>
 </body>
 </html>
