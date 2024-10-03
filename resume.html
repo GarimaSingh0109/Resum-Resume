@@ -8,6 +8,27 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="icon" href="images/favicon-removebg-preview.png" />
+
+  <link rel="stylesheet" href="style.css" />
     <style>
 
       :root {
@@ -22,7 +43,7 @@
 
       .container {
         max-width: 600px;
-        margin: 50px auto;
+        margin: 12vw auto;
         background-color: #fff;
         padding: 20px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -78,7 +99,7 @@
         color: #666;
       }
       .navbar {
-        background-color: var(--purple);
+        /* background-color: var(--purple); */
         padding: 15px 20px;
         display: flex;
         justify-content: space-between;
@@ -137,6 +158,32 @@
     </style>
   </head>
   <body>
+      <!-- header section starts -->
+
+      <header>
+        <input type="checkbox" name="" id="toggler" />
+        <label for="toggler" class="fas fa-bars"></label>
+        <a href="#" class="logo"><img src=assets/logo.png width="80px" margin-right="-19px">RESUME<span>.</span></a>
+  
+  
+        <nav class="navbar">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="resume.html">Build Resume</a>
+          <a href="signup.html">Sign Up</a>
+          <a href="login.html">Login</a>
+        </nav>
+  
+        <div class="icons">
+          <a href="about.html" class="fas fa-info-circle"></a>
+          <a href="#" class="fas fa-envelope"></a>
+          <a href="login.html" id="loginIcon" class="fas fa-user"></a>
+        </div>
+      </header>
+  
+      <!-- header section ends -->
+  
+
     <div class="container">
       <!-- Navbar -->
       <nav class="navbar">
