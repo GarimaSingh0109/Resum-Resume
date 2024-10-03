@@ -1,5 +1,5 @@
 :root{
-    --purple: #aca7eb;
+    --purple: #6e65f0;
 }
 
 * {
@@ -56,7 +56,7 @@ section{
 header{
     position: fixed;
     top: 0; left: 0; right: 0;
-    background: #fff;
+    background: #f0f0f4;
     padding: 2rem 9%;
     display: flex;
     align-items: center;
@@ -78,13 +78,13 @@ header .logo:hover{
 }
 
 header .logo span{
-    color: var(--#3f10ea);
+    color: var(--#2b1480);
 }
 
 header .navbar a{
     font-size: 2rem;
     padding: 0 1.5rem;
-    color: #666;
+    color: #0d1193;
 }
 
 header .navbar a:hover{
@@ -94,7 +94,7 @@ header .navbar a:hover{
 
 header .icons a{
     font-size: 2.5rem;
-    color: #333;
+    color: #180c3a;
     margin-left: 1.5rem;
 }
 
@@ -108,7 +108,7 @@ header #toggler{
 
 header .fa-bars{
     font-size: 3rem;
-    color:#333;
+    color:#180c3a;
     border-radius: .5rem;
     padding: .5rem 1.5rem;
     cursor: pointer;
@@ -150,7 +150,7 @@ body {
 
 .home .content h3{
     font-size: 5rem;
-    color: #333;
+    color: #0e0d0d;
 }
 
 .home .content span{
@@ -162,7 +162,7 @@ body {
 
 .home .content p{
     font-size: 1.5rem;
-    color: #999;
+    color: #0f0f16;
     padding: 1rem 0;
     line-height: 1.5;
 }
@@ -170,11 +170,12 @@ body {
 
 /* Footer Styles */
 .footer {
-    background-color: #1a1a1a;
+    background-color: #242d45;
     color: #fff;
     padding: 40px 0;
     font-size: 14px;
 }
+
 
 .footer .footer-content {
     display: flex;
