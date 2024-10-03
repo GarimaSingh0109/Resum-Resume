@@ -1,0 +1,12 @@
+{
+  "name": "resum-resume",
+  "version": "1.0.0",
+  "description": "This project is a **LinkedIn Resume Builder** that allows users to generate professional resumes from their LinkedIn profiles in just a few clicks. The website is designed with a clean and responsive UI using **Bootstrap**, and it focuses on simplicity and ease of use. Users can sign up, log in, and create a polished resume using their LinkedIn URL.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
