@@ -8,10 +8,19 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <!-- For icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <style>
       :root {
         --purple: #aca7eb;
+        --hover-purple: #8c82db;
+        --dark-purple: #6761c5;
+        --footer-bg: #2c2b40;
       }
+
       body {
         font-family: "Roboto", sans-serif;
         background-color: #f4f4f9;
@@ -21,67 +30,32 @@
 
       .container {
         max-width: 600px;
-        margin: 50px auto;
+        margin: 80px auto 50px;
         background-color: #fff;
-        padding: 20px;
+        padding: 30px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
       }
 
       h1 {
         text-align: center;
         color: #333;
-      }
-
-      form {
-        display: flex;
-        flex-direction: column;
-      }
-
-      label {
-        margin: 10px 0 5px;
-        color: #333;
-        font-weight: 500;
-      }
-
-      input[type="url"],
-      select,
-      button {
-        padding: 10px;
-        font-size: 16px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
+        font-size: 28px;
         margin-bottom: 20px;
-        outline: none;
+        background: linear-gradient(to right, var(--purple), var(--dark-purple));
+        -webkit-background-clip: text;
+        color: transparent;
       }
 
-      input[type="url"]:focus,
-      select:focus {
-        border-color: var(--purple);
-      }
-
-      button {
-        background-color: var(--purple);
-        color: white;
-        border: none;
-        cursor: pointer;
-      }
-
-      button:hover {
-        background-color: var(--purple);
-      }
-
-      .footer {
-        text-align: center;
-        margin-top: 20px;
-        font-size: 14px;
-        color: #666;
-      }
+      /* Navbar */
       .navbar {
-        background-color: var(--purple);
+        background: linear-gradient(to right, var(--purple), var(--dark-purple));
         padding: 15px 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 0 0 10px 10px;
       }
 
       .navbar h1 {
@@ -106,15 +80,92 @@
         color: white;
         text-decoration: none;
         font-size: 18px;
+        display: flex;
+        align-items: center;
+      }
+
+      .navbar ul li a i {
+        margin-right: 5px;
       }
 
       .navbar ul li a:hover {
         text-decoration: underline;
       }
 
-      /* Main Content Placeholder */
-      .content {
-        padding: 20px;
+      /* Form */
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      label {
+        margin: 10px 0 5px;
+        color: #333;
+        font-weight: 500;
+      }
+
+      input[type="url"],
+      select,
+      button {
+        padding: 12px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        outline: none;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      input[type="url"]:focus,
+      select:focus {
+        border-color: var(--purple);
+        box-shadow: 0 0 5px rgba(172, 167, 235, 0.5);
+      }
+
+      button {
+        background-color: var(--purple);
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 30px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      button:hover {
+        background-color: var(--hover-purple);
+        transform: translateY(-2px);
+      }
+
+      /* Footer */
+      .footer {
+        background-color: var(--footer-bg);
+        padding: 15px;
+        text-align: center;
+        color: white;
+        margin-top: 20px;
+        font-size: 14px;
+        border-radius: 8px;
+      }
+
+      .footer p {
+        margin: 5px 0;
+      }
+
+      .footer .social-icons {
+        margin-top: 10px;
+      }
+
+      .footer .social-icons a {
+        color: white;
+        margin: 0 10px;
+        text-decoration: none;
+        font-size: 20px;
+        transition: color 0.3s ease;
+      }
+
+      .footer .social-icons a:hover {
+        color: var(--purple);
       }
 
       /* Responsive adjustments */
@@ -133,25 +184,6 @@
           margin-bottom: 10px;
         }
       }
-      @media (max-width: 400px) {
-        .navbar ul {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-evenly;
-          width: 100%;
-        }
-        .navbar ul li {
-          justify-content: space-evenly !important;
-        }
-        .navbar ul li a {
-          color: #eee7e7;
-          font-size: 20px;
-        }
-        .navbar ul li a:hover {
-          color: #ffffff;
-          font-size: 22px;
-        }
-      }
     </style>
   </head>
   <body>
@@ -160,10 +192,11 @@
       <nav class="navbar">
         <h1>Resume Builder</h1>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
         </ul>
       </nav>
+
       <form id="resumeForm">
         <label for="linkedin-url">LinkedIn Profile URL</label>
         <input
@@ -186,6 +219,11 @@
 
       <div class="footer">
         <p>Powered by Resume Builder &copy; 2024</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
       </div>
     </div>
 
