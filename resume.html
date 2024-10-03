@@ -1,175 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resume Builder from LinkedIn</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 0;
-        }
+      :root {
+        --deep-teal: #003d4d; /* Updated primary color */
+        --off-white: #f8f9fa; /* Updated background color */
+        --dark-slate: #2f4f4f; /* Text color */
+        --soft-gold: #d9c79e; /* Accent color */
+      }
 
-        .container {
-            max-width: 600px;
-            margin: 50px auto;
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        text-transform: capitalize;
+        transition: 0.2s linear;
+      }
 
-        h1 {
-            text-align: center;
-            color: #333;
-        }
+      body {
+        background-color: var(--off-white);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Ensure body takes full height */
+      }
 
-        form {
-            display: flex;
-            flex-direction: column;
-        }
+      .container {
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px; /* Added rounded corners */
+        transition: box-shadow 0.3s ease;
+      }
 
-        label {
-            margin: 10px 0 5px;
-            color: #333;
-            font-weight: 500;
-        }
+      .container:hover {
+        box-shadow: 0 0 20px rgba(0, 77, 79, 0.8); /* Glow effect on hover */
+      }
 
-        input[type="url"], select, button {
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            margin-bottom: 20px;
-            outline: none;
-        }
+      h1 {
+        text-align: center;
+        color: var(--dark-slate); /* Updated heading color */
+      }
 
-        input[type="url"]:focus, select:focus {
-            border-color: #0073b1;
-        }
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto; /* Adjusted height for more fields */
+        width: 300px;
+      }
 
-        button {
-            background-color: #0073b1;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
+      label {
+        margin: 10px 0 5px;
+        color: var(--dark-slate); /* Updated label color */
+        font-weight: 500;
+      }
 
-        button:hover {
-            background-color: #005f8c;
-        }
+      input[type="url"],
+      input[type="email"],
+      input[type="tel"],
+      select,
+      button {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        outline: none;
+      }
 
-        .footer {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 14px;
-            color: #666;
-        }
+      input[type="url"]:focus,
+      input[type="email"]:focus,
+      input[type="tel"]:focus,
+      select:focus {
+        border-color: var(--purple);
+      }
+
+      button {
+        background-color: var(--deep-teal);
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      button:hover {
+        background-color: var(--soft-gold); /* Soft gold hover color */
+        color: var(--deep-teal);
+        transform: scale(1.05);
+      }
+
+      .footer {
+        text-align: center;
+        margin-top: auto; /* Push footer to the bottom */
+        padding: 34px 0;
+        background-color: var(--deep-teal);
+        color: white;
+        font-size: 14px;
+      }
+
+      .navbar {
+        background-color: var(--deep-teal);
+        padding: 30px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .navbar h1 {
+        color: white;
+        margin-left: 15px;
+        font-size: 2rem;
+        transition: color 0.3s ease;
+      }
+
+      .navbar h1:hover {
+        color: var(--soft-gold);
+      }
+
+      .navbar ul {
+        list-style-type: none;
+        margin-right: 30px;
+        padding: 0;
+        display: flex;
+        gap: 20px;
+      }
+
+      .navbar ul li {
+        display: inline;
+      }
+
+      .navbar ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        transition: color 0.3s ease;
+      }
+
+      .navbar ul li a:hover {
+        color: var(--soft-gold);
+      }
+
+      .content {
+        padding: 20px;
+        text-align: center;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
         .navbar {
-            background-color: #0073b1;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .navbar h1 {
-            color: white;
-            margin: 0;
-            font-size: 24px;
+          flex-direction: column;
+          align-items: flex-start;
         }
 
         .navbar ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 20px;
+          flex-direction: column;
+          gap: 10px;
         }
 
-        .navbar ul li {
-            display: inline;
+        .navbar h1 {
+          margin-bottom: 10px;
         }
 
-        .navbar ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
+        .container {
+          max-width: 90%; /* Adjusted width for mobile */
         }
-
-        .navbar ul li a:hover {
-            text-decoration: underline;
-        }
-
-        /* Main Content Placeholder */
-        .content {
-            padding: 20px;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .navbar ul {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .navbar h1 {
-                margin-bottom: 10px;
-            }
-        }
+      }
     </style>
-</head>
-<body>
-
-<div class="container">
+  </head>
+  <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <h1>Resume Builder</h1>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="resume.html">Build Resume</a></li>
-        </ul>
+      <h1>Resum Resume</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.html">Build Resume</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
     </nav>
-    <form id="resumeForm">
+
+    <div class="container">
+      <form id="resumeForm">
         <label for="linkedin-url">LinkedIn Profile URL</label>
-        <input type="url" id="linkedin-url" name="linkedin-url" placeholder="Enter your LinkedIn URL" required>
+        <input
+          type="url"
+          id="linkedin-url"
+          name="linkedin-url"
+          placeholder="Enter your LinkedIn URL"
+          required
+        />
+
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email address"
+          required
+        />
+
+        <label for="phone">Phone Number</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Enter your phone number"
+          required
+        />
 
         <label for="template">Choose a Resume Template</label>
         <select id="template" name="template" required>
-            <option value="classic">Classic Template</option>
-            <option value="modern">Modern Template</option>
-            <option value="minimalist">Minimalist Template</option>
+          <option value="classic">Classic Template</option>
+          <option value="modern">Modern Template</option>
+          <option value="minimalist">Minimalist Template</option>
         </select>
 
         <button type="submit">Generate Resume</button>
-    </form>
-
-    <div class="footer">
-        <p>Powered by Resume Builder &copy; 2024</p>
+      </form>
     </div>
-</div>
 
-<script>
-    document.getElementById('resumeForm').addEventListener('submit', function(event) {
-        event.preventDefault();
+    <!-- Footer -->
+    <div class="footer">
+      <p>Powered by Resume Builder &copy; 2024</p>
+    </div>
 
-        const linkedInUrl = document.getElementById('linkedin-url').value;
-        const template = document.getElementById('template').value;
+    <script>
+      document
+        .getElementById("resumeForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
 
-        if (linkedInUrl && template) {
-            alert(`Generating resume using ${template} template for LinkedIn profile: ${linkedInUrl}`);
-            // Here you would add logic to send this data to your backend for processing
-        }
-    });
-</script>
+          const linkedInUrl = document.getElementById("linkedin-url").value;
+          const email = document.getElementById("email").value;
+          const phone = document.getElementById("phone").value;
+          const template = document.getElementById("template").value;
 
-</body>
+          if (linkedInUrl && email && phone && template) {
+            alert(
+              `Generating resume using ${template} template for LinkedIn profile: ${linkedInUrl}, Email: ${email}, Phone: ${phone}`
+            );
+            // Add logic to send this data to your backend for processing
+          }
+        });
+    </script>
+  </body>
 </html>

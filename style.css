@@ -1,0 +1,261 @@
+:root{
+    --deep-teal: #003d4d; /* Deep Teal */
+    --off-white: #f8f9fa; /* Off-White */
+    --dark-slate: #2f4f4f; /* Dark Slate */
+    --soft-gold: #d9c79e; /* Soft Gold */
+}
+
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    color: var(--dark-slate); /* Dark Slate color */
+    padding: 1rem;
+    margin: 2rem 0;
+    background: var(--deep-teal); /* Changed background to Deep Teal */
+}
+
+.heading span {
+    color: var(--soft-gold); /* Soft Gold for span */
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: var(--soft-gold); /* Soft Gold button background */
+    color: var(--dark-slate); /* Dark Slate text color */
+    padding: 0.9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.btn:hover {
+    background: var(--deep-teal); /* Deep Teal on hover */
+}
+
+header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: var(--deep-teal); /* Changed background to Deep Teal */
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 3rem;
+    color: var(--off-white); /* White logo for contrast */
+    font-weight: bolder;
+}
+
+header .logo:hover {
+    font-size: 3rem;
+    color: var(--soft-gold); /* Soft Gold on hover for logo */
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+header .logo span {
+    color: var(--off-white); /* Updated to match logo color */
+}
+
+header .navbar a {
+    font-size: 2rem;
+    padding: 15px;
+    color: var(--off-white); /* White text for better contrast */
+    text-decoration: none; /* Ensure no underline by default */
+}
+
+header .navbar a:hover {
+    color: var(--soft-gold); /* Soft Gold on hover */
+    text-decoration: none; /* Ensure no underline by default */
+}
+
+header .icons a {
+    font-size: 2.5rem;
+    color: var(--off-white); /* White icons for contrast */
+    margin-left: 1.5rem;
+}
+
+header .icons a:hover {
+    color: var(--soft-gold); /* Soft Gold hover effect for icons */
+}
+
+header #toggler {
+    display: none;
+}
+
+header .fa-bars {
+    font-size: 3rem;
+    color: var(--off-white); /* White for better visibility */
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+/* Default light mode styles */
+body {
+    background-color: var(--off-white); /* Changed from #ffffff to Off-White */
+    color: var(--dark-slate); /* Changed from #000000 to Dark Slate */
+}
+
+/* Dark mode styles */
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode button {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+/* Add more styles as needed for other elements */
+
+.home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(images/background-home.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    max-width: 50rem;
+}
+
+.home .content h3{
+    font-size: 5rem;
+    color: var(--dark-slate); /* Changed from #333 to Dark Slate */
+
+}
+
+.home .content span{
+    font-size: 3.5rem;
+    color: var(--soft-gold); /* Changed from var(--purple) to Soft Gold */
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.home .content p{
+    font-size: 1.5rem;
+    color: #666; /* Changed from #999 to a darker gray for better readability */
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+
+
+
+
+
+/* media queries */
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    .home {
+        background-position: left;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    html .fa-bars {
+        display: block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #f9f9f9; /* Updated background to a softer light color */
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header #toggler:checked ~ .navbar {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a {
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #ffffff; /* Updated to a cleaner white */
+        border: 0.1rem solid rgba(0, 0, 0, 0.1);
+        color: var(--dark-slate); /* Changed text color to Dark Slate */
+        display: block;
+    }
+
+    header .navbar a:hover {
+        color: var(--soft-gold); /* Hover color set to Soft Gold */
+    }
+
+    .home .content h3 {
+        font-size: 5rem;
+    }
+
+    .home .content span {
+        font-size: 2.5rem;
+    }
+
+    .icons-container .icons h3 {
+        font-size: 2rem;
+    }
+    
+    .icons-container .icons span {
+        font-size: 1.7rem;
+    }
+     
+
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
+    
+}

@@ -4,327 +4,319 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LinkedIn Resume Builder - Home</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <link rel="icon" href="images/favicon-removebg-preview.png">
+
+    <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f0f4f8;
-            margin: 0;
-            padding: 0;
-        }
+    <label for="dark-mode-toggle" style="margin: 20px; display: block; text-align: center;">
+    <input type="checkbox" id="dark-mode-toggle" />
+    Toggle Dark Mode
+    </label>
 
-        .header {
-            background-color: #0073b1;
-            padding: 20px;
-            text-align: center;
-            color: white;
-        }
+<!-- Features Section -->
+<style>
+.features {
+    padding: 60px 20px;
+    background-color: #f9f9f9; /* Consider changing this to a darker tone if needed */
+}
 
-        .header h1 {
-            margin: 0;
-            font-size: 36px;
-        }
+.features h2 {
+    text-align: center;
+    color: #333; /* Consider changing this for better contrast */
+    margin-bottom: 40px;
+    font-size: 32px;
+}
 
-        .content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 80vh;
-        }
+.features-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-        .content h2 {
-            font-size: 28px;
-            color: #333;
-            margin-bottom: 20px;
-            text-align: center;
-        }
+.features-card {
+    background-color: #fff; /* You might want to change this to a softer off-white */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 30px);
+    text-align: center;
 
-        .content p {
-            font-size: 18px;
-            color: #555;
-            text-align: center;
-            max-width: 600px;
-            margin-bottom: 30px;
-        }
+    transition: transform 0.3s, box-shadow 0.3s, z-index 0.3s;
+    position: relative;
+    z-index: 1;
+}
 
-        .cta-button {
-            padding: 15px 30px;
-            font-size: 18px;
-            color: white;
-            background-color: #0073b1;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-        }
+.features-card:hover {
+    transform: translateY(-10px) scale(1.1);
+    box-shadow: 0 4px 8px #0073b1; /* Consider adjusting this to match the modern minimalist theme */
+    z-index: 3;
+}
+.features-card img {
+    width: 60px; /* Set the width for the icon images */
+    height: 60px; /* Set the height for the icon images */
+    margin-bottom: 20px;
+    border-radius: 10px; /* Rounded corners for the images */
+    transition: transform 0.3s ease;
+}
 
-        .cta-button:hover {
-            background-color: #005f8c;
-        }
+.features-card:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
 
-        .footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-            color: #666;
-            background-color: #f4f4f9;
-        }
-        /* Navbar Styles */
-        .navbar {
-            background-color: #0073b1;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+.features-card h3 {
+    color: var(--deep-teal); /* Use the deep teal color for headings */
+    margin: 15px 0;
+    font-size: 22px;
+}
 
-        .navbar h1 {
-            color: white;
-            margin: 0;
-            font-size: 24px;
-        }
+.features-card p {
+    color: var(--dark-slate); /* Use dark slate for paragraph text */
+    font-size: 16px;
+}
 
-        .navbar ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 20px;
-        }
+/* Testimonials Section */
+.testimonials {
+    padding: 60px 20px;
+    background-color: var(--off-white); /* Use the off-white background color */
+}
 
-        .navbar ul li {
-            display: inline;
-        }
+.testimonials h2 {
+    text-align: center;
+    color: var(--dark-slate); /* Use dark slate for heading text */
+    margin-bottom: 40px;
+    font-size: 32px;
+}
 
-        .navbar ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-        }
+.testimonial-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-        .navbar ul li a:hover {
-            text-decoration: underline;
-        }
+.testimonial-card {
+    background-color: var(--off-white); /* Use off-white for testimonial cards */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 30px);
+    text-align: center;
+}
 
-        /* Main Content Placeholder */
-        .content {
-            padding: 20px;
-        }
+.testimonial-card img {
+    width: 80px; /* Profile image width */
+    height: 80px; /* Profile image height */
+    border-radius: 50%; /* Circular shape for profile images */
+    margin-bottom: 20px;
+}
+.testimonial-card h3 {
+    color: var(--deep-teal); /* Use deep teal for testimonial headings */
+    margin: 10px 0;
+    font-size: 20px;
+}
 
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                align-items: flex-start;
-            }
+.testimonial-card p {
+    color: var(--dark-slate); /* Use dark slate for testimonial text */
+    font-size: 16px;
+    font-style: italic; /* Italic style for testimonial text */
+}
 
-            .navbar ul {
-                flex-direction: column;
-                gap: 10px;
-            }
+/* Footer Styles */
+.footer {
+    background-color: var(--deep-teal); /* Use deep teal for footer background */
+    color: #ffffff; /* White text for footer */
+    padding: 40px 0;
+}
 
-            .navbar h1 {
-                margin-bottom: 10px;
-            }
-        }
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px; /* Max width for footer content */
+    margin: 0 auto; /* Center footer content */
+    padding: 0 20px;
+}
 
-        /* Features Section */
-        .features {
-            padding: 60px 20px;
-            text-align: center;
-        }
+.footer-section {
+    flex: 1; /* Flexible sections in footer */
+    margin-bottom: 20px; /* Space between footer sections */
+    min-width: 200px; /* Minimum width for each section */
+}
 
-        .features h2 {
-            color: #333;
-            margin-bottom: 40px;
-        }
+.text {
+    padding-right: 20px; /* Right padding for text sections */
+    max-width: 50%; /* Maximum width for text sections */
+}
 
-        .features-cards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
+.image {
+    max-width: 50%; /* Maximum width for image sections */
+}
 
-        .features-card {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            text-align: center;
-        }
+.image img {
+    width: 100%; /* Full width for images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners for images */
+}
 
-        .features-card img {
-            width: 60px;
-            height: 60px;
-            margin-bottom: 15px;
-        }
+.footer-section h3 {
+    font-size: 18px; /* Font size for section headings */
+    font-weight: 700; /* Bold weight for section headings */
+    margin-bottom: 15px; /* Space below section headings */
+    color: #ffffff; /* White color for headings */
+}
 
-        .features-card h3 {
-            color: #0073b1;
-            margin: 15px 0;
-            font-size: 20px;
-        }
+.footer-section ul {
+    list-style-type: none; /* No bullet points for list */
+    padding: 0; /* No padding for list */
+}
 
-        .features-card p {
-            color: #666;
-            font-size: 16px;
-        }
+.footer-section ul li {
+    margin-bottom: 8px; /* Space between list items */
+}
 
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .features-cards {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
+.footer-section ul li a {
+    color: #e0e0e0; /* Light grey for links */
+    text-decoration: none; /* No underline for links */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
 
-        /* Testimonials Section */
-        .testimonials {
-            padding: 60px 20px;
-            text-align: center;
-            background-color: #ffffff;
-        }
+.footer-section ul li a:hover {
+    color: #ffffff; /* White color on hover */
+    text-decoration: underline; /* Underline on hover */
+}
 
-        .testimonials h2 {
-            color: #333;
-            margin-bottom: 40px;
-        }
+.social-icons {
+    margin-top: 15px; /* Space above social icons */
+}
 
-        .testimonial-cards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
+.social-icons a {
+    color: #ffffff; /* White color for social icons */
+    font-size: 20px; /* Font size for social icons */
+    margin-right: 15px; /* Space between social icons */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
 
-        .testimonial-card {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            text-align: center;
-        }
+.social-icons a:hover {
+    color: var(--light-grey); /* Use light grey on hover for social icons */
+}
 
-        .testimonial-card img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            margin-bottom: 15px;
-        }
+.footer-bottom {
+    text-align: center; /* Center the text in the footer bottom */
+    padding-top: 20px; /* Space above footer bottom */
+    margin-top: 20px; /* Space above footer bottom */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Light border for separation */
+}
 
-        .testimonial-card h3 {
-            color: #0073b1;
-            margin: 10px 0;
-            font-size: 18px;
-        }
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
 
-        .testimonial-card p {
-            color: #666;
-            font-size: 16px;
-            font-style: italic;
-        }
+    .navbar ul {
+        flex-direction: column; /* Stack navbar links vertically */
+        gap: 10px; /* Space between navbar links */
+        margin-top: 10px; /* Space above navbar links */
+    }
 
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .testimonial-cards {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-        .container {
-            padding: 20px;
-        }
-        .content {
-            flex: 1;
-        }
-        .text {
-            padding-right: 20px; /* Space between text and image */
-            max-width: 50%; /* Adjust to ensure content and image fit well */
-        }
-        .image {
-            max-width: 50%; /* Adjust to ensure content and image fit well */
-        }
-        .image img {
-            width: 100%; /* Ensure the image fills the container */
-            height: auto;
-            border-radius: 8px; /* Optional: for rounded corners */
-        }
-        .cta-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .cta-button:hover {
-            background-color: #0056b3;
-        }
+    .hero-content {
+        flex-direction: column; /* Stack hero content vertically */
+    }
 
+    .hero-text {
+        padding-right: 0; /* Remove right padding for hero text */
+        margin-bottom: 30px; /* Space below hero text */
+    }
+
+    .features-card, .testimonial-card {
+        width: 100%; /* Full width for cards on small screens */
+    }
+
+    .footer-content {
+        flex-direction: column; /* Stack footer content vertically */
+    }
+
+    .footer-section {
+        margin-bottom: 30px; /* Space below footer sections */
+    }
+}
 
     </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <h1>Resum Resume</h1>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="resume.html">Build Resume</a></li>
-            <li><a href="signup.html">Sign Up</a></li>
-            <li><a href="login.html">Log In</a></li>
-        </ul>
-    </nav>
+   <!-- header section starts -->
 
-
-    <div class="container d-flex">
-        <div class="content d-flex align-items-center">
-            <div class="text">
-                <h2>Build Your Resume in Seconds from LinkedIn</h2>
-                <p>
-                    Easily generate a professional resume using your LinkedIn profile. Select a template, enter your LinkedIn URL,
-                    and get a downloadable resume in a few clicks. Save time and create a resume that stands out. 
-                </p>
-                <a href="signup.html" class="cta-button">Get Started</a>
-            </div>
-            <div class="image">
-                <img src="Hero Section.jpg" alt="Resume Builder Image">
-            </div>
-        </div>
-    </div>
-
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<header>
+        
+    <input type="checkbox" name="" id="toggler">
+    <label for="toggler" class="fas fa-bars"></label>
+    <a href="#" class="logo">Resum Resume</a>
+             
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="about.html">About</a>
+                <a href="resume.html">Build Resume</a>
+                <a href="signup.html">Sign Up</a>
+                <a href="login.html">Login</a>
+            </nav>
     
+            <div class="icons">
+                <a href="about.html" class="fas fa-info-circle"></a>
+                <a href="#" class="fas fa-envelope"></a>
+                <a href="login.html" id="loginIcon" class="fas fa-user"></a>
+            </div>
+    
+        </header> 
+        
+        <!-- header section ends -->
+    
+    
+        <!-- home section starts -->
+    
+        <section class="home" id="Home">
+    
+            <div class="content">
+                <h3>Build Your Resume in Seconds from LinkedIn</h3>
+                <p>Easily generate a professional resume using your LinkedIn profile. Select a template, enter your LinkedIn URL,
+                    and get a downloadable resume in a few clicks. Save time and create a resume that stands out. </p>
+                <a href="signup.html" class="btn">Get Started</a>
+            </div>
+    
+        </section>
+    
+        <!-- home section ends-->
+
     <!-- Features Section -->
     <section class="features">
         <h2>Our Features</h2>
         <div class="features-cards">
             <div class="features-card">
-                <img src="https://source.unsplash.com/60x60/?job" alt="Easy to Use">
+                <img src="assets/joao-ferrao-4YzrcDNcRVg-unsplash.jpg" alt="Easy to Use" >
                 <h3>Easy to Use</h3>
                 <p>Create a professional resume effortlessly with our user-friendly interface.</p>
             </div>
             <div class="features-card">
-                <img src="https://source.unsplash.com/60x60/?analytics" alt="Instant Resume">
+                <img src="assets/instant resume.jpg" alt="Instant Resume">
                 <h3>Instant Resume</h3>
                 <p>Generate a polished resume in seconds using your LinkedIn profile data.</p>
             </div>
             <div class="features-card">
-                <img src="https://source.unsplash.com/60x60/?security" alt="Secure Data">
+                <img src="assets/securedata.jpg" alt="Secure Data">
                 <h3>Secure Data</h3>
                 <p>Your personal information is safe with our secure and encrypted platform.</p>
             </div>
             <div class="features-card">
-                <img src="https://source.unsplash.com/60x60/?support" alt="24/7 Support">
+                <img src="assets/support.jpg" alt="24/7 Support">
                 <h3>24/7 Support</h3>
                 <p>Our dedicated support team is available round the clock to assist you.</p>
             </div>
@@ -336,27 +328,68 @@
         <h2>What Our Users Say</h2>
         <div class="testimonial-cards">
             <div class="testimonial-card">
-                <img src="https://source.unsplash.com/60x60/?portrait" alt="User 1">
+                <img src="assets/jondoe.jpg" alt="User 1">
                 <h3>Jane Doe</h3>
                 <p>"This resume builder transformed my LinkedIn profile into a professional resume effortlessly. Highly recommended!"</p>
             </div>
             <div class="testimonial-card">
-                <img src="https://source.unsplash.com/60x60/?portrait" alt="User 2">
+                <img src="assets/john_smith.jpg" alt="User 2">
                 <h3>John Smith</h3>
                 <p>"I was amazed at how quickly I was able to generate a resume. The process was smooth and the result was perfect."</p>
             </div>
             <div class="testimonial-card">
-                <img src="https://source.unsplash.com/60x60/?portrait" alt="User 3">
+                <img src="assets/emily_johnson.jpg" alt="User 3">
                 <h3>Emily Johnson</h3>
                 <p>"The platform is user-friendly and secure. I felt confident that my data was protected. Great service!"</p>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Resume Builder</a></li>
+                    <li><a href="#">CV Templates</a></li>
+                    <li><a href="#">Career Advice</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Resume Builder. All rights reserved.</p>
+        </div>
+    </footer>
 
-    <div class="footer">
-        <p>Powered by Resume Builder &copy; 2024</p>
-    </div>
-
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

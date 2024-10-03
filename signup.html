@@ -6,15 +6,34 @@
     <title>Sign Up - LinkedIn Resume Builder</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --deep-teal: #003d4d;
+            --off-white: #f8f9fa;
+            --dark-slate: #2f4f4f;
+            --soft-gold: #d9c79e;
+        }
+
+        * {
+            margin: 0; 
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            text-transform: capitalize;
+            transition: .2s linear;
+        }
+
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f0f4f8;
+            background-color: var(--off-white);
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            flex-direction: column; /* Added for vertical alignment */
         }
 
         .container {
@@ -27,8 +46,20 @@
             text-align: center;
         }
 
+        .logo {
+            font-size: 2rem; /* Decreased size for single line */
+            color: var(--deep-teal);
+            font-weight: 600;
+            margin-bottom: 20px;
+            cursor: pointer; /* Change cursor to pointer */
+        }
+
+        .logo:hover {
+            color: var(--soft-gold); /* Change color on hover */
+        }
+
         h2 {
-            color: #333;
+            color: var(--dark-slate);
             margin-bottom: 20px;
         }
 
@@ -45,7 +76,7 @@
         button {
             width: 100%;
             padding: 15px;
-            background-color: #0073b1;
+            background-color: var(--deep-teal);
             color: white;
             border: none;
             border-radius: 4px;
@@ -54,20 +85,36 @@
         }
 
         button:hover {
-            background-color: #005f8c;
+            background-color: var(--soft-gold);
+        }
+
+        .login-btn {
+            background-color: var(--soft-gold);
+            margin-top: 10px;
+        }
+
+        .login-btn:hover {
+            background-color: var(--deep-teal);
         }
 
         .footer {
-            margin-top: 20px;
+            margin-top: 20px; /* Space between container and footer */
+            text-align: center;
+            width: 100%; /* Ensure the footer takes full width */
+            background-color: var(--deep-teal); /* Background color for the footer */
+            color: white; /* Text color */
+            padding: 30px 0; /* Padding for spacing */
+            position: absolute; /* Positioning at the bottom */
+            bottom: 0; /* Align to the bottom */
         }
 
         .footer p {
-            color: #666;
+            color: #fff; /* Text color for footer */
             font-size: 14px;
         }
 
         .footer a {
-            color: #0073b1;
+            color: var(--soft-gold);
             text-decoration: none;
         }
 
@@ -79,22 +126,25 @@
 <body>
 
     <div class="container">
+        <div class="logo" onclick="window.location.href='index.html'">Resum Resume</div>
         <h2>Create Your Account</h2>
-        <form action="#" method="POST">
+        <form id="signupForm" action="#" method="POST">
             <input type="text" placeholder="Full Name" required>
             <input type="email" placeholder="Email Address" required>
             <input type="password" placeholder="Password" required>
             <input type="password" placeholder="Confirm Password" required>
             <button type="submit">Sign Up</button>
         </form>
-        <div class="footer">
-            <p>Already have an account? <a href="login.html">Log In</a></p>
-        </div>
+        <button class="login-btn" onclick="window.location.href='login.html'">Go to Login</button>
+    </div>
+
+    <div class="footer">
+        <p>Powered by Resume Builder &copy; 2024</p>
     </div>
 
     <script>
         document.getElementById('signupForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission
+            event.preventDefault();
 
             var formData = new FormData(this);
             
@@ -105,7 +155,7 @@
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    window.location.href = 'index.html'; // Redirect to homepage
+                    window.location.href = 'index.html'; 
                 } else {
                     alert('Sign Up failed: ' + data.message);
                 }
