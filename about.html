@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - LinkedIn Resume Builder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <link rel="icon" href="images/favicon-removebg-preview.png" />
+
+    <link rel="stylesheet" href="style.css" />
+   <style>
+        :root{
+         --purple: #aca7eb;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #acb4bc;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #aca7eb;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        .content1{
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 120px;
+        }
+        .gif{
+            margin-left: 100px;
+        }
+        .content {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 12px 12px;
+        }
+
+        .content:hover{
+            transform:scale(1.1);
+            transform: 0.5s ease;
+        }
+
+        .content h2 {
+            font-size: 28px;
+            color: white;
+            border-radius: 5px;
+            padding: 2px 5px;
+            margin-bottom: 20px;
+            background-color: black;
+            text-align: center;
+        }
+
+        .content h2:hover{
+            background-color: #0073b1;
+        }
+
+
+        .content p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+
+        .content ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .content ul li {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 15px;
+            font-size: 24px;
+            color: #666;
+            background-color: #f4f4f9;
+            margin-top: 45px;
+            
+        }
+        .footer p{
+            margin-bottom: 0;
+        }
+
+        .back-button {
+            display: block;
+            text-align: center;
+            margin-top: 35px;
+            margin-bottom: 0px;
+        }
+
+        .back-button a {
+            padding: 10px 20px;
+            background-color: #aca7eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .back-button a:hover {
+            background-color: var(--purple);
+        }
+        .navbar {
+            background-color: #aca7eb;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar h1 {
+            color: white;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar ul li {
+            display: inline;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .navbar ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content Placeholder */
+        .content {
+            padding: 20px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .navbar h1 {
+                margin-bottom: 10px;
+            }
+            .navbar ul li a {
+            color: rgb(53, 52, 52);
+            text-decoration: none;
+            font-size: 18px;
+        }
+        }
+     /* Responsive Styles */
+@media (max-width: 1200px) {
+    .content {
+        padding: 20px;
+    }
+
+    .content1 {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .content1 {
+        flex-direction: column;
+    }
+
+    .content h2 {
+        font-size: 24px;
+    }
+
+    .content p, .content ul li {
+        font-size: 16px;
+    }
+
+    img {
+        margin: 10px 0;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .content {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .content h2 {
+        font-size: 20px;
+    }
+
+    .content p, .content ul li {
+        font-size: 14px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .back-button a {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .footer {
+        font-size: 16px;
+    }
+}
+@media (max-width: 769px) {
+.navbar,
+  .icons {
+    display: none;
+  }
+}
+    </style>
+</head>
+<body>
+
+ <header>  <!-- Navbar -->
+    <input type="checkbox" name="" id="toggler" />
+    <label for="toggler" class="fas fa-bars"></label>
+    <a href="#" class="logo">Resume Builder</a>
+    <nav class="navbar">
+     <ul>
+         <li><a href="index.html">Home</a>
+         <li><a href="about.html">About</a>
+         <li><a href="resume.html">Build Resume</a>
+     </ul>
+ </nav>
+ <div class="sidebar">
+     <span class="close-btn">&times;</span>
+     <a href="index.html">Home</a></li>
+         <a href="about.html">About</a></li>
+         <a href="resume.html">Build Resume</a>
+ 
+     <!-- Sidebar icons -->
+     <div class="sidebar-icons">
+       <a href="about.html" class="fas fa-info-circle"></a>
+       <a href="#" class="fas fa-envelope"></a>
+       <a href="login.html" id="loginIcon" class="fas fa-user"></a>
+     </div>
+   </div></header>
+    <div class="content1">
+        <img src="Li.gif" alt="" height="150px">
+        <div class="content">
+            <div class="action">
+    
+                <h2>Our Mission</h2>
+                <p>
+                    The LinkedIn Resume Builder is designed to make your job search easier and faster by transforming your LinkedIn profile into a polished, professional resume. 
+                    We understand the challenges of job hunting and the importance of having an up-to-date resume. Our mission is to provide a simple, fast, and reliable solution 
+                    that saves you time and effort.
+                </p>
+            </div>
+            
+            <h2>How It Works</h2>
+            <p>
+                Our tool integrates with LinkedIn to gather essential details from your profile, including your work experience, education, and skills. 
+                With just a few clicks, you can convert your profile into a beautifully formatted resume. Here’s a simple breakdown of how it works:
+            </p>
+            <ul>
+                <li>Enter your LinkedIn profile URL in our resume form.</li>
+                <li>Choose a resume template from our professionally designed options.</li>
+                <li>Generate a downloadable resume in PDF format within seconds.</li>
+            </ul>
+    
+            <h2>Why Use LinkedIn Resume Builder?</h2>
+            <p>
+                Here are a few reasons why professionals prefer our tool:
+            </p>
+            <ul>
+                <li><strong>Time-saving:</strong> No need to manually update or format your resume.</li>
+                <li><strong>Professional templates:</strong> Choose from various modern and classic designs.</li>
+                <li><strong>Easy to use:</strong> Generate resumes in just a few clicks.</li>
+                <li><strong>Accurate data:</strong> Directly pulls information from your LinkedIn profile.</li>
+            </ul>
+        </div>
+        <img src="Li.gif" alt="" height="150px">
+    </div>
+    <div class="back-button">
+        <a href="index.html">Go Back to Home</a>
+    </div>
+
+    <div class="footer">
+        <p>Powered by Resume Builder &copy; 2024</p>
+    </div>
+    <script>
+        const toggler = document.getElementById("toggler");
+        const body = document.body;
+        const closeBtn = document.querySelector(".close-btn");
+  
+        closeBtn.addEventListener("click", function () {
+          toggler.checked = false;
+          body.classList.remove("sidebar-active");
+        });
+        toggler.addEventListener("change", function () {
+          if (toggler.checked) {
+            body.classList.add("sidebar-active");
+          } else {
+            body.classList.remove("sidebar-active");
+          }
+        });
+      </script>
+</body>
+</html>
