@@ -1,5 +1,9 @@
 :root{
-    --purple: #aca7eb;
+    --deep-teal: #003d4d; /* Deep Teal */
+    --off-white: #f8f9fa; /* Off-White */
+    --dark-slate: #2f4f4f; /* Dark Slate */
+    --soft-gold: #d9c79e; /* Soft Gold */
+
 }
 
 * {
@@ -56,7 +60,7 @@ section{
 header {
     position: fixed;
     top: 0; left: 0; right: 0;
-    background: #fff;
+    background: var(--deep-teal); /* Changed background to Deep Teal */
     padding: 2rem 9%;
     display: flex;
     align-items: center;
@@ -78,14 +82,16 @@ header .logo:hover {
     text-decoration: none;
 }
 
-header .logo span{
-    color: var(--#3f10ea);
+header .logo span {
+    color: var(--off-white); /* Updated to match logo color */
+
 }
 
 header .navbar a {
     font-size: 2rem;
-    padding: 0 1.5rem;
-    color: #666;
+    padding: 15px;
+    color: var(--off-white); /* White text for better contrast */
+    text-decoration: none; /* Ensure no underline by default */
 }
 
 header .navbar a:hover {
@@ -95,7 +101,7 @@ header .navbar a:hover {
 
 header .icons a {
     font-size: 2.5rem;
-    color: #333;
+    color: var(--off-white); /* White icons for contrast */
     margin-left: 1.5rem;
 }
 
@@ -109,7 +115,8 @@ header #toggler {
 
 header .fa-bars {
     font-size: 3rem;
-    color:#333;
+
+    color: var(--off-white); /* White for better visibility */
     border-radius: .5rem;
     padding: .5rem 1.5rem;
     cursor: pointer;
@@ -163,7 +170,7 @@ body {
 
 .home .content h3{
     font-size: 5rem;
-    color: #333;
+    color: var(--dark-slate); /* Changed from #333 to Dark Slate */
 }
 
 .home .content span{
@@ -175,7 +182,7 @@ body {
 
 .home .content p{
     font-size: 1.5rem;
-    color: #999;
+    color: #666; /* Changed from #999 to a darker gray for better readability */
     padding: 1rem 0;
     line-height: 1.5;
 }
