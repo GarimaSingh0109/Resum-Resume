@@ -140,18 +140,30 @@ body {
 
 /* Add more styles as needed for other elements */
 
-.home{
+.home {
     display: flex;
     align-items: center;
     min-height: 100vh;
     background: url(images/background-home.png) no-repeat;
     background-size: cover;
     background-position: center;
+    animation: floatInFromRight 2s ease-out forwards; /* Image floats from right */
 }
 
-.home .content{
+.home .content {
     max-width: 50rem;
+    opacity: 0; /* Ensure the text is hidden initially */
+    animation: floatInFromTop 2s ease-out forwards; /* Text floats from top */
 }
+
+.home .content h3,
+.home .content p,
+.home .content a {
+    opacity: 0; /* Initially hidden */
+    animation: floatInFromTop 2s ease-out forwards; /* Text enters from the top */
+    animation-delay: 0.5s; /* Delay for a smooth entrance */
+}
+
 
 .home .content h3{
     font-size: 5rem;
@@ -173,6 +185,27 @@ body {
     line-height: 1.5;
 }
 
+@keyframes floatInFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(0); /* Starting position from above */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Final position */
+    }
+}
+
+@keyframes floatInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px); /* Starting position from the right */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Final position */
+    }
+}
 
 
 
