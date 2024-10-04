@@ -9,18 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     
     <link rel="icon" href="images/favicon-removebg-preview.png">
-
     <link rel="stylesheet" href="style.css">
-    <label for ="dark-mode-toggle">
-        <input type="checkbox" id="dark-mode-toggle" />
-        Toggle Dark Mode
-    </label>
     <style>
-  /*<label for ="dark-mode-toggle">
-    <input type="checkbox" id="dark-mode-toggle" />
-    Toggle Dark Mode
-</label>*/
-
         /* Features Section */
         .features {
             padding: 60px 20px;
@@ -50,39 +40,23 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             width: calc(25% - 30px);
             text-align: center;
-
             transition: transform 0.3s, box-shadow 0.3s, z-index 0.3s;
             position: relative;
             z-index: 1;
         }
 
         .features-card:hover {
-        transform: translateY(-10px) scale(1.1);
-        box-shadow: 0 4px 8px #0073b1; 
-        z-index: 3;
-        }
-
-        .features-card img {
-            width: 260px;
-            height: 260px;
-            margin-bottom: 15px;
-            height: 50%; /* Set height to 50% of the card */
-            /* /* object-fit: cover;  */
-            border-radius: 10px;
-            
-
-            transition: transform 0.3s ease;
-        }
-
-        .features-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px) scale(1.1);
+            box-shadow: 0 4px 8px #0073b1; 
+            z-index: 3;
         }
 
         .features-card img {
             width: 60px;
             height: 60px;
             margin-bottom: 20px;
-
+            border-radius: 10px;
+            transition: transform 0.3s ease;
         }
 
         .features-card h3 {
@@ -146,57 +120,73 @@
             font-style: italic;
         }
 
+        /* Scroll to Top Button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #0073b1;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: none; /* Hidden by default */
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .scroll-to-top:hover {
+            background-color: #005580;
+            transform: scale(1.1);
+        }
+
+        .scroll-to-top i {
+            font-size: 20px;
+        }
     </style>
 </head>
 <body>
-   <!-- header section starts -->
+    <!-- Header Section Starts -->
+    <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+        <a href="#" class="logo">Resum Resume<span>.</span></a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="about.html">About</a>
+            <a href="resume.html">Build Resume</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="login.html">Login</a>
+        </nav>
+        <div class="icons">
+            <a href="about.html" class="fas fa-info-circle"></a>
+            <a href="#" class="fas fa-envelope"></a>
+            <a href="login.html" id="loginIcon" class="fas fa-user"></a>
+        </div>
+    </header>
+    <!-- Header Section Ends -->
 
-<header>
-        
-    <input type="checkbox" name="" id="toggler">
-    <label for="toggler" class="fas fa-bars"></label>
-    <a href="#" class="logo">Resum Resume<span>.</span></a>
-             
-            <nav class="navbar">
-                <a href="#home">Home</a>
-                <a href="about.html">About</a>
-                <a href="resume.html">Build Resume</a>
-                <a href="signup.html">Sign Up</a>
-                <a href="login.html">Login</a>
-            </nav>
-    
-            <div class="icons">
-                <a href="about.html" class="fas fa-info-circle"></a>
-                <a href="#" class="fas fa-envelope"></a>
-                <a href="login.html" id="loginIcon" class="fas fa-user"></a>
-            </div>
-    
-        </header> 
-        
-        <!-- header section ends -->
-    
-    
-        <!-- home section starts -->
-    
-        <section class="home" id="Home">
-    
-            <div class="content">
-                <h3>Build Your Resume in Seconds from LinkedIn</h3>
-                <p>Easily generate a professional resume using your LinkedIn profile. Select a template, enter your LinkedIn URL,
-                    and get a downloadable resume in a few clicks. Save time and create a resume that stands out. </p>
-                <a href="signup.html" class="btn">Get Started</a>
-            </div>
-    
-        </section>
-    
-        <!-- home section ends-->
+    <!-- Home Section Starts -->
+    <section class="home" id="Home">
+        <div class="content">
+            <h3>Build Your Resume in Seconds from LinkedIn</h3>
+            <p>Easily generate a professional resume using your LinkedIn profile. Select a template, enter your LinkedIn URL,
+                and get a downloadable resume in a few clicks. Save time and create a resume that stands out.</p>
+            <a href="signup.html" class="btn">Get Started</a>
+        </div>
+    </section>
+    <!-- Home Section Ends -->
 
     <!-- Features Section -->
     <section class="features">
         <h2>Our Features</h2>
         <div class="features-cards">
             <div class="features-card">
-                <img src="assets/joao-ferrao-4YzrcDNcRVg-unsplash.jpg" alt="Easy to Use" >
+                <img src="assets/joao-ferrao-4YzrcDNcRVg-unsplash.jpg" alt="Easy to Use">
                 <h3>Easy to Use</h3>
                 <p>Create a professional resume effortlessly with our user-friendly interface.</p>
             </div>
@@ -239,6 +229,11 @@
             </div>
         </div>
     </section>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTopBtn">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
     <!-- Footer -->
     <footer class="footer">
@@ -286,5 +281,21 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Scroll to Top Button Functionality
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollToTopBtn.style.display = 'flex'; // Show button
+            } else {
+                scrollToTopBtn.style.display = 'none'; // Hide button
+            }
+        };
+
+        scrollToTopBtn.onclick = function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to top
+        };
+    </script>
 </body>
 </html>
