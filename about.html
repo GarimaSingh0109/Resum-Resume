@@ -308,6 +308,22 @@ body {
     <div class="footer">
         <p>Powered by Resume Builder &copy; 2024</p>
     </div>
-
+    <script>
+        const toggler = document.getElementById("toggler");
+        const body = document.body;
+        const closeBtn = document.querySelector(".close-btn");
+  
+        closeBtn.addEventListener("click", function () {
+          toggler.checked = false;
+          body.classList.remove("sidebar-active");
+        });
+        toggler.addEventListener("change", function () {
+          if (toggler.checked) {
+            body.classList.add("sidebar-active");
+          } else {
+            body.classList.remove("sidebar-active");
+          }
+        });
+      </script>
 </body>
 </html>

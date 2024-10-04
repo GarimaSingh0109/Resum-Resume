@@ -11,11 +11,27 @@
     <link rel="icon" href="images/favicon-removebg-preview.png">
 
     <link rel="stylesheet" href="style.css">
+    <label for ="dark-mode-toggle">
+        <input type="checkbox" id="dark-mode-toggle" />
+        Toggle Dark Mode
+    </label>
     <style>
+<<<<<<< HEAD
     <label for="dark-mode-toggle" style="margin: 20px; display: block; text-align: center;">
+||||||| da240a0
+<label for="dark-mode-toggle">
+=======
+  /*<label for ="dark-mode-toggle">
+>>>>>>> 138659a007ac3e74405947d0c1d4a7a240745c7a
     <input type="checkbox" id="dark-mode-toggle" />
     Toggle Dark Mode
+<<<<<<< HEAD
     </label>
+||||||| da240a0
+</label>
+=======
+</label>*/
+>>>>>>> 138659a007ac3e74405947d0c1d4a7a240745c7a
 
 <!-- Features Section -->
 <style>
@@ -94,6 +110,7 @@
     font-size: 32px;
 }
 
+<<<<<<< HEAD
 .testimonial-cards {
     display: flex;
     flex-wrap: wrap;
@@ -102,7 +119,21 @@
     max-width: 1200px;
     margin: 0 auto;
 }
+||||||| da240a0
+        .features-card h3 {
+            color: #aca7eb;
+            margin: 15px 0;
+            font-size: 22px;
+        }
+=======
+        .features-card h3 {
+            color: #6e65f0;
+            margin: 15px 0;
+            font-size: 22px;
+        }
+>>>>>>> 138659a007ac3e74405947d0c1d4a7a240745c7a
 
+<<<<<<< HEAD
 .testimonial-card {
     background-color: var(--off-white); /* Use off-white for testimonial cards */
     padding: 30px;
@@ -111,6 +142,17 @@
     width: calc(33.33% - 30px);
     text-align: center;
 }
+||||||| da240a0
+        .features-card p {
+            color: #666;
+            font-size: 16px;
+        }
+=======
+        .features-card p {
+            color: #52525a;
+            font-size: 16px;
+        }
+>>>>>>> 138659a007ac3e74405947d0c1d4a7a240745c7a
 
 .testimonial-card img {
     width: 80px; /* Profile image width */
@@ -152,15 +194,44 @@
     min-width: 200px; /* Minimum width for each section */
 }
 
+<<<<<<< HEAD
 .text {
     padding-right: 20px; /* Right padding for text sections */
     max-width: 50%; /* Maximum width for text sections */
 }
+||||||| da240a0
+        .testimonial-card h3 {
+            color: #aca7eb;
+            margin: 10px 0;
+            font-size: 20px;
+        }
+=======
+        .testimonial-card h3 {
+            color:  #6e65f0;
+            margin: 10px 0;
+            font-size: 20px;
+        }
+>>>>>>> 138659a007ac3e74405947d0c1d4a7a240745c7a
 
+<<<<<<< HEAD
 .image {
     max-width: 50%; /* Maximum width for image sections */
 }
+||||||| da240a0
+        .testimonial-card p {
+            color: #666;
+            font-size: 16px;
+            font-style: italic;
+        }
+=======
+        .testimonial-card p {
+            color: #52525a;
+            font-size: 16px;
+            font-style: italic;
+        }
+>>>>>>> 138659a007ac3e74405947d0c1d4a7a240745c7a
 
+<<<<<<< HEAD
 .image img {
     width: 100%; /* Full width for images */
     height: auto; /* Maintain aspect ratio */
@@ -251,6 +322,128 @@
     }
 }
 
+||||||| da240a0
+        /* Footer Styles */
+        .footer {
+            background-color: #aca7eb;
+            color: #ffffff;
+            padding: 40px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-section {
+            flex: 1;
+            margin-bottom: 20px;
+            min-width: 200px;
+        }
+
+        .text {
+            padding-right: 20px; 
+            max-width: 50%; 
+        }
+        .image {
+            max-width: 50%; 
+        }
+        .image img {
+            width: 100%; 
+            height: auto;
+            border-radius: 5px; 
+
+
+        .footer-section h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .footer-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 8px;
+
+        }
+
+        .footer-section ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        .social-icons {
+            margin-top: 15px;
+        }
+
+        .social-icons a {
+            color: #ffffff;
+            font-size: 20px;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #e0e0e0;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            margin-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar ul {
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            .hero-content {
+                flex-direction: column;
+            }
+
+            .hero-text {
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+
+            .features-card, .testimonial-card {
+                width: 100%;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+
+            .footer-section {
+                margin-bottom: 30px;
+            }
+        }
+=======
+>>>>>>> 138659a007ac3e74405947d0c1d4a7a240745c7a
     </style>
 </head>
 <body>
