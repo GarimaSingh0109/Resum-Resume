@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LinkedIn Resume Builder - Home</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -157,13 +159,24 @@
     <label for="toggler" class="fas fa-bars"></label>
     <a href="#" class="logo">Resum Resume<span>.</span></a>
              
-            <nav class="navbar">
-                <a href="#home">Home</a>
-                <a href="about.html">About</a>
-                <a href="resume.html">Build Resume</a>
-                <a href="signup.html">Sign Up</a>
-                <a href="login.html">Login</a>
-            </nav>
+            <!-- <nav class="navbar">
+                <a class="tabs" href="#home">Home</a>
+                <a class="tabs" href="about.html">About</a>
+                <a class="tabs" href="resume.html">Build Resume</a>
+                <a class="tabs" href="signup.html">Sign Up</a>
+                <a class="tabs" href="login.html">Login</a>
+            </nav> -->
+            <div class="navbar">
+                <ul id="tabs">
+                    <li class="tab"><a href="#">Home</a></li>
+                    <li class="tab"><a href="scholarships.html">About</a></li>
+                    <li class="tab"><a href="jobs.html">Build Resume</li>
+                    <li class="tab"><a href="forum.html">Sign Up</a></li>
+                    <li class="tab"><a href="#faqs">Login</a></li>
+                   
+                </ul>
+                <div class="cursor"></div>
+            </div>
     
             <div class="icons">
                 <a href="about.html" class="fas fa-info-circle"></a>
@@ -281,10 +294,97 @@
             <p>&copy; 2024 Resume Builder. All rights reserved.</p>
         </div>
     </footer>
+    <script>// Wait for the DOM to be fully loaded
+        document.addEventListener("DOMContentLoaded", function () {
+            // Select all sections you want to animate
+            const sections = document.querySelectorAll("section, header, footer");
+        
+            // Animate each section with a fade-in effect and additional properties
+            sections.forEach((section) => {
+                gsap.set(section, { opacity: 0, scale: 0.9 }); // Initial state
+                gsap.to(section, {
+                    opacity: 1,
+                    scale: 1,
+                    duration: 1,
+                    delay: 0.5,
+                    stagger: 0.3,
+                    ease: "back.out(1.7)" // Use a bounce effect for the animation
+                });
+            });
+        
+            // Animate the navbar items
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach((tab, index) => {
+                gsap.set(tab, { opacity: 0, y: -20, scale: 0.9 }); // Initial state
+                gsap.to(tab, {
+                    opacity: 1,
+                    y: 0,
+                    scale: 1,
+                    duration: 0.5,
+                    delay: 1 + index * 0.2,
+                    ease: "back.out(1.7)" // Bounce effect
+                });
+            });
+        
+            // Add animations for icons
+            const icons = document.querySelectorAll('.icons a');
+            icons.forEach((icon, index) => {
+                gsap.set(icon, { opacity: 0, y: -20, rotation: -15 }); // Initial state
+                gsap.to(icon, {
+                    opacity: 1,
+                    y: 0,
+                    rotation: 0,
+                    duration: 0.5,
+                    delay: 1 + index * 0.3,
+                    ease: "back.out(1.7)" // Bounce effect
+                });
+            });
+        
+            // Animate the home section content
+            const homeContent = document.querySelector('.home .content');
+            gsap.set(homeContent, { opacity: 0, y: 30 }); // Initial state
+            gsap.to(homeContent, {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                delay: 1.5,
+                ease: "power2.out" // Smooth easing
+            });
+        
+            // Animate the features cards
+            const featuresCards = document.querySelectorAll('.features-card');
+            featuresCards.forEach((card, index) => {
+                gsap.set(card, { opacity: 0, y: 20 }); // Initial state
+                gsap.to(card, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.5,
+                    delay: 1.5 + index * 0.2,
+                    ease: "power2.out" // Smooth easing
+                });
+            });
+        
+            // Animate testimonials section
+            const testimonialCards = document.querySelectorAll('.testimonial-card');
+            testimonialCards.forEach((card, index) => {
+                gsap.set(card, { opacity: 0, scale: 0.9 }); // Initial state
+                gsap.to(card, {
+                    opacity: 1,
+                    scale: 1,
+                    duration: 0.5,
+                    delay: 2 + index * 0.3,
+                    ease: "back.out(1.7)" // Bounce effect
+                });
+            });
+        });
+        </script>
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
 </body>
 </html>
