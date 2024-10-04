@@ -8,26 +8,16 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <style>
       *{
         margin:10px;
       }
-      .nav{
-        background-color: #aca7eb;
-        display: flex;
-        width: 100%;
-        margin: 0%;
-        
-      }
-      ul{
-        list-style: none;
-        display: flex;
-        align-items: end;
-        color: #fff;
-        font-size: 25px;
-        font-weight: 300;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      }
+      
+      
       a{
         color: #fff;
         justify-content: space-between;
@@ -37,11 +27,146 @@
         text-align: end;
       }
       .heading{
-        font-size: 70px;
-        background-color: #aca7eb;
-        color: white;
-        padding-left: 20px;
-        font-family:   sans-serif;
+        text-align: center;
+        font-size: 4rem;
+        color: #333;
+        padding: 1rem;
+        margin: 2rem 0;
+        background: rgba(255,51,153,0.05);
+      }
+      .heading span{
+        color: var(--pink);
+      }
+      header{
+        background-color: #f0f0f4;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,0.1);
+      }
+
+      header .logo{
+        font-size: 36px; /* Increased from 24px */
+        color: #3f10ea;
+        font-weight: bolder;
+        text-decoration: none;
+      }
+
+      header .navbar{
+        display: flex;
+        gap: 20px;
+      }
+
+      header .navbar a{
+        color: #0d1193;
+        text-decoration: none;
+        font-size: 22px; /* Increased from 18px */
+      }
+
+      header .icons a{
+        color: #180c3a;
+        text-decoration: none;
+        font-size: 22px; /* Increased from 18px */
+        margin-left: 15px;
+      }
+
+      header #toggler,
+      header .fa-bars{
+        display: none;
+      }
+
+      @media (max-width: 768px) {
+        header .fa-bars {
+          display: block;
+          font-size: 24px;
+          cursor: pointer;
+        }
+
+        header .navbar,
+        header .icons {
+          display: none;
+        }
+
+        header #toggler:checked ~ .navbar,
+        header #toggler:checked ~ .icons {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background: #eee;
+          padding: 10px;
+        }
+      }
+
+      body {
+        padding-top: 80px; /* Increased from 70px */
+      }
+
+      .logo:hover{
+          font-size: 38px; /* Slightly larger on hover */
+          color: #f03c0b;
+          transition: all 0.3s ease;
+      }
+
+      .logo span{
+          color: var(--#2b1480);
+      }
+
+      .navbar a:hover{
+          color: #f03c0b;
+          transition: color 0.3s ease;
+      }
+
+      .icons a:hover{
+          color: #6e65f0;
+          transition: color 0.3s ease;
+      }
+
+      #toggler{
+          display: none;
+      }
+
+      .fa-bars{
+          font-size: 3rem;
+          color:#180c3a;
+          border-radius: .5rem;
+          padding: .5rem 1.5rem;
+          cursor: pointer;
+          border: .1rem solid rgba(0,0,0,0.3);
+          display: none;
+      }
+      @media (max-width:768px){
+        html .fa-bars{
+            display: block;
+        }
+
+        header .navbar{
+            position: absolute;
+            top: 100%; left: 0; right: 0;
+            background: #eee;
+            border-top: 0.1rem solid rgba(0,0,0,0.1);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        }
+
+        header #toggler:checked ~ .navbar{
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+
+        header .navbar a{
+            margin: 1.5rem;
+            padding: 1.5rem;
+            background: #fff;
+            border: 0.1rem solid rgba(0,0,0,0.1);
+            display: block;
+        }
       }
       img{
         border: 2px solid black;
@@ -137,92 +262,42 @@
         font-size: 14px;
         color: #666;
       }
-      .navbar {
-        background-color: var(--purple);
-        padding: 15px 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .navbar h1 {
-        color: white;
-        margin: 0;
-        font-size: 24px;
-      }
-
-      .navbar ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        gap: 20px;
-      }
-
-      .navbar ul li {
-        display: inline;
-      }
-
-      .navbar ul li a {
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
-      }
-
-      .navbar ul li a:hover {
-        text-decoration: underline;
-      }
-
+      
       /* Main Content Placeholder */
       .content {
         padding: 20px;
       }
-
-      /* Responsive adjustments */
-      @media (max-width: 768px) {
-        .navbar {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-
-        .navbar ul {
-          flex-direction: column;
-          gap: 10px;
-        }
-
-        .navbar h1 {
-          margin-bottom: 10px;
-        }
+      .navbar h1 {
+            color: white;
+            margin: 0;
+            font-size: 24px;
       }
-      @media (max-width: 400px) {
-        .navbar ul {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-evenly;
-          width: 100%;
-        }
-        .navbar ul li {
-          justify-content: space-evenly !important;
-        }
-        .navbar ul li a {
-          color: #eee7e7;
-          font-size: 20px;
-        }
-        .navbar ul li a:hover {
-          color: #ffffff;
-          font-size: 22px;
-        }
-      }
+      
+      
     </style>
   </head>
   <body>
-    <div class="nav">
-        <h1 class="heading">Resume Builder</h1>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
+    <header>
+    
+      <input type="checkbox" name="" id="toggler">
+      <label for="toggler" class="fas fa-bars"></label>
+      <a href="#" class="logo">Resum Resume<span>.</span></a>
+    
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="resume.html">Build Resume</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="login.html">Login</a>
+      </nav>
+    
+      <div class="icons">
+        <a href="about.html" class="fas fa-info-circle"></a>
+        <a href="#" class="fas fa-envelope"></a>
+        <a href="login.html" id="loginIcon" class="fas fa-user"></a>
       </div>
+    
+    </header>
         <div class="gallery-view">
 
           <div class="sampleTemplates">
