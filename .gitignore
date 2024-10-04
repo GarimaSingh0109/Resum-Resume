@@ -22,7 +22,7 @@ Thumbs.db
 .idea/
 
 # Ignore package lock files
-package-lock.json
+
 yarn.lock
 
 # Ignore coverage reports
