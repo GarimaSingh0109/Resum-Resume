@@ -86,6 +86,8 @@ To submit a pull request:
 - Follow the [JavaScript Standard Style](https://standardjs.com/) for coding conventions.
 - Write clear and concise commit messages.
 - Ensure your code is well-documented and easy to understand.
+- Add screenshot in issue and pr description.
+  
 
 
 
