@@ -19,134 +19,404 @@
         Toggle Dark Mode
     </label>
     <style>
-  /*<label for ="dark-mode-toggle">
+
+    <label for="dark-mode-toggle" style="margin: 20px; display: block; text-align: center;">
+
+<label for="dark-mode-toggle">
+
     <input type="checkbox" id="dark-mode-toggle" />
     Toggle Dark Mode
-</label>*/
 
-        /* Features Section */
-        .features {
-            padding: 60px 20px;
-            background-color: #f9f9f9;
-        }
+    </label>
 
-        .features h2 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 40px;
-            font-size: 32px;
-        }
+</label>
 
-        .features-cards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
 
-        .features-card {
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: calc(25% - 30px);
-            text-align: center;
+<!-- Features Section -->
+<style>
+.features {
+    padding: 60px 20px;
+    background-color: #f9f9f9; /* Consider changing this to a darker tone if needed */
+}
 
-            transition: transform 0.3s, box-shadow 0.3s, z-index 0.3s;
-            position: relative;
-            z-index: 1;
-        }
+.features h2 {
+    text-align: center;
+    color: #333; /* Consider changing this for better contrast */
+    margin-bottom: 40px;
+    font-size: 32px;
+}
 
-        .features-card:hover {
-        transform: translateY(-10px) scale(1.1);
-        box-shadow: 0 4px 8px #0073b1; 
-        z-index: 3;
-        }
+.features-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-        .features-card img {
-            width: 260px;
-            height: 260px;
-            margin-bottom: 15px;
-            height: 50%; /* Set height to 50% of the card */
-            /* /* object-fit: cover;  */
-            border-radius: 10px;
-            
+.features-card {
+    background-color: #fff; /* You might want to change this to a softer off-white */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 30px);
+    text-align: center;
 
-            transition: transform 0.3s ease;
-        }
+    transition: transform 0.3s, box-shadow 0.3s, z-index 0.3s;
+    position: relative;
+    z-index: 1;
+}
 
-        .features-card:hover {
-            transform: translateY(-5px);
-        }
+.features-card:hover {
+    transform: translateY(-10px) scale(1.1);
+    box-shadow: 0 4px 8px #0073b1; /* Consider adjusting this to match the modern minimalist theme */
+    z-index: 3;
+}
+.features-card img {
+    width: 60px; /* Set the width for the icon images */
+    height: 60px; /* Set the height for the icon images */
+    margin-bottom: 20px;
+    border-radius: 10px; /* Rounded corners for the images */
+    transition: transform 0.3s ease;
+}
 
-        .features-card img {
-            width: 60px;
-            height: 60px;
-            margin-bottom: 20px;
+.features-card:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
 
-        }
+.features-card h3 {
+    color: var(--deep-teal); /* Use the deep teal color for headings */
+    margin: 15px 0;
+    font-size: 22px;
+}
+
+.features-card p {
+    color: var(--dark-slate); /* Use dark slate for paragraph text */
+    font-size: 16px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 60px 20px;
+    background-color: var(--off-white); /* Use the off-white background color */
+}
+
+.testimonials h2 {
+    text-align: center;
+    color: var(--dark-slate); /* Use dark slate for heading text */
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+
+.testimonial-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
         .features-card h3 {
-            color: #6e65f0;
+            color: #aca7eb;
             margin: 15px 0;
             font-size: 22px;
         }
 
+
+
+.testimonial-card {
+    background-color: var(--off-white); /* Use off-white for testimonial cards */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 30px);
+    text-align: center;
+}
+
         .features-card p {
-            color: #52525a;
+            color: #666;
             font-size: 16px;
         }
 
-        /* Testimonials Section */
-        .testimonials {
-            padding: 60px 20px;
-            background-color: #ffffff;
-        }
 
-        .testimonials h2 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 40px;
-            font-size: 32px;
-        }
+.testimonial-card img {
+    width: 80px; /* Profile image width */
+    height: 80px; /* Profile image height */
+    border-radius: 50%; /* Circular shape for profile images */
+    margin-bottom: 20px;
+}
+.testimonial-card h3 {
+    color: var(--deep-teal); /* Use deep teal for testimonial headings */
+    margin: 10px 0;
+    font-size: 20px;
+}
 
-        .testimonial-cards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+.testimonial-card p {
+    color: var(--dark-slate); /* Use dark slate for testimonial text */
+    font-size: 16px;
+    font-style: italic; /* Italic style for testimonial text */
+}
 
-        .testimonial-card {
-            background-color: #f9f9f9;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: calc(33.33% - 30px);
-            text-align: center;
-        }
+/* Footer Styles */
+.footer {
+    background-color: var(--deep-teal); /* Use deep teal for footer background */
+    color: #ffffff; /* White text for footer */
+    padding: 40px 0;
+}
 
-        .testimonial-card img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-        }
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px; /* Max width for footer content */
+    margin: 0 auto; /* Center footer content */
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1; /* Flexible sections in footer */
+    margin-bottom: 20px; /* Space between footer sections */
+    min-width: 200px; /* Minimum width for each section */
+}
+
+
+.text {
+    padding-right: 20px; /* Right padding for text sections */
+    max-width: 50%; /* Maximum width for text sections */
+}
 
         .testimonial-card h3 {
-            color:  #6e65f0;
+            color: #aca7eb;
             margin: 10px 0;
             font-size: 20px;
         }
 
+
+
+.image {
+    max-width: 50%; /* Maximum width for image sections */
+}
+
         .testimonial-card p {
-            color: #52525a;
+            color: #666;
             font-size: 16px;
             font-style: italic;
+        }
+
+
+
+.image img {
+    width: 100%; /* Full width for images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners for images */
+}
+
+.footer-section h3 {
+    font-size: 18px; /* Font size for section headings */
+    font-weight: 700; /* Bold weight for section headings */
+    margin-bottom: 15px; /* Space below section headings */
+    color: #ffffff; /* White color for headings */
+}
+
+.footer-section ul {
+    list-style-type: none; /* No bullet points for list */
+    padding: 0; /* No padding for list */
+}
+
+.footer-section ul li {
+    margin-bottom: 8px; /* Space between list items */
+}
+
+.footer-section ul li a {
+    color: #e0e0e0; /* Light grey for links */
+    text-decoration: none; /* No underline for links */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.footer-section ul li a:hover {
+    color: #ffffff; /* White color on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+.social-icons {
+    margin-top: 15px; /* Space above social icons */
+}
+
+.social-icons a {
+    color: #ffffff; /* White color for social icons */
+    font-size: 20px; /* Font size for social icons */
+    margin-right: 15px; /* Space between social icons */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.social-icons a:hover {
+    color: var(--light-grey); /* Use light grey on hover for social icons */
+}
+
+.footer-bottom {
+    text-align: center; /* Center the text in the footer bottom */
+    padding-top: 20px; /* Space above footer bottom */
+    margin-top: 20px; /* Space above footer bottom */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Light border for separation */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .navbar ul {
+        flex-direction: column; /* Stack navbar links vertically */
+        gap: 10px; /* Space between navbar links */
+        margin-top: 10px; /* Space above navbar links */
+    }
+
+    .hero-content {
+        flex-direction: column; /* Stack hero content vertically */
+    }
+
+    .hero-text {
+        padding-right: 0; /* Remove right padding for hero text */
+        margin-bottom: 30px; /* Space below hero text */
+    }
+
+    .features-card, .testimonial-card {
+        width: 100%; /* Full width for cards on small screens */
+    }
+
+    .footer-content {
+        flex-direction: column; /* Stack footer content vertically */
+    }
+
+    .footer-section {
+        margin-bottom: 30px; /* Space below footer sections */
+    }
+}
+
+
+        /* Footer Styles */
+        .footer {
+            background-color: #aca7eb;
+            color: #ffffff;
+            padding: 40px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-section {
+            flex: 1;
+            margin-bottom: 20px;
+            min-width: 200px;
+        }
+
+        .text {
+            padding-right: 20px; 
+            max-width: 50%; 
+        }
+        .image {
+            max-width: 50%; 
+        }
+        .image img {
+            width: 100%; 
+            height: auto;
+            border-radius: 5px; 
+
+
+        .footer-section h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .footer-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 8px;
+
+        }
+
+        .footer-section ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        .social-icons {
+            margin-top: 15px;
+        }
+
+        .social-icons a {
+            color: #ffffff;
+            font-size: 20px;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #e0e0e0;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            margin-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar ul {
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            .hero-content {
+                flex-direction: column;
+            }
+
+            .hero-text {
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+
+            .features-card, .testimonial-card {
+                width: 100%;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+
+            .footer-section {
+                margin-bottom: 30px;
+            }
         }
 
     </style>
@@ -158,7 +428,11 @@
         
     <input type="checkbox" name="" id="toggler">
     <label for="toggler" class="fas fa-bars"></label>
+
     <a href="#" class="logo" id=""><span id="newlogo"></span></a>
+
+    <a href="#" class="logo">Resum Resume</a>
+
              
             <nav class="navbar">
                 <a href="#home">Home</a>
