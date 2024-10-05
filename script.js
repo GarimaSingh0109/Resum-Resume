@@ -80,4 +80,17 @@ document.addEventListener('DOMContentLoaded', () => {
             commentInput.value = ''; // Clear the input
         });
     });
+    
 });
+
+        
+// var typed = new Typed('#newlogo', {
+//     strings: ['EnhanCV.'],
+//     typeSpeed: 50,
+// });
+       
+  
+
+        
+       
+  

@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - LinkedIn Resume Builder</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-    <link rel="icon" href="images/favicon-removebg-preview.png">
     <style>
         :root {
-            --purple: #aca7eb;
+            
+            --deep-teal: #003d4d;
+            --off-white: #f8f9fa;
+            --dark-slate: #2f4f4f;
+            --soft-gold: #d9c79e;
+
         }
 
         * {
-            margin: 0;
+            margin: 0; 
             padding: 0;
             box-sizing: border-box;
-
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
             outline: none;
             border: none;
             text-decoration: none;
@@ -27,263 +27,15 @@
             transition: .2s linear;
         }
 
-        html {
-            font-size: 62.5%;
-            scroll-behavior: smooth;
-            scroll-padding-top: 6rem;
-            overflow-x: hidden;
-        }
-
-        header {
-            position: fixed;
-
-            top: 0;
-            left: 0;
-            right: 0;
-            background: #fff;
-            padding: 2rem 9%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            z-index: 1000;
-            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
-        }
-
-        header .logo {
-            font-size: 3rem;
-            color: #3f10ea;
-            font-weight: bolder;
-        }
-
-        header .logo:hover {
-            font-size: 3rem;
-            color: #f03c0b;
-            font-weight: bolder;
-            text-decoration: none;
-        }
-
-        header .logo span {
-            color: var(--#3f10ea);
-        }
-
-        header .navbar a {
-            font-size: 2rem;
-            padding: 0 1.5rem;
-            color: #666;
-        }
-
-        header .navbar a:hover {
-            color: var(--red);
-            text-decoration: none;
-        }
-
-        header .icons a {
-            font-size: 2.5rem;
-            color: #333;
-            margin-left: 1.5rem;
-        }
-
-        header .icons a:hover {
-            text-decoration: none;
-            color: var(--purple);
-        }
-
-        header #toggler {
-            display: none;
-        }
-
-        header .fa-bars {
-            font-size: 3rem;
-            color: #333;
-            border-radius: .5rem;
-            padding: .5rem 1.5rem;
-            cursor: pointer;
-            border: .1rem solid rgba(0, 0, 0, 0.3);
-            display: none;
-        }
-
-        .footer-login {
-            margin-top: 20px;
-        }
-
-        .footer-login p {
-            color: #666;
-            font-size: 14px;
-        }
-
-        .footer-login a {
-            color: #aca7eb;
-            text-decoration: none;
-        }
-
-        .footer-login a:hover {
-            text-decoration: underline;
-        }
-
-        .footer {
-            background-color: #1a1a1a;
-            color: #fff;
-            padding: 40px 0;
-            font-size: 14px;
-        }
-
-        .footer .footer-content {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .footer .footer-section {
-            flex-basis: 23%;
-            margin-bottom: 20px;
-        }
-
-        .footer .footer-section h3 {
-            font-size: 18px;
-            margin-bottom: 20px;
-            font-weight: 600;
-            color: #fff;
-            border-bottom: 2px solid #00c6ff;
-            padding-bottom: 10px;
-        }
-
-        .footer .footer-section ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer .footer-section ul li {
-            margin-bottom: 10px;
-        }
-
-        .footer .footer-section ul li a {
-            color: #ccc;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer .footer-section ul li a:hover {
-            color: #00c6ff;
-        }
-
-        .footer .footer-section .social-icons a {
-            margin-right: 10px;
-            color: #ccc;
-            text-decoration: none;
-            font-size: 18px;
-            transition: color 0.3s ease;
-        }
-
-        .footer .footer-section .social-icons a:hover {
-            color: #00c6ff;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #111;
-            font-size: 12px;
-        }
-
-        .footer-bottom p {
+        body {
+            background-color: var(--off-white);
             margin: 0;
-            color: #ccc;
-        }
-
-        @media (max-width: 768px) {
-            .footer .footer-content {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .footer .footer-section {
-                flex-basis: 100%;
-                text-align: center;
-            }
-
-            .footer .footer-section ul li {
-                margin-bottom: 8px;
-            }
-        }
-
-        @media (max-width:991px) {
-
-            html {
-                font-size: 55%;
-            }
-
-            header {
-                padding: 2rem;
-            }
-
-
-
-
-        }
-
-        @media (max-width:768px) {
-
-            html .fa-bars {
-                display: block;
-            }
-
-            header .navbar {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: #eee;
-                border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
-                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-            }
-
-            header #toggler:checked~.navbar {
-                clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-            }
-
-            header .navbar a {
-                margin: 1.5rem;
-                padding: 1.5rem;
-                background: #fff;
-                border: 0.1rem solid rgba(0, 0, 0, 0.1);
-                display: block;
-            }
-
-
-
-            .icons-container .icons h3 {
-                font-size: 2rem;
-            }
-
-            .icons-container .icons span {
-                font-size: 1.7rem;
-            }
-
-
-        }
-
-
-
-
-        .footer-signup {
-            margin-top: 20px;
-        }
-
-        .footer-signup p {
-            color: #666;
-            font-size: 14px;
-        }
-
-        .footer-signup a {
-            color: var(--purple);
-            text-decoration: none;
-        }
-
-        .footer-signup a:hover {
-            text-decoration: underline;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column; /* Added for vertical alignment */
         }
 
         .container {
@@ -291,18 +43,25 @@
             padding: 40px;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            margin-top: 150px;
-            margin-bottom: 20px;
-            width: 35%;
-            font-size: 15px;
+            max-width: 400px;
+            width: 100%;
             text-align: center;
         }
 
-        .signup-heading {
-            font-size: 30px;
-            font-weight: bold;
-            font-family: 'Roboto', sans-serif;
-            color: #333;
+        .logo {
+            font-size: 2rem; /* Decreased size for single line */
+            color: var(--deep-teal);
+            font-weight: 600;
+            margin-bottom: 20px;
+            cursor: pointer; /* Change cursor to pointer */
+        }
+
+        .logo:hover {
+            color: var(--soft-gold); /* Change color on hover */
+        }
+
+        h2 {
+            color: var(--dark-slate);
             margin-bottom: 20px;
         }
 
@@ -319,7 +78,7 @@
         button {
             width: 100%;
             padding: 15px;
-            background-color: var(--purple);
+            background-color: var(--deep-teal);
             color: white;
             border: none;
             border-radius: 4px;
@@ -328,122 +87,84 @@
         }
 
         button:hover {
-            background-color: var(--purple);
+            background-color: var(--soft-gold);
+        }
+
+        .login-btn {
+            background-color: var(--soft-gold);
+            margin-top: 10px;
+        }
+
+        .login-btn:hover {
+            background-color: var(--deep-teal);
+        }
+
+        .footer {
+            margin-top: 20px; /* Space between container and footer */
+            text-align: center;
+            width: 100%; /* Ensure the footer takes full width */
+            background-color: var(--deep-teal); /* Background color for the footer */
+            color: white; /* Text color */
+            padding: 30px 0; /* Padding for spacing */
+            position: absolute; /* Positioning at the bottom */
+            bottom: 0; /* Align to the bottom */
+        }
+
+        .footer p {
+            color: #fff; /* Text color for footer */
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: var(--soft-gold);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
-
 <body>
-    <header>
 
-        <input type="checkbox" name="" id="toggler">
-        <label for="toggler" class="fas fa-bars"></label>
-        <a href="#" class="logo">Resum Resume<span>.</span></a>
-
-        <nav class="navbar">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="resume.html">Build Resume</a>
-            <a href="signup.html">Sign Up</a>
-            <a href="login.html">Login</a>
-        </nav>
-
-        <div class="icons">
-            <a href="about.html" class="fas fa-info-circle"></a>
-            <a href="#" class="fas fa-envelope"></a>
-            <a href="login.html" id="loginIcon" class="fas fa-user"></a>
-        </div>
-
-    </header>
     <div class="container">
+        <div class="logo" onclick="window.location.href='index.html'">Resum Resume</div>
         <h2>Create Your Account</h2>
-        <form id = "signupForm"action="#" method="POST">
+        <form id="signupForm" action="#" method="POST">
             <input type="text" placeholder="Full Name" required>
             <input type="email" placeholder="Email Address" required>
-            <input type="password" id="password"placeholder="Password(8+ chars, upper, lower, special char)" required>
+            <input type="password" placeholder="Password" required>
             <input type="password" placeholder="Confirm Password" required>
-            <span id="errorMessage" class="error"></span>
             <button type="submit">Sign Up</button>
         </form>
-        <div class="footer-signup">
-            <p>Already have an account? <a href="login.html">Log In</a></p>
-        </div>
+        <button class="login-btn" onclick="window.location.href='login.html'">Go to Login</button>
     </div>
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>About Us</h3>
-                <ul>
-                    <li><a href="#">Our Story</a></li>
-                    <li><a href="#">Team</a></li>
-                    <li><a href="#">Careers</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Services</h3>
-                <ul>
-                    <li><a href="#">Resume Builder</a></li>
-                    <li><a href="#">CV Templates</a></li>
-                    <li><a href="#">Career Advice</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Support</h3>
-                <ul>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Connect With Us</h3>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Resume Builder. All rights reserved.</p>
-        </div>
-    </footer>
-    <script>
-        document.getElementById('signupForm').addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent the default form submission
-            const password = document.getElementById('password').value;
-            const confirmPassword= document.getElementById('confirmPassword').value;
-            const errorMessage= document.getElementById('errorMessage');
-            //password validation regex:8+ characters, uppercase, lowercase, special characters
-            const passwordPattern=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-            if(!passwordPattern.test(password)){
-                errorMessage.textContent = "Password must be atleast 8 characters, include uppercase, lowercase, a number, and a special character."
-                return;
-            }
-            if(password!== confirmPassword){
-                errorMessage.textContent ="Passwords do not match."
-            }
-            //if everything is fine, proceed with form submission
-            errorMessage.textContent="";//clear the error message
-            var formData = new FormData(this);
 
+    <div class="footer">
+        <p>Powered by Resume Builder &copy; 2024</p>
+    </div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var formData = new FormData(this);
+            
             fetch('signup-process.php', {
                 method: 'POST',
                 body: formData
             })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        window.location.href = 'index.html'; // Redirect to homepage
-                    } else {
-                        alert('Sign Up failed: ' + data.message);
-                    }
-                })
-                .catch(error => console.error('Error:', error));
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    window.location.href = 'index.html'; 
+                } else {
+                    alert('Sign Up failed: ' + data.message);
+                }
+            })
+            .catch(error => console.error('Error:', error));
         });
     </script>
 
 </body>
-
 </html>
