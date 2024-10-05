@@ -56,6 +56,22 @@ section{
 .btn:hover {
     background: var(--deep-teal); /* Deep Teal on hover */
 }
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 5rem;
+  background: #333;
+  color: #fff;
+  padding: 0.9rem 3.5rem;
+  cursor: pointer;
+  font-size: 1.7rem;
+  background-color: #3f10ea;
+}
+.btn:hover {
+  background: var(--purple);
+  background-color: #f03c0b;
+  color: white;
+}
 
 header {
     position: fixed;
@@ -84,6 +100,19 @@ header .logo:hover {
     color: var(--soft-gold); /* Soft Gold on hover for logo */
     font-weight: bolder;
     text-decoration: none;
+}
+header .logo {
+  font-size: 3rem;
+  color: #3f10ea;
+  font-weight: bolder;
+  font-size: 2.5rem;
+}
+header .logo:hover {
+  font-size: 3rem;
+  color: #f03c0b;
+  font-weight: bolder;
+  text-decoration: none;
+  font-size: 2.55rem;
 }
 
 
@@ -114,6 +143,31 @@ header .icons a {
 header .icons a:hover {
     color: var(--soft-gold); /* Soft Gold hover effect for icons */
 }
+  header .navbar a {
+  font-size: 2rem;
+  padding: 0 1.5rem;
+  color: #666;
+  font-size: 1.8rem;
+}
+
+header .navbar a:hover {
+  color: var(--red);
+  text-decoration: none;
+  color: #3f10ea;
+}
+
+header .icons a {
+  font-size: 2.5rem;
+  color: #333;
+  margin-left: 1.5rem;
+  font-size: 2.2rem;
+}
+
+header .icons a:hover {
+  color: var(--purple);
+  color: #3f10ea;
+  text-decoration: none;
+ }
 
 header #toggler {
     display: none;
@@ -136,17 +190,21 @@ body {
     color: var(--dark-slate); /* Changed from #000000 to Dark Slate */
 }
 
-/* Dark mode styles */
-.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
-}
+
 
 .dark-mode button {
     background-color: #1e1e1e;
     color: #ffffff;
 }
 
+
+.home .content h3 {
+  font-size: 5rem;
+  color: #333;
+  font-size: 4.5rem;
+  font-weight: 600;
+  line-height: 6rem;
+=======
 /* Add more styles as needed for other elements */
 
 .home {
@@ -158,6 +216,20 @@ body {
     background-position: center;
     animation: floatInFromRight 2s ease-out forwards; /* Image floats from right */
 }
+.home {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background: url(images/background-home.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 110vh;
+=======
+/* Dark mode styles */
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
 
 .home .content {
     max-width: 50rem;
@@ -173,7 +245,14 @@ body {
     animation-delay: 0.5s; /* Delay for a smooth entrance */
 }
 
-
+.home .content p {
+  font-size: 1.5rem;
+  color: #999;
+  padding: 1rem 0;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  color: grey;
+}
 .home .content h3{
     font-size: 5rem;
     color: var(--dark-slate); /* Changed from #333 to Dark Slate */
@@ -388,4 +467,60 @@ body {
         font-size: 3rem;
     }
     
+}
+
+/* Features section */
+.features h2{
+  font-weight: 600;
+}
+.features-card img{
+  width:80%;
+  height: 40%;
+  object-fit: cover;
+}
+.features-card h3{
+  color: #3f10ea;
+}
+.features-card p{
+  margin-bottom: 0;
+  color: grey;
+}
+
+/* testimonials features section */
+.testimonials h2{
+  font-weight: 600;
+}
+.testimonial-card img{
+  height: 9rem;
+  width: 9rem;
+  border: 0.3rem solid white;
+}
+.testimonial-card h3{
+  color: #3f10ea;
+  font-size: 2rem;
+}
+.testimonial-card p{
+  color: grey;
+}
+
+/* Footer section */
+.footer{
+  background-color: #607D8B;
+  padding-bottom: 2rem;
+}
+.footer-section h3{
+  font-size: 2.5rem;
+}
+.footer-section ul li{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.footer-bottom p{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.footer-bottom{
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
