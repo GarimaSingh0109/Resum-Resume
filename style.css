@@ -206,6 +206,7 @@ body {
   line-height: 6rem;
 =======
 /* Add more styles as needed for other elements */
+}
 
 .home {
     display: flex;
@@ -216,15 +217,7 @@ body {
     background-position: center;
     animation: floatInFromRight 2s ease-out forwards; /* Image floats from right */
 }
-.home {
-  display: flex;
-  align-items: center;
-  min-height: 100vh;
-  background: url(images/background-home.png) no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-height: 110vh;
-=======
+
 /* Dark mode styles */
 .dark-mode {
     background-color: #121212;
