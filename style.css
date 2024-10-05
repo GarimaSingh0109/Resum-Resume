@@ -72,7 +72,7 @@ header .logo{
 }
 header .logo:hover{
     font-size: 2rem;
-    color: #00c6ff;
+    color: #00c6;
     font-weight: bolder;
     text-decoration: none;
 }
