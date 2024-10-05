@@ -71,6 +71,10 @@ header {
 
 header .logo {
     font-size: 3rem;
+
+    font-family: 'Poppins', sans-serif;
+    color: #353047;
+
     color: var(--off-white); /* White logo for contrast */
     font-weight: bolder;
 }
@@ -82,10 +86,12 @@ header .logo:hover {
     text-decoration: none;
 }
 
+
 header .logo span {
     color: var(--off-white); /* Updated to match logo color */
 
 }
+
 
 header .navbar a {
     font-size: 2rem;
