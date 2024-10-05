@@ -515,6 +515,10 @@ body {
   font-size: 1.5rem;
   font-weight: 500;
 }
+    .footer-section ul li a{
+      color:#000;
+}
+    
 .footer-bottom p{
   font-size: 1.5rem;
   font-weight: 500;
