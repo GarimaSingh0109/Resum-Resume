@@ -117,14 +117,14 @@ header .fa-bars{
 }
 /* Default light mode styles */
 body {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #000;
+    color: blueviolet;
 }
 
 /* Dark mode styles */
 .dark-mode {
     background-color: #121212;
-    color: #ffffff;
+    color: blueviolet;
 }
 
 .dark-mode button {
@@ -171,7 +171,7 @@ body {
 /* Footer Styles */
 .footer {
     background-color: #1a1a1a;
-    color: #fff;
+    color: blueviolet;
     padding: 40px 0;
     font-size: 14px;
 }
@@ -194,7 +194,7 @@ body {
     font-size: 18px;
     margin-bottom: 20px;
     font-weight: 600;
-    color: #fff;
+    color: red;
     border-bottom: 2px solid #00c6ff;
     padding-bottom: 10px;
 }
