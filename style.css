@@ -5,6 +5,9 @@
     --soft-gold: #d9c79e; /* Soft Gold */
 
 }
+::-webkit-scrollbar{
+    display: none;
+}
 
 * {
     margin: 0; 
