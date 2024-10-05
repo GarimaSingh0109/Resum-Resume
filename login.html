@@ -5,27 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - LinkedIn Resume Builder</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="images/favicon-removebg-preview.png">
 
     <style>
-        
         :root {
             --deep-teal: #003d4d;
             --off-white: #f8f9fa;
             --dark-slate: #2f4f4f;
             --soft-gold: #d9c79e;
-
         }
 
         * {
             margin: 0; 
             padding: 0;
             box-sizing: border-box;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-family: 'Roboto', sans-serif; /* Changed to Roboto */
             outline: none;
             text-decoration: none;
             text-transform: capitalize;
@@ -34,8 +30,6 @@
 
         body {
             background-color: var(--off-white);
-            margin: 0;
-            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -51,7 +45,7 @@
             max-width: 400px;
             width: 100%;
             text-align: center;
-            position: relative; /* Allow footer positioning */
+            position: relative; /* Allows footer positioning */
         }
 
         .logo {
@@ -111,7 +105,7 @@
             width: 100%; /* Ensure the footer takes full width */
             background-color: var(--deep-teal); /* Background color for the footer */
             color: white; /* Text color */
-            padding: 30px 0; /* Padding for spacing */
+            padding: 20px 0; /* Padding for spacing */
             position: absolute; /* Positioning at the bottom */
             bottom: 0; /* Align to the bottom */
         }
@@ -128,6 +122,17 @@
 
         .footer a:hover {
             text-decoration: underline;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            button, .signup-btn {
+                padding: 12px;
+                font-size: 16px;
+            }
         }
     </style>
 </head>
@@ -147,47 +152,6 @@
     <div class="footer">
         <p>Powered by Resume Builder &copy; 2024</p>
     </div>
-
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>About Us</h3>
-                <ul>
-                    <li><a href="#">Our Story</a></li>
-                    <li><a href="#">Team</a></li>
-                    <li><a href="#">Careers</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Services</h3>
-                <ul>
-                    <li><a href="#">Resume Builder</a></li>
-                    <li><a href="#">CV Templates</a></li>
-                    <li><a href="#">Career Advice</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Support</h3>
-                <ul>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Connect With Us</h3>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-x-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Resume Builder. All rights reserved.</p>
-        </div>
-    </footer>
 
     <script>
         document.getElementById('loginForm').addEventListener('submit', function(event) {

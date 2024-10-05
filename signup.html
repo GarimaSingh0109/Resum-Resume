@@ -7,12 +7,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
         :root {
-            
             --deep-teal: #003d4d;
             --off-white: #f8f9fa;
             --dark-slate: #2f4f4f;
             --soft-gold: #d9c79e;
-
         }
 
         * {
@@ -35,10 +33,11 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            flex-direction: column; /* Added for vertical alignment */
+            flex-direction: column;
         }
 
         .container {
+            position: relative;
             background-color: white;
             padding: 40px;
             border-radius: 8px;
@@ -48,16 +47,40 @@
             text-align: center;
         }
 
+        /* Red Cross Button */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: transparent;
+            color: red;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 50%; /* Make the element circular */
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.2s;
+        }
+
+        /* Circle outline when hovered */
+        .close-btn:hover {
+            border: 2px solid red; /* Add circle outline */
+        }
+
         .logo {
-            font-size: 2rem; /* Decreased size for single line */
+            font-size: 2rem;
             color: var(--deep-teal);
             font-weight: 600;
             margin-bottom: 20px;
-            cursor: pointer; /* Change cursor to pointer */
+            cursor: pointer;
         }
 
         .logo:hover {
-            color: var(--soft-gold); /* Change color on hover */
+            color: var(--soft-gold);
         }
 
         h2 {
@@ -100,18 +123,18 @@
         }
 
         .footer {
-            margin-top: 20px; /* Space between container and footer */
+            margin-top: 20px;
             text-align: center;
-            width: 100%; /* Ensure the footer takes full width */
-            background-color: var(--deep-teal); /* Background color for the footer */
-            color: white; /* Text color */
-            padding: 30px 0; /* Padding for spacing */
-            position: absolute; /* Positioning at the bottom */
-            bottom: 0; /* Align to the bottom */
+            width: 100%;
+            background-color: var(--deep-teal);
+            color: white;
+            padding: 30px 0;
+            position: absolute;
+            bottom: 0;
         }
 
         .footer p {
-            color: #fff; /* Text color for footer */
+            color: #fff;
             font-size: 14px;
         }
 
@@ -128,6 +151,7 @@
 <body>
 
     <div class="container">
+        <button class="close-btn" onclick="window.location.href='index.html'">&times;</button>
         <div class="logo" onclick="window.location.href='index.html'">Resum Resume</div>
         <h2>Create Your Account</h2>
         <form id="signupForm" action="#" method="POST">
