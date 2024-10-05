@@ -133,8 +133,8 @@
         <form id="signupForm" action="#" method="POST">
             <input type="text" placeholder="Full Name" required>
             <input type="email" placeholder="Email Address" required>
-            <input type="password" placeholder="Password" required>
-            <input type="password" placeholder="Confirm Password" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
             <button type="submit">Sign Up</button>
         </form>
         <button class="login-btn" onclick="window.location.href='login.html'">Go to Login</button>
@@ -149,7 +149,27 @@
             event.preventDefault();
 
             var formData = new FormData(this);
+
+            var password = formData.get('password');
+            var confirmPassword = formData.get('confirmPassword');
             
+            function isStrongPassword(password) {
+                const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{8,}$/;
+                return regex.test(password);
+            }
+
+            // Password match validation
+            if (password !== confirmPassword) {
+                alert('Passwords do not match.');
+                return;
+            }
+
+            // Password strength validation
+            if (!isStrongPassword(password)) {
+                alert('Password must be at least 8 characters long, include an uppercase letter, a lowercase letter, a number, and a special character.');
+                return;
+            }
+
             fetch('signup-process.php', {
                 method: 'POST',
                 body: formData
