@@ -157,7 +157,7 @@ body {
     font-size: 3.5rem;
     color: var(--purple);
     padding: 1rem 0;
-    line-height: 1.5;
+    line-height: 1.0;
 }
 
 .home .content p{
