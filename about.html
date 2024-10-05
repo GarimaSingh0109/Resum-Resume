@@ -23,12 +23,17 @@
     <link rel="stylesheet" href="style.css" />
    <style>
         :root{
-         --purple: #aca7eb;
+         --bg-color:#acb4bc;
+         --navbar-bg:#aca7eb;
+        }
+        .dark-mode{
+            --bg-color:#0b0b0b;
+            --navbar-bg:#0a0a0a;
         }
 
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #acb4bc;
+            background-color: var(--bg-color);
             margin: 0;
             padding: 0;
         }
@@ -134,7 +139,7 @@
             background-color: var(--purple);
         }
         .navbar {
-            background-color: #aca7eb;
+            background-color: var(--navbar-bg);
             padding: 15px 20px;
             display: flex;
             justify-content: space-between;
@@ -271,7 +276,7 @@
  <header>  <!-- Navbar -->
     <input type="checkbox" name="" id="toggler" />
     <label for="toggler" class="fas fa-bars"></label>
-    <a href="#" class="logo">Resume Builder</a>
+    <a href="index.html" class="logo"><img src="logo.png" alt="logo"></a>
     <nav class="navbar">
      <ul>
          <li><a href="index.html">Home</a>
@@ -340,7 +345,7 @@
         const toggler = document.getElementById("toggler");
         const body = document.body;
         const closeBtn = document.querySelector(".close-btn");
-  
+
         closeBtn.addEventListener("click", function () {
           toggler.checked = false;
           body.classList.remove("sidebar-active");
@@ -353,5 +358,6 @@
           }
         });
       </script>
+     
 </body>
 </html>

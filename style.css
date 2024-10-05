@@ -1,7 +1,39 @@
 :root{
-    --purple: #6e65f0;
+    --background-color: #ffffff;
+    --footer-hover: #00c6ff;
+    --footer-underline:#00c6ff;
+    --footer-bg:#242d45;
+    --header-icon:#180c3a;
+    --header-hover:purple;
+    --p-text:#0f0f16;
+    --header-bg:#f0f0f4;
+    --header-text:#0d1193;
+   
+}
+/* Default light mode styles */
+body {
+    background-color: var(--background-color);
+    color: #000000;
 }
 
+.dark-mode {
+    --background-color: #4a4a4a;
+    --footer-hover: #515253;
+    --footer-underline:#656565;
+    --footer-bg:#020202;
+    --header-icon:#525252;
+    --header-hover:purple;
+    --p-text:#0f0f16;
+    --header-bg:#000000;
+    --header-text:#fdfdfd;
+}
+
+.dark-mode button {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+/* Add more styles as needed for other elements */
 * {
     margin: 0; 
     padding: 0;
@@ -13,7 +45,10 @@
     text-transform: capitalize;
     transition: .2s linear;
 }
-
+#theme{
+    width: 30px;
+    cursor: pointer;
+}
 html{
     font-size: 62.5%;
     scroll-behavior: smooth;
@@ -56,7 +91,7 @@ section{
 header{
     position: fixed;
     top: 0; left: 0; right: 0;
-    background: #f0f0f4;
+    background: var(--header-bg);
     padding: 2rem 9%;
     display: flex;
     align-items: center;
@@ -70,6 +105,17 @@ header .logo{
     color: #3f10ea;
     font-weight: bolder;
 }
+.logo{
+    position:absolute;  
+    top: 10px;          
+    left: 10px;          
+  }
+  
+  .logo img{
+    max-width: 70px;    
+    height: auto;        
+    width: auto;        
+  }
 header .logo:hover{
     font-size: 3rem;
     color: #f03c0b;
@@ -84,7 +130,7 @@ header .logo span{
 header .navbar a{
     font-size: 2rem;
     padding: 0 1.5rem;
-    color: #0d1193;
+    color: var(--header-text);
 }
 
 header .navbar a:hover{
@@ -94,12 +140,12 @@ header .navbar a:hover{
 
 header .icons a{
     font-size: 2.5rem;
-    color: #180c3a;
+    color: var(--header-icon);
     margin-left: 1.5rem;
 }
 
 header .icons a:hover{
-    color: var(--purple);
+    color: var(--header-hover);
 }
 
 header #toggler{
@@ -115,25 +161,6 @@ header .fa-bars{
     border: .1rem solid rgba(0,0,0,0.3);
     display: none;
 }
-/* Default light mode styles */
-body {
-    background-color: #ffffff;
-    color: #000000;
-}
-
-/* Dark mode styles */
-.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
-}
-
-.dark-mode button {
-    background-color: #1e1e1e;
-    color: #ffffff;
-}
-
-/* Add more styles as needed for other elements */
-
 
 .home{
     display: flex;
@@ -155,14 +182,14 @@ body {
 
 .home .content span{
     font-size: 3.5rem;
-    color: var(--purple);
+    color: var(--header-hover);
     padding: 1rem 0;
     line-height: 1.5;
 }
 
 .home .content p{
     font-size: 1.5rem;
-    color: #0f0f16;
+    color:var(--p-text);
     padding: 1rem 0;
     line-height: 1.5;
 }
@@ -170,7 +197,7 @@ body {
 
 /* Footer Styles */
 .footer {
-    background-color: #242d45;
+    background-color: var(--footer-bg);
     color: #fff;
     padding: 40px 0;
     font-size: 14px;
@@ -196,7 +223,7 @@ body {
     margin-bottom: 20px;
     font-weight: 600;
     color: #fff;
-    border-bottom: 2px solid #00c6ff;
+    border-bottom: 2px solid var(--footer-underline);
     padding-bottom: 10px;
 }
 
@@ -216,7 +243,7 @@ body {
 }
 
 .footer .footer-section ul li a:hover {
-    color: #00c6ff;
+    color: var(--footer-hover);
 }
 
 .footer .footer-section .social-icons a {
@@ -228,7 +255,7 @@ body {
 }
 
 .footer .footer-section .social-icons a:hover {
-    color: #00c6ff;
+    color: var(--footer-hover);
 }
 
 .footer-bottom {

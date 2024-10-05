@@ -9,27 +9,44 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     
     <link rel="icon" href="images/favicon-removebg-preview.png">
+    <script src="https://kit.fontawesome.com/9fa8e6aacd.js" crossorigin="anonymous"></script>
+
 
     <link rel="stylesheet" href="style.css">
-    <label for ="dark-mode-toggle">
-        <input type="checkbox" id="dark-mode-toggle" />
-        Toggle Dark Mode
-    </label>
     <style>
-  /*<label for ="dark-mode-toggle">
-    <input type="checkbox" id="dark-mode-toggle" />
-    Toggle Dark Mode
-</label>*/
+        /*dark-mode*/
+        :root{
+            --feature-bg:white;
+            --feature-h2: #333;
+            --feature-h3:#6e65f0;
+            --feature-p:#52525a;
+            --testimonial-bg:#ffffff;
+            --testimonial-h3:#6e65f0;
+            --testimonial-p:#52525a;
+            --testimonial-h2:#333;
+            
+        }
+        .dark-mode{
+            --feature-bg:rgb(5, 5, 5);
+            --feature-h2: #f8f5f5;
+            --feature-h3:#6e65f0;
+            --feature-p:#060606;
+            --testimonial-bg:#060606;
+            --testimonial-h3:#6e65f0;
+            --testimonial-p:#0d0d0d;
+            --testimonial-h2:#f8f5f5;
+        }
+  
 
         /* Features Section */
         .features {
             padding: 60px 20px;
-            background-color: #f9f9f9;
+            background-color: var(--feature-bg);
         }
 
         .features h2 {
             text-align: center;
-            color: #333;
+            color: var(--feature-h2);
             margin-bottom: 40px;
             font-size: 32px;
         }
@@ -86,25 +103,25 @@
         }
 
         .features-card h3 {
-            color: #6e65f0;
+            color: var(--feature-h3);
             margin: 15px 0;
             font-size: 22px;
         }
 
         .features-card p {
-            color: #52525a;
+            color: var(--feature-p);
             font-size: 16px;
         }
 
         /* Testimonials Section */
         .testimonials {
             padding: 60px 20px;
-            background-color: #ffffff;
+            background-color: var(--testimonial-bg);
         }
 
         .testimonials h2 {
             text-align: center;
-            color: #333;
+            color: var(--testimonial-h2);
             margin-bottom: 40px;
             font-size: 32px;
         }
@@ -135,27 +152,27 @@
         }
 
         .testimonial-card h3 {
-            color:  #6e65f0;
+            color:  var(--testimonial-h3);
             margin: 10px 0;
             font-size: 20px;
         }
 
         .testimonial-card p {
-            color: #52525a;
+            color: var(--testimonial-p);
             font-size: 16px;
             font-style: italic;
         }
 
     </style>
 </head>
-<body>
+<body>  
    <!-- header section starts -->
 
 <header>
         
     <input type="checkbox" name="" id="toggler">
     <label for="toggler" class="fas fa-bars"></label>
-    <a href="#" class="logo">Resum Resume<span>.</span></a>
+    <a href="#home" class="logo"><img src="logo.png" alt="logo"><span></span></a>
              
             <nav class="navbar">
                 <a href="#home">Home</a>
@@ -170,8 +187,9 @@
                 <a href="#" class="fas fa-envelope"></a>
                 <a href="login.html" id="loginIcon" class="fas fa-user"></a>
             </div>
+            <img src="moon.png" id="theme">
     
-        </header> 
+        </header>  
         
         <!-- header section ends -->
     
@@ -271,7 +289,7 @@
                 <h3>Connect With Us</h3>
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
                 </div>
@@ -283,6 +301,21 @@
     </footer>
 
     <!-- Scripts -->
+     <script>
+        var theme = document.getElementById("theme");
+
+        theme.onclick = function(){
+            document.body.classList.toggle("dark-mode");
+            if(document.body.classList.contains("dark-mode")){
+                theme.src="Sun.png";
+            }
+            else{
+                theme.src="moon.png";
+            }
+        }
+
+     </script>
+     
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
