@@ -124,10 +124,6 @@ header .navbar a:hover {
     text-decoration: none; /* Ensure no underline by default */
 }
 
-header .icons {
-
-}
-
 header .icons a {
     font-size: 2.5rem;
     color: var(--off-white); /* White icons for contrast */
@@ -198,9 +194,10 @@ body {
   font-size: 4.5rem;
   font-weight: 600;
   line-height: 6rem;
-=======
-/* Add more styles as needed for other elements */
+  /* Add more styles as needed for other elements */
 }
+
+
 
 .home {
     display: flex;
