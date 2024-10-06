@@ -20,7 +20,7 @@
 		/* Features Section */
 		.features {
 			padding: 60px 20px;
-			background-color: #f9f9f9;
+			background-color:rgb(255, 248, 220);
 		}
 
 
@@ -28,7 +28,7 @@
 			background-color: white;
 			padding: 30px;
 			border-radius: 8px;
-			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 			width: calc(25% - 30px);
 			text-align: center;
 			transition: transform 0.3s, box-shadow 0.3s, z-index 0.3s;
@@ -38,7 +38,7 @@
 
 		.features-card:hover {
 			transform: translateY(-10px) scale(1.1);
-			box-shadow: 0 4px 8px #0073b1;
+			box-shadow: 0 5px 8px #1077ae;
 			z-index: 3;
 		}
 
@@ -46,8 +46,8 @@
 			width: 60px;
 			height: 60px;
 			margin-bottom: 20px;
-			border-radius: 10px;
-			transition: transform 0.3s ease;
+			border-radius: 30px;
+			transition: transform 0.3s ease-in-out;
 		}
 
 		< !-- Features Section --><style>.features {
@@ -100,7 +100,7 @@
 			height: 60px;
 			/* Set the height for the icon images */
 			margin-bottom: 20px;
-			border-radius: 10px;
+			border-radius: 30px;
 			/* Rounded corners for the images */
 			transition: transform 0.3s ease;
 		}
@@ -147,10 +147,9 @@
 			max-width: 1200px;
 			margin: 0 auto;
 		}
-
-
+		
 		.features-card h3 {
-			color: #aca7eb;
+			color: #6a64b8;
 			margin: 15px 0;
 			font-size: 22px;
 		}
@@ -168,19 +167,30 @@
 		}
 
 		.features-card p {
-			color: #666;
+			color: #131212;
 			font-size: 16px;
+		}
+		.testimonial-cards:hover {
+			transform: translateY(-10px) scale(1.1);
+			box-shadow: 1px 5px 8px #df4108;
+			z-index: 4;
+		}
+		.testimonial-card:hover {
+			transform: translateY(-5px);
+			/* Slight lift effect on hover */
 		}
 
 
+
 		.testimonial-card img {
-			width: 80px;
+			width: 90px;
 			/* Profile image width */
-			height: 80px;
+			height: 90px;
 			/* Profile image height */
 			border-radius: 50%;
 			/* Circular shape for profile images */
 			margin-bottom: 20px;
+			transition: 0.3s ease-in;
 		}
 
 		.testimonial-card h3 {
@@ -200,11 +210,11 @@
 
 		/* Footer Styles */
 		.footer {
-			background-color: var(--deep-teal);
+			background-color: #05238e;
 			/* Use deep teal for footer background */
 			color: #ffffff;
 			/* White text for footer */
-			padding: 40px 0;
+			padding: 40px 10px;
 		}
 
 		.footer-content {
@@ -236,7 +246,7 @@
 		}
 
 		.testimonial-card h3 {
-			color: #aca7eb;
+			color: #281dbe;
 			margin: 10px 0;
 			font-size: 20px;
 		}
@@ -249,7 +259,7 @@
 		}
 
 		.testimonial-card p {
-			color: #666;
+			color: #0b0b0b;
 			font-size: 16px;
 			font-style: italic;
 		}
@@ -332,7 +342,7 @@
 			/* Space above footer bottom */
 			margin-top: 20px;
 			/* Space above footer bottom */
-			border-top: 1px solid rgba(255, 255, 255, 0.1);
+			border-top: 1px solid rgba(22, 21, 21, 0.1);
 			/* Light border for separation */
 		}
 
