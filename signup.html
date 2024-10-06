@@ -84,11 +84,11 @@
     <div class="container">
         <h2>Create Your Account</h2>
         <form action="#" method="POST">
-            <input type="text" placeholder="Full Name" required>
-            <input type="email" placeholder="Email Address" required>
-            <input type="password" placeholder="Password" required>
-            <input type="password" placeholder="Confirm Password" required>
-            <button type="submit">Sign Up</button>
+            <input id="name" type="text" placeholder="Full Name" required>
+            <input id="email" type="email" placeholder="Email Address" required>
+            <input id="password" type="password" placeholder="Password" required>
+            <input id="confirmPassword" type="password" placeholder="Confirm Password" required>
+            <button type="submit" class="signupbtn">Sign Up</button>
         </form>
         <div class="footer">
             <p>Already have an account? <a href="login.html">Log In</a></p>
@@ -96,25 +96,45 @@
     </div>
 
     <script>
-        document.getElementById('signupForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission
+       const signUp = document.querySelector(".signupbtn");
 
-            var formData = new FormData(this);
-            
-            fetch('signup-process.php', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    window.location.href = 'index.html'; // Redirect to homepage
-                } else {
-                    alert('Sign Up failed: ' + data.message);
+            signUp.addEventListener("click",(e)=>{
+                e.preventDefault();
+
+                const name = document.querySelector("#name").value;
+                const email = document.querySelector("#email").value;
+                const password = document.querySelector("#password").value;
+                const confirmPassword =document.querySelector("#confirmPassword").value;
+
+                if(!name || ! email || !password || ! confirmPassword){
+                    alert(" all feilds required");
+                    return;
                 }
-            })
-            .catch(error => console.error('Error:', error));
-        });
+                const userData = {
+                    name,email,password,confirmPassword
+                }
+
+                registerUser(userData);
+            });
+
+            const registerUser =async (user)=>{
+
+                try{
+
+                        const res = await fetch("http://localhost:5000/auth/signup",{
+                            method:"POST",
+                            headers:{"content-type":"application/json"},
+                            body:JSON.stringify(user)
+
+                        });
+                        const data = await res.json();
+                        window.location.href = "http://127.0.0.1:5500/Resum-Resume/login.html";
+
+                }catch(error){
+                    console.log(error.message);
+                    alert(" check the credentails")
+                }
+            }
     </script>
 
 </body>
