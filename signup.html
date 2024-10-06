@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for character set and viewport settings -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - LinkedIn Resume Builder</title>
+
+    <!-- Google Fonts: Importing Roboto font -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Internal CSS for styling the page -->
     <style>
+        /* Defining root variables for color palette */
         :root {
-            
             --deep-teal: #003d4d;
             --off-white: #f8f9fa;
             --dark-slate: #2f4f4f;
             --soft-gold: #d9c79e;
-
         }
 
+        /* Resetting default margins, padding, and other browser styles */
         * {
             margin: 0; 
             padding: 0;
@@ -27,6 +32,7 @@
             transition: .2s linear;
         }
 
+        /* Styling the body to center content vertically and horizontally */
         body {
             background-color: var(--off-white);
             margin: 0;
@@ -38,6 +44,7 @@
             flex-direction: column; /* Added for vertical alignment */
         }
 
+        /* Container styling for form area */
         .container {
             background-color: white;
             padding: 40px;
@@ -48,6 +55,7 @@
             text-align: center;
         }
 
+        /* Styling the logo text */
         .logo {
             font-size: 2rem; /* Decreased size for single line */
             color: var(--deep-teal);
@@ -56,15 +64,18 @@
             cursor: pointer; /* Change cursor to pointer */
         }
 
+        /* Hover effect for the logo text */
         .logo:hover {
             color: var(--soft-gold); /* Change color on hover */
         }
 
+        /* Styling the heading */
         h2 {
             color: var(--dark-slate);
             margin-bottom: 20px;
         }
 
+        /* Input fields styling */
         input[type="text"],
         input[type="email"],
         input[type="password"] {
@@ -75,6 +86,7 @@
             border-radius: 4px;
         }
 
+        /* Styling the sign-up button */
         button {
             width: 100%;
             padding: 15px;
@@ -86,19 +98,23 @@
             cursor: pointer;
         }
 
+        /* Hover effect for the sign-up button */
         button:hover {
             background-color: var(--soft-gold);
         }
 
+        /* Styling the login button */
         .login-btn {
             background-color: var(--soft-gold);
             margin-top: 10px;
         }
 
+        /* Hover effect for the login button */
         .login-btn:hover {
             background-color: var(--deep-teal);
         }
 
+        /* Styling the footer area */
         .footer {
             margin-top: 20px; /* Space between container and footer */
             text-align: center;
@@ -110,16 +126,19 @@
             bottom: 0; /* Align to the bottom */
         }
 
+        /* Footer paragraph styling */
         .footer p {
             color: #fff; /* Text color for footer */
             font-size: 14px;
         }
 
+        /* Footer links styling */
         .footer a {
             color: var(--soft-gold);
             text-decoration: none;
         }
 
+        /* Hover effect for footer links */
         .footer a:hover {
             text-decoration: underline;
         }
@@ -127,42 +146,60 @@
 </head>
 <body>
 
+    <!-- Container for sign-up form -->
     <div class="container">
+        <!-- Logo that links to the index page -->
         <div class="logo" onclick="window.location.href='index.html'">Resum Resume</div>
+
+        <!-- Form heading -->
         <h2>Create Your Account</h2>
+
+        <!-- Sign-up form -->
         <form id="signupForm" action="#" method="POST">
+            <!-- Input fields for full name, email, password, and password confirmation -->
             <input type="text" placeholder="Full Name" required>
             <input type="email" placeholder="Email Address" required>
             <input type="password" placeholder="Password" required>
             <input type="password" placeholder="Confirm Password" required>
+            
+            <!-- Submit button for sign-up -->
             <button type="submit">Sign Up</button>
         </form>
+
+        <!-- Button to navigate to login page -->
         <button class="login-btn" onclick="window.location.href='login.html'">Go to Login</button>
     </div>
 
+    <!-- Footer section with powered by information -->
     <div class="footer">
         <p>Powered by Resume Builder &copy; 2024</p>
     </div>
 
+    <!-- JavaScript to handle form submission using Fetch API -->
     <script>
+        // Event listener for form submission
         document.getElementById('signupForm').addEventListener('submit', function(event) {
-            event.preventDefault();
+            event.preventDefault(); // Prevent default form submission behavior
 
+            // Collect form data
             var formData = new FormData(this);
             
+            // Send form data to 'signup-process.php' using Fetch API
             fetch('signup-process.php', {
                 method: 'POST',
                 body: formData
             })
-            .then(response => response.json())
+            .then(response => response.json()) // Parse response as JSON
             .then(data => {
                 if (data.success) {
+                    // Redirect to home page on successful sign-up
                     window.location.href = 'index.html'; 
                 } else {
+                    // Show an alert if sign-up fails
                     alert('Sign Up failed: ' + data.message);
                 }
             })
-            .catch(error => console.error('Error:', error));
+            .catch(error => console.error('Error:', error)); // Handle any errors
         });
     </script>
 
