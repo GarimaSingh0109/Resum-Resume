@@ -1,0 +1,70 @@
+name: 🐞 Bug Report
+description: Report a bug found in the Resum-Resume source code
+labels: ["bug"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A brief description of the bug, including what you tried and what didn't work.
+      placeholder: Describe the bug in detail.
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Provide the steps to reproduce the bug.
+      placeholder: Step-by-step instructions to reproduce the bug.
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: Describe what you expected to happen.
+      placeholder: Expected behavior.
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: Describe what actually happened.
+      placeholder: Actual behavior.
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Information
+      description: Any other information you think might be helpful.
+      placeholder: Additional context, logs, or screenshots (recommended).
+
+  - type: checkboxes
+    id: browser
+    attributes:
+      label: What browser are you seeing the problem on?
+      options:
+        - label: Firefox
+          value: firefox
+        - label: Chrome
+          value: chrome
+        - label: Safari
+          value: safari
+        - label: Microsoft Edge
+          value: edge
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have checked the existing issues
+          value: checked_issues
+        - label: I have read the Contributing Guidelines
+          value: read_guidelines
+        - label: I want to work on this issue (optional)
+          value: work_on_issue
