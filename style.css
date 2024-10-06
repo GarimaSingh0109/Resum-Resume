@@ -83,29 +83,16 @@ header {
     justify-content: space-between;
     z-index: 1000;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+    padding: 2rem 5% 2rem 2%; /* Ajusta o padding-left */
 }
 
-header .logo {
-    font-size: 3rem;
-
-    font-family: 'Poppins', sans-serif;
-    color: #353047;
-
-    color: var(--off-white); /* White logo for contrast */
-    font-weight: bolder;
-}
-
-header .logo:hover {
-    font-size: 3rem;
-    color: var(--soft-gold); /* Soft Gold on hover for logo */
-    font-weight: bolder;
-    text-decoration: none;
-}
 header .logo {
   font-size: 3rem;
   color: #3f10ea;
   font-weight: bolder;
   font-size: 2.5rem;
+  align-self: flex-start;
+  margin-left: 7%;
 }
 header .logo:hover {
   font-size: 3rem;
@@ -121,10 +108,13 @@ header .logo span {
 
 }
 
-
+header .navbar {
+    position: relative;
+    left: 25%;
+}
 header .navbar a {
     font-size: 2rem;
-    padding: 15px;
+    padding: 5px;
     color: var(--off-white); /* White text for better contrast */
     text-decoration: none; /* Ensure no underline by default */
 }
@@ -204,8 +194,10 @@ body {
   font-size: 4.5rem;
   font-weight: 600;
   line-height: 6rem;
-=======
-/* Add more styles as needed for other elements */
+  /* Add more styles as needed for other elements */
+}
+
+
 
 .home {
     display: flex;
@@ -216,15 +208,7 @@ body {
     background-position: center;
     animation: floatInFromRight 2s ease-out forwards; /* Image floats from right */
 }
-.home {
-  display: flex;
-  align-items: center;
-  min-height: 100vh;
-  background: url(images/background-home.png) no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-height: 110vh;
-=======
+
 /* Dark mode styles */
 .dark-mode {
     background-color: #121212;
