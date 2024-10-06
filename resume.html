@@ -1,303 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resume Builder from LinkedIn</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
-      rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet"
     />
     <style>
-      *{
-        margin:10px;
-      }
-      .nav{
-        background-color: #aca7eb;
-        display: flex;
-        width: 100%;
-        margin: 0%;
-        
-      }
-      ul{
-        list-style: none;
-        display: flex;
-        align-items: end;
-        color: #fff;
-        font-size: 25px;
-        font-weight: 300;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      }
-      a{
-        color: #fff;
-        justify-content: space-between;
-        text-decoration: none;
-      }
-      li{
-        text-align: end;
-      }
-      .heading{
-        font-size: 70px;
-        background-color: #aca7eb;
-        color: white;
-        padding-left: 20px;
-        font-family:   sans-serif;
-      }
-      img{
-        border: 2px solid black;
-      }
-      .sub-heading{
-        margin-left: 30px;
-        padding-top: 40px;
-        font-size: 40px;
-        color: #4841bd;
-        width:fit-content;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-      }
-      .sample-resume{
-        width:20%;
-        margin:10px;
-        padding: 3px;
-      }
-      .sample-color{
-        width:17%;
-        margin:10px;
-        padding: 3px;
-      }
-      .button-view{
-       padding: 15px;
-       font-size: 25px;
-       font-weight: 500;
-       font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-       border: 1px solid #4841bd;
-      }
-      :root {
-        --purple: #6e65f0;
-      }
-      body {
-        font-family: "Roboto", sans-serif;
-        background-color: #f4f4f9;
-        margin: 0;
-        padding: 0;
-      }
-
-      .container {
-        margin: 50px 120px ;
-        background-color: #fff;
-        padding: 20px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      }
-
-      h1 {
-        text-align: center;
-        color: #333;
-      }
-
-      form {
-        display: flex;
-        flex-direction: column;
-      }
-
-      label {
-        margin: 10px 0 5px;
-        color: #333;
-        font-weight: 500;
-      }
-
-      input[type="url"],
-      select,
-      button {
-        padding: 10px;
-        font-size: 16px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        margin-bottom: 20px;
-        outline: none;
-      }
-
-      input[type="url"]:focus,
-      select:focus {
-        border-color: var(--purple);
-      }
-
-      button {
-        background-color: var(--purple);
-        color: white;
-        border: none;
-        cursor: pointer;
-      }
-
-      button:hover {
-        background-color: var(--purple);
-      }
-
-      .footer {
-        text-align: center;
-        margin-top: 20px;
-        font-size: 14px;
-        color: #666;
-      }
-      .navbar {
-        background-color: var(--purple);
-        padding: 15px 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .navbar h1 {
-        color: white;
-        margin: 0;
-        font-size: 24px;
-      }
-
-      .navbar ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        gap: 20px;
-      }
-
-      .navbar ul li {
-        display: inline;
-      }
-
-      .navbar ul li a {
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
-      }
-
-      .navbar ul li a:hover {
-        text-decoration: underline;
-      }
-
-      /* Main Content Placeholder */
-      .content {
-        padding: 20px;
-      }
-
-      /* Responsive adjustments */
-      @media (max-width: 768px) {
-        .navbar {
-          flex-direction: column;
-          align-items: flex-start;
+        :root {
+            --deep-teal: #003d4d; /* Updated primary color */
+            --off-white: #f8f9fa; /* Updated background color */
+            --dark-slate: #2f4f4f; /* Text color */
+            --soft-gold: #d9c79e; /* Accent color */
         }
 
-        .navbar ul {
-          flex-direction: column;
-          gap: 10px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            text-transform: capitalize;
+            transition: 0.2s linear;
+        }
+
+        body {
+            background-color: var(--off-white);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure body takes full height */
+        }
+
+        .container {
+            margin: 50px auto; /* Center horizontally */
+            padding: 20px;
+            max-width: 500px; /* Set a max-width for the container */
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px; /* Added rounded corners */
+            transition: box-shadow 0.3s ease;
+            display: flex; /* Use flexbox to center items */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: calc(100vh - 180px); /* Full height minus margins */
+        }
+
+        .container:hover {
+            box-shadow: 0 0 20px rgba(0, 77, 79, 0.8); /* Glow effect on hover */
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--dark-slate); /* Updated heading color */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%; /* Make form take full width of container */
+        }
+
+        label {
+            margin: 10px 0 5px;
+            color: var(--dark-slate); /* Updated label color */
+            font-weight: 500;
+        }
+
+        input[type="url"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        button {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            outline: none;
+            width: 100%; /* Full width for input fields */
+        }
+
+        input[type="url"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        select:focus {
+            border-color: var(--purple);
+        }
+
+        button {
+            background-color: var(--deep-teal);
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: var(--soft-gold); /* Soft gold hover color */
+            color: var(--deep-teal);
+            transform: scale(1.05);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: auto; /* Push footer to the bottom */
+            padding: 34px 0;
+            background-color: var(--deep-teal);
+            color: white;
+            font-size: 14px;
+        }
+
+        .navbar {
+            background-color: var(--deep-teal);
+            padding: 30px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .navbar h1 {
-          margin-bottom: 10px;
+            color: white;
+            margin-left: 15px;
+            font-size: 2rem;
+            transition: color 0.3s ease;
         }
-      }
-      @media (max-width: 400px) {
+
+        .navbar h1:hover {
+            color: var(--soft-gold);
+        }
+
         .navbar ul {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-evenly;
-          width: 100%;
+            list-style-type: none;
+            margin-right: 30px;
+            padding: 0;
+            display: flex;
+            gap: 20px;
         }
+
         .navbar ul li {
-          justify-content: space-evenly !important;
+            display: inline;
         }
+
         .navbar ul li a {
-          color: #eee7e7;
-          font-size: 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
         }
+
         .navbar ul li a:hover {
-          color: #ffffff;
-          font-size: 22px;
+            color: var(--soft-gold);
         }
-      }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .navbar h1 {
+                margin-bottom: 10px;
+            }
+
+            .container {
+                max-width: 90%; /* Adjusted width for mobile */
+            }
+        }
+        @media (max-width: 400px) {
+            .navbar ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                width: 100%;
+            }
+            .navbar ul li {
+                justify-content: space-evenly !important;
+            }
+            .navbar ul li a {
+                color: #eee7e7;
+                font-size: 20px;
+            }
+            .navbar ul li a:hover {
+                color: #ffffff;
+                font-size: 22px;
+            }
+        }
     </style>
-  </head>
-  <body>
-    <div class="nav">
-        <h1 class="heading">Resume Builder</h1>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1>Resum Resume</h1>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Build Resume</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="login.html">Login</a></li>
         </ul>
-      </div>
-        <div class="gallery-view">
+    </nav>
 
-          <div class="sampleTemplates">
-           <h2 class="sub-heading">SAMPLE DESIGNS</h2>
-
-           <img class="sample-resume"src="images\sample-resume6.jpg" alt="resume6">
-           <img class="sample-resume"src="images\sample-resume1.jpg" alt="resume1">
-           <img class="sample-resume"src="images\sample-resume2.jpg" alt="resume2">
-           <img class="sample-resume"src="images\sample-resume7.jpg" alt="resume7">
-           <img class="sample-resume"src="images\sample-resume4.jpg" alt="resume4">
-           <img class="sample-resume"src="images\sample-resume5.jpg" alt="resume5">
-           <img class="sample-resume"src="images\sample-resume8.jpg" alt="resume8">
-           <a href="galleryView.html"><button class="button-view">GALLERY VIEW</button></a>
-           
-           
-          </div>
-          <div class="colorPallet">
-            <h2 class="sub-heading">COLOUR PALETTE</h2>
-            <img class="sample-color"src="images\sample-color1.png" alt="color1">
-            <img class="sample-color"src="images\sample-color2.png" alt="color2">
-            <img class="sample-color"src="images\sample-color3.png" alt="color3">
-            <img class="sample-color"src="images\sample-color4.png" alt="color4">
-            <a href="colorChoice.html"><button class="button-view">MORE CHOICES</button></a> 
-          </div>
-        </div>
-
-        <div class="main-section">
-        <h2 class="sub-heading">CREATE YOUR OWN RESUME</h2>
     <div class="container">
-     
-      <form id="resumeForm">
-        <label for="linkedin-url">LinkedIn Profile URL</label>
-        <input
-          type="url"
-          id="linkedin-url"
-          name="linkedin-url"
-          placeholder="Enter your LinkedIn URL"
-          required
-        />
+        <form id="resumeForm">
+            <label for="linkedin-url">LinkedIn Profile URL</label>
+            <input
+                type="url"
+                id="linkedin-url"
+                name="linkedin-url"
+                placeholder="Enter your LinkedIn URL"
+                required
+            />
 
-        <label for="template">Choose a Resume Template</label>
-        <select id="template" name="template" placeholder="Choose Template"required>
-        <option value="classic">Choose Template</option>
-          <option value="classic">Classic Template</option>
-          <option value="modern">Modern Template</option>
-          <option value="minimalist">Minimalist Template</option>
-          <option value="Custom">Custom Template</option>
-        </select>
+            <label for="email">Email Address</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email address"
+                required
+            />
 
-        <button type="submit">Generate Resume</button>
-      </form>
+            <label for="phone">Phone Number</label>
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter your phone number"
+                required
+            />
+
+            <label for="template">Choose a Resume Template</label>
+            <select id="template" name="template" placeholder="Choose Template" required>
+                <option value="classic">Choose Template</option>
+                <option value="classic">Classic Template</option>
+                <option value="modern">Modern Template</option>
+                <option value="minimalist">Minimalist Template</option>
+                <option value="custom">Custom Template</option>
+            </select>
+
+            <button type="submit">Generate Resume</button>
+        </form>
     </div>
 
-
-      <div class="footer">
+    <!-- Footer -->
+    <div class="footer">
         <p>Powered by Resume Builder &copy; 2024</p>
-      </div>
     </div>
 
     <script>
-      document
-        .getElementById("resumeForm")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
+        document
+            .getElementById("resumeForm")
+            .addEventListener("submit", function (event) {
+                event.preventDefault();
 
-          const linkedInUrl = document.getElementById("linkedin-url").value;
-          const template = document.getElementById("template").value;
+                const linkedInUrl = document.getElementById("linkedin-url").value;
+                const email = document.getElementById("email").value;
+                const phone = document.getElementById("phone").value;
+                const template = document.getElementById("template").value;
 
-          if (linkedInUrl && template) {
-            alert(
-              `Generating resume using ${template} template for LinkedIn profile: ${linkedInUrl}`
-            );
-            // Here you would add logic to send this data to your backend for processing
-          }
-        });
+                if (linkedInUrl && email && phone && template) {
+                    alert(
+                        `Generating resume using ${template} template for LinkedIn profile: ${linkedInUrl}, Email: ${email}, Phone: ${phone}`
+                    );
+                    // Add logic to send this data to your backend for processing
+                }
+            });
     </script>
-  </body>
+</body>
 </html>
