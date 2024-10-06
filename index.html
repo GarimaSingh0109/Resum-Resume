@@ -24,12 +24,16 @@
 		}
 
 
+
+		/* <label for = "dark-mode-toggle" style="margin: 20px; display: block; text-align: center;"><label for="dark-mode-toggle"><input type="checkbox" id="dark-mode-toggle" />Toggle Dark Mode </label></label>.features-card {
+
 		/* <label for ="dark-mode-toggle" style="margin: 20px; display: block; text-align: center;"><label for="dark-mode-toggle"><input type="checkbox" id="dark-mode-toggle" />Toggle Dark Mode </label></label> */
 		
 		
 		.features-card {
+
 			background-color: white;
-			padding: 30px;
+			padding : 30px;
 			border-radius: 8px;
 			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 			width: calc(25% - 30px);
@@ -37,13 +41,16 @@
 			transition: transform 0.3s, box-shadow 0.3s, z-index 0.3s;
 			position: relative;
 			z-index: 1;
-		}
+		} */
 
 		.features-card:hover {
 			transform: translateY(-10px) scale(1.1);
 			box-shadow: 0 4px 8px #0073b1;
 			z-index: 3;
 		}
+
+
+		/* < !-- Features Section --><style>.features {
 
 		.features-card img {
 			width: 60px;
@@ -55,10 +62,11 @@
 
 		
 	.features {
+
 			padding: 60px 20px;
 			background-color: #f9f9f9;
-			/* Consider changing this to a darker tone if needed */
-		}
+			/* Consider changing this to a darker tone if needed 
+		} */
 
 		.features h2 {
 			text-align: center;
@@ -80,8 +88,8 @@
 		.features-card {
 			background-color: #fff;
 			/* You might want to change this to a softer off-white */
-			padding: 30px;
-			border-radius: 8px;
+			
+			border-radius: 18px;
 			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 			width: calc(25% - 30px);
 			text-align: center;
@@ -99,12 +107,12 @@
 		}
 
 		.features-card img {
-			width: 60px;
+			width: 100%;
 			/* Set the width for the icon images */
-			height: 60px;
+			height: 185px;
 			/* Set the height for the icon images */
-			margin-bottom: 20px;
-			border-radius: 10px;
+			/* margin-bottom: 20px; */
+			border-radius: 10px 10px 0 0;
 			/* Rounded corners for the images */
 			transition: transform 0.3s ease;
 		}
@@ -412,8 +420,10 @@
 			/* Remove default margin */
 			background: linear-gradient(90deg, #ff6f61, #de8c3e);
 			/* Gradient background */
-			-webkit-background-clip: text;
-			/* Clip background to text */
+
+			background-clip: text; /* Standard property */
+			-webkit-background-clip: text; /* Clip background to text */ /* For Safari and older versions of Chrome */
+			
 			-webkit-text-fill-color: transparent;
 			/* Fill color to transparent for effect */
 		}
@@ -545,6 +555,7 @@
 				margin-top: 20px;
 				border-top: 1px solid rgba(255, 255, 255, 0.1);
 			}
+		}	
 
 			/* Responsive Styles */
 			@media (max-width: 768px) {
@@ -798,6 +809,7 @@
 		scrollToTopBtn.onclick = function () {
 			window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to top
 		};
+	</script>
 
 	<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js">
 	</script>
