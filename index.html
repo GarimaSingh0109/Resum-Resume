@@ -24,7 +24,8 @@
 		}
 
 
-		<label for="dark-mode-toggle" style="margin: 20px; display: block; text-align: center;"><label for="dark-mode-toggle"><input type="checkbox" id="dark-mode-toggle" />Toggle Dark Mode </label></label>.features-card {
+		/* <label for="dark-mode-toggle" style="margin: 20px; display: block; text-align: center;"><label for="dark-mode-toggle"><input type="checkbox" id="dark-mode-toggle" />Toggle Dark Mode </label></label> */
+		.features-card {
 			background-color: white;
 			padding: 30px;
 			border-radius: 8px;
@@ -50,7 +51,8 @@
 			transition: transform 0.3s ease;
 		}
 
-		< !-- Features Section --><style>.features {
+		/* < !-- Features Section --><style> */
+			.features {
 			padding: 60px 20px;
 			background-color: #f9f9f9;
 			/* Consider changing this to a darker tone if needed */
@@ -795,11 +797,12 @@
 			window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to top
 		};
 
-		<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js">
+		<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 	</script>
+	
 	<script>
 			var typed = new Typed("#newlogo", {
-				strings: ["EnhanCV.", "Build and shine!"],
+			strings: ["EnhanCV.", "Build and shine!"],
 			loop: true,
 			typeSpeed: 80,
 			backSpeed: 25, // Speed for backspacing

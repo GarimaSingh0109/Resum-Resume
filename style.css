@@ -204,10 +204,10 @@ body {
   font-size: 4.5rem;
   font-weight: 600;
   line-height: 6rem;
-=======
+}
 /* Add more styles as needed for other elements */
 
-.home {
+.home{
     display: flex;
     align-items: center;
     min-height: 100vh;
@@ -224,7 +224,7 @@ body {
   background-size: cover;
   background-position: center;
   min-height: 110vh;
-=======
+}
 /* Dark mode styles */
 .dark-mode {
     background-color: #121212;
