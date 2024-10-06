@@ -111,7 +111,7 @@
             width: 100%; /* Ensure the footer takes full width */
             background-color: var(--deep-teal); /* Background color for the footer */
             color: white; /* Text color */
-            padding: 30px 0; /* Padding for spacing */
+            padding: 13px 0; /* Padding for spacing */
             position: absolute; /* Positioning at the bottom */
             bottom: 0; /* Align to the bottom */
         }
@@ -119,6 +119,7 @@
         .footer p {
             color: #fff; /* Text color for footer */
             font-size: 14px;
+            padding-top: 1rem;
         }
 
         .footer a {
@@ -136,80 +137,79 @@
     <div class="container">
         <div class="logo" onclick="window.location.href='index.html'">Resum Resume</div>
         <h2>Log In to Your Account</h2>
+
+        <form action="#" method="POST">
+            <input type="email" placeholder="Email Address " id="email" required>
+            <input type="password" placeholder="Password" id="password" required>
+            <button type="submit" id="signinbtn">Log In</button>
+
         <form id="loginForm" action="#" method="POST">
             <input type="email" placeholder="Email Address" required>
             <input type="password" placeholder="Password" required>
             <button type="submit">Log In</button>
+
         </form>
         <button class="signup-btn" onclick="window.location.href='signup.html'">Go to Signup</button>
     </div>
+
+  
+
 
     <div class="footer">
         <p>Powered by Resume Builder &copy; 2024</p>
     </div>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>About Us</h3>
-                <ul>
-                    <li><a href="#">Our Story</a></li>
-                    <li><a href="#">Team</a></li>
-                    <li><a href="#">Careers</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Services</h3>
-                <ul>
-                    <li><a href="#">Resume Builder</a></li>
-                    <li><a href="#">CV Templates</a></li>
-                    <li><a href="#">Career Advice</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Support</h3>
-                <ul>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Connect With Us</h3>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-x-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Resume Builder. All rights reserved.</p>
-        </div>
-    </footer>
 
     <script>
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission
+        const signin = document.querySelector("#signinbtn");
+ 
+             signin.addEventListener("click",(e)=>{
+                 e.preventDefault();
+ 
+           
+                 const email = document.querySelector("#email").value;
+                 const password = document.querySelector("#password").value;
+               
+ 
+                 if( ! email || !password ){
+                     alert(" all feilds required");
+                     return;
+                 }
+                 const userData = {
+                     email,password
+                 }
+ 
+                loginUser(userData);
+             });
+ 
+             const loginUser =async (user)=>{
+ 
+                 try{
+ 
+                         const res = await fetch("http://localhost:5000/auth/signin",{
+                             method:"POST",
+                             credentials:"include",
+                             redirect:"follow",
+                             headers:{"content-type":"application/json"},
+                             body:JSON.stringify(user)
+ 
+                         });
 
-            var formData = new FormData(this);
-            
-            fetch('login-process.php', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    window.location.href = 'index.html'; // Redirect to homepage
-                } else {
-                    alert('Login failed: ' + data.message);
-                }
-            })
-            .catch(error => console.error('Error:', error));
-        });
-    </script>
+                         if(!res.ok){
+                            alert(" Incorrect Credentails");
+                            return
+                         }
+                         const data = await res.json();
+                         alert("Login Successfull")
+                         window.location.href = "http://127.0.0.1:5500/Resum-Resume/index.html";
+ 
+                 }catch(error){
+                     console.log(error.message);
+                     alert(" check the credentails")
+                 }
 
+             }
+
+     </script>
 </body>
 </html>
