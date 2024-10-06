@@ -198,7 +198,7 @@ body {
 }
 
 
-.home .content h3 {
+.home .content h3{
   font-size: 5rem;
   color: #333;
   font-size: 4.5rem;
@@ -523,6 +523,7 @@ body {
   font-size: 1.5rem;
   font-weight: 500;
 }
+
 .footer-bottom{
   display: flex;
   justify-content: center;
