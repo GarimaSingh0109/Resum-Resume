@@ -338,13 +338,14 @@ body {
 }
 
 .footer .footer-section ul li a {
-    color: #ccc;
+    color: rgb(88, 88, 88);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer .footer-section ul li a:hover {
-    color: #00c6ff;
+    color: white;
+    text-decoration: none;
 }
 
 .footer .footer-section .social-icons a {
@@ -356,7 +357,8 @@ body {
 }
 
 .footer .footer-section .social-icons a:hover {
-    color: #00c6ff;
+    color: white;
+    text-decoration: none;
 }
 
 .footer-bottom {
