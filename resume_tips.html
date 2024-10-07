@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Tips - LinkedIn Resume Builder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --deep-teal: #003d4d; /* Updated primary color */
+            --off-white: #f8f9fa; /* Updated background color */
+            --dark-slate: #2f4f4f; /* Text color */
+            --soft-gold: #d9c79e; /* Accent color */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            text-transform: capitalize;
+            transition: 0.2s linear;
+        }
+
+        .navbar {
+            background-color: var(--deep-teal);
+            padding: 31px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .navbar h1 {
+            color: var(--off-white); 
+            margin: 0;
+            font-size: 2rem;
+            transition: color 0.3s ease; 
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin-right: 30px;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar ul li {
+            display: inline;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            color: var(--soft-gold);
+        }
+
+        body {
+            background-color: var(--off-white); 
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .summary, .education, .skills, .experience, .achieve, .tips {
+            background-color: var(--soft-gold);
+            color: var(--dark-slate);
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px #2f4f4f;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .summary:hover, .education:hover, .skills:hover, .experience:hover, .achieve:hover, .tips:hover {
+            background-color: rgb(185, 210, 210); 
+            color: var(--deep-teal);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px #2f4f4f;
+        }
+
+        .summary h2,.education h2,.skills h2,.experience h2,.achieve h2,.tips h2{
+            color: #003d4d;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+        
+        ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer {
+            background-color: var(--deep-teal); 
+            color: var(--off-white); 
+            padding: 30px 0; 
+            text-align: center; 
+            margin-top: 30px;
+        }
+
+        #main_heading {
+            text-align: center;
+            margin: 10px;
+            padding: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #003d4d;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1>Resum Resume</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="resume.html">Build Resume</a></li>
+                <li><a href="resume_tips.html">Resume Tips</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    <h1 id="main_heading">Ace Your Resume: Essential Tips</h1>
+    </header>
+    <main>
+        <div class="summary">
+            <h2>How To Write a Strong Professional Summary?</h2>
+            <br>
+            <p>A resume summary, also known as a professional summary or summary statement, is a short description at the top of your resume that describes your experience, qualities and skills. Your professional summary is your first impression. Make it count!</p>
+            <br>
+            <ul>
+                <li>Length: Keep it concise—2-3 sentences long.</li>
+                <li>Customization: Tailor it for each job application using keywords from the job description.</li>
+                <li>Professional Background: Include your job title, years of experience, and relevant industries.</li>
+                <li>Core Skills: Mention both hard and soft skills pertinent to the role in short.</li>
+                <li>Value Proposition: Explain how you can contribute to the employer’s success.</li>
+            </ul>
+            <br>
+            <p>
+                <h3>Example: For a Recent Graduate</h3>
+
+                Motivated Computer Science graduate with hands-on software development experience through internships. Proficient in Python and Java, with a solid foundation in data structures and algorithms. Demonstrated strong analytical and problem-solving skills through academic projects, including a web application that enhanced user engagement by 30%. Eager to apply technical skills and passion for technology to contribute to a dynamic tech team while continuing to grow professionally.
+            <p>
+        </div>
+        <div class="education">
+            <h2>Education Section</h2>
+            <br>
+            <p>Your education background is important, especially if you are a recent graduate.</p>
+            <br>
+            <ul>
+                <li>Order: List your education in reverse chronological order (most recent first).</li>
+                <li>Degree: Specify your degree and major (if applicable).</li>
+                <li>Institution: Name the school, college, or university.</li>
+                <li>Graduation Date: Include month and year.</li>
+                <li>GPA/Percentage: Include if it's impressive.</li>
+            </ul>
+        </div>
+        <div class="skills">
+            <h2>Highlighting Skills Effectively</h2>
+            <br>
+            <p>Make sure to showcase the skills that set you apart.</p>
+            <br>
+            <ul>
+                <li>Relevance: Tailor skills to the job description.</li>
+                <li>Categorization: Categorize the skills into hard skills (field related skills) as well as soft skills (interpersonal skills).</li>
+                <li>Be honest: Do not list skills you don't possess.</li>
+                <li>Avoid Overloading: Limit to 8-12 relevant skills.</li>
+            </ul>
+        </div>
+        <div class="experience">
+            <h2>Detailing Work Experience</h2>
+            <br>
+            <p>Your work experience section should showcase your career journey.</p>
+            <br>
+            <ul>
+                <li>Reverse Chronological Order: List jobs starting with the most recent position.</li>
+                <li>Include Key Information: Job Title, Company Name, Location, Dates of Employment.</li>
+                <li>Quantify Achievements: Whenever possible, include numbers or metrics to showcase your accomplishments (e.g., “Increased sales by 20%”).</li>
+                <li>Projects: If applicable, mention significant projects and your role in them.</li>
+            </ul>
+        </div>
+        <div class="achieve">
+            <h2>Achievements and awards section</h2>
+            <br>
+            <p>Mentioning achievements on your resume demonstrates your skills, value, and contributions, helping you stand out to potential employers.</p>
+            <br>
+            <ul>
+                <li>Relevance: Include achievements that are relevant to the job you’re applying for. This could include academic honors, professional awards, or notable projects.</li>
+                <li>Specificity: Be specific about each achievement. Include the name of the award or recognition, the organization that granted it, and the date received.</li>
+                <li>Quantify When Possible: Use numbers to illustrate the impact of your achievements (e.g., “Awarded Employee of the Month for increasing sales by 25%”).</li>
+            </ul>
+        </div>
+
+        <div class="tips">
+            <h2>Additional Tips</h2>
+            <br>
+            <p>The way your resume looks can affect its readability.</p>
+            <br>
+            <ul>
+                <li>Use a clean and professional layout.</li>
+                <li>Keep your font size between 10-12 points.</li>
+                <li>Use consistent formatting for headings and bullet points.</li>
+                <li>Leave adequate white space for easy reading.</li>
+                <li>Avoid using jargons.</li>
+                <li>Double-check for typos, grammar mistakes, and inaccuracies.</li>
+            </ul>
+        </div>
+        
+    </main>
+    <footer>
+        <div class="footer">
+            <p>Powered by Resume Builder &copy; 2024</p>
+        </div>
+    </footer>
+</body>
+</html>
