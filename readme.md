@@ -3,6 +3,8 @@
 
 This project is a **LinkedIn Resume Builder** that allows users to generate professional resumes from their LinkedIn profiles in just a few clicks. The website is designed with a clean and responsive UI using **Bootstrap**, and it focuses on simplicity and ease of use. Users can sign up, log in, and create a polished resume using their LinkedIn URL.
 
+**Discord Link:-** https://discord.gg/GJ5BfwVd
+
 ## Features 🚀
 
 - **Easy-to-Use Interface**: A user-friendly interface allows users to effortlessly create a resume.

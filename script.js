@@ -80,7 +80,9 @@ document.addEventListener('DOMContentLoaded', () => {
             commentInput.value = ''; // Clear the input
         });
     });
+    
 });
+
 // animations.js
 
 // Navbar Animation
@@ -164,3 +166,17 @@ gsap.from(".testimonial-card", {
     stagger: 0.2,
     ease: "power2.out"
 });
+
+
+        
+// var typed = new Typed('#newlogo', {
+//     strings: ['EnhanCV.'],
+//     typeSpeed: 50,
+// });
+       
+  
+
+        
+       
+  
+
