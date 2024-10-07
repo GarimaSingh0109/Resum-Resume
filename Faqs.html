@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - LinkedIn Resume Builder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+  
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #E0B1CB;
+            /* 
+#231942, #5E548E, , #BE95C4, #E0B1CB */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 40px;
+            /* padding-top: 10px; */
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+            font-size: 32px;
+        }
+
+        .faq-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+        }
+
+        .faq-card h5 {
+            font-size: 18px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .faq-card h5::after {
+            content: "\f078"; /* FontAwesome icon for caret-down */
+            font-family: FontAwesome;
+            position: absolute;
+            right: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-card.active h5::after {
+            transform: rotate(180deg);
+        }
+
+        .faq-card p {
+            display: none;
+            color: #666;
+            margin-top: 10px;
+            line-height: 1.6;
+        }
+
+        .faq-card.active p {
+            display: block;
+        }
+
+        .faq-card:hover {
+            box-shadow: 0 4px 8px #0073b1;
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #0073b1;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+            font-size: 20px;
+            display: none;
+        }
+
+        .scroll-to-top.visible {
+            display: block;
+        }
+
+        
+        .footer {
+            background-color: #0073b1;
+            color: #ffffff;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer p {
+            color: #ffffff;
+            margin: 0;
+        }
+        .back-button{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+		<input type="checkbox" name="" id="toggler" />
+		<label for="toggler" class="fas fa-bars"></label>
+
+		<a href="#" class="logo" id=""><span id="newlogo"></span></a>
+		<a href="#" class="logo">Resum Resume</a>
+
+		<nav class="navbar">
+			<a href="#home">Home</a>
+			<a href="about.html">About</a>
+			<a href="resume.html">Build Resume</a>
+			<a href="signup.html">Sign Up</a>
+			<a href="login.html">Login</a>
+		</nav>
+
+		<div class="icons">
+			<a href="about.html" class="fas fa-info-circle"></a>
+			<a href="#" class="fas fa-envelope"></a>
+			<a href="login.html" id="loginIcon" class="fas fa-user"></a>
+		</div>
+	</header>
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-card">
+            <h5>What is LinkedIn Resume Builder?</h5>
+            <p>LinkedIn Resume Builder is a tool that allows users to create professional resumes quickly by importing their LinkedIn profile data and formatting it into a polished, job-ready document.</p>
+        </div>
+
+        <div class="faq-card">
+            <h5>How can I use this tool?</h5>
+            <p>You can use LinkedIn Resume Builder by signing in with your LinkedIn account, selecting the data you want to include in your resume, and choosing one of our pre-designed templates to generate your resume.</p>
+        </div>
+
+        <div class="faq-card">
+            <h5>Is LinkedIn Resume Builder free to use?</h5>
+            <p>Yes, LinkedIn Resume Builder offers free templates and tools to create your resume. However, premium templates and features may require a subscription.</p>
+        </div>
+
+        <div class="faq-card">
+            <h5>Can I customize my resume?</h5>
+            <p>Yes, you can customize your resume by editing the sections, changing the layout, and selecting different templates to fit your style and professional needs.</p>
+        </div>
+
+        <div class="faq-card">
+            <h5>How do I download my resume?</h5>
+            <p>Once you’ve completed your resume, you can download it in PDF format directly from the platform.</p>
+        </div>
+        <div class="back-button">
+            <a href="index.html">Go Back to Home</a>
+        </div>
+
+    </div>
+
+    <button class="scroll-to-top" id="scrollToTopBtn"><i class="fas fa-chevron-up"></i></button>
+
+  
+    <footer class="footer">
+        <p>&copy; 2024 LinkedIn Resume Builder. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+  
+        const faqCards = document.querySelectorAll('.faq-card');
+        faqCards.forEach(card => {
+            card.addEventListener('click', () => {
+                card.classList.toggle('active');
+            });
+        });
+
+
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 100) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+
+</html>
