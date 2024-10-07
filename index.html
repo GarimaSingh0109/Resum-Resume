@@ -24,9 +24,16 @@
 		}
 
 
-		<label for="dark-mode-toggle" style="margin: 20px; display: block; text-align: center;"><label for="dark-mode-toggle"><input type="checkbox" id="dark-mode-toggle" />Toggle Dark Mode </label></label>.features-card {
+
+		/* <label for = "dark-mode-toggle" style="margin: 20px; display: block; text-align: center;"><label for="dark-mode-toggle"><input type="checkbox" id="dark-mode-toggle" />Toggle Dark Mode </label></label>.features-card {
+
+		/* <label for ="dark-mode-toggle" style="margin: 20px; display: block; text-align: center;"><label for="dark-mode-toggle"><input type="checkbox" id="dark-mode-toggle" />Toggle Dark Mode </label></label> */
+		
+		
+		.features-card {
+
 			background-color: white;
-			padding: 30px;
+			padding : 30px;
 			border-radius: 8px;
 			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 			width: calc(25% - 30px);
@@ -34,13 +41,16 @@
 			transition: transform 0.3s, box-shadow 0.3s, z-index 0.3s;
 			position: relative;
 			z-index: 1;
-		}
+		} */
 
 		.features-card:hover {
 			transform: translateY(-10px) scale(1.1);
 			box-shadow: 0 4px 8px #0073b1;
 			z-index: 3;
 		}
+
+
+		/* < !-- Features Section --><style>.features {
 
 		.features-card img {
 			width: 60px;
@@ -50,11 +60,13 @@
 			transition: transform 0.3s ease;
 		}
 
-		< !-- Features Section --><style>.features {
+		
+	.features {
+
 			padding: 60px 20px;
 			background-color: #f9f9f9;
-			/* Consider changing this to a darker tone if needed */
-		}
+			/* Consider changing this to a darker tone if needed 
+		} */
 
 		.features h2 {
 			text-align: center;
@@ -76,8 +88,8 @@
 		.features-card {
 			background-color: #fff;
 			/* You might want to change this to a softer off-white */
-			padding: 30px;
-			border-radius: 8px;
+			
+			border-radius: 18px;
 			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 			width: calc(25% - 30px);
 			text-align: center;
@@ -95,12 +107,12 @@
 		}
 
 		.features-card img {
-			width: 60px;
+			width: 100%;
 			/* Set the width for the icon images */
-			height: 60px;
+			height: 185px;
 			/* Set the height for the icon images */
-			margin-bottom: 20px;
-			border-radius: 10px;
+			/* margin-bottom: 20px; */
+			border-radius: 10px 10px 0 0;
 			/* Rounded corners for the images */
 			transition: transform 0.3s ease;
 		}
@@ -408,8 +420,10 @@
 			/* Remove default margin */
 			background: linear-gradient(90deg, #ff6f61, #de8c3e);
 			/* Gradient background */
-			-webkit-background-clip: text;
-			/* Clip background to text */
+
+			background-clip: text; /* Standard property */
+			-webkit-background-clip: text; /* Clip background to text */ /* For Safari and older versions of Chrome */
+			
 			-webkit-text-fill-color: transparent;
 			/* Fill color to transparent for effect */
 		}
@@ -490,7 +504,7 @@
 			width: 100%;
 			height: auto;
 			border-radius: 5px;
-
+		}
 
 			.footer-section h3 {
 				font-size: 18px;
@@ -541,6 +555,7 @@
 				margin-top: 20px;
 				border-top: 1px solid rgba(255, 255, 255, 0.1);
 			}
+		}	
 
 			/* Responsive Styles */
 			@media (max-width: 768px) {
@@ -610,6 +625,146 @@
 </head>
 
 <body>
+
+   <!-- header section starts -->
+
+<header>
+        
+    <input type="checkbox" name="" id="toggler">
+    <label for="toggler" class="fas fa-bars"></label>
+    <a href="#" class="logo">Resum Resume<span>.</span></a>
+             
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="about.html">About</a>
+                <a href="resume.html">Build Resume</a>
+                <a href="signup.html">Sign Up</a>
+                <a href="login.html">Login</a>
+                <a href="comment.html">Login</a>
+            </nav>
+    
+            <div class="icons">
+                <a href="about.html" class="fas fa-info-circle"></a>
+                <a href="#" class="fas fa-envelope"></a>
+                <a href="login.html" id="loginIcon" class="fas fa-user"></a>
+            </div>
+    
+        </header> 
+        
+        <!-- header section ends -->
+    
+    
+        <!-- home section starts -->
+    
+        <section class="home" id="Home">
+    
+            <div class="content">
+                <h3>Build Your Resume in Seconds from LinkedIn</h3>
+                <p>Easily generate a professional resume using your LinkedIn profile. Select a template, enter your LinkedIn URL,
+                    and get a downloadable resume in a few clicks. Save time and create a resume that stands out. </p>
+                <a href="signup.html" class="btn">Get Started</a>
+            </div>
+    
+        </section>
+    
+        <!-- home section ends-->
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Our Features</h2>
+        <div class="features-cards">
+            <div class="features-card">
+                <img src="assets/joao-ferrao-4YzrcDNcRVg-unsplash.jpg" alt="Easy to Use" >
+                <h3>Easy to Use</h3>
+                <p>Create a professional resume effortlessly with our user-friendly interface.</p>
+            </div>
+            <div class="features-card">
+                <img src="assets/instant resume.jpg" alt="Instant Resume">
+                <h3>Instant Resume</h3>
+                <p>Generate a polished resume in seconds using your LinkedIn profile data.</p>
+            </div>
+            <div class="features-card">
+                <img src="assets/securedata.jpg" alt="Secure Data">
+                <h3>Secure Data</h3>
+                <p>Your personal information is safe with our secure and encrypted platform.</p>
+            </div>
+            <div class="features-card">
+                <img src="assets/support.jpg" alt="24/7 Support">
+                <h3>24/7 Support</h3>
+                <p>Our dedicated support team is available round the clock to assist you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Users Say</h2>
+        <div class="testimonial-cards">
+            <div class="testimonial-card">
+                <img src="assets/jondoe.jpg" alt="User 1">
+                <h3>Jane Doe</h3>
+                <p>"This resume builder transformed my LinkedIn profile into a professional resume effortlessly. Highly recommended!"</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="assets/john_smith.jpg" alt="User 2">
+                <h3>John Smith</h3>
+                <p>"I was amazed at how quickly I was able to generate a resume. The process was smooth and the result was perfect."</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="assets/emily_johnson.jpg" alt="User 3">
+                <h3>Emily Johnson</h3>
+                <p>"The platform is user-friendly and secure. I felt confident that my data was protected. Great service!"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Resume Builder</a></li>
+                    <li><a href="#">CV Templates</a></li>
+                    <li><a href="#">Career Advice</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/GarimaSingh0109/Resum-Resume" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Resume Builder. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 	<!-- header section begins -->
 
@@ -727,12 +882,12 @@
 		</div>
 	</section>
 
-	<!-- Scroll to Top Button -->
+	
 	<button class="scroll-to-top" id="scrollToTopBtn">
 		<i class="fas fa-chevron-up"></i>
 	</button>
 
-	<!-- Footer -->
+
 	<footer class="footer">
 		<div class="footer-content">
 			<div class="footer-section">
@@ -754,7 +909,7 @@
 			<div class="footer-section">
 				<h3>Support</h3>
 				<ul>
-					<li><a href="#">FAQ</a></li>
+					<li><a href="/Faqs.html">FAQ</a></li>
 					<li><a href="#">Contact Us</a></li>
 					<li><a href="#">Privacy Policy</a></li>
 				</ul>
@@ -766,6 +921,9 @@
 					<a href="#"><i class="fab fa-twitter"></i></a>
 					<a href="#"><i class="fab fa-linkedin-in"></i></a>
 					<a href="#"><i class="fab fa-instagram"></i></a>
+				</div>
+				<div class = "web-views">
+					<img src="https://hits.sh/garimasingh0109.github.io/Resum-Resume.svg?label=Website%20Views&extraCount=1627&color=black&labelColor=9f9f9f" style="height: 20px;width: 150px;margin-top: 10px;" alt="web views">
 				</div>
 			</div>
 		</div>
@@ -794,8 +952,9 @@
 		scrollToTopBtn.onclick = function () {
 			window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to top
 		};
+	</script>
 
-		<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js">
+	<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js">
 	</script>
 	<script>
 			var typed = new Typed("#newlogo", {
@@ -807,6 +966,7 @@
 			startDelay: 500, // Optional: Delay before starting the typing effect
 			});
 	</script>
+
 </body>
 
 </html>
