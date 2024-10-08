@@ -97,6 +97,12 @@ header .logo {
     font-weight: bolder;
 }
 
+.logo img{
+    width: 100px;
+    padding: 0px 6px;
+    margin-right: -14px;
+}
+
 header .logo:hover {
     font-size: 3rem;
     color: var(--soft-gold); /* Soft Gold on hover for logo */
