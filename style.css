@@ -3,6 +3,8 @@
     --off-white: #f8f9fa; /* Off-White */
     --dark-slate: #2f4f4f; /* Dark Slate */
     --soft-gold: #d9c79e; /* Soft Gold */
+    --soft-teal: #aca7eb;
+
 
 }
 
@@ -76,13 +78,13 @@ section{
 header {
     position: fixed;
     top: 0; left: 0; right: 0;
-    background: var(--deep-teal); /* Changed background to Deep Teal */
+    background: var(--soft-teal); /*Changed background to Deep Teal */
     padding: 2rem 9%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);/
 }
 
 header .logo {
@@ -93,6 +95,12 @@ header .logo {
 
     color: var(--off-white); /* White logo for contrast */
     font-weight: bolder;
+}
+
+.logo img{
+    width: 100px;
+    padding: 0px 6px;
+    margin-right: -14px;
 }
 
 header .logo:hover {
