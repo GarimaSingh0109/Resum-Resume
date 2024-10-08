@@ -833,6 +833,12 @@
 			backDelay: 1000, // Delay before starting to backspace
 			startDelay: 500, // Optional: Delay before starting the typing effect
 			});
+
+			const userName = localStorage.getItem('userName');
+        if (userName) {
+            document.getElementById('accountName').textContent = userName;
+        }
+				
 	</script>
 
 </body>
