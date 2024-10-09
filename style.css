@@ -215,7 +215,7 @@ body {
 }
 /* Add more styles as needed for other elements */
 
-.home {
+.home{
     display: flex;
     align-items: center;
     min-height: 100vh;
