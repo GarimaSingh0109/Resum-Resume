@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,72 +8,169 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
         :root {
-            
             --deep-teal: #003d4d;
             --off-white: #f8f9fa;
             --dark-slate: #2f4f4f;
             --soft-gold: #d9c79e;
 
+            --dark-background: #121212;
+            --dark-surface: #1e1e1e;
+            --dark-primary: #bb86fc;
+            --dark-text: #e0e0e0;
         }
 
         * {
-            margin: 0; 
+            margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            outline: none;
-            border: none;
-            text-decoration: none;
-            text-transform: capitalize;
+            font-family: 'Roboto', sans-serif;
             transition: .2s linear;
         }
 
         body {
             background-color: var(--off-white);
-            margin: 0;
-            padding: 0;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            min-height: 100vh;
+            color: var(--dark-slate);
+        }
+
+        body.dark {
+            background-color: var(--dark-background);
+            color: var(--dark-text);
+        }
+
+        .navbar {
+            background-color: var(--deep-teal);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
             align-items: center;
-            height: 100vh;
-            flex-direction: column; /* Added for vertical alignment */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar img {
+            width: 80px;
+        }
+
+        .navbar h1 {
+            color: var(--off-white);
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .navbar ul li a {
+            color: var(--off-white);
+            font-size: 16px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            color: var(--soft-gold);
+            text-decoration: underline;
+        }
+
+        .theme-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+            color: var(--deep-teal);
+        }
+
+        .toggle-label {
+            margin-left: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        body.dark .toggle-label {
+            color: var(--dark-text);
         }
 
         .container {
             background-color: white;
-            padding: 40px;
+            padding: 40px 30px;
             border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
             width: 100%;
             text-align: center;
+            margin: 30px auto;
+            flex: 1;
+        }
+
+        body.dark .container {
+            background-color: var(--dark-surface);
         }
 
         .logo {
-            font-size: 2rem; /* Decreased size for single line */
+            font-size: 2.5rem;
             color: var(--deep-teal);
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 20px;
-            cursor: pointer; /* Change cursor to pointer */
+            cursor: pointer;
+            transition: color 0.3s;
         }
 
         .logo:hover {
-            color: var(--soft-gold); /* Change color on hover */
+            color: var(--soft-gold);
         }
 
         h2 {
             color: var(--dark-slate);
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+
+        body.dark h2 {
+            color: var(--dark-primary);
+        }
+
+        .form-group {
+            width: 100%;
             margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            margin-bottom: 5px;
+            display: block;
+            font-weight: bold;
+            color: var(--dark-slate);
         }
 
         input[type="text"],
         input[type="email"],
         input[type="password"] {
             width: 100%;
-            padding: 12px;
-            margin: 10px 0;
+            padding: 15px;
             border: 1px solid #ccc;
             border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            border-color: var(--deep-teal);
+            outline: none;
+        }
+
+        body.dark input[type="text"],
+        body.dark input[type="email"],
+        body.dark input[type="password"] {
+            background-color: var(--dark-surface);
+            border: 1px solid var(--dark-primary);
+            color: var(--dark-text);
         }
 
         button {
@@ -84,6 +182,8 @@
             border-radius: 4px;
             font-size: 18px;
             cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
         }
 
         button:hover {
@@ -92,60 +192,115 @@
 
         .login-btn {
             background-color: var(--soft-gold);
-            margin-top: 10px;
+            color: var(--deep-teal);
         }
 
         .login-btn:hover {
             background-color: var(--deep-teal);
+            color: white;
         }
 
         .footer {
-            margin-top: 20px; /* Space between container and footer */
+            margin-top: 30px;
             text-align: center;
-            width: 100%; /* Ensure the footer takes full width */
-            background-color: var(--deep-teal); /* Background color for the footer */
-            color: white; /* Text color */
-            padding: 30px 0; /* Padding for spacing */
-            position: absolute; /* Positioning at the bottom */
-            bottom: 0; /* Align to the bottom */
+            width: 100%;
+            background-color: var(--deep-teal);
+            color: white;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
         }
 
         .footer p {
-            color: #fff; /* Text color for footer */
             font-size: 14px;
         }
 
         .footer a {
             color: var(--soft-gold);
             text-decoration: none;
+            transition: text-decoration 0.3s;
         }
 
         .footer a:hover {
             text-decoration: underline;
         }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .container {
+                padding: 30px 20px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .navbar h1 {
+                font-size: 1.5rem;
+            }
+
+            .navbar img {
+                width: 70px;
+            }
+        }
     </style>
 </head>
+
 <body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <img src="images/logo.png" alt="logo">
+        <h1>Resum Resume</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Build Resume</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Theme Toggle Switch -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="themeSwitcher">
+        <label class="toggle-label" for="themeSwitcher">Day/Night Theme</label>
+    </div>
 
     <div class="container">
         <div class="logo" onclick="window.location.href='index.html'">Resum Resume</div>
         <h2>Create Your Account</h2>
 
-        <form action="#" method="POST">
-            <input id="name" type="text" placeholder="Full Name" required>
-            <input id="email" type="email" placeholder="Email Address" required>
-            <input id="password" type="password" placeholder="Password" required>
-            <input id="confirmPassword" type="password" placeholder="Confirm Password" required>
-            <button type="submit" class="signupbtn">Sign Up</button>
-
         <form id="signupForm" action="#" method="POST">
-            <input type="text" placeholder="Full Name" required>
-            <input type="email" placeholder="Email Address" required>
-            <input type="password" placeholder="Password" required>
-            <input type="password" placeholder="Confirm Password" required>
-            <button type="submit">Sign Up</button>
-
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input id="name" type="text" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input id="email" type="email" placeholder="Enter your email address" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input id="password" type="password" placeholder="Enter your password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input id="confirmPassword" type="password" placeholder="Re-enter your password" required>
+            </div>
+            <button type="submit" class="signupbtn">Sign Up</button>
         </form>
+
         <button class="login-btn" onclick="window.location.href='login.html'">Go to Login</button>
     </div>
 
@@ -154,64 +309,55 @@
     </div>
 
     <script>
+        const signUpForm = document.getElementById('signupForm');
+        const themeSwitcher = document.getElementById('themeSwitcher');
 
-       const signUp = document.querySelector(".signupbtn");
+        // Theme toggle functionality
+        themeSwitcher.addEventListener('change', () => {
+            document.body.classList.toggle('dark');
+        });
 
-            signUp.addEventListener("click",(e)=>{
-                e.preventDefault();
+        signUpForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
 
-                const name = document.querySelector("#name").value;
-                const email = document.querySelector("#email").value;
-                const password = document.querySelector("#password").value;
-                const confirmPassword =document.querySelector("#confirmPassword").value;
+            const name = document.querySelector("#name").value;
+            const email = document.querySelector("#email").value;
+            const password = document.querySelector("#password").value;
+            const confirmPassword = document.querySelector("#confirmPassword").value;
 
-                if(!name || ! email || !password || ! confirmPassword){
-                    alert(" all feilds required");
-                    return;
-                }
-                const userData = {
-                    name,email,password,confirmPassword
-                }
-
-                registerUser(userData);
-            });
-
-            const registerUser =async (user)=>{
-
-                try{
-
-                        const res = await fetch("http://localhost:5000/auth/signup",{
-                            method:"POST",
-                            headers:{"content-type":"application/json"},
-                            body:JSON.stringify(user)
-
-                        });
-                        const data = await res.json();
-                        window.location.href = "http://127.0.0.1:5500/Resum-Resume/login.html";
-
-                }catch(error){
-                    console.log(error.message);
-                    alert(" check the credentails")
-
-        document.getElementById('signupForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            var formData = new FormData(this);
-            
-            fetch('signup-process.php', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    window.location.href = 'index.html'; 
-                } else {
-                    alert('Sign Up failed: ' + data.message);
-
-                }
+            if (!name || !email || !password || !confirmPassword) {
+                alert("All fields are required");
+                return;
             }
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match");
+                return;
+            }
+
+            const userData = { name, email, password, confirmPassword };
+
+            try {
+                const res = await fetch("http://localhost:5000/auth/signup", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(userData)
+                });
+
+                const data = await res.json();
+
+                if (data.success) {
+                    window.location.href = "http://127.0.0.1:5500/Resum-Resume/login.html";
+                } else {
+                    alert("Sign Up failed: " + data.message);
+                }
+            } catch (error) {
+                console.log(error.message);
+                alert("Check your credentials");
+            }
+        });
     </script>
 
 </body>
+
 </html>

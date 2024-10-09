@@ -10,40 +10,42 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
     <style>
-  
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #E0B1CB;
-            /* 
-#231942, #5E548E, , #BE95C4, #E0B1CB */
         }
 
         .container {
-            max-width: 1200px;
-            margin: 50px auto;
-            padding: 40px;
-            /* padding-top: 10px; */
+            max-width: 1400px; /* Increased width for more content space */
+            margin: 80px auto; /* Adjusted margin for better spacing */
+            padding: 60px; /* More padding for a spacious feel */
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
         }
 
         h2 {
             text-align: center;
             color: #333;
             margin-bottom: 40px;
-            font-size: 32px;
+            font-size: 36px; /* Increased font size for heading */
+            font-weight: 700;
         }
 
         .faq-card {
             background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 15px;
+            padding: 30px; /* More padding for each card */
+            border-radius: 12px;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1); /* Deeper shadow for a more polished look */
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
         }
 
         .faq-card h5 {
-            font-size: 18px;
+            font-size: 22px; /* Increased font size */
             cursor: pointer;
             position: relative;
+            font-weight: 600;
         }
 
         .faq-card h5::after {
@@ -60,9 +62,10 @@
 
         .faq-card p {
             display: none;
-            color: #666;
-            margin-top: 10px;
-            line-height: 1.6;
+            color: #555;
+            margin-top: 20px; /* Increased margin */
+            line-height: 1.8; /* Improved readability */
+            font-size: 18px; /* Larger text size */
         }
 
         .faq-card.active p {
@@ -70,7 +73,7 @@
         }
 
         .faq-card:hover {
-            box-shadow: 0 4px 8px #0073b1;
+            box-shadow: 0 6px 12px rgba(0, 115, 177, 0.3); /* Hover effect */
         }
 
         .scroll-to-top {
@@ -88,53 +91,66 @@
             cursor: pointer;
             font-size: 20px;
             display: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         .scroll-to-top.visible {
             display: block;
         }
 
-        
         .footer {
             background-color: #0073b1;
             color: #ffffff;
-            padding: 40px 0;
+            padding: 50px 0;
             text-align: center;
+            font-size: 16px;
+            font-weight: 500;
         }
 
-        .footer p {
-            color: #ffffff;
-            margin: 0;
-        }
-        .back-button{
+        .back-button {
             display: flex;
             justify-content: center;
+            margin-top: 30px;
+        }
+
+        .back-button a {
+            background-color: #0073b1;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .back-button a:hover {
+            background-color: #005580;
         }
     </style>
 </head>
 
 <body>
     <header>
-		<input type="checkbox" name="" id="toggler" />
-		<label for="toggler" class="fas fa-bars"></label>
+        <input type="checkbox" name="" id="toggler" />
+        <label for="toggler" class="fas fa-bars"></label>
 
-		<a href="#" class="logo" id=""><span id="newlogo"></span></a>
-		<a href="#" class="logo">Resum Resume</a>
+        <a href="#" class="logo" id=""><span id="newlogo"></span></a>
+        <a href="#" class="logo">Resum Resume</a>
 
-		<nav class="navbar">
-			<a href="#home">Home</a>
-			<a href="about.html">About</a>
-			<a href="resume.html">Build Resume</a>
-			<a href="signup.html">Sign Up</a>
-			<a href="login.html">Login</a>
-		</nav>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="about.html">About</a>
+            <a href="resume.html">Build Resume</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="login.html">Login</a>
+        </nav>
 
-		<div class="icons">
-			<a href="about.html" class="fas fa-info-circle"></a>
-			<a href="#" class="fas fa-envelope"></a>
-			<a href="login.html" id="loginIcon" class="fas fa-user"></a>
-		</div>
-	</header>
+        <div class="icons">
+            <a href="about.html" class="fas fa-info-circle"></a>
+            <a href="#" class="fas fa-envelope"></a>
+            <a href="login.html" id="loginIcon" class="fas fa-user"></a>
+        </div>
+    </header>
+
     <div class="container">
         <h2>Frequently Asked Questions</h2>
 
@@ -162,21 +178,20 @@
             <h5>How do I download my resume?</h5>
             <p>Once you’ve completed your resume, you can download it in PDF format directly from the platform.</p>
         </div>
+
         <div class="back-button">
             <a href="index.html">Go Back to Home</a>
         </div>
-
     </div>
 
     <button class="scroll-to-top" id="scrollToTopBtn"><i class="fas fa-chevron-up"></i></button>
 
-  
     <footer class="footer">
         <p>&copy; 2024 LinkedIn Resume Builder. All Rights Reserved.</p>
     </footer>
 
     <script>
-  
+        // FAQ toggle
         const faqCards = document.querySelectorAll('.faq-card');
         faqCards.forEach(card => {
             card.addEventListener('click', () => {
@@ -184,7 +199,7 @@
             });
         });
 
-
+        // Scroll to Top button functionality
         const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
         window.addEventListener('scroll', () => {

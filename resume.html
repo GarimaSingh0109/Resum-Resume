@@ -4,23 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resume Builder from LinkedIn</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
-        rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
     <style>
         :root {
             --deep-teal: #003d4d; /* Updated primary color */
             --off-white: #f8f9fa; /* Updated background color */
             --dark-slate: #2f4f4f; /* Text color */
             --soft-gold: #d9c79e; /* Accent color */
+            --dark-background: #121212;
+            --dark-surface: #1e1e1e;
+            --dark-primary: #bb86fc;
+            --dark-text: #e0e0e0;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-family: 'Roboto', sans-serif;
             outline: none;
             border: none;
             text-decoration: none;
@@ -30,47 +31,43 @@
 
         body {
             background-color: var(--off-white);
-            margin: 0;
-            padding: 0;
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Ensure body takes full height */
+            min-height: 100vh;
+        }
+
+        body.dark {
+            background-color: var(--dark-background);
+            color: var(--dark-text);
         }
 
         .container {
-            margin: 50px auto; /* Center horizontally */
-            padding: 20px;
-            max-width: 500px; /* Set a max-width for the container */
+            margin: 30px auto;
+            width: 100%;
+            padding: 40px 30px;
+            max-width: 600px;
             background-color: #fff;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px; /* Added rounded corners */
-            transition: box-shadow 0.3s ease;
-            display: flex; /* Use flexbox to center items */
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
-            height: calc(100vh - 180px); /* Full height minus margins */
-        }
-
-        .container:hover {
-            box-shadow: 0 0 20px rgba(0, 77, 79, 0.8); /* Glow effect on hover */
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         h1 {
             text-align: center;
-            color: var(--dark-slate); /* Updated heading color */
+            color: var(--dark-slate);
         }
 
         form {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%; /* Make form take full width of container */
+            width: 100%;
         }
 
         label {
             margin: 10px 0 5px;
-            color: var(--dark-slate); /* Updated label color */
+            color: var(--dark-slate);
             font-weight: 500;
         }
 
@@ -84,34 +81,29 @@
             border: 1px solid #ccc;
             border-radius: 4px;
             margin-bottom: 20px;
-            outline: none;
-            width: 100%; /* Full width for input fields */
+            width: 100%;
         }
 
-        input[type="url"]:focus,
-        input[type="email"]:focus,
-        input[type="tel"]:focus,
-        select:focus {
-            border-color: var(--purple);
+        input:focus {
+            border-color: var(--deep-teal);
         }
 
         button {
             background-color: var(--deep-teal);
             color: white;
-            border: none;
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
         button:hover {
-            background-color: var(--soft-gold); /* Soft gold hover color */
+            background-color: var(--soft-gold);
             color: var(--deep-teal);
             transform: scale(1.05);
         }
 
         .footer {
             text-align: center;
-            margin-top: auto; /* Push footer to the bottom */
+            margin-top: auto;
             padding: 34px 0;
             background-color: var(--deep-teal);
             color: white;
@@ -126,15 +118,12 @@
             align-items: center;
         }
 
-        .navbar  img{
-        width: 100px;
-        padding: 0px 6px;
-        margin-right: -64px;
+        .navbar img {
+            width: 100px;
         }
 
         .navbar h1 {
             color: white;
-            margin-left: -38rem;
             font-size: 2rem;
             transition: color 0.3s ease;
         }
@@ -145,14 +134,9 @@
 
         .navbar ul {
             list-style-type: none;
-            margin-right: 30px;
             padding: 0;
             display: flex;
             gap: 20px;
-        }
-
-        .navbar ul li {
-            display: inline;
         }
 
         .navbar ul li a {
@@ -166,48 +150,33 @@
             color: var(--soft-gold);
         }
 
-        .content {
-            padding: 20px;
-            text-align: center;
+        .theme-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+            color: var(--off-white);
         }
 
-        /* Responsive adjustments */
+        .toggle-label {
+            margin-left: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            color: blue; /* Set label color to blue */
+        }
+
+        body.dark .toggle-label {
+            color: var(--dark-text);
+        }
+
         @media (max-width: 768px) {
             .navbar {
                 flex-direction: column;
                 align-items: flex-start;
             }
 
-            .navbar ul {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .navbar h1 {
-                margin-bottom: 10px;
-            }
-
             .container {
-                max-width: 90%; /* Adjusted width for mobile */
-            }
-        }
-        @media (max-width: 400px) {
-            .navbar ul {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-evenly;
-                width: 100%;
-            }
-            .navbar ul li {
-                justify-content: space-evenly !important;
-            }
-            .navbar ul li a {
-                color: #eee7e7;
-                font-size: 20px;
-            }
-            .navbar ul li a:hover {
-                color: #ffffff;
-                font-size: 22px;
+                max-width: 90%;
             }
         }
     </style>
@@ -227,38 +196,26 @@
         </ul>
     </nav>
 
+    <!-- Theme Toggle Switch -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="themeSwitcher">
+        <label class="toggle-label" for="themeSwitcher">Day/Night Theme</label>
+    </div>
+
     <div class="container">
         <form id="resumeForm">
             <label for="linkedin-url">LinkedIn Profile URL</label>
-            <input
-                type="url"
-                id="linkedin-url"
-                name="linkedin-url"
-                placeholder="Enter your LinkedIn URL"
-                required
-            />
+            <input type="url" id="linkedin-url" name="linkedin-url" placeholder="Enter your LinkedIn URL" required />
 
             <label for="email">Email Address</label>
-            <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Enter your email address"
-                required
-            />
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required />
 
             <label for="phone">Phone Number</label>
-            <input
-                type="tel"
-                id="phone"
-                name="phone"
-                placeholder="Enter your phone number"
-                required
-            />
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required />
 
             <label for="template">Choose a Resume Template</label>
-            <select id="template" name="template" placeholder="Choose Template" required>
-                <option value="classic">Choose Template</option>
+            <select id="template" name="template" required>
+                <option value="" disabled selected>Choose Template</option>
                 <option value="classic">Classic Template</option>
                 <option value="modern">Modern Template</option>
                 <option value="minimalist">Minimalist Template</option>
@@ -275,23 +232,26 @@
     </div>
 
     <script>
-        document
-            .getElementById("resumeForm")
-            .addEventListener("submit", function (event) {
-                event.preventDefault();
+        document.getElementById("resumeForm").addEventListener("submit", function (event) {
+            event.preventDefault();
 
-                const linkedInUrl = document.getElementById("linkedin-url").value;
-                const email = document.getElementById("email").value;
-                const phone = document.getElementById("phone").value;
-                const template = document.getElementById("template").value;
+            const linkedInUrl = document.getElementById("linkedin-url").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const template = document.getElementById("template").value;
 
-                if (linkedInUrl && email && phone && template) {
-                    alert(
-                        `Generating resume using ${template} template for LinkedIn profile: ${linkedInUrl}, Email: ${email}, Phone: ${phone}`
-                    );
-                    // Add logic to send this data to your backend for processing
-                }
-            });
+            if (linkedInUrl && email && phone && template) {
+                alert(`Generating resume using ${template} template for LinkedIn profile: ${linkedInUrl}, Email: ${email}, Phone: ${phone}`);
+                // Add logic to send this data to your backend for processing
+            }
+        });
+
+        // Theme toggle functionality
+        const themeSwitcher = document.getElementById('themeSwitcher');
+
+        themeSwitcher.addEventListener('change', () => {
+            document.body.classList.toggle('dark');
+        });
     </script>
 </body>
 </html>
