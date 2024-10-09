@@ -13,6 +13,17 @@
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
 
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --deep-teal: #003d4d; /* Updated primary color */
+            --off-white: #f8f9fa; /* Updated background color */
+            --dark-slate: #2f4f4f; /* Text color */
+            --soft-gold: #d9c79e; /* Accent color */
+        }
+
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -20,7 +31,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
+</head>
     <style>
       :root {
         --deep-teal: #003d4d; /* Updated primary color */
@@ -331,13 +342,16 @@
     <nav class="navbar">
         <img src="images/logo.png" alt="logo">
         <h1>Resum Resume</h1>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="resume.html">Build Resume</a></li>
-            <li><a href="signup.html">Sign Up</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
+        <nav class="navbar">
+			<div class="tabs-container"></div>
+			<a class="tab" href="#home">Home</a>
+			<a class="tab" href="about.html">About</a>
+			<a class="tab" href="resume.html">Build Resume</a>
+			<a class="tab" href="signup.html">Sign Up</a>
+			<a class="tab" href="login.html">Login</a>
+			</div>
+		</nav>
+		
     </nav>
 
     <div class="container">

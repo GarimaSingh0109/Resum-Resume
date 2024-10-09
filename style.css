@@ -485,6 +485,55 @@ body {
     }
 }
 
+
+.tab:hover {
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: blue;
+}
+
+
+.tab.active {
+    color: blue; 
+    font-weight: bold; 
+}
+.navbar {
+    position: relative;
+}
+
+#tabs {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+}
+
+.tab {
+    position: relative;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 19px;
+    color: black;
+    
+   
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.tab:hover {
+    background-color: black;
+}
+
+.cursor {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    background: black;
+    border-radius: 50%;
+    pointer-events: none; 
+    transition: all 0.3s ease; 
+    opacity: 0; 
+}
+
 /* Features section */
 .features h2{
   font-weight: 600;
@@ -517,4 +566,34 @@ body {
 }
 .testimonial-card p{
   color: grey;
+
 }
+
+/* Footer section */
+.footer{
+  background-color: #607D8B;
+  padding-bottom: 2rem;
+}
+.footer-section h3{
+  font-size: 2.5rem;
+}
+.footer-section ul li{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+    .footer-section ul li a{
+      color:#000;
+}
+    
+.footer-bottom p{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.footer-bottom{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+
