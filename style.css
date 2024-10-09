@@ -133,8 +133,8 @@ header .logo span {
 header .navbar a {
     font-size: 2rem;
     padding: 15px;
-    color: var(--off-white); /* White text for better contrast */
-    text-decoration: none; /* Ensure no underline by default */
+    color: blue; /* change to lue */
+    text-decoration: underline; /* underline*/
 }
 
 header .navbar a:hover {
@@ -144,8 +144,8 @@ header .navbar a:hover {
 
 header .icons a {
     font-size: 2.5rem;
-    color: var(--off-white); /* White icons for contrast */
-    margin-left: 1.5rem;
+    color: #000; /* black */
+    margin-left: 1.8rem;
 }
 
 header .icons a:hover {
@@ -154,7 +154,7 @@ header .icons a:hover {
   header .navbar a {
   font-size: 2rem;
   padding: 0 1.5rem;
-  color: #666;
+  color: #00ff00;
   font-size: 1.8rem;
 }
 
