@@ -306,7 +306,8 @@ body {
 .footer {
     background-color: #242d45;
     color: #fff;
-    padding: 40px 0;
+    
+    
     font-size: 14px;
 }
 
@@ -563,7 +564,7 @@ body {
 /* Footer section */
 .footer{
   background-color: #607D8B;
-  padding-bottom: 2rem;
+  /* padding-bottom: 2rem; */
 }
 .footer-section h3{
   font-size: 2.5rem;
