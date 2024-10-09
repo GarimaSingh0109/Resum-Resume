@@ -7,22 +7,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="images/favicon-removebg-preview.png">
 
     <style>
-        
         :root {
             --deep-teal: #003d4d;
             --off-white: #f8f9fa;
             --dark-slate: #2f4f4f;
             --soft-gold: #d9c79e;
-
         }
 
         * {
-            margin: 0; 
+            margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -39,7 +36,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             flex-direction: column;
         }
 
@@ -51,19 +48,18 @@
             max-width: 400px;
             width: 100%;
             text-align: center;
-            position: relative; /* Allow footer positioning */
         }
 
         .logo {
-            font-size: 2rem; /* Adjusted size for single line */
+            font-size: 2rem;
             color: var(--deep-teal);
             font-weight: 600;
             margin-bottom: 20px;
-            cursor: pointer; /* Change cursor to pointer */
+            cursor: pointer;
         }
 
         .logo:hover {
-            color: var(--soft-gold); /* Change color on hover */
+            color: var(--soft-gold);
         }
 
         h2 {
@@ -89,7 +85,7 @@
             border-radius: 4px;
             font-size: 18px;
             cursor: pointer;
-            margin-top: 10px; /* Added margin for spacing */
+            margin-top: 10px;
         }
 
         button:hover {
@@ -106,20 +102,18 @@
         }
 
         .footer {
-            margin-top: 20px; /* Space between container and footer */
+            margin-top: 20px;
             text-align: center;
-            width: 100%; /* Ensure the footer takes full width */
-            background-color: var(--deep-teal); /* Background color for the footer */
-            color: white; /* Text color */
-            padding: 13px 0; /* Padding for spacing */
-            position: absolute; /* Positioning at the bottom */
-            bottom: 0; /* Align to the bottom */
+            width: 100%;
+            background-color: var(--deep-teal);
+            color: white;
+            padding: 20px 0;
+            position: relative;
         }
 
         .footer p {
-            color: #fff; /* Text color for footer */
+            color: #fff;
             font-size: 14px;
-            padding-top: 1rem;
         }
 
         .footer a {
@@ -138,78 +132,60 @@
         <div class="logo" onclick="window.location.href='index.html'">Resum Resume</div>
         <h2>Log In to Your Account</h2>
 
-        <form action="#" method="POST">
-            <input type="email" placeholder="Email Address " id="email" required>
-            <input type="password" placeholder="Password" id="password" required>
-            <button type="submit" id="signinbtn">Log In</button>
-
         <form id="loginForm" action="#" method="POST">
-            <input type="email" placeholder="Email Address" required>
-            <input type="password" placeholder="Password" required>
-            <button type="submit">Log In</button>
-
+            <input type="email" id="email" placeholder="Email Address" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit" id="signinbtn">Log In</button>
         </form>
+
         <button class="signup-btn" onclick="window.location.href='signup.html'">Go to Signup</button>
     </div>
-
-  
-
 
     <div class="footer">
         <p>Powered by Resume Builder &copy; 2024</p>
     </div>
 
-
     <script>
         const signin = document.querySelector("#signinbtn");
- 
-             signin.addEventListener("click",(e)=>{
-                 e.preventDefault();
- 
-           
-                 const email = document.querySelector("#email").value;
-                 const password = document.querySelector("#password").value;
-               
- 
-                 if( ! email || !password ){
-                     alert(" all feilds required");
-                     return;
-                 }
-                 const userData = {
-                     email,password
-                 }
- 
-                loginUser(userData);
-             });
- 
-             const loginUser =async (user)=>{
- 
-                 try{
- 
-                         const res = await fetch("http://localhost:5000/auth/signin",{
-                             method:"POST",
-                             credentials:"include",
-                             redirect:"follow",
-                             headers:{"content-type":"application/json"},
-                             body:JSON.stringify(user)
- 
-                         });
 
-                         if(!res.ok){
-                            alert(" Incorrect Credentails");
-                            return
-                         }
-                         const data = await res.json();
-                         alert("Login Successfull")
-                         window.location.href = "http://127.0.0.1:5500/Resum-Resume/index.html";
- 
-                 }catch(error){
-                     console.log(error.message);
-                     alert(" check the credentails")
-                 }
+        signin.addEventListener("click", (e) => {
+            e.preventDefault();
 
-             }
+            const email = document.querySelector("#email").value;
+            const password = document.querySelector("#password").value;
 
-     </script>
+            if (!email || !password) {
+                alert("All fields are required");
+                return;
+            }
+
+            const userData = { email, password };
+            loginUser(userData);
+        });
+
+        const loginUser = async (user) => {
+            try {
+                const res = await fetch("http://localhost:5000/auth/signin", {
+                    method: "POST",
+                    credentials: "include",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(user),
+                });
+
+                if (!res.ok) {
+                    alert("Incorrect credentials");
+                    return;
+                }
+
+                const data = await res.json();
+                alert("Login successful");
+                window.location.href = "index.html";
+            } catch (error) {
+                console.log(error.message);
+                alert("Check the credentials");
+            }
+        };
+    </script>
 </body>
 </html>
+
