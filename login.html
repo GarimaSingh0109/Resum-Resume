@@ -80,6 +80,11 @@
             border-radius: 4px;
         }
 
+           input::placeholder {
+            color: #888; 
+        }
+
+        
         button {
             width: 100%;
             padding: 15px;
@@ -113,6 +118,8 @@
             color: white; /* Text color */
             padding: 13px 0; /* Padding for spacing */
             position: absolute; /* Positioning at the bottom */
+            justify-content: center;
+            display: flex;
             bottom: 0; /* Align to the bottom */
         }
 
@@ -130,25 +137,42 @@
         .footer a:hover {
             text-decoration: underline;
         }
+
+            @media (max-width: 768px) {
+            .container {
+                padding: 20px; 
+                width: 90%; 
+            }
+
+            button {
+                padding: 12px; 
+            }
+
+            h2 {
+                font-size: 1.5rem; 
+            }
+        }
     </style>
 </head>
 <body>
 
+   
     <div class="container">
+    
         <div class="logo" onclick="window.location.href='index.html'">Resum Resume</div>
         <h2>Log In to Your Account</h2>
 
+   
         <form action="#" method="POST">
-            <input type="email" placeholder="Email Address " id="email" required>
+            <label for="email">Email Address</label>
+            <input type="email" placeholder="Email Address" id="email" required>
+
+            <label for="password">Password</label>
             <input type="password" placeholder="Password" id="password" required>
+
             <button type="submit" id="signinbtn">Log In</button>
-
-        <form id="loginForm" action="#" method="POST">
-            <input type="email" placeholder="Email Address" required>
-            <input type="password" placeholder="Password" required>
-            <button type="submit">Log In</button>
-
         </form>
+
         <button class="signup-btn" onclick="window.location.href='signup.html'">Go to Signup</button>
     </div>
 
