@@ -169,6 +169,7 @@ body {
 .back-button {
     display: block;
     text-align: center;
+    font-size: medium;
     margin-top: 20px; /* Decrease this value to move the button up */
     margin-bottom: 0px;
 }
@@ -186,12 +187,13 @@ body {
 }
 
 .navbar {
-    background-color: var(--deep-teal); /* Updated navbar background color */
-    padding: 31px 20px; /* Increased top and bottom padding */
+    background-color: var(--deep-teal);
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 
 .navbar  img{
     width: 100px;
@@ -200,11 +202,11 @@ body {
 }
 
 .navbar h1 {
-    color: var(--off-white); /* Changed to use off-white for better contrast */
-    margin: 0;
+    color: white;
+    margin-left: -38rem;
     font-size: 2rem;
-    margin-left: -38rem; /* Adjust this value to move the logo right */
-    transition: color 0.3s ease; /* Smooth transition for color change */
+    transition: color 0.3s ease;
+    font-style: oblique;
 }
 
 .navbar h1:hover {
@@ -234,6 +236,13 @@ body {
     color: var(--soft-gold); /* Updated hover color to Soft Gold */
     text-decoration: none;
     transition: color 0.3s ease;
+}
+a.tab{
+    color: #ffffff;
+}
+a.tab:hover{
+    color: var(--deep-teal);
+    background-color: #ffffff;
 }
 
 /* Main Content Placeholder */
