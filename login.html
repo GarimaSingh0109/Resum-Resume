@@ -1,215 +1,633 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - LinkedIn Resume Builder</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" href="images/favicon-removebg-preview.png">
-
-    <style>
-        
-        :root {
-            --deep-teal: #003d4d;
-            --off-white: #f8f9fa;
-            --dark-slate: #2f4f4f;
-            --soft-gold: #d9c79e;
-
-        }
-
-        * {
-            margin: 0; 
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            outline: none;
-            text-decoration: none;
-            text-transform: capitalize;
-            transition: .2s linear;
-        }
-
-        body {
-            background-color: var(--off-white);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
-        }
-
-        .container {
-            background-color: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            width: 100%;
-            text-align: center;
-            position: relative; /* Allow footer positioning */
-        }
-
-        .logo {
-            font-size: 2rem; /* Adjusted size for single line */
-            color: var(--deep-teal);
-            font-weight: 600;
-            margin-bottom: 20px;
-            cursor: pointer; /* Change cursor to pointer */
-        }
-
-        .logo:hover {
-            color: var(--soft-gold); /* Change color on hover */
-        }
-
-        h2 {
-            color: var(--dark-slate);
-            margin-bottom: 20px;
-        }
-
-        input[type="email"],
-        input[type="password"] {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        button {
-            width: 100%;
-            padding: 15px;
-            background-color: var(--deep-teal);
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-size: 18px;
-            cursor: pointer;
-            margin-top: 10px; /* Added margin for spacing */
-        }
-
-        button:hover {
-            background-color: var(--soft-gold);
-        }
-
-        .signup-btn {
-            background-color: var(--soft-gold);
-            margin-top: 10px;
-        }
-
-        .signup-btn:hover {
-            background-color: var(--deep-teal);
-        }
-
-        .footer {
-            margin-top: 20px; /* Space between container and footer */
-            text-align: center;
-            width: 100%; /* Ensure the footer takes full width */
-            background-color: var(--deep-teal); /* Background color for the footer */
-            color: white; /* Text color */
-            padding: 13px 0; /* Padding for spacing */
-            position: absolute; /* Positioning at the bottom */
-            bottom: 0; /* Align to the bottom */
-        }
-
-        .footer p {
-            color: #fff; /* Text color for footer */
-            font-size: 14px;
-            padding-top: 1rem;
-        }
-
-        .footer a {
-            color: var(--soft-gold);
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register & Login</title>
+    <link rel="stylesheet" href="src\css/login.css" />
+    <link rel="shortcut icon" href="ambulance.png" type="image/x-icon">
+  </head>
+  <body>
     <div class="container">
-        <div class="logo" onclick="window.location.href='index.html'">Resum Resume</div>
-        <h2>Log In to Your Account</h2>
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form action="#" class="sign-in-form">
+            <h2 class="title">Sign in</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Username" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" />
+            </div>
+            <input type="submit" value="Login" class="btn solid" />
+            <p class="social-text">Or Sign in with social platforms</p>
+            <div class="social-media">
+             <a href="https://facebook.com/YourPage" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="40" height="40" style="margin-left: 5px;">
+</a>
+<br>
+              <a href="https://www.google.com" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png" alt="Google" width="40" height="40" style="margin-left: 5px;">
+</a>
+<br>
 
-        <form action="#" method="POST">
-            <input type="email" placeholder="Email Address " id="email" required>
-            <input type="password" placeholder="Password" id="password" required>
-            <button type="submit" id="signinbtn">Log In</button>
+              <a href="https://github.com/YourGitHubProfile" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width="40" height="40" style="margin-left: 5px;">
+              </a>
+            </div>
+          </form>
+          <form action="#" class="sign-up-form">
+            <h2 class="title">Sign up</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Username" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" placeholder="Email" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" />
+            </div>
+            <input type="submit" class="btn" value="Sign up" />
+            <p class="social-text">Or Sign up with social platforms</p>
+            <div class="social-media">
+               <a href="https://facebook.com/YourPage" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="40" height="40" style="margin-left: 5px;">
+</a>
+<br>
+              <a href="https://www.google.com" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png" alt="Google" width="40" height="40" style="margin-left: 5px;">
+</a>
+<br>
 
-        <form id="loginForm" action="#" method="POST">
-            <input type="email" placeholder="Email Address" required>
-            <input type="password" placeholder="Password" required>
-            <button type="submit">Log In</button>
+              <a href="https://github.com/YourGitHubProfile" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width="40" height="40" style="margin-left: 5px;">
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
 
-        </form>
-        <button class="signup-btn" onclick="window.location.href='signup.html'">Go to Signup</button>
+      <div class="panels-container">
+        <a href="index.html" class="homeBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20" width="30" height="30">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+          </svg>
+        </a>
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>New here ?</h3>
+            <p>
+                Discover new experiences with AmbuFlow! <br>Get access to exclusive content and features. <br> Create your account.
+            </p>
+            <a href="index.html" class="homeBtn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20" width="30" height="30">
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+              </svg>
+            </a>
+            <button class="btn transparent" id="sign-up-btn">
+              Sign up
+            </button>
+          </div>
+          <img src="img/log.svg" class="image" alt="" />
+        </div>
+        <div class="panel right-panel">
+          
+          <div class="content">
+            
+            <h3>One of us ?</h3>
+            <p>
+                Welcome to our community
+            </p>
+            <button class="btn transparent" id="sign-in-btn">
+              Sign in
+            </button>
+            
+          </div>
+          <img src="img/register.svg" class="image" alt="" />
+        </div>
+        
+      </div>
+      
     </div>
-
-  
-
-
-    <div class="footer">
-        <p>Powered by Resume Builder &copy; 2024</p>
-    </div>
-
-
-    <script>
-        const signin = document.querySelector("#signinbtn");
- 
-             signin.addEventListener("click",(e)=>{
-                 e.preventDefault();
- 
-           
-                 const email = document.querySelector("#email").value;
-                 const password = document.querySelector("#password").value;
-               
- 
-                 if( ! email || !password ){
-                     alert(" all feilds required");
-                     return;
-                 }
-                 const userData = {
-                     email,password
-                 }
- 
-                loginUser(userData);
-             });
- 
-             const loginUser =async (user)=>{
- 
-                 try{
- 
-                         const res = await fetch("http://localhost:5000/auth/signin",{
-                             method:"POST",
-                             credentials:"include",
-                             redirect:"follow",
-                             headers:{"content-type":"application/json"},
-                             body:JSON.stringify(user)
- 
-                         });
-
-                         if(!res.ok){
-                            alert(" Incorrect Credentails");
-                            return
-                         }
-                         const data = await res.json();
-                         alert("Login Successfull")
-                         window.location.href = "http://127.0.0.1:5500/Resum-Resume/index.html";
- 
-                 }catch(error){
-                     console.log(error.message);
-                     alert(" check the credentails")
-                 }
-
-             }
-
-     </script>
-</body>
+    <script src="login.js"></script>
+  </body>
 </html>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+input {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  background-color: #aca7eb;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.forms-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.signin-signup {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 75%;
+  width: 50%;
+  transition: 1s 0.7s ease-in-out;
+  display: grid;
+  grid-template-columns: 1fr;
+  z-index: 5;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0rem 5rem;
+  transition: all 0.2s 0.7s;
+  overflow: hidden;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+form.sign-up-form {
+  opacity: 0;
+  z-index: 1;
+}
+
+form.sign-in-form {
+  z-index: 2;
+}
+
+.title {
+  font-size: 2.2rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.input-field {
+  max-width: 380px;
+  width: 100%;
+  background-color: #f0f0f0;
+  margin: 10px 0;
+  height: 55px;
+  border-radius: 55px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding: 0 0.4rem;
+  position: relative;
+}
+
+.input-field i {
+  text-align: center;
+  line-height: 55px;
+  color: #acacac;
+  transition: 0.5s;
+  font-size: 1.1rem;
+}
+
+.input-field input {
+  background: none;
+  outline: none;
+  border: none;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.input-field input::placeholder {
+  color: #aaa;
+  font-weight: 500;
+}
+
+.social-text {
+  padding: 0.7rem 0;
+  font-size: 1rem;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icon {
+  height: 46px;
+  width: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.45rem;
+  color: #ffffff;
+  /* border-radius: 50%;
+  border: 1px solid #333; */
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: 0.3s;
+}
+
+.social-icon:hover {
+  color: #0b3174;
+  border-color: #af6e6e; 
+}
+
+.btn {
+  width: 150px;
+  background-color: #062c3b;
+  border: none;
+  outline: none;
+  height: 49px;
+  border-radius: 49px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-color: #9999c0;
+}
+.panels-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.container:before {
+  content: "";
+  position: absolute;
+  height: 2000px;
+  width: 2000px;
+  top: -10%;
+  right: 48%;
+  transform: translateY(-50%);
+  background-image: linear-gradient(-45deg, #000000 0%, #000000 100%);
+  transition: 1.8s ease-in-out;
+  border-radius: 50%;
+  z-index: 6;
+}
+
+.image {
+  width: 100%;
+  transition: transform 1.1s ease-in-out;
+  transition-delay: 0.4s;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  z-index: 6;
+}
+
+.left-panel {
+  pointer-events: all;
+  padding: 4rem 17% 2rem 12%;
+}
+
+.right-panel {
+  pointer-events: none;
+  padding: 3rem 12% 2rem 17%;
+}
+
+.panel .content {
+  color: #ffffff;
+  transition: transform 0.9s ease-in-out;
+  transition-delay: 0.6s;
+}
+
+.panel h3 {
+  font-weight: 600;
+  line-height: 1;
+  font-size: 1.5rem;
+}
+
+.panel p {
+  font-size: 0.95rem;
+  padding: 0.7rem 0;
+}
+
+.btn.transparent {
+  margin: 0;
+  background: none;
+  border: 2px solid #ffffff;
+  width: 130px;
+  height: 41px;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.right-panel .image,
+.right-panel .content {
+  transform: translateX(800px);
+}
+
+/* ANIMATION */
+
+.container.sign-up-mode:before {
+  transform: translate(100%, -50%);
+  right: 52%;
+}
+
+.container.sign-up-mode .left-panel .image,
+.container.sign-up-mode .left-panel .content {
+  transform: translateX(-800px);
+}
+
+.container.sign-up-mode .signin-signup {
+  left: 25%;
+}
+
+.container.sign-up-mode form.sign-up-form {
+  opacity: 1;
+  z-index: 2;
+}
+
+.container.sign-up-mode form.sign-in-form {
+  opacity: 0;
+  z-index: 1;
+}
+
+.container.sign-up-mode .right-panel .image,
+.container.sign-up-mode .right-panel .content {
+  transform: translateX(0%);
+}
+
+.container.sign-up-mode .left-panel {
+  pointer-events: none;
+}
+
+.container.sign-up-mode .right-panel {
+  pointer-events: all;
+}
+
+@media (max-width: 870px) {
+  .container {
+    min-height: 800px;
+    height: 100vh;
+  }
+  .signin-signup {
+    width: 100%;
+    top: 95%;
+    transform: translate(-50%, -100%);
+    transition: 1s 0.8s ease-in-out;
+  }
+
+  .signin-signup,
+  .container.sign-up-mode .signin-signup {
+    left: 50%;
+  }
+
+  .panels-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+  }
+
+  .panel {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2.5rem 8%;
+    grid-column: 1 / 2;
+  }
+
+  .right-panel {
+    grid-row: 3 / 4;
+  }
+
+  .left-panel {
+    grid-row: 1 / 2;
+  }
+
+  .image {
+    width: 200px;
+    transition: transform 0.9s ease-in-out;
+    transition-delay: 0.6s;
+  }
+
+  .panel .content {
+    padding-right: 15%;
+    transition: transform 0.9s ease-in-out;
+    transition-delay: 0.8s;
+  }
+
+  .panel h3 {
+    font-size: 1.2rem;
+  }
+
+  .panel p {
+    font-size: 0.7rem;
+    padding: 0.5rem 0;
+  }
+
+  .btn.transparent {
+    width: 110px;
+    height: 35px;
+    font-size: 0.7rem;
+  }
+
+  .container:before {
+    width: 1500px;
+    height: 1500px;
+    transform: translateX(-50%);
+    left: 30%;
+    bottom: 68%;
+    right: initial;
+    top: initial;
+    transition: 2s ease-in-out;
+  }
+
+  .container.sign-up-mode:before {
+    transform: translate(-50%, 100%);
+    bottom: 32%;
+    right: initial;
+  }
+
+  .container.sign-up-mode .left-panel .image,
+  .container.sign-up-mode .left-panel .content {
+    transform: translateY(-300px);
+  }
+
+  .container.sign-up-mode .right-panel .image,
+  .container.sign-up-mode .right-panel .content {
+    transform: translateY(0px);
+  }
+
+  .right-panel .image,
+  .right-panel .content {
+    transform: translateY(300px);
+  }
+
+  .container.sign-up-mode .signin-signup {
+    top: 5%;
+    transform: translate(-50%, 0);
+  }
+}
+
+@media (max-width: 570px) {
+  form {
+    padding: 0 1.5rem;
+  }
+
+  .image {
+    display: none;
+  }
+  .panel .content {
+    padding: 0.5rem 1rem;
+  }
+  .container {
+    padding: 1.5rem;
+  }
+
+  .container:before {
+    bottom: 72%;
+    left: 50%;
+  }
+
+  .container.sign-up-mode:before {
+    bottom: 28%;
+    left: 50%;
+  }
+}
+
+
+
+.homeBtn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: #aca7eb;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+
+</style>
+<script>
+    const sign_in_btn = document.querySelector("#sign-in-btn");
+const sign_up_btn = document.querySelector("#sign-up-btn");
+const container = document.querySelector(".container");
+
+sign_up_btn.addEventListener("click", () => {
+  container.classList.add("sign-up-mode");
+});
+
+sign_in_btn.addEventListener("click", () => {
+  container.classList.remove("sign-up-mode");
+});
+
+// Sign in form submission
+document.querySelector(".sign-in-form").addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  // Get the input values
+  const username = document.querySelector(".sign-in-form input[type='text']").value;
+  const password = document.querySelector(".sign-in-form input[type='password']").value;
+
+  // Dummy login logic for demo purposes
+  if (username === 'admin' && password === 'password') {
+    alert('Login successful!');
+    // Redirect to dashboard page
+    window.location.href = 'index.html';
+  } else {
+    alert('Invalid username or password');
+  }
+});
+
+// Sign up form submission
+document.querySelector(".sign-up-form").addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  // Get the input values
+  const username = document.querySelector(".sign-up-form input[type='text']").value;
+  const email = document.querySelector(".sign-up-form input[type='email']").value;
+  const password = document.querySelector(".sign-up-form input[type='password']").value;
+
+  if (username === '' || email === '' || password === '') {
+    alert('Please fill in all fields');
+    return;
+  }
+
+  // Dummy signup logic for demo purposes
+  localStorage.setItem('username', username);
+  localStorage.setItem('email', email);
+  localStorage.setItem('password', password);
+  localStorage.setItem('isLoggedIn', 'true');
+
+  alert('Signup successful!');
+  // Redirect to dashboard page
+  window.location.href = 'index.html';
+});
+
+// Toggle password visibility
+function togglePassword(fieldId, icon) {
+  const field = document.getElementById(fieldId);
+  const isPassword = field.type === 'password';
+
+  // Toggle between 'password' and 'text'
+  field.type = isPassword ? 'text' : 'password';
+
+  // Change the icon class between eye and eye-slash
+  icon.classList.toggle('fa-eye-slash', isPassword);
+  icon.classList.toggle('fa-eye', !isPassword);
+}
+
+// Check password strength
+function checkPasswordStrength() {
+  const password = document.querySelector(".sign-up-form input[type='password']").value;
+  const strengthWeak = document.getElementById('strength-weak');
+  const strengthMedium = document.getElementById('strength-medium');
+  const strengthStrong = document.getElementById('strength-strong');
+
+  let strength = 0;
+
+  if (password.length >= 8) strength++;
+  if (password.match(/[A-Z]/)) strength++;
+  if (password.match(/[a-z]/)) strength++;
+  if (password.match(/[0-9]/)) strength++;
+  if (password.match(/[^a-zA-Z0-9]/)) strength++;
+
+  strengthWeak.className = '';
+  strengthMedium.className = '';
+  strengthStrong.className = '';
+
+  if (strength >= 1) strengthWeak.className = 'weak';
+  if (strength >= 3) strengthMedium.className = 'medium';
+  if (strength >= 5) strengthStrong.className = 'strong';
+}
+
+// Call the checkPasswordStrength function on password input
+document.querySelector(".sign-up-form input[type='password']").addEventListener('input', checkPasswordStrength);
+</script>
