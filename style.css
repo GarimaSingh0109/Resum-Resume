@@ -34,7 +34,7 @@ section{
 .heading {
     text-align: center;
     font-size: 4rem;
-    color: var(--dark-slate); /* Dark Slate color */
+    color: var(--off-white); /* Dark Slate color */
     padding: 1rem;
     margin: 2rem 0;
     background: var(--deep-teal); /* Changed background to Deep Teal */
@@ -131,14 +131,14 @@ header .logo span {
 
 
 header .navbar a {
-    font-size: 2rem;
+    font-size: 2.5rem;
     padding: 15px;
-    color: var(--off-white); /* White text for better contrast */
+    color: var(--black); /* White text for better contrast */
     text-decoration: none; /* Ensure no underline by default */
 }
 
 header .navbar a:hover {
-    color: var(--soft-gold); /* Soft Gold on hover */
+    color: var(#3f10ea); /* Soft Gold on hover */
     text-decoration: none; /* Ensure no underline by default */
 }
 
@@ -161,19 +161,20 @@ header .icons a:hover {
 header .navbar a:hover {
   color: var(--red);
   text-decoration: none;
-  color: #3f10ea;
+  color: #d8eb08;
+  text-emphasis-color: #fff;
 }
 
 header .icons a {
   font-size: 2.5rem;
-  color: #333;
+  color: #e0cece;
   margin-left: 1.5rem;
   font-size: 2.2rem;
 }
 
 header .icons a:hover {
   color: var(--purple);
-  color: #3f10ea;
+  color: #3708e1;
   text-decoration: none;
  }
 
@@ -304,9 +305,9 @@ body {
 
 /* Footer Styles */
 .footer {
-    background-color: #242d45;
+    background-color: #1b4bcd;
     color: #fff;
-    padding: 40px 0;
+    padding: 40px 10px;
     font-size: 14px;
 }
 
