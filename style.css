@@ -3,6 +3,8 @@
     --off-white: #f8f9fa; /* Off-White */
     --dark-slate: #2f4f4f; /* Dark Slate */
     --soft-gold: #d9c79e; /* Soft Gold */
+    --soft-teal: #aca7eb;
+
 
 }
 
@@ -56,17 +58,33 @@ section{
 .btn:hover {
     background: var(--deep-teal); /* Deep Teal on hover */
 }
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 5rem;
+  background: #333;
+  color: #fff;
+  padding: 0.9rem 3.5rem;
+  cursor: pointer;
+  font-size: 1.7rem;
+  background-color: #3f10ea;
+}
+.btn:hover {
+  background: var(--purple);
+  background-color: #f03c0b;
+  color: white;
+}
 
 header {
     position: fixed;
     top: 0; left: 0; right: 0;
-    background: var(--deep-teal); /* Changed background to Deep Teal */
+    background: var(--soft-teal); /*Changed background to Deep Teal */
     padding: 2rem 9%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);/
 }
 
 header .logo {
@@ -79,11 +97,30 @@ header .logo {
     font-weight: bolder;
 }
 
+.logo img{
+    width: 100px;
+    padding: 0px 6px;
+    margin-right: -14px;
+}
+
 header .logo:hover {
     font-size: 3rem;
     color: var(--soft-gold); /* Soft Gold on hover for logo */
     font-weight: bolder;
     text-decoration: none;
+}
+header .logo {
+  font-size: 3rem;
+  color: #3f10ea;
+  font-weight: bolder;
+  font-size: 2.5rem;
+}
+header .logo:hover {
+  font-size: 3rem;
+  color: #f03c0b;
+  font-weight: bolder;
+  text-decoration: none;
+  font-size: 2.55rem;
 }
 
 
@@ -114,6 +151,31 @@ header .icons a {
 header .icons a:hover {
     color: var(--soft-gold); /* Soft Gold hover effect for icons */
 }
+  header .navbar a {
+  font-size: 2rem;
+  padding: 0 1.5rem;
+  color: #666;
+  font-size: 1.8rem;
+}
+
+header .navbar a:hover {
+  color: var(--red);
+  text-decoration: none;
+  color: #3f10ea;
+}
+
+header .icons a {
+  font-size: 2.5rem;
+  color: #333;
+  margin-left: 1.5rem;
+  font-size: 2.2rem;
+}
+
+header .icons a:hover {
+  color: var(--purple);
+  color: #3f10ea;
+  text-decoration: none;
+ }
 
 header #toggler {
     display: none;
@@ -136,17 +198,21 @@ body {
     color: var(--dark-slate); /* Changed from #000000 to Dark Slate */
 }
 
-/* Dark mode styles */
-.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
-}
+
 
 .dark-mode button {
     background-color: #1e1e1e;
     color: #ffffff;
 }
 
+
+.home .content h3{
+  font-size: 5rem;
+  color: #333;
+  font-size: 4.5rem;
+  font-weight: 600;
+  line-height: 6rem;
+}
 /* Add more styles as needed for other elements */
 
 .home {
@@ -158,6 +224,20 @@ body {
     background-position: center;
     animation: floatInFromRight 2s ease-out forwards; /* Image floats from right */
 }
+.home {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background: url(images/background-home.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 110vh;
+}
+/* Dark mode styles */
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
 
 .home .content {
     max-width: 50rem;
@@ -173,7 +253,14 @@ body {
     animation-delay: 0.5s; /* Delay for a smooth entrance */
 }
 
-
+.home .content p {
+  font-size: 1.5rem;
+  color: #999;
+  padding: 1rem 0;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  color: grey;
+}
 .home .content h3{
     font-size: 5rem;
     color: var(--dark-slate); /* Changed from #333 to Dark Slate */
@@ -389,3 +476,114 @@ body {
     }
     
 }
+
+
+.tab:hover {
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: blue;
+}
+
+
+.tab.active {
+    color: blue; 
+    font-weight: bold; 
+}
+.navbar {
+    position: relative;
+}
+
+#tabs {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+}
+
+.tab {
+    position: relative;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 19px;
+    color: black;
+    
+   
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.tab:hover {
+    background-color: black;
+}
+
+.cursor {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    background: black;
+    border-radius: 50%;
+    pointer-events: none; 
+    transition: all 0.3s ease; 
+    opacity: 0; 
+}
+
+/* Features section */
+.features h2{
+  font-weight: 600;
+}
+.features-card img{
+  width:80%;
+  height: 40%;
+  object-fit: cover;
+}
+.features-card h3{
+  color: #3f10ea;
+}
+.features-card p{
+  margin-bottom: 0;
+  color: grey;
+}
+
+/* testimonials features section */
+.testimonials h2{
+  font-weight: 600;
+}
+.testimonial-card img{
+  height: 9rem;
+  width: 9rem;
+  border: 0.3rem solid white;
+}
+.testimonial-card h3{
+  color: #3f10ea;
+  font-size: 2rem;
+}
+.testimonial-card p{
+  color: grey;
+}
+
+/* Footer section */
+.footer{
+  background-color: #607D8B;
+  padding-bottom: 2rem;
+}
+.footer-section h3{
+  font-size: 2.5rem;
+}
+.footer-section ul li{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+    .footer-section ul li a{
+      color:#000;
+}
+    
+.footer-bottom p{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.footer-bottom{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+

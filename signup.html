@@ -130,12 +130,21 @@
     <div class="container">
         <div class="logo" onclick="window.location.href='index.html'">Resum Resume</div>
         <h2>Create Your Account</h2>
+
+        <form action="#" method="POST">
+            <input id="name" type="text" placeholder="Full Name" required>
+            <input id="email" type="email" placeholder="Email Address" required>
+            <input id="password" type="password" placeholder="Password" required>
+            <input id="confirmPassword" type="password" placeholder="Confirm Password" required>
+            <button type="submit" class="signupbtn">Sign Up</button>
+
         <form id="signupForm" action="#" method="POST">
             <input type="text" placeholder="Full Name" required>
             <input type="email" placeholder="Email Address" required>
             <input type="password" placeholder="Password" required>
             <input type="password" placeholder="Confirm Password" required>
             <button type="submit">Sign Up</button>
+
         </form>
         <button class="login-btn" onclick="window.location.href='login.html'">Go to Login</button>
     </div>
@@ -145,6 +154,45 @@
     </div>
 
     <script>
+
+       const signUp = document.querySelector(".signupbtn");
+
+            signUp.addEventListener("click",(e)=>{
+                e.preventDefault();
+
+                const name = document.querySelector("#name").value;
+                const email = document.querySelector("#email").value;
+                const password = document.querySelector("#password").value;
+                const confirmPassword =document.querySelector("#confirmPassword").value;
+
+                if(!name || ! email || !password || ! confirmPassword){
+                    alert(" all feilds required");
+                    return;
+                }
+                const userData = {
+                    name,email,password,confirmPassword
+                }
+
+                registerUser(userData);
+            });
+
+            const registerUser =async (user)=>{
+
+                try{
+
+                        const res = await fetch("http://localhost:5000/auth/signup",{
+                            method:"POST",
+                            headers:{"content-type":"application/json"},
+                            body:JSON.stringify(user)
+
+                        });
+                        const data = await res.json();
+                        window.location.href = "http://127.0.0.1:5500/Resum-Resume/login.html";
+
+                }catch(error){
+                    console.log(error.message);
+                    alert(" check the credentails")
+
         document.getElementById('signupForm').addEventListener('submit', function(event) {
             event.preventDefault();
 
@@ -160,10 +208,9 @@
                     window.location.href = 'index.html'; 
                 } else {
                     alert('Sign Up failed: ' + data.message);
+
                 }
-            })
-            .catch(error => console.error('Error:', error));
-        });
+            }
     </script>
 
 </body>

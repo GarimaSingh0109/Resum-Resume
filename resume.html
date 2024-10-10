@@ -8,6 +8,7 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
         rel="stylesheet"
     />
+    <link rel="stylesheet" href="style.css">
     <style>
         :root {
             --deep-teal: #003d4d; /* Updated primary color */
@@ -138,9 +139,22 @@
             align-items: center;
         }
 
+        .navbar  img{
+        width: 100px;
+        padding: 0px 6px;
+        margin-right: -64px;
+        }
+
         .navbar h1 {
             color: white;
+            margin-left: -38rem;
+            
             font-size: 2rem;
+          transition: color 0.3s ease;
+        }
+      
+      .navbar h1:hover {
+            color: var(--soft-gold);
         }
 
         .navbar ul {
@@ -185,14 +199,18 @@
 
     <!-- Navbar -->
     <nav class="navbar">
+        <img src="images/logo.png" alt="logo">
         <h1>Resum Resume</h1>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="resume.html">Build Resume</a></li>
-            <li><a href="signup.html">Sign Up</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
+        <nav class="navbar">
+			<div class="tabs-container"></div>
+			<a class="tab" href="#home">Home</a>
+			<a class="tab" href="about.html">About</a>
+			<a class="tab" href="resume.html">Build Resume</a>
+			<a class="tab" href="signup.html">Sign Up</a>
+			<a class="tab" href="login.html">Login</a>
+			</div>
+		</nav>
+		
     </nav>
 
     <!-- Form Section -->
