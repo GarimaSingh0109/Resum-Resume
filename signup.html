@@ -3,121 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up - LinkedIn Resume Builder</title>
+    <title>Signup - LinkedIn Resume Builder</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
     <style>
         :root {
-            
-            --deep-teal: #003d4d;
-            --off-white: #f8f9fa;
-            --dark-slate: #2f4f4f;
-            --soft-gold: #d9c79e;
-
+            --primary-color: #003d4d;
+            --secondary-color: #d9c79e;
+            --background-color: #f8f9fa;
+            --text-color: #2f4f4f;
         }
 
         * {
             margin: 0; 
             padding: 0;
             box-sizing: border-box;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            outline: none;
-            border: none;
-            text-decoration: none;
-            text-transform: capitalize;
-            transition: .2s linear;
+            font-family: 'Roboto', sans-serif;
+            transition: 0.3s ease-in-out;
         }
 
         body {
-            background-color: var(--off-white);
-            margin: 0;
-            padding: 0;
+            background-color: var(--background-color);
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            flex-direction: column; /* Added for vertical alignment */
         }
 
         .container {
             background-color: white;
             padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
             max-width: 400px;
             width: 100%;
             text-align: center;
+            position: relative;
         }
 
         .logo {
-            font-size: 2rem; /* Decreased size for single line */
-            color: var(--deep-teal);
+            font-size: 2.5rem;
+            color: var(--primary-color);
             font-weight: 600;
             margin-bottom: 20px;
-            cursor: pointer; /* Change cursor to pointer */
         }
 
         .logo:hover {
-            color: var(--soft-gold); /* Change color on hover */
+            color: var(--secondary-color);
         }
 
         h2 {
-            color: var(--dark-slate);
+            color: var(--text-color);
             margin-bottom: 20px;
         }
 
-        input[type="text"],
         input[type="email"],
-        input[type="password"] {
+        input[type="password"],
+        input[type="Name"],
+        input[type="confirmpassword"] {
             width: 100%;
             padding: 12px;
             margin: 10px 0;
             border: 1px solid #ccc;
-            border-radius: 4px;
+            border-radius: 8px;
+        }
+
+        input:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 10px rgba(0, 61, 77, 0.2);
         }
 
         button {
             width: 100%;
             padding: 15px;
-            background-color: var(--deep-teal);
+            background-color: var(--primary-color);
             color: white;
             border: none;
-            border-radius: 4px;
+            border-radius: 8px;
             font-size: 18px;
             cursor: pointer;
+            margin-top: 10px;
         }
 
         button:hover {
-            background-color: var(--soft-gold);
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
         }
 
         .login-btn {
-            background-color: var(--soft-gold);
+            background-color: var(--secondary-color);
             margin-top: 10px;
         }
 
         .login-btn:hover {
-            background-color: var(--deep-teal);
+            background-color: var(--primary-color);
+            color: white;
         }
 
         .footer {
-            margin-top: 20px; /* Space between container and footer */
+            margin-top: 20px;
             text-align: center;
-            width: 100%; /* Ensure the footer takes full width */
-            background-color: var(--deep-teal); /* Background color for the footer */
-            color: white; /* Text color */
-            padding: 30px 0; /* Padding for spacing */
-            position: absolute; /* Positioning at the bottom */
-            bottom: 0; /* Align to the bottom */
-        }
-
-        .footer p {
-            color: #fff; /* Text color for footer */
-            font-size: 14px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
         }
 
         .footer a {
-            color: var(--soft-gold);
-            text-decoration: none;
+            color: var(--secondary-color);
         }
 
         .footer a:hover {
@@ -128,25 +126,18 @@
 <body>
 
     <div class="container">
-        <div class="logo" onclick="window.location.href='index.html'">Resum Resume</div>
-        <h2>Create Your Account</h2>
-
-        <form action="#" method="POST">
-            <input id="name" type="text" placeholder="Full Name" required>
-            <input id="email" type="email" placeholder="Email Address" required>
-            <input id="password" type="password" placeholder="Password" required>
-            <input id="confirmPassword" type="password" placeholder="Confirm Password" required>
-            <button type="submit" class="signupbtn">Sign Up</button>
+        <div class="logo">Resum Resume</div>
+        <h2>Create Your Account</h2> 
 
         <form id="signupForm" action="#" method="POST">
-            <input type="text" placeholder="Full Name" required>
-            <input type="email" placeholder="Email Address" required>
-            <input type="password" placeholder="Password" required>
-            <input type="password" placeholder="Confirm Password" required>
-            <button type="submit">Sign Up</button>
-
+            <input type="Name" placeholder="Enter Name" id="name" required>
+            <input type="email" placeholder="Email Address" id="email" required>
+            <input type="password" placeholder="Password" id="password" required>
+            <input type="password" placeholder="Confirm Password" id="confirmpassword" required>
+            <button type="submit" id="signupbtn">Sign Up</button>
         </form>
-        <button class="login-btn" onclick="window.location.href='login.html'">Go to Login</button>
+
+        <a href="Login.html"><button class="login-btn" onclick="window.location.href='login.html'">Already Have an Account? Log In</button></a> 
     </div>
 
     <div class="footer">
@@ -154,64 +145,49 @@
     </div>
 
     <script>
-
-       const signUp = document.querySelector(".signupbtn");
-
-            signUp.addEventListener("click",(e)=>{
-                e.preventDefault();
-
-                const name = document.querySelector("#name").value;
-                const email = document.querySelector("#email").value;
-                const password = document.querySelector("#password").value;
-                const confirmPassword =document.querySelector("#confirmPassword").value;
-
-                if(!name || ! email || !password || ! confirmPassword){
-                    alert(" all feilds required");
-                    return;
-                }
-                const userData = {
-                    name,email,password,confirmPassword
-                }
-
-                registerUser(userData);
-            });
-
-            const registerUser =async (user)=>{
-
-                try{
-
-                        const res = await fetch("http://localhost:5000/auth/signup",{
-                            method:"POST",
-                            headers:{"content-type":"application/json"},
-                            body:JSON.stringify(user)
-
-                        });
-                        const data = await res.json();
-                        window.location.href = "http://127.0.0.1:5500/Resum-Resume/login.html";
-
-                }catch(error){
-                    console.log(error.message);
-                    alert(" check the credentails")
-
-        document.getElementById('signupForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            var formData = new FormData(this);
-            
-            fetch('signup-process.php', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    window.location.href = 'index.html'; 
-                } else {
-                    alert('Sign Up failed: ' + data.message);
-
-                }
+        const signupForm = document.getElementById('signupForm');
+        const signupBtn = document.getElementById('signupbtn');
+        
+        signupBtn.addEventListener('click', (e) => {
+            e.preventDefault();  // Prevent form submission
+    
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmpassword').value;
+    
+            // Basic validation
+            if (!name || !email || !password || !confirmPassword) {
+                alert('All fields are required.');
+                return;
             }
+    
+            // Email format validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+    
+            // Password validation
+            if (password.length < 8) {
+                alert('Password must be at least 8 characters long.');
+                return;
+            }
+    
+            // Confirm password validation
+            if (password !== confirmPassword) {
+                alert('Passwords do not match.');
+                return;
+            }
+    
+            // Submit the form if validation is successful
+            signupForm.submit();
+        });
     </script>
+    
 
 </body>
+
 </html>
+``
