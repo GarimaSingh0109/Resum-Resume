@@ -5,27 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - LinkedIn Resume Builder</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="images/favicon-removebg-preview.png">
 
     <style>
-        
         :root {
             --deep-teal: #003d4d;
             --off-white: #f8f9fa;
             --dark-slate: #2f4f4f;
             --soft-gold: #d9c79e;
-
         }
 
         * {
             margin: 0; 
             padding: 0;
             box-sizing: border-box;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-family: 'Roboto', sans-serif; /* Changed to Roboto */
             outline: none;
             text-decoration: none;
             text-transform: capitalize;
@@ -34,8 +30,6 @@
 
         body {
             background-color: var(--off-white);
-            margin: 0;
-            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -51,7 +45,7 @@
             max-width: 400px;
             width: 100%;
             text-align: center;
-            position: relative; /* Allow footer positioning */
+            position: relative; /* Allows footer positioning */
         }
 
         .logo {
@@ -111,7 +105,7 @@
             width: 100%; /* Ensure the footer takes full width */
             background-color: var(--deep-teal); /* Background color for the footer */
             color: white; /* Text color */
-            padding: 13px 0; /* Padding for spacing */
+            padding: 20px 0; /* Padding for spacing */
             position: absolute; /* Positioning at the bottom */
             bottom: 0; /* Align to the bottom */
         }
@@ -119,7 +113,6 @@
         .footer p {
             color: #fff; /* Text color for footer */
             font-size: 14px;
-            padding-top: 1rem;
         }
 
         .footer a {
@@ -130,6 +123,17 @@
         .footer a:hover {
             text-decoration: underline;
         }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            button, .signup-btn {
+                padding: 12px;
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -137,79 +141,39 @@
     <div class="container">
         <div class="logo" onclick="window.location.href='index.html'">Resum Resume</div>
         <h2>Log In to Your Account</h2>
-
-        <form action="#" method="POST">
-            <input type="email" placeholder="Email Address " id="email" required>
-            <input type="password" placeholder="Password" id="password" required>
-            <button type="submit" id="signinbtn">Log In</button>
-
         <form id="loginForm" action="#" method="POST">
             <input type="email" placeholder="Email Address" required>
             <input type="password" placeholder="Password" required>
             <button type="submit">Log In</button>
-
         </form>
         <button class="signup-btn" onclick="window.location.href='signup.html'">Go to Signup</button>
     </div>
-
-  
-
 
     <div class="footer">
         <p>Powered by Resume Builder &copy; 2024</p>
     </div>
 
-
     <script>
-        const signin = document.querySelector("#signinbtn");
- 
-             signin.addEventListener("click",(e)=>{
-                 e.preventDefault();
- 
-           
-                 const email = document.querySelector("#email").value;
-                 const password = document.querySelector("#password").value;
-               
- 
-                 if( ! email || !password ){
-                     alert(" all feilds required");
-                     return;
-                 }
-                 const userData = {
-                     email,password
-                 }
- 
-                loginUser(userData);
-             });
- 
-             const loginUser =async (user)=>{
- 
-                 try{
- 
-                         const res = await fetch("http://localhost:5000/auth/signin",{
-                             method:"POST",
-                             credentials:"include",
-                             redirect:"follow",
-                             headers:{"content-type":"application/json"},
-                             body:JSON.stringify(user)
- 
-                         });
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
 
-                         if(!res.ok){
-                            alert(" Incorrect Credentails");
-                            return
-                         }
-                         const data = await res.json();
-                         alert("Login Successfull")
-                         window.location.href = "http://127.0.0.1:5500/Resum-Resume/index.html";
- 
-                 }catch(error){
-                     console.log(error.message);
-                     alert(" check the credentails")
-                 }
+            var formData = new FormData(this);
+            
+            fetch('login-process.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    window.location.href = 'index.html'; // Redirect to homepage
+                } else {
+                    alert('Login failed: ' + data.message);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
 
-             }
-
-     </script>
 </body>
 </html>
