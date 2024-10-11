@@ -78,6 +78,255 @@
 			/* Consider changing this to a darker tone if needed 
 		} */
 
+		.features h2 {
+			text-align: center;
+			color: #333;
+			/* Consider changing this for better contrast */
+			margin-bottom: 40px;
+			font-size: 32px;
+		}
+
+		.features-cards {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 30px;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+
+		.features-card {
+			background-color: #fff;
+			/* You might want to change this to a softer off-white */
+			
+			border-radius: 18px;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			width: calc(25% - 30px);
+			text-align: center;
+
+			transition: transform 0.3s, box-shadow 0.3s, z-index 0.3s;
+			position: relative;
+			z-index: 1;
+		}
+
+		.features-card:hover {
+			transform: translateY(-10px) scale(1.1);
+			box-shadow: 0 4px 8px #0073b1;
+			/* Consider adjusting this to match the modern minimalist theme */
+			z-index: 3;
+		}
+
+		.features-card img {
+			width: 100%;
+			/* Set the width for the icon images */
+			height: 185px;
+			/* Set the height for the icon images */
+			/* margin-bottom: 20px; */
+			border-radius: 10px 10px 0 0;
+			/* Rounded corners for the images */
+			transition: transform 0.3s ease;
+		}
+
+		.features-card:hover {
+			transform: translateY(-5px);
+			/* Slight lift effect on hover */
+		}
+
+		.features-card h3 {
+			color: var(--deep-teal);
+			/* Use the deep teal color for headings */
+			margin: 15px 0;
+			font-size: 22px;
+		}
+
+		.features-card p {
+			color: var(--dark-slate);
+			/* Use dark slate for paragraph text */
+			font-size: 16px;
+		}
+
+		/* Testimonials Section */
+		.testimonials {
+			padding: 60px 20px;
+			background-color: var(--off-white);
+			/* Use the off-white background color */
+		}
+
+		.testimonials h2 {
+			text-align: center;
+			color: var(--dark-slate);
+			/* Use dark slate for heading text */
+			margin-bottom: 40px;
+			font-size: 32px;
+		}
+
+
+		.testimonial-cards {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 30px;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+
+
+		.features-card h3 {
+			color: #aca7eb;
+			margin: 15px 0;
+			font-size: 22px;
+		}
+
+
+
+		.testimonial-card {
+			background-color: var(--off-white);
+			/* Use off-white for testimonial cards */
+			padding: 30px;
+			border-radius: 8px;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			width: calc(33.33% - 30px);
+			text-align: center;
+		}
+
+		.features-card p {
+			color: #666;
+			font-size: 16px;
+		}
+
+
+		.testimonial-card img {
+			width: 80px;
+			/* Profile image width */
+			height: 80px;
+			/* Profile image height */
+			border-radius: 50%;
+			/* Circular shape for profile images */
+			margin-bottom: 20px;
+		}
+
+		.testimonial-card h3 {
+			color: var(--deep-teal);
+			/* Use deep teal for testimonial headings */
+			margin: 10px 0;
+			font-size: 20px;
+		}
+
+		.testimonial-card p {
+			color: var(--dark-slate);
+			/* Use dark slate for testimonial text */
+			font-size: 16px;
+			font-style: italic;
+			/* Italic style for testimonial text */
+		}
+
+		/* Footer Styles */
+		.footer {
+			background-color: var(--deep-teal);
+			/* Use deep teal for footer background */
+			color: #ffffff;
+			/* White text for footer */
+			padding: 40px 0;
+			padding-bottom:0;
+		}
+
+		.footer-content {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			max-width: 1200px;
+			/* Max width for footer content */
+			margin: 0 auto;
+			/* Center footer content */
+			padding: 0 20px;
+		}
+
+		.footer-section {
+			flex: 1;
+			/* Flexible sections in footer */
+			margin-bottom: 20px;
+			/* Space between footer sections */
+			min-width: 200px;
+			/* Minimum width for each section */
+		}
+
+
+		.text {
+			padding-right: 20px;
+			/* Right padding for text sections */
+			max-width: 50%;
+			/* Maximum width for text sections */
+		}
+
+		.testimonial-card h3 {
+			color: #aca7eb;
+			margin: 10px 0;
+			font-size: 20px;
+		}
+
+
+
+		.image {
+			max-width: 50%;
+			/* Maximum width for image sections */
+		}
+
+		.testimonial-card p {
+			color: #666;
+			font-size: 16px;
+			font-style: italic;
+		}
+
+
+
+		.image img {
+			width: 100%;
+			/* Full width for images */
+			height: auto;
+			/* Maintain aspect ratio */
+			border-radius: 5px;
+			/* Rounded corners for images */
+		}
+
+		.footer-section h3 {
+			font-size: 18px;
+			/* Font size for section headings */
+			font-weight: 700;
+			/* Bold weight for section headings */
+			margin-bottom: 15px;
+			/* Space below section headings */
+			color: #ffffff;
+			/* White color for headings */
+		}
+
+		.footer-section ul {
+			list-style-type: none;
+			/* No bullet points for list */
+			padding: 0;
+			/* No padding for list */
+		}
+
+		.footer-section ul li {
+			margin-bottom: 8px;
+			/* Space between list items */
+		}
+
+		.footer-section ul li a {
+			color: #e0e0e0;
+			/* Light grey for links */
+			text-decoration: none;
+			/* No underline for links */
+			transition: color 0.3s ease;
+			/* Smooth transition for color change */
+		}
+
+		.footer-section ul li a:hover {
+			color: #ffffff;
+			/* White color on hover */
+			text-decoration: underline;
+			/* Underline on hover */
+		}
+
       .features h2 {
         text-align: center;
         color: #333;
@@ -384,6 +633,7 @@
 
   <body>
     <!-- header section starts -->
+
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -1001,4 +1251,3 @@
 </body>
 
 </html>
-
