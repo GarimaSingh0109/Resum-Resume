@@ -323,11 +323,21 @@ body {
 
 }
 
+
+.footer .footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #fff;
+    border-bottom: 2px solid #3f10ea;
+    padding-bottom: 10px;
+
 .ul{
    padding: 0;
    list-style: none;
    font-family: Verdana, Geneva, Tahoma, sans-serif;
    text-align: center;
+
 }
 .footer-bottom{
     text-align: center;
@@ -335,6 +345,29 @@ body {
     font-size: 14px;
     margin: 0px;
     margin-top:10px;
+}
+
+
+.footer .footer-section ul li a {
+    color: #2f4f4f;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer .footer-section ul li a:hover {
+    color: #3f10ea;
+}
+
+.footer .footer-section .social-icons a {
+    margin-right: 10px;
+    color: #2f4f4f;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.footer .footer-section .social-icons a:hover {
+    color: #3f10ea;
 }
 
 .footer a {
@@ -352,6 +385,7 @@ body {
     color: var(--light-grey);
     transform: scale(1.2) translateY(-5px);
  }
+
 
 
 .footer a:hover {
