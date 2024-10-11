@@ -78,7 +78,19 @@
       .container:hover {
         box-shadow: 0 0 20px rgba(0, 77, 79, 0.8); /* Glow effect on hover */
       }
-
+      .tab{
+        font-size: 2rem;
+        display: flex;
+        color: #fff;
+        padding: 10px 15px;
+        /* transition: background-color 0.3s ease, color 0.3s ease; */
+        text-decoration: none;
+      }
+      .tab:hover{
+        color: var(--soft-gold);
+        text-decoration: none;
+        /* color: var(--deep-teal); */
+      }
       h1 {
         text-align: center;
         color: var(--dark-slate); /* Updated heading color */
@@ -88,16 +100,31 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         width: 100%; /* Make form take full width of container */
       }
 
       label {
+        text-align: start;
+        font-size: 20px;
         margin: 10px 0 5px;
         color: var(--dark-slate); /* Updated label color */
         font-weight: 500;
       }
-
+      #template{
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        font-size: 16x;
+      }
+      .formhead h1{
+        font-weight: 600;
+        margin-left: 165px;
+        color: var(--dark-slate); /* Use the same color scheme */
+        font-size: 3rem; /* Adjust font size for visibility */
+        margin-bottom: 50px; /* Add spacing between the title and form */
+      }
       input[type="url"],
       input[type="email"],
       input[type="tel"],
@@ -144,7 +171,7 @@
       .navbar h1 {
         color: white;
         margin-left: 15px;
-        font-size: 2rem;
+        font-size: 4rem;
         transition: color 0.3s ease;
       }
 
@@ -162,6 +189,7 @@
 
       .navbar ul li {
         display: inline;
+        
       }
 
       .navbar ul li a {
@@ -247,16 +275,18 @@
       @media (max-width: 768px) {
         .navbar {
           flex-direction: column;
-          align-items: flex-start;
+          align-items: center;
+          padding: 20px;
         }
 
         .navbar ul {
           flex-direction: column;
-          gap: 10px;
+          gap: 15px;
         }
 
         .navbar h1 {
           margin-bottom: 10px;
+          font-size: 1.8rem;
         }
 
         .container {
@@ -296,15 +326,14 @@
           margin-bottom: 0;
           }
         .navbar  img{
-        width: 100px;
-        padding: 0px 6px;
-        margin-right: -64px;
+          height: 40px; /* Adjust logo size */
+          vertical-align: middle;
         }
 
         .navbar h1 {
             color: white;
-            margin-left: -38rem;
-            font-size: 2rem;
+            margin-left: 15px;
+            font-size: 1.8rem;
           transition: color 0.3s ease;
         }
 
@@ -328,7 +357,7 @@
         }
         .navbar ul li a {
           color: #eee7e7;
-          font-size: 20px;
+          font-size: 16px;
         }
         .navbar ul li a:hover {
           color: #ffffff;
@@ -340,10 +369,11 @@
   <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <img src="images/logo.png" alt="logo">
-        <h1>Resum Resume</h1>
+        <img src="images/logo.png" alt="logo" height="75px">
+        <h1><b>Resum Resume</b></h1>
         <nav class="navbar">
 			<div class="tabs-container"></div>
+      
 			<a class="tab" href="#home">Home</a>
 			<a class="tab" href="about.html">About</a>
 			<a class="tab" href="resume.html">Build Resume</a>
@@ -356,6 +386,9 @@
 
     <div class="container">
       <form id="resumeForm">
+        <div class="formhead">
+        <h1>Resume</h1>
+      </div>
         <label for="linkedin-url">LinkedIn Profile URL</label>
         <input
           type="url"
