@@ -51,6 +51,7 @@
             max-width: 400px;
             width: 100%;
             text-align: center;
+            margin-bottom:40px;
             position: relative; /* Allow footer positioning */
         }
 
@@ -105,31 +106,112 @@
             background-color: var(--deep-teal);
         }
 
-        .footer {
-            margin-top: 20px; /* Space between container and footer */
-            text-align: center;
-            width: 100%; /* Ensure the footer takes full width */
-            background-color: var(--deep-teal); /* Background color for the footer */
-            color: white; /* Text color */
-            padding: 13px 0; /* Padding for spacing */
-            position: absolute; /* Positioning at the bottom */
-            bottom: 0; /* Align to the bottom */
-        }
+        /* footer section styles  starts */
 
-        .footer p {
-            color: #fff; /* Text color for footer */
-            font-size: 14px;
-            padding-top: 1rem;
-        }
+      :root {
+        --deep-teal: #003d4d;
+        --off-white: #f8f9fa;
+        --dark-slate: #2f4f4f;
+        --soft-gold: #d9c79e;
+      }
+      .footer {
+        width: 100%;
+        background-color: var(--deep-teal);
+        color: white;
+        padding: 13px 0;
+      }
+      .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
 
-        .footer a {
-            color: var(--soft-gold);
-            text-decoration: none;
-        }
+      .ul {
+        padding: 0;
+        list-style: none;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+      }
+      .footer-bottom {
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+        margin: 0px;
+        margin-top: 3px;
+      }
+      .footer-bottom p{
+        margin:0 0 10px;
+      }
 
-        .footer a:hover {
-            text-decoration: underline;
-        }
+      .footer a {
+        color: var(--soft-gold);
+        text-decoration: none;
+        font-size: 16px;
+      }
+
+      .social-icons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+      .social-icons a:hover {
+        color: var(--light-grey);
+        transform: scale(1.2) translateY(-5px);
+      }
+
+      .footer a:hover {
+        text-decoration: underline;
+      }
+
+      .footer-section h3 {
+        margin-bottom: 14px;
+        font-size: 28px;
+      }
+      /* footer section style ends */
+
+      @media (max-width: 768px) {
+    .footer-section h3 {
+        font-size: 18px;
+    }
+    
+    .footer a {
+        font-size: 13px;
+    }
+
+    .footer-section {
+        margin-bottom: 0;
+        gap:18px;
+    }
+
+    .footer-bottom{
+        font-size: 12px;
+        margin: 0px;
+        margin-top:8px;
+    }
+}
+
+@media (max-width:450px){
+
+    .footer-section h3 {
+        font-size: 14px;
+    }
+    
+    .footer a {
+        font-size: 11px;
+    }
+
+    .footer-section {
+        margin-bottom: 0;
+        
+    }
+
+    .footer-bottom{
+        font-size: 10px;
+        margin: 0px;
+        margin-top:5px;
+    }
+}
+        
     </style>
 </head>
 <body>
@@ -151,14 +233,47 @@
         </form>
         <button class="signup-btn" onclick="window.location.href='signup.html'">Go to Signup</button>
     </div>
-
-  
-
-
-    <div class="footer">
-        <p>Powered by Resume Builder &copy; 2024</p>
-    </div>
-
+    <!-- footer-section -->
+    <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>About Us</h3>
+            <ul class="ul">
+              <li><a href="#">Our Story</a></li>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Services</h3>
+            <ul class="ul">
+              <li><a href="#">Resume Builder</a></li>
+              <li><a href="#">CV Templates</a></li>
+              <li><a href="#">Career Advice</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Support</h3>
+            <ul class="ul">
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Connect With Us</h3>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-x-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Resume Builder. All rights reserved.</p>
+        </div>
+      </footer>
 
     <script>
         const signin = document.querySelector("#signinbtn");
