@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - LinkedIn Resume Builder</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
     <style>
 :root {
     --deep-teal: #003d4d; /* Updated primary color */
@@ -106,64 +112,68 @@ body {
     text-align: left; /* Left-align list items */
 }
 
+/* footer section styles */
 
-/* Footer Styles */
+:root {
+    --deep-teal: #003d4d;
+    --off-white: #f8f9fa;
+    --dark-slate: #2f4f4f;
+    --soft-gold: #d9c79e;
+}
 .footer {
-    background-color: var(--deep-teal); /* Match deep teal for footer background */
-    color: var(--off-white); /* Off-white text for footer for contrast */
-    padding: 30px 0; /* Consistent padding */
-    text-align: center; /* Center the text */
-    margin-top: 30px;
+    width: 100%; 
+    background-color: var(--deep-teal); 
+    color: white;
+    padding: 13px 0;
 }
 
-.footer-content {
+.footer-content{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.ul{
+   padding: 0;
+   list-style: none;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   text-align: center;
+}
+.footer-bottom{
+    text-align: center;
+    color: #fff; 
+    font-size: 14px;
+    margin: 0;
+    margin-bottom:10px;
+}
+
+.footer a {
+    color: var(--soft-gold);
+    text-decoration: none;
+    font-size: 16px;  
+}
+
+ .social-icons{
+    display: flex;
     justify-content: space-between;
-    max-width: 1200px; /* Max width for footer content */
-    margin: 0 auto; /* Center footer content */
-    padding: 0 20px; /* Consistent padding */
+    margin-top:20px
+ }
+ .social-icons a:hover{
+    color: var(--light-grey);
+    transform: scale(1.2) translateY(-5px);
+ }
+
+
+.footer a:hover {
+    text-decoration: underline;
 }
 
-.footer-section {
-    flex: 1; /* Flexible sections in footer */
-    margin-bottom: 20px; /* Space between footer sections */
-    min-width: 200px; /* Minimum width for each section */
+.footer-section h3{
+    margin-bottom: 14px;
+    font-size: 28px;
 }
-
-.footer-section h3 {
-    font-size: 18px; /* Font size for section headings */
-    font-weight: 700; /* Bold weight for section headings */
-    margin-bottom: 15px; /* Space below section headings */
-    color: var(--soft-gold); /* Soft Gold color for headings */
-}
-
-.footer-section ul {
-    list-style-type: none; /* No bullet points for list */
-    padding: 0; /* No padding for list */
-}
-
-.footer-section ul li {
-    margin-bottom: 8px; /* Space between list items */
-}
-
-.footer-section ul li a {
-    color: #e0e0e0; /* Light grey for links */
-    text-decoration: none; /* No underline for links */
-    transition: color 0.3s ease; /* Smooth transition for color change */
-}
-
-.footer-section ul li a:hover {
-    color: var(--soft-gold); /* Soft Gold color on hover */
-    text-decoration: none; /* Removed underline on hover for consistency */
-}
-
-.footer-bottom {
-    text-align: center; /* Centered text for the footer bottom */
-    padding-top: 20px; /* Padding for footer bottom */
-    margin-top: 20px; /* Margin for separation */
-    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Light border for separation */
-}
+/* footer section style ends */
 
 .back-button {
     display: block;
@@ -255,6 +265,47 @@ body {
     .navbar h1 {
         margin-bottom: 10px;
     }
+    .footer-section h3 {
+        font-size: 18px;
+    }
+    
+    .footer a {
+        font-size: 13px;
+    }
+
+    .footer-section {
+        margin-bottom: 0;
+        gap:18px;
+    }
+
+    .footer-bottom{
+        font-size: 12px;
+        margin: 0px;
+        margin-top:8px;
+    }
+}
+
+
+@media (max-width:450px){
+
+    .footer-section h3 {
+        font-size: 14px;
+    }
+
+    .footer a {
+        font-size: 11px;
+    }
+
+    .footer-section {
+        margin-bottom: 0;
+        
+    }
+
+    .footer-bottom{
+        font-size: 10px;
+        margin: 0px;
+        margin-top:5px;
+    }
 }
 
     </style>
@@ -265,13 +316,16 @@ body {
    <nav class="navbar">
     <img src="images/logo.png" alt="logo">
     <h1>Resum Resume</h1>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="resume.html">Build Resume</a></li>
-        <li><a href="signup.html">Sign Up</a></li>
-        <li><a href="login.html">Login</a></li>
-    </ul>
+    <nav class="navbar">
+        <div class="tabs-container"></div>
+        <a class="tab" href="#home">Home</a>
+        <a class="tab" href="about.html">About</a>
+        <a class="tab" href="resume.html">Build Resume</a>
+        <a class="tab" href="signup.html">Sign Up</a>
+        <a class="tab" href="login.html">Login</a>
+        </div>
+    </nav>
+    
 </nav>
     <div class="content1">
         <div class="content">
@@ -308,13 +362,52 @@ body {
             </ul>
         </div>
     </div>
-    <div class="back-button">
+    <!-- <div class="back-button">
         <a href="index.html">Go Back to Home</a>
-    </div>
+    </div> -->
 
-    <div class="footer">
-        <p>Powered by Resume Builder &copy; 2024</p>
-    </div>
+    <!-- footer section -->
+    <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>About Us</h3>
+            <ul class="ul">
+              <li><a href="#">Our Story</a></li>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Services</h3>
+            <ul class="ul">
+              <li><a href="#">Resume Builder</a></li>
+              <li><a href="#">CV Templates</a></li>
+              <li><a href="#">Career Advice</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Support</h3>
+            <ul class="ul">
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Connect With Us</h3>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-x-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Resume Builder. All rights reserved.</p>
+        </div>
+      </footer>
+
     <script>
         const toggler = document.getElementById("toggler");
         const body = document.body;

@@ -302,97 +302,101 @@ body {
     }
 }
 
-/* Footer Styles */
+/* footer section styles */
+
+:root {
+    --deep-teal: #003d4d;
+    --off-white: #f8f9fa;
+    --dark-slate: #2f4f4f;
+    --soft-gold: #d9c79e;
+}
 .footer {
-    background-color: #242d45;
-    color: #fff;
-    padding: 40px 0;
-    font-size: 14px;
+    width: 100%; 
+    background-color: var(--deep-teal); 
+    color: white;
+    padding: 13px 0;
 }
-
-
-.footer .footer-content {
+.footer-content{
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    justify-content: space-around;
+
 }
 
-.footer .footer-section {
-    flex-basis: 23%;
-    margin-bottom: 20px;
-}
 
 .footer .footer-section h3 {
     font-size: 18px;
     margin-bottom: 20px;
     font-weight: 600;
     color: #fff;
-    border-bottom: 2px solid #00c6ff;
+    border-bottom: 2px solid #3f10ea;
     padding-bottom: 10px;
+
+.ul{
+   padding: 0;
+   list-style: none;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   text-align: center;
+
+}
+.footer-bottom{
+    text-align: center;
+    color: #fff; 
+    font-size: 14px;
+    margin: 0px;
+    margin-top:10px;
 }
 
-.footer .footer-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer .footer-section ul li {
-    margin-bottom: 10px;
-}
 
 .footer .footer-section ul li a {
-    color: #ccc;
+    color: #2f4f4f;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer .footer-section ul li a:hover {
-    color: #00c6ff;
+    color: #3f10ea;
 }
 
 .footer .footer-section .social-icons a {
     margin-right: 10px;
-    color: #ccc;
+    color: #2f4f4f;
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s ease;
 }
 
 .footer .footer-section .social-icons a:hover {
-    color: #00c6ff;
+    color: #3f10ea;
 }
 
-.footer-bottom {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #111;
-    font-size: 12px;
+.footer a {
+    color: var(--soft-gold);
+    text-decoration: none;
+    font-size: 16px;  
 }
 
-.footer-bottom p {
-    margin: 0;
-    color: #ccc;
+ .social-icons{
+    display: flex;
+    justify-content: space-between;
+    margin-top:20px
+ }
+ .social-icons a:hover{
+    color: var(--light-grey);
+    transform: scale(1.2) translateY(-5px);
+ }
+
+
+
+.footer a:hover {
+    text-decoration: underline;
 }
 
-/* Responsive Footer */
-@media (max-width: 768px) {
-    .footer .footer-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer .footer-section {
-        flex-basis: 100%;
-        text-align: center;
-    }
-
-    .footer .footer-section ul li {
-        margin-bottom: 8px;
-    }
+.footer-section h3{
+    margin-bottom: 14px;
+    font-size: 28px;
 }
+/* footer section style ends */
 
 
 /* media queries */
@@ -462,6 +466,25 @@ body {
     .icons-container .icons span {
         font-size: 1.7rem;
     }
+
+    .footer-section h3 {
+        font-size: 18px;
+    }
+    
+    .footer a {
+        font-size: 13px;
+    }
+
+    .footer-section {
+        margin-bottom: 0;
+        gap:18px;
+    }
+
+    .footer-bottom{
+        font-size: 12px;
+        margin: 0px;
+        margin-top:8px;
+    }
      
 
 }
@@ -475,6 +498,74 @@ body {
         font-size: 3rem;
     }
     
+
+    .footer-section h3 {
+        font-size: 14px;
+    }
+    
+    .footer a {
+        font-size: 11px;
+    }
+
+    .footer-section {
+        margin-bottom: 0;
+        
+    }
+
+    .footer-bottom{
+        font-size: 10px;
+        margin: 0px;
+        margin-top:5px;
+    }
+}
+
+
+.tab:hover {
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: blue;
+}
+
+
+.tab.active {
+    color: blue; 
+    font-weight: bold; 
+}
+.navbar {
+    position: relative;
+}
+
+#tabs {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+}
+
+.tab {
+    position: relative;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 19px;
+    color: black;
+    
+   
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.tab:hover {
+    background-color: black;
+}
+
+.cursor {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    background: black;
+    border-radius: 50%;
+    pointer-events: none; 
+    transition: all 0.3s ease; 
+    opacity: 0; 
 }
 
 /* Features section */
@@ -509,6 +600,7 @@ body {
 }
 .testimonial-card p{
   color: grey;
+
 }
 
 /* Footer section */
@@ -537,3 +629,5 @@ body {
   justify-content: center;
   align-content: center;
 }
+
+
