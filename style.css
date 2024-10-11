@@ -161,7 +161,7 @@ header .icons a:hover {
 header .navbar a:hover {
   color: var(--red);
   text-decoration: none;
-  color: #3f10ea;
+  color: #fff;
 }
 
 header .icons a {
