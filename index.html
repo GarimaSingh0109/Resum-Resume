@@ -1,5 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>LinkedIn Resume Builder - Home</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+	<link rel="icon" href="images/favicon-removebg-preview.png" />
+
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		rel="stylesheet" />
+
+	<link rel="stylesheet" href="style.css" />
+	<style>
+		/* Features Section */
+		.features {
+			padding: 60px 20px;
+			background-color: #f9f9f9;
+		}
+
+
+
+		
+		.features-card {
+			background-color: white;
+			padding : 30px;
+			border-radius: 8px;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			width: calc(25% - 30px);
+			text-align: center;
+			transition: transform 0.3s, box-shadow 0.3s, z-index 0.3s;
+			position: relative;
+			z-index: 1;
+		} */
+
+		.features-card:hover {
+			transform: translateY(-10px) scale(1.1);
+			box-shadow: 0 4px 8px #0073b1;
+			z-index: 3;
+		}
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -70,9 +115,7 @@
 			transition: transform 0.3s ease;
 		}
 
-		
-	.features {
-
+			.features {
 			padding: 60px 20px;
 			background-color: #f9f9f9;
 			/* Consider changing this to a darker tone if needed 
@@ -1235,11 +1278,14 @@
 		};
 	</script>
 
+
 	<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js">
+
 	</script>
+	
 	<script>
 			var typed = new Typed("#newlogo", {
-				strings: ["EnhanCV.", "Build and shine!"],
+			strings: ["EnhanCV.", "Build and shine!"],
 			loop: true,
 			typeSpeed: 80,
 			backSpeed: 25, // Speed for backspacing
