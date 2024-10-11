@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - LinkedIn Resume Builder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+    <style>
+:root {
+    --deep-teal: #003d4d; /* Updated primary color */
+    --off-white: #f8f9fa; /* Updated background color */
+    --dark-slate: #2f4f4f; /* Text color */
+    --soft-gold: #d9c79e; /* Accent color */
+}
+
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+body {
+    background-color: var(--off-white); /* Updated background color */
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: var(--deep-teal); /* Updated header color */
+    padding: 20px;
+    text-align: center;
+    color: var(--off-white); /* Text color for better contrast */
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.content1 {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.gif {
+    margin-left: 100px;
+}
+
+.content {
+    max-width: 70%; /* Further reduced width to prevent hiding the GIFs */
+    margin: 30px auto; /* Centered margin */
+    background-color: #f5f5f5; /* Slightly off-white background */
+    border-radius: 10px;
+    padding: 20px; /* Padding to maintain space inside the box */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease; /* Transition for scaling and glow */
+}
+
+.content:hover {
+    transform: scale(1.05); /* Slightly reduced scale effect for a minimalist look */
+    box-shadow: 0 0 15px rgba(0, 77, 79, 0.8); /* Glow effect with Dark Teal color */
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Ensure smooth transition */
+}
+
+.content h2 {
+    font-size: 28px;
+    color: var(--dark-slate); /* Updated heading color */
+    border-radius: 5px;
+    padding: 2px 5px;
+    margin-bottom: 20px;
+    background-color: var(--soft-gold); /* Updated background color for h2 */
+    text-align: center; /* Center align the heading */
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.content h2:hover {
+    background-color: var(--deep-teal); /* Updated hover effect to match the theme */
+    color: var(--off-white);
+    transition: background-color 0.5s ease, color 0.5s ease; /* Transition for background and color */
+}
+
+.content p {
+    font-size: 18px;
+    color: var(--dark-slate); /* Updated paragraph color to Dark Slate */
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: left; /* Left-align paragraph text */
+}
+
+.content ul {
+    padding-left: 20px; /* Indent list */
+    margin-bottom: 20px;
+    text-align: left; /* Ensure ul is left aligned */
+}
+
+.content ul li {
+    font-size: 18px;
+    color: var(--dark-slate); /* Updated list item color */
+    margin-bottom: 10px;
+    text-align: left; /* Left-align list items */
+}
+
+/* footer section styles */
+
+:root {
+    --deep-teal: #003d4d;
+    --off-white: #f8f9fa;
+    --dark-slate: #2f4f4f;
+    --soft-gold: #d9c79e;
+}
+.footer {
+    width: 100%; 
+    background-color: var(--deep-teal); 
+    color: white;
+    padding: 13px 0;
+}
+
+.footer-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.ul{
+   padding: 0;
+   list-style: none;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   text-align: center;
+}
+.footer-bottom{
+    text-align: center;
+    color: #fff; 
+    font-size: 14px;
+    margin: 0;
+    margin-bottom:10px;
+}
+
+.footer a {
+    color: var(--soft-gold);
+    text-decoration: none;
+    font-size: 16px;  
+}
+
+ .social-icons{
+    display: flex;
+    justify-content: space-between;
+    margin-top:20px
+ }
+ .social-icons a:hover{
+    color: var(--light-grey);
+    transform: scale(1.2) translateY(-5px);
+ }
+
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-section h3{
+    margin-bottom: 14px;
+    font-size: 28px;
+}
+/* footer section style ends */
+
+.back-button {
+    display: block;
+    text-align: center;
+    margin-top: 20px; /* Decrease this value to move the button up */
+    margin-bottom: 0px;
+}
+
+.back-button a {
+    padding: 10px 20px;
+    background-color: var(--deep-teal); /* Updated back button color */
+    color: var(--off-white); /* Text color for back button */
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.back-button a:hover {
+    background-color: var(--soft-gold); /* Updated hover color */
+}
+
+.navbar {
+    background-color: var(--deep-teal); /* Updated navbar background color */
+    padding: 31px 20px; /* Increased top and bottom padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar  img{
+    width: 100px;
+    padding: 0px 6px;
+    margin-right: -64px;
+}
+
+.navbar h1 {
+    color: var(--off-white); /* Changed to use off-white for better contrast */
+    margin: 0;
+    font-size: 2rem;
+    margin-left: -38rem; /* Adjust this value to move the logo right */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.navbar h1:hover {
+    color: var(--soft-gold); /* Color change on hover */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    margin-right: 30px; /* Adjust this value to move the items left */
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: var(--off-white); /* Updated navbar link color */
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar ul li a:hover {
+    color: var(--soft-gold); /* Updated hover color to Soft Gold */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Main Content Placeholder */
+.content {
+    padding: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar h1 {
+        margin-bottom: 10px;
+    }
+    .footer-section h3 {
+        font-size: 18px;
+    }
+    
+    .footer a {
+        font-size: 13px;
+    }
+
+    .footer-section {
+        margin-bottom: 0;
+        gap:18px;
+    }
+
+    .footer-bottom{
+        font-size: 12px;
+        margin: 0px;
+        margin-top:8px;
+    }
+}
+
+
+@media (max-width:450px){
+
+    .footer-section h3 {
+        font-size: 14px;
+    }
+
+    .footer a {
+        font-size: 11px;
+    }
+
+    .footer-section {
+        margin-bottom: 0;
+        
+    }
+
+    .footer-bottom{
+        font-size: 10px;
+        margin: 0px;
+        margin-top:5px;
+    }
+}
+    </style>
+</head>
+<body>
+
+   <!-- Navbar -->
+   <nav class="navbar">
+    <img src="images/logo.png" alt="logo">
+    <h1>Resum Resume</h1>
+    <nav class="navbar">
+        <div class="tabs-container"></div>
+        <a class="tab" href="index.html">Home</a>
+        <a class="tab" href="about.html">About</a>
+        <a class="tab" href="resume.html">Build Resume</a>
+        <a class="tab" href="signup.html">Sign Up</a>
+        <a class="tab" href="login.html">Login</a>
+        <a class="tab" href="privacypolicy.html">Privacy Policy</a>
+        </div>
+    </nav>
+    
+</nav>
+    <div class="content1">
+        <div class="content">
+            <div class="action">
+    
+                <h2>Introduction</h2>
+                <p>
+                    Welcome to Resum Resume. We are committed to protecting your privacy and ensuring that your personal information is handled responsibly. This Privacy Policy outlines how we collect, use, and protect your information when you visit our website and use our services.
+                </p>
+            </div>
+            
+            <h2>Information We Collect</h2>
+             <h3>Personal Information</h3>
+            <p>
+               <ul>
+                <li>Name</li>
+                <li>Email address</li>
+                <li>Phone number</li>
+                <li>Address</li>
+                <li>Work history</li>
+                <li>Education details</li>
+                <li>Other information you choose to provide <br style="padding: 10px;"></li>
+               </ul>
+            </p>
+  <h3>Non-Personal Information</h3>
+              <p>
+                <ul>
+                 <li>Browser type</li>
+                 <li>IP address</li>
+                 <li>Device information</li>
+                 <li>Pages visited</li>
+                 <li>Time spent on our site</li>
+                 <li>Referral source</li>
+                </ul>
+            </p> 
+        <h2>How We Use Your Information</h2>
+            <p>
+                We may use your information for the following purposes:
+            </p>
+            <ul>
+                <li>To provide and maintain our services.</li>
+                <li>To communicate with you, including responding to inquiries and providing customer support.</li>
+                <li>To send you updates, newsletters, and marketing materials (you can opt-out at any time).</li>
+                <li>To analyze usage and trends to enhance user experience</li>
+            </ul>
+            <h2>Third-Party Links</h2>
+            <p>Our website may contain links to third-party websites. We do not control these sites and are not responsible for their content or privacy practices. We encourage you to review the privacy policies of any third-party sites you visit.</p>
+
+            <h2>Data Security</h2>
+            <p>We take reasonable measures to protect your information from unauthorized access, disclosure, alteration, and destruction. However, no method of transmission over the internet or electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your personal information, we cannot guarantee its absolute security.</p>
+            <h2>Changes to This Privacy Policy</h2>
+            <p>
+                We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on our website with a new effective date. We encourage you to review this Privacy Policy periodically for any updates.
+            </p>
+        </div>
+    </div>
+    <div class="back-button">
+        <a href="index.html">Go Back To Home.</a>
+    </div>
+   <div class="footer">
+    <p>Powered by Resume Builder © 2024</p>
+   </div>
+</body>
+</html>
