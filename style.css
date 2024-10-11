@@ -260,6 +260,7 @@ body {
   line-height: 1.5;
   margin-bottom: 2rem;
   color: grey;
+  text-transform: none;
 }
 .home .content h3{
     font-size: 5rem;
@@ -639,5 +640,3 @@ body {
   justify-content: center;
   align-content: center;
 }
-
-
