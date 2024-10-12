@@ -16,7 +16,7 @@
         /* Features Section */
         .features {
             padding: 60px 20px;
-            background-color: #f9f9f9;
+            background-color:  #094e83;
         }
 
         .features h2 {
@@ -78,7 +78,7 @@
         }
 
         .features-card h3 {
-            color: #aca7eb;
+            color:  #094e83;
             margin: 15px 0;
             font-size: 22px;
         }
@@ -127,7 +127,7 @@
         }
 
         .testimonial-card h3 {
-            color: #aca7eb;
+            color:  #094e83;
             margin: 10px 0;
             font-size: 20px;
         }
@@ -140,7 +140,7 @@
 
         /* Footer Styles */
         .footer {
-            background-color: #aca7eb;
+            background-color: #094e83;
             color: #ffffff;
             padding: 40px 0;
         }
@@ -171,6 +171,7 @@
             width: 100%; 
             height: auto;
             border-radius: 5px; 
+        }
 
 
         .footer-section h3 {
@@ -213,7 +214,7 @@
         }
 
         .social-icons a:hover {
-            color: #e0e0e0;
+            color: #243be6;
         }
 
         .footer-bottom {
@@ -225,7 +226,7 @@
 
         /* Responsive Styles */
         @media (max-width: 768px) {
-            .navbar {
+             /*.navbar {
                 flex-direction: column;
                 align-items: flex-start;
             }
@@ -234,7 +235,37 @@
                 flex-direction: column;
                 gap: 10px;
                 margin-top: 10px;
-            }
+            } */
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px 20px;
+              }
+            
+              .navbar ul {
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 10px;
+                display: none; /* Initially hidden in mobile */
+                width: 100%;
+              }
+            
+              .navbar ul li {
+                width: 100%;
+              }
+            
+              .navbar ul li a {
+                display: block;
+                width: 100%;
+                text-align: left;
+                padding: 10px;
+              }
+            
+              /* Show the mobile menu */
+              .navbar ul.active {
+                display: flex;
+              }
+            
 
             .hero-content {
                 flex-direction: column;
@@ -266,7 +297,7 @@
         
     <input type="checkbox" name="" id="toggler">
     <label for="toggler" class="fas fa-bars"></label>
-    <a href="#" class="logo">Resum Resume<span>.</span></a>
+    <a href="#" class="logo">Resumake<span></span></a>
              
             <nav class="navbar">
                 <a href="#home">Home</a>
