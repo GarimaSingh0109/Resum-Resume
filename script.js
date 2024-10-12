@@ -83,6 +83,91 @@ document.addEventListener('DOMContentLoaded', () => {
     
 });
 
+// animations.js
+
+// Navbar Animation
+gsap.from(".navbar", {
+    duration: 1,
+    y: -50,
+    opacity: 0,
+    ease: "power2.out",
+    delay: 0.5
+});
+
+// Header Logo Animation
+gsap.from(".logo", {
+    duration: 1,
+    opacity: 0,
+    x: -50,
+    ease: "power2.out",
+    delay: 0.7
+});
+
+// Header Icons Animation
+gsap.from(".icons a", {
+    duration: 1,
+    opacity: 0,
+    scale: 0,
+    stagger: 0.2,
+    ease: "back.out(1.7)",
+    delay: 0.9
+});
+
+// Home Section Content Animation
+gsap.from(".home .content h3", {
+    duration: 1,
+    opacity: 0,
+    y: 30,
+    ease: "power2.out",
+    delay: 1.2
+});
+
+gsap.from(".home .content p", {
+    duration: 1,
+    opacity: 0,
+    y: 20,
+    ease: "power2.out",
+    delay: 1.4
+});
+
+// Get Started Button Animation
+gsap.from(".home .content .btn", {
+    duration: 1,
+    opacity: 0,
+    scale: 0,
+    ease: "back.out(1.7)",
+    delay: 1.6
+});
+
+// Features Cards Animation
+gsap.from(".features-card", {
+    scrollTrigger: {
+        trigger: ".features",
+        start: "top 75%",
+        toggleActions: "play none none reverse"
+    },
+    duration: 1,
+    opacity: 0,
+    y: 20,
+    stagger: 0.2,
+    ease: "power2.out"
+});
+
+// Testimonials Animation
+gsap.from(".testimonial-card", {
+    scrollTrigger: {
+        trigger: ".testimonials",
+        start: "top 75%",
+        toggleActions: "play none none reverse"
+    },
+    duration: 1,
+    opacity: 0,
+    y: 20,
+    stagger: 0.2,
+    ease: "power2.out"
+});
+
+
         
 // var typed = new Typed('#newlogo', {
 //     strings: ['EnhanCV.'],
@@ -94,3 +179,4 @@ document.addEventListener('DOMContentLoaded', () => {
         
        
   
+
