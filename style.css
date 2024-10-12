@@ -1,15 +1,13 @@
 :root{
-    --deep-teal: #003d4d; /* Deep Teal */
-    --off-white: #f8f9fa; /* Off-White */
-    --dark-slate: #2f4f4f; /* Dark Slate */
-    --soft-gold: #d9c79e; /* Soft Gold */
-    --soft-teal: #aca7eb;
+
+    
+    --soft-teal: #003d4d;
 
 
 }
 
 * {
-    margin: 0; 
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -62,7 +60,7 @@ section{
   display: inline-block;
   margin-top: 1rem;
   border-radius: 5rem;
-  background: #333;
+  background: #ffffff;
   color: #fff;
   padding: 0.9rem 3.5rem;
   cursor: pointer;
@@ -111,17 +109,11 @@ header .logo:hover {
 }
 header .logo {
   font-size: 3rem;
-  color: #3f10ea;
+  color: white;
   font-weight: bolder;
   font-size: 2.5rem;
 }
-header .logo:hover {
-  font-size: 3rem;
-  color: #f03c0b;
-  font-weight: bolder;
-  text-decoration: none;
-  font-size: 2.55rem;
-}
+
 
 
 header .logo span {
@@ -133,8 +125,8 @@ header .logo span {
 header .navbar a {
     font-size: 2rem;
     padding: 15px;
-    color: var(--off-white); /* White text for better contrast */
-    text-decoration: none; /* Ensure no underline by default */
+    color: white
+
 }
 
 header .navbar a:hover {
@@ -144,36 +136,33 @@ header .navbar a:hover {
 
 header .icons a {
     font-size: 2.5rem;
-    color: var(--off-white); /* White icons for contrast */
+    color: white
     margin-left: 1.5rem;
 }
 
-header .icons a:hover {
-    color: var(--soft-gold); /* Soft Gold hover effect for icons */
-}
   header .navbar a {
   font-size: 2rem;
   padding: 0 1.5rem;
-  color: #666;
+  color: #ffffff;
   font-size: 1.8rem;
 }
 
 header .navbar a:hover {
   color: var(--red);
   text-decoration: none;
-  color: #3f10ea;
+  color: #ffffff;
 }
 
 header .icons a {
   font-size: 2.5rem;
-  color: #333;
+  color: #ffffff;
   margin-left: 1.5rem;
   font-size: 2.2rem;
 }
 
 header .icons a:hover {
   color: var(--purple);
-  color: #3f10ea;
+  color: #ffffff;
   text-decoration: none;
  }
 
@@ -417,6 +406,7 @@ body {
 
     header {
         padding: 2rem;
+        background-color: 003d4d;
     }
 
     section {
@@ -588,7 +578,7 @@ body {
   object-fit: cover;
 }
 .features-card h3{
-  color: #3f10ea;
+  color: #003d4d;
 }
 .features-card p{
   margin-bottom: 0;
@@ -605,7 +595,7 @@ body {
   border: 0.3rem solid white;
 }
 .testimonial-card h3{
-  color: #3f10ea;
+  color: #003d4d;
   font-size: 2rem;
 }
 .testimonial-card p{
@@ -615,7 +605,7 @@ body {
 
 /* Footer section */
 .footer{
-  background-color: #607D8B;
+  background-color: #003d4d;
   padding-bottom: 2rem;
 }
 .footer-section h3{
