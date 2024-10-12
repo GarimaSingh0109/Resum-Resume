@@ -1,6 +1,6 @@
 :root{
 
-    
+
     --soft-teal: #003d4d;
 
 
@@ -300,8 +300,8 @@ body {
     --soft-gold: #d9c79e;
 }
 .footer {
-    width: 100%; 
-    background-color: var(--deep-teal); 
+    width: 100%;
+    background-color: var(--deep-teal);
     color: white;
     padding: 13px 0;
 }
@@ -330,7 +330,7 @@ body {
 }
 .footer-bottom{
     text-align: center;
-    color: #fff; 
+    color: #fff;
     font-size: 14px;
     margin: 0px;
     margin-top:10px;
@@ -372,7 +372,7 @@ body {
 .footer a {
     color: var(--soft-gold);
     text-decoration: none;
-    font-size: 16px;  
+    font-size: 16px;
 }
 
  .social-icons{
@@ -416,7 +416,7 @@ body {
     .home {
         background-position: left;
     }
-    
+
 }
 
 @media (max-width: 768px) {
@@ -462,7 +462,7 @@ body {
     .icons-container .icons h3 {
         font-size: 2rem;
     }
-    
+
     .icons-container .icons span {
         font-size: 1.7rem;
     }
@@ -470,7 +470,7 @@ body {
     .footer-section h3 {
         font-size: 18px;
     }
-    
+
     .footer a {
         font-size: 13px;
     }
@@ -485,7 +485,7 @@ body {
         margin: 0px;
         margin-top:8px;
     }
-     
+
 
 }
 
@@ -497,19 +497,19 @@ body {
     .heading {
         font-size: 3rem;
     }
-    
+
 
     .footer-section h3 {
         font-size: 14px;
     }
-    
+
     .footer a {
         font-size: 11px;
     }
 
     .footer-section {
         margin-bottom: 0;
-        
+
     }
 
     .footer-bottom{
@@ -521,14 +521,14 @@ body {
 
 
 .tab:hover {
-    background-color: rgba(0, 0, 0, 0.8); 
+    background-color: rgba(0, 0, 0, 0.8);
     color: blue;
 }
 
 
 .tab.active {
-    color: blue; 
-    font-weight: bold; 
+    color: blue;
+    font-weight: bold;
 }
 .navbar {
     position: relative;
@@ -547,8 +547,8 @@ body {
     padding: 10px 20px;
     font-size: 19px;
     color: black;
-    
-   
+
+
     border-radius: 4px;
     transition: background-color 0.3s;
 }
@@ -563,9 +563,9 @@ body {
     width: 24px;
     background: black;
     border-radius: 50%;
-    pointer-events: none; 
-    transition: all 0.3s ease; 
-    opacity: 0; 
+    pointer-events: none;
+    transition: all 0.3s ease;
+    opacity: 0;
 }
 
 /* Features section */
@@ -618,7 +618,7 @@ body {
     .footer-section ul li a{
       color:#000;
 }
-    
+
 .footer-bottom p{
   font-size: 1.5rem;
   font-weight: 500;

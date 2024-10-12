@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;        /* Centers vertically */
+    justify-content: center;    /* Centers horizontally */
+    height: 100vh;              /* Full viewport height */
+    background-color: white;
+    background: url(https://img.freepik.com/free-vector/gradient-white-monochrome-background_23-2149026464.jpg);
+    background-size: cover;
+}
+
+.login {
+    height: 37.5rem;            /* 600px -> 37.5rem */
+    width: 31.25rem;            /* 500px -> 31.25rem */
+    border: 0.125rem solid rgb(132, 132, 210); /* 2px -> 0.125rem */
+    padding: 1.25rem;           /* 20px -> 1.25rem */
+    display: flex;
+    flex-direction: column;     /* Stack content vertically */
+    background-color: white;
+    border-radius: 0.9375rem;   /* 15px -> 0.9375rem */
+    background: url(https://img.freepik.com/premium-photo/light-effects-backgrounds-electronics-futuristic_53876-232997.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 8px 8px 19px rgba(0, 0, 0, 0.5);
+}
+
+#heading {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 1.25rem;      /* 20px -> 1.25rem */
+    text-align: center;          /* Centers the heading text */
+    font-size: 1.5rem;           /* 24px -> 1.5rem */
+}
+
+.details {
+    display: flex;
+    flex-direction: column;      /* Stack labels and inputs vertically */
+    align-items: flex-start;
+}
+
+.details h4 {
+    margin-bottom: 0.3125rem;    /* 5px -> 0.3125rem */
+    font-size: 1rem;             /* 16px -> 1rem */
+    text-align: left;            /* Aligns label text to the left */
+}
+
+.details input {
+    margin-bottom: 1.25rem;      /* 20px -> 1.25rem */
+    height: 2.1875rem;           /* 35px -> 2.1875rem */
+    width: 100%;
+    border: 0.0625rem solid black; /* 1px -> 0.0625rem */
+    border-radius: 0.25rem;      /* 4px -> 0.25rem */
+    padding: 0.3125rem;          /* 5px -> 0.3125rem */
+}
+
+.details input:focus {
+    box-shadow: 0 0 0.5rem rgba(0, 123, 255, 0.5); /* 8px -> 0.5rem */
+    outline: none;
+}
+
+.final {
+    text-align: center;
+    margin-top: 2.5rem;          /* 40px -> 2.5rem */
+}
+
+.final button {
+    height: 1.875rem;            /* 30px -> 1.875rem */
+    width: 9.375rem;             /* 150px -> 9.375rem */
+    font-size: 0.9375rem;        /* 15px -> 0.9375rem */
+    border-radius: 0.3125rem;    /* 5px -> 0.3125rem */
+    background-color: rgb(219, 231, 243);
+    transition: 0.2s linear;
+}
+
+.final button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 0 0.5rem rgba(0, 123, 255, 0.5); /* 8px -> 0.5rem */
+}
+
+.login .acct {
+    margin-top: 0;
+    margin-left: 13.125rem;      /* 210px -> 13.125rem */
+}
+
+.icons i {
+    margin: 0.3125rem;           /* 5px -> 0.3125rem */
+    font-size: 1.1875rem;        /* 19px -> 1.1875rem */
+    transition: 0.1s linear;
+}
+
+.icons i:hover {
+    transform: scale(1.5);
+    color: blue;
+}
+
+.icons .insta:hover {
+    color: rgb(239, 147, 162);
+}
