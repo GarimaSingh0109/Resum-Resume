@@ -204,7 +204,7 @@ body {
 }
 /* Add more styles as needed for other elements */
 
-.home {
+.home{
     display: flex;
     align-items: center;
     min-height: 100vh;
@@ -338,12 +338,18 @@ body {
 
 
 .footer .footer-section ul li a {
+
+    color: rgb(88, 88, 88);
+
     color: #2f4f4f;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer .footer-section ul li a:hover {
+    color: white;
+    text-decoration: none;
+
     color: #3f10ea;
 }
 
@@ -356,7 +362,11 @@ body {
 }
 
 .footer .footer-section .social-icons a:hover {
+    color: white;
+    text-decoration: none;
+
     color: #3f10ea;
+ main
 }
 
 .footer a {
