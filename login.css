@@ -55,7 +55,7 @@
     }
     
     .navbar ul li a:hover {
-    color: blue; /* Updated hover color to Soft Gold */
+    color: blue; /* Updated hover color to blue color */
     text-decoration: none;
     transition: color 0.3s ease;
     }
