@@ -162,7 +162,7 @@ header .icons a {
 
 header .icons a:hover {
   color: var(--purple);
-  color: #ffffff;
+  color: #3a1313;
   text-decoration: none;
  }
 
@@ -197,7 +197,7 @@ body {
 
 .home .content h3{
   font-size: 5rem;
-  color: #333;
+  color: #221b1b;
   font-size: 4.5rem;
   font-weight: 600;
   line-height: 6rem;
@@ -229,7 +229,7 @@ body {
   }
 
 .home .content {
-    max-width: 50rem;
+    max-width: 55rem;
     opacity: 0; /* Ensure the text is hidden initially */
     animation: floatInFromTop 2s ease-out forwards; /* Text floats from top */
 }
@@ -248,7 +248,8 @@ body {
   padding: 1rem 0;
   line-height: 1.5;
   margin-bottom: 2rem;
-  color: grey;
+  color: rgb(134, 121, 121);
+  font-weight: 400;
 }
 .home .content h3{
     font-size: 5rem;
@@ -264,7 +265,7 @@ body {
 
 .home .content p{
     font-size: 1.5rem;
-    color: #666; /* Changed from #999 to a darker gray for better readability */
+    color: #959292; /* Changed from #999 to a darker gray for better readability */
     padding: 1rem 0;
     line-height: 1.5;
 }
@@ -318,7 +319,7 @@ body {
     margin-bottom: 20px;
     font-weight: 600;
     color: #fff;
-    border-bottom: 2px solid #3f10ea;
+    border-bottom: 2px solid #300cb5;
     padding-bottom: 10px;
 
 .ul{

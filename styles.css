@@ -126,7 +126,7 @@ body{
     transition: 0.5s;
 }
 .contact form .btn:hover{
-    background-color:blue;
+    background-color:rgb(35, 4, 233);
     color: black;
     border: black;
     box-shadow: 0 0 5px 4px black;
