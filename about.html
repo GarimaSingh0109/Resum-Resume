@@ -308,9 +308,48 @@ body {
     }
 }
 
+#progress-container {
+            width: 100%;
+            height: 5px;
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden; 
+            position: fixed;
+            top: 0;
+            left: 0; 
+            z-index: 9999; 
+        }
+
+        #progress-bar {
+            height: 100%;
+            background-color: #3f10ea;
+        }
+
     </style>
 </head>
 <body>
+
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+      </div>
+    
+      <script>
+    let lastScrollPercentage = 0; 
+    
+    function updateProgressBar() {
+        const scrollTop = window.scrollY; 
+        const windowHeight = document.documentElement.scrollHeight - window.innerHeight; 
+        const scrollPercentage = (scrollTop / windowHeight) * 100; 
+    
+        const progressBar = document.getElementById('progress-bar');
+        
+        
+        lastScrollPercentage += (scrollPercentage - lastScrollPercentage) * 0.1; 
+        progressBar.style.width = lastScrollPercentage + '%'; 
+    }
+    window.addEventListener('scroll', updateProgressBar);
+    
+      </script>
 
    <!-- Navbar -->
    <nav class="navbar">
