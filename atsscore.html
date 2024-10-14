@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume ATS Score Finder</title>
+    <link rel="stylesheet" href="atsscore.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1>Resume ATS Score Finder</h1>
+        <label for="job-description">Enter Job Description:</label>
+        <textarea id="job-description" rows="4" placeholder="Enter job description..."></textarea>
+
+        <label for="resume-upload">Upload Your Resume (PDF or Word):</label>
+        <input type="file" id="resume-upload" accept=".pdf, .doc, .docx">
+
+        <label for="resume-text">Or Paste Your Resume Text Here:</label>
+        <textarea id="resume-text" rows="4" placeholder="Paste your resume text..."></textarea>
+
+        <button id="analyze-button">Analyze Resume</button>
+
+        <div id="feedback-section">
+            <h2>ATS Compatibility Score: <span id="score"></span></h2>
+            <p>Feedback: <span id="feedback"></span></p>
+        </div>
+    </div>
+    <script src="atsscore.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>

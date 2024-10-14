@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume ATS Score Finder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMR5aN2eW1u1a1G6T8G6Fz2F4zS3z7P8S5f5WJ" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.2/mammoth.browser.min.js"></script>
+    
+<style>
+    :root {
+        --deep-teal: #003d4d; /* Updated primary color */
+        --off-white: #f8f9fa; /* Updated background color */
+        --dark-slate: #2f4f4f; /* Text color */
+        --soft-gold: #d9c79e; /* Accent color */
+    }
+
+    * {
+        margin: 0; 
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        text-transform: capitalize;
+        transition: .2s linear;
+    }
+
+    body {
+        background-color: var(--off-white); 
+        line-height: 1.6;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Header Style */
+    #main_heading {
+        background-color: var(--deep-teal); /* Deep Teal background */
+        color: var(--off-white); /* Off-white text color */
+        text-align: center;
+        padding: 20px; /* Spacing around the heading */
+        font-size: 2rem; /* Font size for the heading */
+        text-transform: uppercase; /* Uppercase text */
+        margin: 20px 0; /* Margin for spacing */
+    }
+
+    main {
+        max-width: 800px; /* Limit the width of the content */
+        margin: 0 auto; /* Center the content */
+        padding: 20px; /* Padding inside the content box */
+        background-color: var(--soft-gold); /* Background color for the content box */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    }
+
+    /* Content Styles */
+    .summary, .education, .skills, .experience, .achieve, .tips {
+        color: var(--dark-slate); /* Text color */
+        padding: 20px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        #main_heading {
+            font-size: 1.5rem; /* Smaller font size on mobile */
+        }
+
+        main {
+            padding: 15px; /* Adjust padding on mobile */
+        }
+    }
+
+    @media (max-width: 450px) {
+        #main_heading {
+            font-size: 1.2rem; /* Even smaller font size on smaller devices */
+        }
+    }
+
+</style>
+
+
+</head>
+<body>
+
+<div class="container">
+    <h1>Resume ATS Score Finder</h1>
+    <label for="job-description">Enter Job Description:</label>
+    <textarea id="job-description" rows="4" style="width: 100%;" placeholder="Enter the job description here..."></textarea>
+
+    <label for="resume-upload">Upload Your Resume (PDF or Word):</label>
+    <input type="file" id="resume-upload" accept=".pdf, .docx" />
+
+    <label for="resume-text">Or Paste Your Resume Text Here:</label>
+    <textarea id="resume-text" rows="4" style="width: 100%;" placeholder="Paste your resume text..."></textarea>
+
+    <button id="analyze-button">Analyze Resume</button>
+
+    <div id="score">ATS Compatibility Score: 0%</div>
+    <div id="feedback"></div>
+</div>
+
+<script>
+// Event listener for the analyze button
+document.getElementById("analyze-button").addEventListener("click", function() {
+    const jobDescription = document.getElementById("job-description").value;
+    const resumeText = document.getElementById("resume-text").value.trim();
+
+    // Handle file upload
+    const fileInput = document.getElementById("resume-upload");
+    const file = fileInput.files[0];
+
+    // If both fields are empty, alert the user
+    if (!jobDescription || (!resumeText && !file)) {
+        alert("Please enter the job description and provide either a resume text or upload a file.");
+        return;
+    }
+
+    // If there's a file, process it
+    if (file) {
+        const reader = new FileReader();
+
+        reader.onload = function(event) {
+            const arrayBuffer = event.target.result;
+
+            if (file.type === "application/pdf") {
+                // PDF file handling
+                pdfjsLib.getDocument(arrayBuffer).promise.then(function(pdf) {
+                    pdf.getPage(1).then(function(page) {
+                        page.getTextContent().then(function(textContent) {
+                            const textItems = textContent.items;
+                            const resumeTextFromFile = textItems.map(item => item.str).join(" ");
+                            analyzeResume(jobDescription, resumeText || resumeTextFromFile);
+                        });
+                    });
+                });
+            } else if (file.type === "application/vnd.openxmlformats-officedocument.wordprocessingml.document") {
+                // Word file handling
+                mammoth.extractRawText({arrayBuffer: arrayBuffer})
+                    .then(function(result) {
+                        const resumeTextFromFile = result.value; // The plain text
+                        analyzeResume(jobDescription, resumeText || resumeTextFromFile);
+                    })
+                    .catch(function(err) {
+                        console.error("Error reading Word file:", err);
+                    });
+            } else {
+                alert("Unsupported file type. Please upload a PDF or Word document.");
+            }
+        };
+
+        reader.readAsArrayBuffer(file);
+    } else {
+        analyzeResume(jobDescription, resumeText); // Analyze with pasted text
+    }
+});
+
+// Function to analyze resume text
+function analyzeResume(jobDescription, resumeText) {
+    if (jobDescription && resumeText) {
+        const atsScore = calculateATSScore(jobDescription, resumeText);
+        const feedback = displayFeedback(atsScore);
+        const formatFeedback = checkFormattingAndStructure(resumeText);
+
+        document.getElementById("score").innerText = "ATS Compatibility Score: " + atsScore + "%";
+        document.getElementById("feedback").innerText = feedback + " " + formatFeedback;
+    } else {
+        document.getElementById("feedback").innerText = "Please enter both the job description and resume.";
+    }
+}
+
+// Function to calculate ATS score based on job description keywords
+function calculateATSScore(jobDescription, resumeText) {
+    // Extract keywords from job description
+    const jobKeywords = jobDescription.toLowerCase().match(/\b\w+\b/g) || [];
+    const resumeKeywords = resumeText.toLowerCase().match(/\b\w+\b/g) || [];
+    let matchingKeywords = 0;
+
+    jobKeywords.forEach(keyword => {
+        if (resumeKeywords.includes(keyword)) {
+            matchingKeywords++;
+        }
+    });
+
+    // Calculate score based on matching keywords
+    return ((matchingKeywords / jobKeywords.length) * 100).toFixed(2);
+}
+
+// Function to display feedback based on ATS score
+function displayFeedback(atsScore) {
+    if (atsScore >= 80) {
+        return "Great! Your resume matches well with the job description.";
+    } else if (atsScore >= 50) {
+        return "Good job! Consider adding more relevant keywords.";
+    } else {
+        return "Your resume needs improvement. Focus on matching key skills.";
+    }
+}
+
+// Function to check formatting and structure
+function checkFormattingAndStructure(resumeText) {
+    const lines = resumeText.split('\n');
+    const hasHeading = lines.some(line => line.trim().toLowerCase().includes("education") || line.trim().toLowerCase().includes("experience"));
+    const hasBulletPoints = lines.some(line => line.trim().startsWith("-") || line.trim().startsWith("•"));
+
+    if (!hasHeading) {
+        return "Consider adding clear headings (e.g., Education, Experience).";
+    }
+    if (!hasBulletPoints) {
+        return "Using bullet points can improve readability.";
+    }
+    return "Your formatting looks good!";
+}
+</script>
+
+</body>
+</html>
