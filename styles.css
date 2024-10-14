@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: rgb(174, 168, 168);
+    background-color: white;
 }
 .contact h2,h3{
     max-width: 50rem;
@@ -13,7 +13,7 @@ body{
     margin-bottom: 2rem;
 }
 .top_header{
-    background-color:  #aca7eb;
+    background-color:  white;
     height: 8rem
 }
 .top_header h2{

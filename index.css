@@ -56,6 +56,45 @@ section{
 .btn:hover {
     background: var(--deep-teal); /* Deep Teal on hover */
 }
+
+#scrollToTopBtn {
+    background-color:blue;
+    z-index: 100;
+}
+
+
+.navbar-home:hover {
+    padding: 10px;
+    background-color: white;
+    border-radius: 4px;
+    border: none;
+}
+
+.navbar-about:hover{
+    padding: 10px;
+    background-color: white;
+    border-radius: 4px;
+    border: none;
+}
+
+.navbar-resume:hover{
+    padding: 10px;
+    background-color: white;
+    border-radius: 4px;
+    border: none;
+}
+.navbar-tips:hover{
+    padding: 10px;
+    background-color: white;
+    border-radius: 4px;
+    border: none;
+}
+.navbar-login:hover{
+    padding: 10px;
+    background-color: white;
+      border-radius: 4px;
+    border: none;
+}
 .btn {
   display: inline-block;
   margin-top: 1rem;
@@ -69,8 +108,8 @@ section{
 }
 .btn:hover {
   background: var(--purple);
-  background-color: #f03c0b;
-  color: white;
+  background-color: white;
+  color: #3f10ea;
 }
 
 header {
@@ -125,18 +164,34 @@ header .logo span {
 header .navbar a {
     font-size: 2rem;
     padding: 15px;
-    color: white
+    
 
 }
 
-header .navbar a:hover {
-    color: var(--soft-gold); /* Soft Gold on hover */
+header .navbar-home:hover  a:hover {
+    color: #003d4d;; /* Soft Gold on hover */
     text-decoration: none; /* Ensure no underline by default */
 }
 
+header .navbar-about:hover  a:hover {
+    color: #003d4d;; /* Soft Gold on hover */
+    text-decoration: none; /* Ensure no underline by default */
+}
+header .navbar-resume:hover  a:hover {
+    color: #003d4d;; /* Soft Gold on hover */
+    text-decoration: none; /* Ensure no underline by default */
+}
+header .navbar-tips:hover  a:hover {
+    color: #003d4d;; /* Soft Gold on hover */
+    text-decoration: none; /* Ensure no underline by default */
+}
+header .navbar-login:hover  a:hover {
+    color: #003d4d;; /* Soft Gold on hover */
+    text-decoration: none; /* Ensure no underline by default */
+}
 header .icons a {
     font-size: 2.5rem;
-    color: white
+    color: white;
     margin-left: 1.5rem;
 }
 
@@ -149,7 +204,7 @@ header .icons a {
 
 header .navbar a:hover {
   color: var(--red);
-  text-decoration: none;
+  /* text-decoration: none; */
   color: #ffffff;
 }
 
@@ -172,7 +227,6 @@ header #toggler {
 
 header .fa-bars {
     font-size: 3rem;
-
     color: var(--off-white); /* White for better visibility */
     border-radius: .5rem;
     padding: .5rem 1.5rem;
@@ -366,9 +420,9 @@ body {
     text-decoration: none;
 
     color: #3f10ea;
- main
+ 
 }
-
+}
 .footer a {
     color: var(--soft-gold);
     text-decoration: none;
