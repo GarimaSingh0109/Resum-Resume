@@ -4,9 +4,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-</head>
-<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/debd0805f2.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .contact {
+            padding: 50px;
+            background-color: #f9f9f9;
+        }
+
+        .top_header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .top_header h2 {
+            font-size: 32px;
+        }
+
+        .top_header span {
+            color: #f15a29;
+        }
+
+        .con_row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .col {
+            flex: 1;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+
+        .contact_info h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .contact_info p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .contact_info a {
+            text-decoration: none;
+            color: #f15a29;
+        }
+
+        form {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            margin-right: 20px;
+        }
+
+        .input_box {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .btn {
+            background-color: #f15a29;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background-color: #d14c23;
+        }
+
+        .map_container {
+            margin-top: 40px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: 0;
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            .con_row {
+                flex-direction: column;
+            }
+
+            .col, form {
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
 <body>
     <section class="contact" id="contact">
         <div class="top_header">
@@ -16,24 +131,33 @@
             <div class="col">
                 <div class="contact_info">
                     <h2>Find Us <i class="fa-solid fa-arrow-down"></i></h2>
-                    <p><i class="fa-solid fa-envelope"></i>Email:<a href="mailto: example@gmail.com"> example@gmail.com</a></p>
-                    <p><i class="fa-solid fa-phone"></i>Phone:<a href="callto: 1234567891">1234567891</a></p>
+                    <p><i class="fa-solid fa-envelope"></i> Email: <a href="mailto: example@gmail.com">example@gmail.com</a></p>
+                    <p><i class="fa-solid fa-phone"></i> Phone: <a href="tel:1234567891">1234567891</a></p>
+                    <p><i class="fa-solid fa-location-dot"></i> Address: 123 Main St, New York, NY 10001</p>
                 </div>
             </div>
-        </div>
-        <form action="#">
-            <div class="input_box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Address">
-            </div>
+            <form action="#">
+                <div class="input_box">
+                    <input type="text" placeholder="Full Name">
+                    <input type="email" placeholder="Email Address">
+                </div>
 
-            <div class="input_box">
-                <input type="number" placeholder="Mobile Number">
-                <input type="text" placeholder="Job Role">
-            </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="Send" class="btn">
-        </form>
+                <div class="input_box">
+                    <input type="number" placeholder="Mobile Number">
+                    <input type="text" placeholder="Job Role">
+                </div>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                <input type="submit" value="Send" class="btn">
+            </form>
+        </div>
+        <div class="map_container">
+            <h2>Our Location</h2>
+            <!-- Google Maps Embed -->
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.9316514694495!2d-74.00601538459529!3d40.71277527933085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a19d7b050b7%3A0xe0ed68c620dccf5e!2sOne%20World%20Trade%20Center%2C%201%20World%20Trade%20Center%2C%20New%20York%2C%20NY%2010007%2C%20USA!5e0!3m2!1sen!2sin!4v1647975385912!5m2!1sen!2sin"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
     </section>
 </body>
 </html>
