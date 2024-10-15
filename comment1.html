@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Page</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <link rel="icon" href="images/favicon-removebg-preview.png" />
+
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+
+<body>
+    <h1 class="title">Resum Resume</h1>
+    <br>
+    <p class="content">The perfect website for resume building</p>
+    <p class="content">Please leave your comments and feedback below</p>
+
+    <div id="comment-section">
+        <h1>Comments</h1>
+        <br>
+        <div id="comments">
+            <form id="comment-form">
+                <textarea id="comment-input" placeholder="Leave a comment here..." required></textarea>
+            </form>
+            <button class="btn" type="submit">Submit</button> <!-- Moved button inside the form -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Resume Builder</a></li>
+                    <li><a href="#">CV Templates</a></li>
+                    <li><a href="#">Career Advice</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Resume Builder. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        const toggler = document.getElementById("toggler");
+        const body = document.body;
+        const closeBtn = document.querySelector(".close-btn");
+
+        closeBtn.addEventListener("click", function () {
+            toggler.checked = false;
+            body.classList.remove("sidebar-active");
+        });
+        toggler.addEventListener("change", function () {
+            if (toggler.checked) {
+                body.classList.add("sidebar-active");
+            } else {
+                body.classList.remove("sidebar-active");
+            }
+        });
+    </script>
+
+</body>
+
+</html>
