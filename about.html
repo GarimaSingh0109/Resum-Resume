@@ -325,6 +325,24 @@ body {
             background-color: #3f10ea;
         }
 
+        .tab{
+
+            color : white;
+        }
+        .tab:hover{
+
+            color : white;
+            background-color: black;
+        }
+
+        .matter{
+
+            font-size : 30px;
+            font-weight: bold; 
+            color : black;
+      }
+     
+
     </style>
 </head>
 <body>
@@ -333,28 +351,14 @@ body {
         <div id="progress-bar"></div>
       </div>
     
-      <script>
-    let lastScrollPercentage = 0; 
-    
-    function updateProgressBar() {
-        const scrollTop = window.scrollY; 
-        const windowHeight = document.documentElement.scrollHeight - window.innerHeight; 
-        const scrollPercentage = (scrollTop / windowHeight) * 100; 
-    
-        const progressBar = document.getElementById('progress-bar');
-        
-        
-        lastScrollPercentage += (scrollPercentage - lastScrollPercentage) * 0.1; 
-        progressBar.style.width = lastScrollPercentage + '%'; 
-    }
-    window.addEventListener('scroll', updateProgressBar);
-    
-      </script>
+      
 
    <!-- Navbar -->
+
+
    <nav class="navbar">
-    <img src="images/logo.png" alt="logo">
-    <h1>Resum Resume</h1>
+    <img style="height : 100px ; width : 200px;" src="images/logo.png" alt="logo">
+    <h1 style="font-size : 30px;">Resume Resume</h1>
     <nav class="navbar">
         <div class="tabs-container"></div>
         <a class="tab" href="#home">Home</a>
@@ -371,26 +375,30 @@ body {
         <div class="content">
             <div class="action">
     
-                <h2>Our Mission</h2>
-                <p>
+                <h2 style="padding : 20px ; color : black; font-weight : bolder; background-color : orange;">Our Mission</h2>
+
+                <p class="matter">
                     The LinkedIn Resume Builder is designed to make your job search easier and faster by transforming your LinkedIn profile into a polished, professional resume. 
                     We understand the challenges of job hunting and the importance of having an up-to-date resume. Our mission is to provide a simple, fast, and reliable solution 
                     that saves you time and effort.
                 </p>
             </div>
             
-            <h2>How It Works</h2>
-            <p>
+            <h2 style="padding : 20px ; color : black; font-weight : bolder; background-color : orange;">How It Works</h2>
+            <p class="matter">
+
                 Our tool integrates with LinkedIn to gather essential details from your profile, including your work experience, education, and skills. 
                 With just a few clicks, you can convert your profile into a beautifully formatted resume. Here’s a simple breakdown of how it works:
             </p>
             <ul>
+
                 <li>Enter your LinkedIn profile URL in our resume form.</li>
                 <li>Choose a resume template from our professionally designed options.</li>
                 <li>Generate a downloadable resume in PDF format within seconds.</li>
+
             </ul>
     
-            <h2>Why Use LinkedIn Resume Builder?</h2>
+            <h2 style="padding : 20px ; color : black; font-weight : bolder; background-color : orange;">Why Use LinkedIn Resume Builder?</h2>
             <p>
                 Here are a few reasons why professionals prefer our tool:
             </p>
@@ -407,39 +415,40 @@ body {
     </div> -->
 
     <!-- footer section -->
+
     <footer class="footer">
         <div class="footer-content">
           <div class="footer-section">
             <h3>About Us</h3>
             <ul class="ul">
-              <li><a href="#">Our Story</a></li>
-              <li><a href="#">Team</a></li>
-              <li><a href="#">Careers</a></li>
+              <li><a style="font-size : 20px; color : white ; " href="#">Our Story</a></li>
+              <li><a style="font-size : 20px; color : white ; " href="#">Team</a></li>
+              <li><a style="font-size : 20px; color : white ; " href="#">Careers</a></li>
             </ul>
           </div>
           <div class="footer-section">
             <h3>Services</h3>
             <ul class="ul">
-              <li><a href="#">Resume Builder</a></li>
-              <li><a href="#">CV Templates</a></li>
-              <li><a href="#">Career Advice</a></li>
+              <li><a style="font-size : 20px; color : white ; " href="#">Resume Builder</a></li>
+              <li><a style="font-size : 20px; color : white ; " href="#">CV Templates</a></li>
+              <li><a style="font-size : 20px; color : white ; " href="#">Career Advice</a></li>
             </ul>
           </div>
           <div class="footer-section">
             <h3>Support</h3>
             <ul class="ul">
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Privacy Policy</a></li>
+              <li><a style="font-size : 20px; color : white ; " href="#">FAQ</a></li>
+              <li><a style="font-size : 20px; color : white ; " href="#">Contact Us</a></li>
+              <li><a style="font-size : 20px; color : white ; " href="#">Privacy Policy</a></li>
             </ul>
           </div>
           <div class="footer-section">
             <h3>Connect With Us</h3>
             <div class="social-icons">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-x-twitter"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a style="font-size : 20px; color : white ; " href="#"><i class="fab fa-facebook-f"></i></a>
+              <a style="font-size : 20px; color : white ; " href="#"><i class="fab fa-x-twitter"></i></a>
+              <a style="font-size : 20px; color : white ; " href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a style="font-size : 20px; color : white ; " href="#"><i class="fab fa-instagram"></i></a>
             </div>
           </div>
         </div>
@@ -447,6 +456,24 @@ body {
           <p>&copy; 2024 Resume Builder. All rights reserved.</p>
         </div>
       </footer>
+
+      <script>
+        let lastScrollPercentage = 0; 
+        
+        function updateProgressBar() {
+            const scrollTop = window.scrollY; 
+            const windowHeight = document.documentElement.scrollHeight - window.innerHeight; 
+            const scrollPercentage = (scrollTop / windowHeight) * 100; 
+        
+            const progressBar = document.getElementById('progress-bar');
+            
+            
+            lastScrollPercentage += (scrollPercentage - lastScrollPercentage) * 0.1; 
+            progressBar.style.width = lastScrollPercentage + '%'; 
+        }
+        window.addEventListener('scroll', updateProgressBar);
+        
+          </script>
 
     <script>
         const toggler = document.getElementById("toggler");
