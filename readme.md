@@ -5,6 +5,18 @@ This project is a **LinkedIn Resume Builder** that allows users to generate prof
 
 **Discord Link:-** https://discord.gg/GJ5BfwVd
 
+## Table of Contents 📑
+1. [Features 🚀](#features-🚀)
+2. [Project Structure 📁](#project-structure-📁)
+3. [Technologies Used 💻](#technologies-used-💻)
+4. [Getting Started 🏁](#getting-started-🏁)
+   - [Prerequisites](#prerequisites)
+   - [Installation](#installation)
+5. [File Structure 📂](#file-structure-📂)
+6. [Usage 📄](#usage-📄)
+7. [Responsive Design 📏](#responsive-design-📏)
+8. [License 📜](#license-📜)
+
 ## Features 🚀
 
 - **Easy-to-Use Interface**: A user-friendly interface allows users to effortlessly create a resume.
@@ -42,9 +54,8 @@ The website consists of the following key sections:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/linkedin-resume-builder.git
-   cd linkedin-resume-builder
-   ```
+   git clone https://github.com/GarimaSingh0109/Resum-Resume
+   cd Resum-Resume
 
 2. Open the `index.html` file in your preferred browser:
 
