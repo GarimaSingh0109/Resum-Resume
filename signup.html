@@ -93,10 +93,16 @@
         .login-btn {
             background-color: var(--soft-gold);
             margin-top: 10px;
+            color: var(--deep-teal);
         }
 
         .login-btn:hover {
             background-color: var(--deep-teal);
+            color: var(--off-white);
+        }
+
+        .signup-btn:hover{
+            color: var(--deep-teal);
         }
 
         .footer {
@@ -131,19 +137,13 @@
         <div class="logo" onclick="window.location.href='index.html'">Resum Resume</div>
         <h2>Create Your Account</h2>
 
-        <form action="#" method="POST">
-            <input id="name" type="text" placeholder="Full Name" required>
-            <input id="email" type="email" placeholder="Email Address" required>
-            <input id="password" type="password" placeholder="Password" required>
-            <input id="confirmPassword" type="password" placeholder="Confirm Password" required>
-            <button type="submit" class="signupbtn">Sign Up</button>
 
         <form id="signupForm" action="#" method="POST">
             <input type="text" placeholder="Full Name" required>
             <input type="email" placeholder="Email Address" required>
             <input type="password" placeholder="Password" required>
             <input type="password" placeholder="Confirm Password" required>
-            <button type="submit">Sign Up</button>
+            <button type="submit" class="signup-btn">Sign Up</button>
 
         </form>
         <button class="login-btn" onclick="window.location.href='login.html'">Go to Login</button>
