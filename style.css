@@ -183,7 +183,8 @@ header .fa-bars {
 
 /* Default light mode styles */
 body {
-    background-color: var(--off-white); /* Changed from #ffffff to Off-White */
+    background-color: var(--ffffff);
+ /* Changed from #ffffff to Off-White */
     color: var(--dark-slate); /* Changed from #000000 to Dark Slate */
 }
 
