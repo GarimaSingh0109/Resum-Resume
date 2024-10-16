@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: rgb(174, 168, 168);
+    background-color: rgb(125, 121, 121);
 }
 .contact h2,h3{
     max-width: 50rem;
@@ -58,6 +58,7 @@ body{
 }
 .contact_info p>i{
     font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
 } 
 .contact_info p>a{
     color:white;
@@ -131,4 +132,5 @@ body{
     border: black;
     box-shadow: 0 0 5px 4px black;
     font-weight: 600;
+    font-style: oblique;
 }
