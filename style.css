@@ -230,7 +230,7 @@ body {
   }
 
 .home .content {
-    max-width: 55rem;
+    max-width: 50rem;
     opacity: 0; /* Ensure the text is hidden initially */
     animation: floatInFromTop 2s ease-out forwards; /* Text floats from top */
 }
@@ -266,9 +266,11 @@ body {
 
 .home .content p{
     font-size: 1.5rem;
-    color: #959292; /* Changed from #999 to a darker gray for better readability */
+    color: #999; /* Changed from #999 to a darker gray for better readability */
     padding: 1rem 0;
     line-height: 1.5;
+    margin-bottom: 2rem;
+    color: grey;
 }
 
 @keyframes floatInFromTop {
@@ -322,6 +324,7 @@ body {
     color: #fff;
     border-bottom: 2px solid #300cb5;
     padding-bottom: 10px;
+}
 
 .ul{
    padding: 0;
@@ -332,7 +335,7 @@ body {
 }
 .footer-bottom{
     text-align: center;
-    color: #fff; 
+    color: #666; 
     font-size: 14px;
     margin: 0px;
     margin-top:10px;
