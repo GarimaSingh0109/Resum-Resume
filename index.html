@@ -165,6 +165,9 @@
         }
     </style>
     </style>
+
+
+<head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>LinkedIn Resume Builder - Home</title>
@@ -186,9 +189,25 @@
 			background-color: #f9f9f9;
 		}
 
-
-
 		/* <label for = "dark-mode-toggle" style="margin: 20px; display: block; text-align: center;"><label for="dark-mode-toggle"><input type="checkbox" id="dark-mode-toggle" />Toggle Dark Mode </label></label>.features-card {
+		
+		.features-card {
+			background-color: white;
+			padding : 30px;
+			border-radius: 8px;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			width: calc(25% - 30px);
+			text-align: center;
+			transition: transform 0.3s, box-shadow 0.3s, z-index 0.3s;
+			position: relative;
+			z-index: 1;
+		} */
+
+		.features-card:hover {
+			transform: translateY(-10px) scale(1.1);
+			box-shadow: 0 4px 8px #0073b1;
+			z-index: 3;
+		}
 
   <head>
     <meta charset="UTF-8" />
@@ -260,13 +279,260 @@
 			transition: transform 0.3s ease;
 		}
 
-		
-	.features {
-
+			.features {
 			padding: 60px 20px;
 			background-color: #f9f9f9;
 			/* Consider changing this to a darker tone if needed 
 		} */
+
+		.features h2 {
+			text-align: center;
+			color: #333;
+			/* Consider changing this for better contrast */
+			margin-bottom: 40px;
+			font-size: 32px;
+		}
+
+		.features-cards {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 30px;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+
+		.features-card {
+			background-color: #fff;
+			/* You might want to change this to a softer off-white */
+			
+			border-radius: 18px;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			width: calc(25% - 30px);
+			text-align: center;
+
+			transition: transform 0.3s, box-shadow 0.3s, z-index 0.3s;
+			position: relative;
+			z-index: 1;
+		}
+
+		.features-card:hover {
+			transform: translateY(-10px) scale(1.1);
+			box-shadow: 0 4px 8px #0073b1;
+			/* Consider adjusting this to match the modern minimalist theme */
+			z-index: 3;
+		}
+
+		.features-card img {
+			width: 100%;
+			/* Set the width for the icon images */
+			height: 185px;
+			/* Set the height for the icon images */
+			/* margin-bottom: 20px; */
+			border-radius: 10px 10px 0 0;
+			/* Rounded corners for the images */
+			transition: transform 0.3s ease;
+		}
+
+		.features-card:hover {
+			transform: translateY(-5px);
+			/* Slight lift effect on hover */
+		}
+
+		.features-card h3 {
+			color: var(--deep-teal);
+			/* Use the deep teal color for headings */
+			margin: 15px 0;
+			font-size: 22px;
+		}
+
+		.features-card p {
+			color: var(--dark-slate);
+			/* Use dark slate for paragraph text */
+			font-size: 16px;
+		}
+
+		/* Testimonials Section */
+		.testimonials {
+			padding: 60px 20px;
+			background-color: var(--off-white);
+			/* Use the off-white background color */
+		}
+
+		.testimonials h2 {
+			text-align: center;
+			color: var(--dark-slate);
+			/* Use dark slate for heading text */
+			margin-bottom: 40px;
+			font-size: 32px;
+		}
+
+
+		.testimonial-cards {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 30px;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+
+
+		.features-card h3 {
+			color: #aca7eb;
+			margin: 15px 0;
+			font-size: 22px;
+		}
+
+
+
+		.testimonial-card {
+			background-color: var(--off-white);
+			/* Use off-white for testimonial cards */
+			padding: 30px;
+			border-radius: 8px;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			width: calc(33.33% - 30px);
+			text-align: center;
+		}
+
+		.features-card p {
+			color: #666;
+			font-size: 16px;
+		}
+
+
+		.testimonial-card img {
+			width: 80px;
+			/* Profile image width */
+			height: 80px;
+			/* Profile image height */
+			border-radius: 50%;
+			/* Circular shape for profile images */
+			margin-bottom: 20px;
+		}
+
+		.testimonial-card h3 {
+			color: var(--deep-teal);
+			/* Use deep teal for testimonial headings */
+			margin: 10px 0;
+			font-size: 20px;
+		}
+
+		.testimonial-card p {
+			color: var(--dark-slate);
+			/* Use dark slate for testimonial text */
+			font-size: 16px;
+			font-style: italic;
+			/* Italic style for testimonial text */
+		}
+
+		/* Footer Styles */
+		.footer {
+			background-color: var(--deep-teal);
+			/* Use deep teal for footer background */
+			color: #ffffff;
+			/* White text for footer */
+			padding: 40px 0;
+			padding-bottom:0;
+		}
+
+		.footer-content {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			max-width: 1200px;
+			/* Max width for footer content */
+			margin: 0 auto;
+			/* Center footer content */
+			padding: 0 20px;
+		}
+
+		.footer-section {
+			flex: 1;
+			/* Flexible sections in footer */
+			margin-bottom: 20px;
+			/* Space between footer sections */
+			min-width: 200px;
+			/* Minimum width for each section */
+		}
+
+
+		.text {
+			padding-right: 20px;
+			/* Right padding for text sections */
+			max-width: 50%;
+			/* Maximum width for text sections */
+		}
+
+		.testimonial-card h3 {
+			color: #aca7eb;
+			margin: 10px 0;
+			font-size: 20px;
+		}
+
+
+
+		.image {
+			max-width: 50%;
+			/* Maximum width for image sections */
+		}
+
+		.testimonial-card p {
+			color: #666;
+			font-size: 16px;
+			font-style: italic;
+		}
+
+
+
+		.image img {
+			width: 100%;
+			/* Full width for images */
+			height: auto;
+			/* Maintain aspect ratio */
+			border-radius: 5px;
+			/* Rounded corners for images */
+		}
+
+		.footer-section h3 {
+			font-size: 18px;
+			/* Font size for section headings */
+			font-weight: 700;
+			/* Bold weight for section headings */
+			margin-bottom: 15px;
+			/* Space below section headings */
+			color: #ffffff;
+			/* White color for headings */
+		}
+
+		.footer-section ul {
+			list-style-type: none;
+			/* No bullet points for list */
+			padding: 0;
+			/* No padding for list */
+		}
+
+		.footer-section ul li {
+			margin-bottom: 8px;
+			/* Space between list items */
+		}
+
+		.footer-section ul li a {
+			color: #e0e0e0;
+			/* Light grey for links */
+			text-decoration: none;
+			/* No underline for links */
+			transition: color 0.3s ease;
+			/* Smooth transition for color change */
+		}
+
+		.footer-section ul li a:hover {
+			color: #ffffff;
+			/* White color on hover */
+			text-decoration: underline;
+			/* Underline on hover */
+		}
 
       .features h2 {
         text-align: center;
@@ -569,6 +835,24 @@
       .scroll-to-top i {
         font-size: 20px;
       }
+
+      #progress-container {
+            width: 100%;
+            height: 5px;
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden; 
+            position: fixed;
+            top: 0;
+            left: 0; 
+            z-index: 9999; 
+        }
+
+        #progress-bar {
+            height: 100%;
+            background-color: #3f10ea;
+        }
+      
     </style>
   </head>
 
@@ -607,7 +891,6 @@
         </div>
     </section>
     <!-- home section ends-->
-
     <!-- Features Section -->
     <section class="features">
         <h2>Our Features</h2>
@@ -722,6 +1005,28 @@
             <p>&copy; 2024 Resume Builder. All rights reserved.</p>
         </div>
     </footer>
+    <div id="progress-container">
+      <div id="progress-bar"></div>
+    </div>
+  
+    <script>
+  let lastScrollPercentage = 0; 
+  
+  function updateProgressBar() {
+      const scrollTop = window.scrollY; 
+      const windowHeight = document.documentElement.scrollHeight - window.innerHeight; 
+      const scrollPercentage = (scrollTop / windowHeight) * 100; 
+  
+      
+      const progressBar = document.getElementById('progress-bar');
+      
+     
+      lastScrollPercentage += (scrollPercentage - lastScrollPercentage) * 0.1; 
+      progressBar.style.width = lastScrollPercentage + '%'; 
+  }
+  window.addEventListener('scroll', updateProgressBar);
+  
+    </script>
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
@@ -740,7 +1045,8 @@
         <a href="#home">Home</a>
         <a href="about.html">About</a>
         <a href="resume.html">Build Resume</a>
-        <a href="signup.html">Sign Up</a>
+        <a href="resume_tips.html">Resume Tips</a>
+	<li><a href="ats_score_finder.html">ATS Score Finder</a></li>
         <a href="login.html">Login</a>
       </nav>
 
@@ -763,7 +1069,7 @@
           Select a template, enter your LinkedIn URL, and get a downloadable
           resume in a few clicks. Save time and create a resume that stands out.
         </p>
-        <a href="signup.html" class="btn">Get Started</a>
+        <a href="login.html" class="btn">Get Started</a>
       </div>
     </section>
 
@@ -889,33 +1195,7 @@
       </div>
     </footer>
 
-<header>
-        
-    <input type="checkbox" name="" id="toggler">
-    <label for="toggler" class="fas fa-bars"></label>
-    <a href="#" class="logo">Resum Resume<span>.</span></a>
-             
 
-            <div class="navbar">
-                <ul id="tabs">
-                    <li class="tab"><a href="#">Home</a></li>
-                    <li class="tab"><a href="scholarships.html">About</a></li>
-                    <li class="tab"><a href="jobs.html">Build Resume</li>
-                    <li class="tab"><a href="forum.html">Sign Up</a></li>
-                    <li class="tab"><a href="#faqs">Login</a></li>
-                   
-                </ul>
-                <div class="cursor"></div>
-            </div>
-
-    
-            <div class="icons">
-                <a href="about.html" class="fas fa-info-circle"></a>
-                <a href="#" class="fas fa-envelope"></a>
-                <a href="login.html" id="loginIcon" class="fas fa-user"></a>
-            </div>
-    
-        </header> 
         
         <!-- header section ends -->
     
@@ -928,7 +1208,7 @@
                 <h3>Build Your Resume in Seconds from LinkedIn</h3>
                 <p>Easily generate a professional resume using your LinkedIn profile. Select a template, enter your LinkedIn URL,
                     and get a downloadable resume in a few clicks. Save time and create a resume that stands out. </p>
-                <a href="signup.html" class="btn">Get Started</a>
+                <a href="login.html" class="btn">Get Started</a>
             </div>
     
         </section>
@@ -1123,22 +1403,6 @@
 
 	<!-- header section begins -->
 
-	<header>
-		<input type="checkbox" name="" id="toggler" />
-		<label for="toggler" class="fas fa-bars"></label>
-
-		<a href="#" class="logo" id=""><span id="newlogo"></span></a>
-		<a href="#" class="logo">Resum Resume</a>
-
-		<nav class="navbar">
-			<div class="tabs-container"></div>
-			<a class="tab" href="#home">Home</a>
-			<a class="tab" href="about.html">About</a>
-			<a class="tab" href="resume.html">Build Resume</a>
-			<a class="tab" href="signup.html">Sign Up</a>
-			<a class="tab" href="login.html">Login</a>
-			</div>
-		</nav>
 		
 
 		<div class="icons">
@@ -1161,7 +1425,7 @@
 				a downloadable resume in a few clicks. Save time and create
 				a resume that stands out.
 			</p>
-			<a href="signup.html" class="btn">Get Started</a>
+			<a href="login.html" class="btn">Get Started</a>
 		</div>
 	</section>
 
@@ -1262,6 +1526,7 @@
 					<li><a href="#">Resume Builder</a></li>
 					<li><a href="#">CV Templates</a></li>
 					<li><a href="#">Career Advice</a></li>
+					
 				</ul>
 			</div>
 			<div class="footer-section">
@@ -1269,7 +1534,7 @@
 				<ul>
 					<li><a href="/Faqs.html">FAQ</a></li>
 					<li><a href="#">Contact Us</a></li>
-					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="/privacy-policy.html">Privacy Policy</a></li>
 				</ul>
 			</div>
 			<div class="footer-section">
@@ -1310,13 +1575,15 @@
 		scrollToTopBtn.onclick = function () {
 			window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to top
 		};
-	</script>
+
 
 	<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js">
+
 	</script>
+	
 	<script>
 			var typed = new Typed("#newlogo", {
-				strings: ["EnhanCV.", "Build and shine!"],
+			strings: ["EnhanCV.", "Build and shine!"],
 			loop: true,
 			typeSpeed: 80,
 			backSpeed: 25, // Speed for backspacing
@@ -1325,7 +1592,7 @@
 			});
 	</script>
 
+
 </body>
 
 </html>
-
