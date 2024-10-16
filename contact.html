@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-</head>
-<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/debd0805f2.js" crossorigin="anonymous"></script>
+</head>
 <body>
     <section class="contact" id="contact">
         <div class="top_header">
@@ -16,22 +16,32 @@
             <div class="col">
                 <div class="contact_info">
                     <h2>Find Us <i class="fa-solid fa-arrow-down"></i></h2>
-                    <p><i class="fa-solid fa-envelope"></i>Email:<a href="mailto: example@gmail.com"> example@gmail.com</a></p>
-                    <p><i class="fa-solid fa-phone"></i>Phone:<a href="callto: 1234567891">1234567891</a></p>
+                    <p><i class="fa-solid fa-envelope"></i>Email: <a href="mailto:example@gmail.com">example@gmail.com</a></p>
+                    <p><i class="fa-solid fa-phone"></i>Phone: <a href="tel:1234567891">1234567891</a></p>
                 </div>
             </div>
         </div>
         <form action="#">
             <div class="input_box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Address">
+                <label for="full_name">Full Name</label>
+                <input type="text" id="full_name" placeholder="Full Name">
             </div>
-
             <div class="input_box">
-                <input type="number" placeholder="Mobile Number">
-                <input type="text" placeholder="Job Role">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Email Address">
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <div class="input_box">
+                <label for="mobile">Mobile Number</label>
+                <input type="number" id="mobile" placeholder="Mobile Number">
+            </div>
+            <div class="input_box">
+                <label for="job_role">Job Role</label>
+                <input type="text" id="job_role" placeholder="Job Role">
+            </div>
+            <div class="input_box">
+                <label for="message">Your Message</label>
+                <textarea id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+            </div>
             <input type="submit" value="Send" class="btn">
         </form>
     </section>
