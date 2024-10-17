@@ -18,6 +18,9 @@
 
 	<link rel="stylesheet" href="style.css" />
 
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
     <style>
@@ -668,30 +671,9 @@
       <div id="progress-bar"></div>
     </div>
   
-    <script>
-  let lastScrollPercentage = 0; 
-  
-  function updateProgressBar() {
-      const scrollTop = window.scrollY; 
-      const windowHeight = document.documentElement.scrollHeight - window.innerHeight; 
-      const scrollPercentage = (scrollTop / windowHeight) * 100; 
-  
-      
-      const progressBar = document.getElementById('progress-bar');
-      
-     
-      lastScrollPercentage += (scrollPercentage - lastScrollPercentage) * 0.1; 
-      progressBar.style.width = lastScrollPercentage + '%'; 
-  }
-  window.addEventListener('scroll', updateProgressBar);
-  
-    </script>
-
+   
     <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+  
     <!-- header section begins -->
 
     <header>
@@ -929,6 +911,26 @@
         </div>
     </footer>
     <script>// Wait for the DOM to be fully loaded
+
+
+let lastScrollPercentage = 0; 
+  
+  function updateProgressBar() {
+      const scrollTop = window.scrollY; 
+      const windowHeight = document.documentElement.scrollHeight - window.innerHeight; 
+      const scrollPercentage = (scrollTop / windowHeight) * 100; 
+  
+      
+      const progressBar = document.getElementById('progress-bar');
+      
+     
+      lastScrollPercentage += (scrollPercentage - lastScrollPercentage) * 0.1; 
+      progressBar.style.width = lastScrollPercentage + '%'; 
+  }
+  window.addEventListener('scroll', updateProgressBar);
+
+
+
         document.addEventListener("DOMContentLoaded", function () {
             // Select all sections you want to animate
             const sections = document.querySelectorAll("section, header, footer");
@@ -1024,7 +1026,7 @@
     <script src="script.js"></script>
 
 
-	<!-- header section begins -->
+
 
 		
 
