@@ -343,7 +343,9 @@
 
 
         <form id="signupForm" action="#" method="POST">
-            <input type="text" placeholder="Full Name" required>
+            <input type="text" placeholder="Full Name" required pattern="[a-zA-Z ]+"
+                                oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')"
+                                oninput="this.setCustomValidity('')">
             <input type="email" placeholder="Email Address" required>
             <input type="password" placeholder="Password" required>
             <input type="password" placeholder="Confirm Password" required>
