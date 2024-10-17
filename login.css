@@ -1,0 +1,172 @@
+/* Global Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #235685; /* added background color */
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #235685;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Forms Container */
+
+.forms-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.signin-signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.sign-in-form, .sign-up-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid #8fc1f1;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.input-field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.input-field i {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.input-field input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #3e8e41;
+}
+
+.solid {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.solid:hover {
+  background-color: #3e8e41;
+}
+
+.social-text {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #666;
+}
+
+.social-media {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.social-media a {
+  margin-right: 20px;
+}
+
+/* Panels Container */
+
+.panels-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-panel {
+  background-color: #235685;
+}
+
+.right-panel {
+  background-color: #235685;
+}
+
+.content {
+  padding: 20px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.homeBtn {
+  margin-bottom: 20px;
+}
+
+.homeBtn svg {
+  fill: #666;
+}
+
+.homeBtn:hover svg {
+  fill: #4CAF50;
+}
+
+.transparent {
+  background-color: transparent;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.transparent:hover {
+  background-color: #4CAF50;
+  color: #fff;
+}
