@@ -339,6 +339,7 @@ body {
     background-color: var(--deep-teal);
     color: white;
     padding: 13px 0;
+    
 }
 
 .footer-content {
@@ -377,23 +378,17 @@ body {
 
 .footer .footer-section ul li a {
 
-    color: rgb(88, 88, 88);
-
-    color: #2f4f4f;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer .footer-section ul li a:hover {
     color: white;
-    text-decoration: none;
 
-    color: #3f10ea;
+   
+   
 }
+
+
 
 .footer .footer-section .social-icons a {
     margin-right: 10px;
-    color: #2f4f4f;
+    color:white;
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s ease;
