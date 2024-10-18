@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ddd7f7; /* Background color */
+        }
+
+        .container {
+            text-align: center;
+            margin: 50px;
+        }
+
+        .container h1 {
+            font-size: 40px;
+            color: rgb(5, 78, 78);
+            text-align: center;
+        }
+
+        /* Thicker line under the heading */
+        .line {
+            width: 100%; /* Adjust width as needed */
+            height: 4px; /* Line thickness */
+            background-color: rgb(5, 78, 78); /* Line color */
+           
+           
+        }
+
+        .cv-gallery {
+            margin-top: 58px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 columns */
+            grid-row-gap: 70px;
+            gap: 30px; /* Space between templates */
+        }
+
+        .cv-template {
+            cursor: pointer;
+            border-radius: 4px;
+            overflow: hidden;
+            transition: transform 0.3s border 0.3s; /* Smooth transition for scaling */
+            height: 300px; /* Set a fixed height for the templates */
+            display: flex; /* Flexbox for centering the image */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+        }
+
+        .cv-template img {
+            width: 100%; /* Make images responsive */
+            height: 100%;
+            max-height: 100%;
+            object-fit: calc();
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .cv-template:hover {
+            transform: scale(1.05);
+            border: 2px solid #888; /* Darker gray on hover */
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Prevent scrolling */
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center; /* Center vertically */
+            justify-content: center; /* Center horizontally */
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            transition: transform 0.25s; /* Smooth transition for zoom */
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CV Templates</h1>
+        <div class="line"></div> <!-- Line under the heading -->
+        <div class="cv-gallery">
+            <div class="cv-template" onclick="openModal('https://www.goodcv.com/images/cv/screenshots/thumbs/en/outstanding_11.png?v=1.0.1')">
+                <img src="https://www.goodcv.com/images/cv/screenshots/thumbs/en/outstanding_11.png?v=1.0.1" alt="CV Template 1" />
+            </div>
+            <div class="cv-template" onclick="openModal('https://www.goodcv.com/images/cv/screenshots/thumbs/en/outstanding_10.png?v=1.0.1')">
+                <img src="https://www.goodcv.com/images/cv/screenshots/thumbs/en/outstanding_10.png?v=1.0.1" alt="CV Template 2" />
+            </div>
+            <div class="cv-template" onclick="openModal('https://www.goodcv.com/images/cv/screenshots/thumbs/en/outstanding_9.png?v=1.0.1')">
+                <img src="https://www.goodcv.com/images/cv/screenshots/thumbs/en/outstanding_9.png?v=1.0.1" alt="CV Template 3" />
+            </div>
+            <div class="cv-template" onclick="openModal('https://www.goodcv.com/images/cv/screenshots/thumbs/en/outstanding_8.png?v=1.0.1')">
+                <img src="https://www.goodcv.com/images/cv/screenshots/thumbs/en/outstanding_8.png?v=1.0.1" alt="CV Template 4" />
+            </div>
+            <div class="cv-template" onclick="openModal('https://www.goodcv.com/images/cv/screenshots/thumbs/en/outstanding_7.png?v=1.0.1')">
+                <img src="https://www.goodcv.com/images/cv/screenshots/thumbs/en/outstanding_7.png?v=1.0.1" alt="CV Template 5" />
+            </div>
+            <div class="cv-template" onclick="openModal('https://www.goodcv.com/images/cv/screenshots/thumbs/en/outstanding_6.png?v=1.0.1')">
+                <img src="https://www.goodcv.com/images/cv/screenshots/thumbs/en/outstanding_6.png?v=1.0.1" alt="CV Template 6" />
+            </div>
+            <div class="cv-template" onclick="openModal('https://www.goodcv.com/images/cv/screenshots/thumbs/en/outstanding_5.png?v=1.0.1')">
+                <img src="https://www.goodcv.com/images/cv/screenshots/thumbs/en/outstanding_5.png?v=1.0.1" alt="CV Template 7" />
+            </div>
+            <div class="cv-template" onclick="openModal('https://www.goodcv.com/images/cv/screenshots/thumbs/en/outstanding_4.png?v=1.0.1')">
+                <img src="https://www.goodcv.com/images/cv/screenshots/thumbs/en/outstanding_4.png?v=1.0.1" alt="CV Template 8" />
+            </div>
+            <div class="cv-template" onclick="openModal('https://www.goodcv.com/images/cv/screenshots/thumbs/en/outstanding_3.png?v=1.0.1')">
+                <img src="https://www.goodcv.com/images/cv/screenshots/thumbs/en/outstanding_3.png?v=1.0.1" alt="CV Template 9" />
+            </div>
+            <div class="cv-template" onclick="openModal('https://www.goodcv.com/images/cv/screenshots/thumbs/en/outstanding_2.png?v=1.0.1')">
+                <img src="https://www.goodcv.com/images/cv/screenshots/thumbs/en/outstanding_2.png?v=1.0.1" alt="CV Template 10" />
+            </div>
+            <div class="cv-template" onclick="openModal('https://www.goodcv.com/images/cv/screenshots/thumbs/en/toppier.png?v=1.0.1')">
+                <img src="https://www.goodcv.com/images/cv/screenshots/thumbs/en/toppier.png?v=1.0.1" alt="CV Template 11" />
+            </div>
+            <div class="cv-template" onclick="openModal('https://www.goodcv.com/images/cv/screenshots/thumbs/en/onepage_impressive_3.png?v=1.0.1')">
+                <img src="https://www.goodcv.com/images/cv/screenshots/thumbs/en/onepage_impressive_3.png?v=1.0.1" alt="CV Template 12" />
+            </div>
+            <div class="cv-template" onclick="openModal('https://www.goodcv.com/images/cv/screenshots/thumbs/en/senior.png?v=1.0.1')">
+                <img src="https://www.goodcv.com/images/cv/screenshots/thumbs/en/senior.png?v=1.0.1" alt="CV Template 13" />
+            </div>
+            <div class="cv-template" onclick="openModal('https://www.goodcv.com/images/cv/screenshots/thumbs/en/onepage_elegant.png?v=1.0.1')">
+                <img src="https://www.goodcv.com/images/cv/screenshots/thumbs/en/onepage_elegant.png?v=1.0.1" alt="CV Template 14" />
+            </div>
+            <div class="cv-template" onclick="openModal('https://www.goodcv.com/images/cv/screenshots/thumbs/en/tiny_1.png?v=1.0.1')">
+                <img src="https://www.goodcv.com/images/cv/screenshots/thumbs/en/tiny_1.png?v=1.0.1" alt="CV Template 15" />
+            </div>
+            <div class="cv-template" onclick="openModal('https://www.goodcv.com/images/cv/screenshots/thumbs/en/onepage_classic.png?v=1.0.1')">
+                <img src="https://www.goodcv.com/images/cv/screenshots/thumbs/en/onepage_classic.png?v=1.0.1" alt="CV Template 16" />
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="myModal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01" />
+    </div>
+
+    <script>
+        function openModal(src) {
+            const modal = document.getElementById("myModal");
+            const modalImg = document.getElementById("img01");
+            modal.style.display = "flex"; // Change to flex to center the modal content
+            modalImg.src = src;
+
+            // Optional: Add zoom functionality
+            modalImg.onclick = function() {
+                if (modalImg.style.transform === "scale(1.5)") {
+                    modalImg.style.transform = "scale(1)";
+                } else {
+                    modalImg.style.transform = "scale(1.5)";
+                }
+            };
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("myModal");
+            modal.style.display = "none";
+            const modalImg = document.getElementById("img01");
+            modalImg.style.transform = "scale(1)"; // Reset zoom on close
+        }
+
+        // Close modal on clicking outside the modal content
+        window.onclick = function(event) {
+            const modal = document.getElementById("myModal");
+            if (event.target === modal) {
+                closeModal();
+            }
+        };
+    </script>
+</body>
+</html>
