@@ -1,479 +1,693 @@
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Resume/CV Builder</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
+/* ============================= */
+/* ====== CSS Variables ======== */
+/* ============================= */
 
-*{
-    margin: 0%;
-    padding: 0%;
-    font-weight: 500;
+:root {
+  /* Transitions */
+  --transition-speed: 0.3s;
+
+  /* Colors */
+  --color-background: #ffffff;
+  --color-text: #000000;
+  --color-primary: #007bff;
+  --color-primary-hover: #0056b3;
+  --color-secondary: #f0f0f0;
+  --color-secondary-hover: #e0e0e0;
+  --color-button: #28a745;
+  --color-button-hover: #218838;
+  --color-button-secondary: #6c757d;
+  --color-button-secondary-hover: #5a6268;
+  --color-button-outline: transparent;
+  --color-button-outline-border: #007bff;
+  --color-button-outline-hover: #0056b3;
+  --color-card-background: #ffffff;
+  --color-feature-background: #f8f8f8;
+  --color-feature-button: #28a745;
+  --color-feature-button-hover: #218838;
+  --color-toggle-background: #f0f0f0;
+  --color-toggle-slider: #ffffff;
+  --color-header-footer: #f8f9fa;
+  --color-link: #007bff;
+  --color-link-hover: #0056b3;
+
+  /* Typography */
+  --font-base: 'Arial', sans-serif;
+  --font-size-base: 16px;
+  --font-size-lg: 1.25em;
+  --font-size-xl: 1.5em;
+
+  /* Spacing */
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+}
+
+body.dark {
+  /* Dark Theme Colors */
+  --color-background: #121212;
+  --color-text: #ffffff;
+  --color-primary: #66b2ff;
+  --color-primary-hover: #3399ff;
+  --color-secondary: #333333;
+  --color-secondary-hover: #555555;
+  --color-button: #6c757d;
+  --color-button-hover: #5a6268;
+  --color-button-secondary: #adb5bd;
+  --color-button-secondary-hover: #6c757d;
+  --color-button-outline: transparent;
+  --color-button-outline-border: #66b2ff;
+  --color-button-outline-hover: #3399ff;
+  --color-card-background: #2c2c2c;
+  --color-feature-background: #2c2c2c;
+  --color-feature-button: #6c757d;
+  --color-feature-button-hover: #5a6268;
+  --color-toggle-background: #333333;
+  --color-toggle-slider: #ffffff;
+  --color-header-footer: #1e1e1e;
+  --color-link: #66b2ff;
+  --color-link-hover: #3399ff;
+}
+
+/* ============================= */
+/* ======== Base Styles ======== */
+/* ============================= */
+
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: 6px;
+  border: 3px solid var(--color-secondary);
+}
+
+body {
+  font-family: var(--font-base);
+  font-size: var(--font-size-base);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  transition: background-color var(--transition-speed) ease,
+    color var(--transition-speed) ease;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: var(--color-link);
+  transition: color var(--transition-speed) ease;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+}
+
+/* ============================= */
+/* ====== Utility Classes ====== */
+/* ============================= */
+
+.mt-sm { margin-top: var(--spacing-sm); }
+.mt-md { margin-top: var(--spacing-md); }
+.mt-lg { margin-top: var(--spacing-lg); }
+.mt-xl { margin-top: var(--spacing-xl); }
+
+.mb-sm { margin-bottom: var(--spacing-sm); }
+.mb-md { margin-bottom: var(--spacing-md); }
+.mb-lg { margin-bottom: var(--spacing-lg); }
+.mb-xl { margin-bottom: var(--spacing-xl); }
+
+.p-sm { padding: var(--spacing-sm); }
+.p-md { padding: var(--spacing-md); }
+.p-lg { padding: var(--spacing-lg); }
+.p-xl { padding: var(--spacing-xl); }
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* ============================= */
+/* ====== Button Styles ======== */
+/* ============================= */
+
+.btn {
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: background-color var(--transition-speed) ease,
+    transform var(--transition-speed) ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+/* Button Variants */
+.btn--secondary {
+  background-color: var(--color-button-secondary);
+  color: #ffffff;
+}
+
+.btn--secondary:hover,
+.btn--secondary:focus {
+  background-color: var(--color-button-secondary-hover);
+}
+
+.btn--outline {
+  background-color: var(--color-button-outline);
+  border: 2px solid var(--color-button-outline-border);
+  color: var(--color-primary);
+}
+
+.btn--outline:hover,
+.btn--outline:focus {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border-color: var(--color-primary-hover);
+}
+
+/* Dark Mode Button Styles */
+body.dark .btn {
+  background-color: var(--color-feature-button);
+}
+
+body.dark .btn:hover,
+body.dark .btn:focus {
+  background-color: var(--color-feature-button-hover);
+}
+
+body.dark .btn--secondary {
+  background-color: var(--color-button-secondary);
+}
+
+body.dark .btn--secondary:hover,
+body.dark .btn--secondary:focus {
+  background-color: var(--color-button-secondary-hover);
+}
+
+body.dark .btn--outline {
+  border-color: var(--color-button-outline-border);
+  color: var(--color-link);
+}
+
+body.dark .btn--outline:hover,
+body.dark .btn--outline:focus {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border-color: var(--color-primary-hover);
+}
+
+/* ============================= */
+/* ===== Toggle Switch ======== */
+/* ============================= */
+
+.mode-toggle-container {
+  position: fixed;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  z-index: 1000; /* Ensure it stays on top */
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-toggle-background);
+  transition: background-color var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: var(--color-toggle-slider);
+  transition: transform var(--transition-speed) ease;
+  border-radius: 50%;
+}
+
+/* Toggle Icons */
+.slider .sun-icon,
+.slider .moon-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #ffc107; /* Sun color */
+}
+
+.slider .sun-icon {
+  left: 8px;
+}
+
+.slider .moon-icon {
+  right: 8px;
+  color: #ffdd57; /* Moon color */
+}
+
+/* Hide icons when not in use */
+.slider .sun-icon {
+  opacity: 0;
+  transition: opacity var(--transition-speed) ease;
+}
+
+.slider .moon-icon {
+  opacity: 1;
+  transition: opacity var(--transition-speed) ease;
+}
+
+.switch input:checked + .slider .sun-icon {
+  opacity: 1;
+}
+
+.switch input:checked + .slider .moon-icon {
+  opacity: 0;
+}
+
+/* When checked, move the slider */
+.switch input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Change background when checked */
+.switch input:checked + .slider {
+  background-color: var(--color-primary);
+}
+
+/* Focus styles */
+.switch input:focus + .slider {
+  box-shadow: 0 0 2px 2px var(--color-primary-hover);
+}
+
+/* ============================= */
+/* ======= Hero Section ======= */
+/* ============================= */
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-xl);
+  background-color: var(--color-secondary);
+  transition: background-color var(--transition-speed) ease;
+}
+
+body.dark .hero {
+  background-color: var(--color-secondary-hover);
+}
+
+.hero__left h1 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-md);
+}
+
+.hero__left p {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.search-container .btn {
+  margin-right: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+/* ============================= */
+/* ====== Features Section ===== */
+/* ============================= */
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  padding: var(--spacing-xl) var(--spacing-md);
+  background-color: var(--color-background);
+  transition: background-color var(--transition-speed) ease;
+}
+
+body.dark .features {
+  background-color: var(--color-background);
+}
+
+.feature {
+  padding: var(--spacing-lg);
+  background-color: var(--color-feature-background);
+  border-radius: 10px;
+  text-align: center;
+  transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+.feature:hover,
+.feature:focus-within {
+  transform: translateY(-5px);
+}
+
+body.dark .feature {
+  background-color: var(--color-feature-background);
+}
+
+.feature__image {
+  width: 60px;
+  height: 60px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.feature__title {
+  margin-bottom: var(--spacing-sm);
+  font-size: 1.5em;
+}
+
+.feature__description {
+  margin-bottom: var(--spacing-sm);
+  font-size: 1em;
+}
+
+/* Feature Buttons */
+.feature__btn {
+  background-color: var(--color-button);
+  transition: background-color var(--transition-speed) ease;
+}
+
+.feature__btn:hover,
+.feature__btn:focus {
+  background-color: var(--color-button-hover);
+}
+
+body.dark .feature__btn {
+  background-color: var(--color-button);
+}
+
+body.dark .feature__btn:hover,
+body.dark .feature__btn:focus {
+  background-color: var(--color-button-hover);
+}
+
+/* ============================= */
+/* ===== Testimonials Section === */
+/* ============================= */
+
+#testimonials {
+  padding: var(--spacing-xl) var(--spacing-md);
+  background-color: var(--color-secondary);
+  transition: background-color var(--transition-speed) ease;
+}
+
+body.dark #testimonials {
+  background-color: var(--color-secondary-hover);
+}
+
+.card {
+  background-color: var(--color-card-background);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+body.dark .card {
+  background-color: var(--color-card-background);
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+.card__body {
+  padding: 20px;
+  text-align: center;
+}
+
+.card__image {
+  border-radius: 50%;
+  margin-bottom: var(--spacing-sm);
+}
+
+.card__name {
+  margin-bottom: var(--spacing-sm);
+  font-size: 1.2em;
+}
+
+.card__title {
+  margin-bottom: var(--spacing-sm);
+  font-size: 1em;
+  color: #6c757d;
+}
+
+.star-rating {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.star-rating__item {
+  color: #ffc107;
+  margin: 0 2px;
+}
+
+body.dark .star-rating__item {
+  color: #ffdd57;
+}
+
+.card__text {
+  font-size: 0.95em;
+  color: #555555;
+  transition: color var(--transition-speed) ease;
+}
+
+body.dark .card__text {
+  color: #dddddd;
+}
+
+/* ============================= */
+/* ======= Lightbox Modal ====== */
+/* ============================= */
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: opacity var(--transition-speed) ease;
+}
+
+.modal__content {
+  background-color: var(--color-background);
+  margin: 10% auto;
+  padding: var(--spacing-lg);
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 700px;
+  border-radius: 10px;
+  position: relative;
+  animation: fadeIn 0.5s;
+}
+
+.modal__close {
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal__close:hover,
+.modal__close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Lightbox Image */
+.modal__image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* ============================= */
+/* ======= Animations ========= */
+/* ============================= */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Apply slideIn to hero section */
+.hero {
+  animation: slideIn 1s ease-out;
+}
+
+/* ============================= */
+/* ======= Responsive Design ==== */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--spacing-lg);
+  }
+
+  .search-container .btn {
+    margin-right: 0;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .mode-toggle-container {
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+  }
+
+  /* Responsive Typography */
+  body {
     font-size: 14px;
-}
-body{
-    background: #ddd7f7;
-    display: grid;
-    place-items: center;
-    font-weight: 450;
-    opacity: 1;
+  }
+
+  .hero__left h1 {
+    font-size: 2em;
+  }
+
+  .hero__left p {
+    font-size: 1em;
+  }
 }
 
-.none
-{
-    display: none;
-}
-.resume
-{
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-left: 50px;
-    width: 800px;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
-}
-#print
-{
-    background-color: #fff;
-    padding: 30px 50px;
-    height: 1120px;
+/* ============================= */
+/* ====== Additional Styles ===== */
+/* ============================= */
 
+/* Header and Footer Styles */
+header,
+footer {
+  background-color: var(--color-header-footer);
+  color: var(--color-text);
+  padding: var(--spacing-md);
+  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
 }
 
-.head
-{
-    display: grid;
-    grid-template-columns: 3fr 1.5fr;
-}
-.head .main .name
-{
-    font-size: 55px;
-    font-family: 'Raleway', sans-serif;
-}
-.head .main  span:nth-child(2)
-{
-    color: rgb(98, 96, 96);
-    font-size: 55px;
-    font-family: 'Raleway', sans-serif;
-    margin-left: 5px;
-}
-.head .main .post
-{
-font-family: 'Barlow', sans-serif;
-}
-.head .contacts
-{
-    text-align: right;
-    padding-top: 7px;
-}
-.head .contacts .content
-{
-    font-weight: 500;
-    padding-right: 5px;
-}
-.head .contacts .symbol
-{
-    margin-right: 5px;
-    font-size: 15px;
-    width: 17px;
-    height: 17px;
-}
-.line
-{
-    height: 0.5px;
-    background-color: rgb(87, 87, 87);
-    margin: 25px 0;
-    margin-bottom: 50px;
-}
-.mainbody
-{
-    display: grid;
-    grid-template-columns: 10fr 1fr 17fr;
-    height: 900px;
-}
-.mainbody .border
-{
-    background-color: rgb(87, 87, 87);
-    width: 3px;
-    opacity: 2;
-}
-.mainbody .rightside
-{
-    padding-left: 15px;
-}
-.title
-{
-    font-weight: 700;
-    font-size: 18px;
-    border: none;
-    padding-bottom: 3px;
-    border-bottom: 2px rgb(9, 80, 72) solid;
-}
-.skill
-{
-    margin-bottom: 6px;
-}
-button
-{
-    margin: 15px 0;
-}
-.language
-{
-    margin-bottom:6px;
-}
-.language span:nth-child(odd)
-{
-    font-weight: 700;
-}
-.edublock{
-    margin-bottom: 10px;
-}
-.edublock .head
-{
-    font-weight: 700;
-    font-size: 17px;
+body.dark header,
+body.dark footer {
+  background-color: var(--color-header-footer);
+  color: var(--color-text);
 }
 
-.navbtn
-{
-position: fixed;
-top: 80%;
-left: 4%;
-transform: translate(-40%,-4%);
-height: 60px;
-width: 60px;
-border-radius: 50%;
-border:#fff 4px solid;
-transition: 300ms ease-in-out;
-box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+/* Links in Dark Mode */
+body.dark a {
+  color: var(--color-link);
 }
-.navbtn:nth-child(2)
-{
-top: 50%;
-left: 4.4%;
-transform: translate(-50%,-4.4%);
-}
-.navbtn:nth-child(3)
-{
-top: 60%;
-left: 4.8%;
-transform: translate(-60%,-4.8%);
-}
-.navbtn:hover
-{
-    background-color: #003d4d;
-    color: #fff;
-    border: #fff 3px solid;
-    height: 65px;
-    width: 65px;
-}
-.input-checkbox{
-    margin-right: 10px;
-}
-.education-head{
-    font-weight: 700;
-    font-size: 17px;
-}  
-    </style>
 
-    </head>
-    <body>
-    <div class="nav">
-    <button id="cmd" onclick="printpdf()" class="navbtn"><i class="fas fa-download"></i></button>
-    </div>
-        
-    <div class="resume" id="resume">
-        <section id="print">
-             <div class="head">
-                <div class="main">
-                    <span class="name" contenteditable="true">YOUR</span> <span contenteditable="true">NAME</span>
-                    <div class="post" contenteditable="true">YOUR JOB PROFILE</div>
-                </div>
-                <div class="contacts">
-                <span contenteditable="true" class="content">231-3212-2132</span><span class="symbol"> <i class="fas fa-phone"></i></span><br>
-                <span contenteditable="true" class="content">samplemail@email.in</span><span class="symbol"> <i class="fas fa-envelope"></i></span><br>
-                <span contenteditable="true" class="content">linkedin/username.com</span><span class="symbol"> <i class="fab fa-linkedin"></i></span><br>
-                <span contenteditable="true" class="content">sample street-India</span><span class="symbol"> <i class="fas fa-map-marker-alt"></i></i></span>
-                </div>
-            </div>
-        
-            <div class="line"></div>
-            <div class="mainbody">
-                <div class="leftside">
-                <span class="title">MY SKILLS</span><br><br><div>
-                <div class="skill"><span><input type="checkbox" class="input-checkbox"></span><span><i class="fas fa-chevron-circle-right"></i></span>   <span contenteditable="true">write your skill here</span></div>
-                <div id="skills"></div>
-                <button id="skilladd" type="button" class="btn btn-success" onclick="addskill()"><i class="fas fa-plus-circle"></i> Skill</button> 
-                <button id="skillrem" type="button" class="btn btn-danger" onclick="remskill(event)"><i class="fas fa-minus-circle"></i> Skill</button></div>
-                <br><br><span class="title">LANGUAGES</span><br><br><div>
-                <div class="language"><span><input type="checkbox" class="input-checkbox"></span><span contenteditable="true">LANGNAME</span> - <span contenteditable="true">level u know</span></div>
-                <div id="languages"></div>
-                <button id="langadd" type="button" class="btn btn-success" onclick="addLang()"><i class="fas fa-plus-circle"></i> Language</button>
-                 
-                <button id="langrem" type="button" class="btn btn-danger" onclick="remLang(event)"><i class="fas fa-minus-circle"></i> Language</button></div>
-                <br><br><span class="title">ACHIEVEMENTS</span><br><br><div>
-                <div class="achieve" ><span><input type="checkbox" class="input-checkbox"></span><span contenteditable="true">Write your achievement</span></div>
-                <div id="achievement"></div>
-                <button id="achadd" type="button" class="btn btn-success" onclick="addAch()"><i class="fas fa-plus-circle"></i> Achievement</button>
-                 
-                <button id="achrem" type="button" class="btn btn-danger" onclick="remAch(event)" style="margin-top: 0;"><i class="fas fa-minus-circle"></i> Achievement</button></div>
-                <br><br><span class="title">INTERESTS</span><br><br><div>
-                <div class="achieve" ><span><input type="checkbox" class="input-checkbox"></span><span contenteditable="true">Write interest</span></div>
-                <div id="interest"></div>
-                <button id="Intadd" type="button" class="btn btn-success" onclick="addInt()"><i class="fas fa-plus-circle"></i> Interest</button>
-                 
-                <button id="Intrem" type="button" class="btn btn-danger" onclick="remInt(event)"><i class="fas fa-minus-circle"></i> Interest</button></div>
-                </div>
-                
-                <div class="border"></div>
-                <div class="rightside">
-                <span class="title">PROFILE</span><br><br>
-                <div contenteditable="true">
-                Here u can write the basic information about your career like your forte, something about yourself that
-                you want your interviewer to know. Try to keep it brief and only provide necessary information. Do not include information which is
-                already written in your resume in some other section.</div>
-                <br><br><span class="title">EDUCATION</span><br><br><div>
-                <div id="education">
-                    <div class="edublock">
-                        <span><input type="checkbox" class="input-checkbox"></span>
-                        <span class="education-head" contenteditable="true">YOUR DEGREE</span>
-                        <div ><span contenteditable="true">Institute name</span> - <span contenteditable="true">Passing Year</span></div>
-                    </div>
-                </div>
-                    
-                <button id="eduadd" type="button" class="btn btn-success" onclick="addedu()"><i class="fas fa-plus-circle"></i> Education</button>
-                 
-                <button id="edurem" type="button" class="btn btn-danger" onclick="remedu(event)"><i class="fas fa-minus-circle"></i> Education</button></div>
-                <br><br>
-                <div class="new-section-div"><div><span><input type="checkbox" class="input-checkbox"></span><span class="title" contenteditable="true">NEW SECTION</span><br><br>
-                <div contenteditable="true">
-                This is the description part of your new section. Try to stay within limit and write something which has less 
-                than 400 characters. The spaces and symbols you use will also be included so use them for an indentation effect.</div>
-                </div>
-                    
-                <div id="newsec"></div>
-                <button id="secadd" type="button" class="btn btn-success" onclick="addsec()"><i class="fas fa-plus-circle"></i> Section</button>
-                 
-                <button id="secrem" type="button" class="btn btn-danger" onclick="remsec(event)"><i class="fas fa-minus-circle"></i> Section</button>
-            </div>
-            </div>
-        </section>
-     </div>
-    </body>
+body.dark a:hover,
+body.dark a:focus {
+  color: var(--color-link-hover);
+}
 
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.min.js"></script>
-    <script>
-    function printpdf() {
-      var content = document.getElementById("resume");
-    
-      const allButtons = document.querySelectorAll("#print button");
-      allButtons.forEach(button => {
-          button.classList.add("none");
-      });
-      let allInputCheckboxes = document.querySelectorAll(".input-checkbox");
-      allInputCheckboxes.forEach(input => {
-          input.classList.add("none");
-      })
-    
-    allButtons.forEach(button => {
-        button.classList.remove("none");
-    })
-    allInputCheckboxes.forEach(input => {
-        input.classList.remove("none");
-    })
-    
-      html2pdf(content, {
-          html2canvas: { scale: 1, logging: true, dpi: 500 }
-      });
-    }
-    
-    function addedu() {
-      const head = document.createElement('div');
-      document.getElementById("education").appendChild(head);
-      head.innerHTML = ('<div class="edublock"><span><input type="checkbox" class="input-checkbox"></span><span class="education-head" contenteditable="true">YOUR DEGREE</span><div ><span contenteditable="true">Institute name</span> - <span contenteditable="true">Passing Year</span></div></div>');
-      saveresume();
-    }
-    function remedu(event) {
-      let val = 0;
-      let empty = true;
-      const allInputCheckboxes = event.target.parentElement.getElementsByClassName("input-checkbox");
-      const array = Array.from(allInputCheckboxes);
-      if (array.length === 0) {
-          alert("No fields are present to be deleted!")
-      }
-      else {
-          console.log(array);
-          array.forEach(element => {
-              if (element.checked === true) {
-                  val = 1;
-                  element.parentElement.parentElement.remove();
-              }
-          })
-          if (val === 0) alert("Please select the checkboxes to delete the required field!")
-      }
-      saveresume();
-    }
-    
-    
-    function addskill() {
-      const head = document.createElement('div');
-      document.getElementById("skills").appendChild(head);
-      head.innerHTML = ('<div class="skill"><span><input type="checkbox" class="input-checkbox"></span><span><i class="fas fa-chevron-circle-right"></i></span>   <span contenteditable="true">write your skill here</span></div>');
-      saveresume();
-    }
-    
-    function remskill(event) {
-      let val = 0;
-      const allInputCheckboxes = event.target.parentElement.getElementsByClassName("input-checkbox");
-      const array = Array.from(allInputCheckboxes);
-      if (array.length === 0) {
-          alert("No fields are present to be deleted!")
-      }
-      else {
-          console.log(array);
-          array.forEach(element => {
-              if (element.checked === true) {
-                  val = 1;
-                  element.parentElement.parentElement.remove();
-              }
-          })
-          if (val === 0) alert("Please select the checkboxes to delete the required field!")
-      }
-      saveresume();
-    }
-    
-    
-    function addLang() {
-      const head = document.createElement('div');
-      document.getElementById("languages").appendChild(head);
-      head.innerHTML = ('<div class="language"><span><input type="checkbox" class="input-checkbox"></span><span contenteditable="true">LANGNAME</span> - <span contenteditable="true">level u know</span></div>');
-      saveresume();
-    }
-    function remLang(event) {
-      let val = 0;
-      const allInputCheckboxes = event.target.parentElement.getElementsByClassName("input-checkbox");
-      const array = Array.from(allInputCheckboxes);
-      if (array.length === 0) {
-          alert("No fields are present to be deleted!")
-      }
-      else {
-          console.log(array);
-          array.forEach(element => {
-              if (element.checked === true) {
-                  val = 1;
-                  element.parentElement.parentElement.remove();
-              }
-          })
-          if (val === 0) alert("Please select the checkboxes to delete the required field!")
-      }
-      saveresume();
-    }
-    
-    
-    function addAch() {
-      const head = document.createElement('div');
-      document.getElementById("achievement").appendChild(head);
-      head.innerHTML = ('<div class="achieve" ><span><input type="checkbox" class="input-checkbox"></span><span contenteditable="true">Write your achievement</span></div>');
-      saveresume();
-    }
-    function remAch(event) {
-      let val = 0;
-      const allInputCheckboxes = event.target.parentElement.getElementsByClassName("input-checkbox");
-      const array = Array.from(allInputCheckboxes);
-      if (array.length === 0) {
-          alert("No fields are present to be deleted!")
-      }
-      else {
-          console.log(array);
-          array.forEach(element => {
-              if (element.checked === true) {
-                  val = 1;
-                  element.parentElement.parentElement.remove();
-              }
-          })
-          if (val === 0) alert("Please select the checkboxes to delete the required field!")
-      }
-      saveresume();
-    }
-    
-    
-    function addInt() {
-      const head = document.createElement('div');
-      document.getElementById("interest").appendChild(head);
-      head.innerHTML = ('<div class="achieve" ><span><input type="checkbox" class="input-checkbox"></span><span contenteditable="true">Write interest</span></div>');
-      saveresume();
-    }
-    function remInt(event) {
-      let val = 0;
-      const allInputCheckboxes = event.target.parentElement.getElementsByClassName("input-checkbox");
-      const array = Array.from(allInputCheckboxes);
-      if (array.length === 0) {
-          alert("No fields are present to be deleted!")
-      }
-      else {
-          array.forEach(element => {
-              if (element.checked === true) {
-                  val = 1;
-                  element.parentElement.parentElement.remove();
-              }
-          })
-          if (val === 0) alert("Please select the checkboxes to delete the required field!")
-      }
-      saveresume();
-    }
-    
-    let maxNewSection = 1;
-    function addsec() {
-      if (maxNewSection < 2) {
-          const head = document.createElement('div');
-          document.getElementById("newsec").appendChild(head);
-          if (maxNewSection === 0) {
-              head.innerHTML = ('<div><span><input type="checkbox" class="input-checkbox"></span><span class="title" contenteditable="true">NEW SECTION</span><br><br><div contenteditable="true">This is the description part of your new section. Try to stay within limit and write something which has less than 400 characters. The spaces and symbols you use will also be included so use them for an indentation effect.</div></div>');
-          }
-          else {
-              head.innerHTML = ('<div><br><br><span><input type="checkbox" class="input-checkbox"></span><span class="title" contenteditable="true">NEW SECTION</span><br><br><div contenteditable="true">This is the description part of your new section. Try to stay within limit and write something which has less than 400 characters. The spaces and symbols you use will also be included so use them for an indentation effect.</div></div>');
-          }
-    
-          maxNewSection = maxNewSection + 1;
-      }
-      else {
-          alert("Atmost 2 NEW SECTION can be added!")
-    
-      }
-      saveresume();
-    }
-    function remsec(event) {
-      let val = 0;
-      const allInputCheckboxes = event.target.parentElement.getElementsByClassName("input-checkbox");
-      const array = Array.from(allInputCheckboxes);
-      if (array.length === 0) {
-          alert("No fields are present to be deleted!")
-      }
-      else {
-          console.log(array);
-          array.forEach(element => {
-              if (element.checked === true) {
-                  val = 1;
-                  maxNewSection = maxNewSection - 1;
-                  element.parentElement.parentElement.remove();
-              }
-          })
-          if (val === 0) alert("Please select the checkboxes to delete the required field!")
-      }
-      saveresume();
-    }
-    
-    function saveresume() {
-      var sec = document.getElementById("print");
-      value1 = sec.innerHTML;
-      var info = document.getElementById("custinfo");
-      info.value = value1;
-    }
-    </script>
-</html>
+/* Forms and Inputs */
+input,
+textarea,
+select {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  border: 1px solid #ced4da;
+  padding: var(--spacing-sm);
+  border-radius: 4px;
+  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease,
+    border-color var(--transition-speed) ease;
+}
+
+body.dark input,
+body.dark textarea,
+body.dark select {
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+  border: 1px solid #555555;
+}
+
+/* Focus States for Accessibility */
+button:focus,
+.btn:focus,
+.switch input:focus + .slider,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--color-primary-hover);
+  outline-offset: 2px;
+}
+
+/* ============================= */
+/* ======= Modal Visibility ===== */
+/* ============================= */
+
+/* Show the modal when active */
+.modal.active {
+  display: block;
+  animation: fadeIn 0.5s;
+}
