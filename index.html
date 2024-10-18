@@ -429,9 +429,9 @@
 
 		/* Footer Styles */
 		.footer {
-			background-color: var(--deep-teal);
+			background: var(--deep-teal);
 			/* Use deep teal for footer background */
-			color: #ffffff;
+			color: #fff;
 			/* White text for footer */
 			padding: 40px 0;
 			padding-bottom:0;
@@ -446,6 +446,7 @@
 			margin: 0 auto;
 			/* Center footer content */
 			padding: 0 20px;
+			color:white;
 		}
 
 		.footer-section {
@@ -456,7 +457,7 @@
 			min-width: 200px;
 			/* Minimum width for each section */
 		}
-
+		
 
 		.text {
 			padding-right: 20px;
@@ -519,7 +520,7 @@
 		}
 
 		.footer-section ul li a {
-			color: #e0e0e0;
+			color:white;
 			/* Light grey for links */
 			text-decoration: none;
 			/* No underline for links */
@@ -529,6 +530,7 @@
 
 		.footer-section ul li a:hover {
 			color: #ffffff;
+			font-weight:bold;
 			/* White color on hover */
 			text-decoration: underline;
 			/* Underline on hover */
@@ -852,7 +854,18 @@
             height: 100%;
             background-color: #3f10ea;
         }
-      
+/* 		added styling for social icons */
+	.footer .footer-section .social-icons a {
+			    margin-right: 10px;
+			    color: white;
+			    text-decoration: none;
+			    font-size: 18px;
+			    transition: color 0.3s ease;
+	}  
+/* 		font color of footer should be white */
+		.footer-section ul li a{
+			color:white;
+		}
     </style>
   </head>
 
