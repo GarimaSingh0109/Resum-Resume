@@ -96,25 +96,6 @@
             cursor: pointer;
         }
 
-        @media (max-width: 768px) {
-            .container h1 {
-                font-size: 2em; /* Smaller heading size for mobile */
-            }
-
-            .cv-template {
-                height: 150px; /* Reduced height for mobile */
-            }
-        }
-
-        @media (max-width: 480px) {
-            .container h1 {
-                font-size: 1.5em; /* Even smaller heading size */
-            }
-
-            .cv-template {
-                height: 120px; /* Further reduced height for small screens */
-            }
-        }
     </style>
 </head>
 <body>
@@ -173,28 +154,42 @@
         </div>
     </div>
 
+    <div class="modal" id="myModal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01" />
+    </div>
 
     <script>
-        let currentScale = 1;
-
-        function openModal(imgSrc) {
-            const modal = document.getElementById("modal");
+        function openModal(src) {
+            const modal = document.getElementById("myModal");
             const modalImg = document.getElementById("img01");
-            modal.style.display = "flex"; // Change to flex for centering
-            modalImg.src = imgSrc; // Set the source of the modal image
-            modalImg.style.transform = "scale(1)"; // Reset scale on open
-            currentScale = 1; // Reset scale factor
+            modal.style.display = "flex"; // Change to flex to center the modal content
+            modalImg.src = src;
+
+            // Optional: Add zoom functionality
+            modalImg.onclick = function() {
+                if (modalImg.style.transform === "scale(1.5)") {
+                    modalImg.style.transform = "scale(1)";
+                } else {
+                    modalImg.style.transform = "scale(1.5)";
+                }
+            };
         }
 
         function closeModal() {
-            document.getElementById("modal").style.display = "none";
+            const modal = document.getElementById("myModal");
+            modal.style.display = "none";
+            const modalImg = document.getElementById("img01");
+            modalImg.style.transform = "scale(1)"; // Reset zoom on close
         }
 
-        function zoomImage(event) {
-            const modalImg = document.getElementById("img01");
-            currentScale = currentScale === 1 ? 1.5 : 1; // Toggle between normal and zoomed scale
-            modalImg.style.transform = `scale(${currentScale})`; // Apply scale transformation
-        }
+        // Close modal on clicking outside the modal content
+        window.onclick = function(event) {
+            const modal = document.getElementById("myModal");
+            if (event.target === modal) {
+                closeModal();
+            }
+        };
     </script>
 </body>
 </html>
