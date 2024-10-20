@@ -223,22 +223,61 @@ body {
 .home {
     display: flex;
     align-items: center;
-    min-height: 100vh;
-    background: url(images/background-home.png) no-repeat;
+    min-height: 110vh; /* Adjusted height from the feature branch */
+    background: url('images/background-home.png') no-repeat;
     background-size: cover;
     background-position: center;
-    animation: floatInFromRight 2s ease-out forwards;
-    /* Image floats from right */
+    animation: floatInFromRight 2s ease-out forwards; /* Keep this animation */
 }
 
-.home {
-    display: flex;
-    align-items: center;
-    min-height: 100vh;
-    background: url(images/background-home.png) no-repeat;
-    background-size: cover;
-    background-position: center;
-    min-height: 110vh;
+/* Illustration class to handle responsive design */
+.illustration {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        background: none;
+        padding-top: 180px;
+        background-color: #e3e3ff;
+    }
+    .illustration {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin-right: 340px; /* Adjust if needed */
+    }
+    .content {
+        background-color: transparent;
+        color: #333;
+    }
+    h3 {
+        font-size: 5rem;
+        color: #333;
+    }
+    p {
+        color: #555;
+    }
+}
+
+@media (max-width: 426px) {
+    .home {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        background: none;
+        padding-top: 280px;
+        background-color: #e3e3ff;
+    }
+
+    .illustration { 
+        display: none;
+    }
 }
 
 /* Dark mode styles */
@@ -400,8 +439,9 @@ body {
 }
 
 .footer .footer-section .social-icons a:hover {
-    color: #3f10ea;
-    text-decoration: none;
+color: #3f10ea; /* Final color */
+text-decoration: none; /* No underline */
+
 }
 
 .footer a {
@@ -670,13 +710,14 @@ body {
     color: #000;
 }
 
-.footer-bottom p {
-    font-size: 1.5rem;
-    font-weight: 500;
-}
-
 .footer-bottom {
     display: flex;
     justify-content: center;
     align-content: center;
 }
+
+.footer-bottom p {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
