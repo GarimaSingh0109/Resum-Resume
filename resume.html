@@ -181,11 +181,75 @@ transform: translate(-60%,-4.8%);
 }  
     </style>
 
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <img src="images/logo.png" alt="logo">
+        <h1>Resum Resume</h1>
+        <nav class="navbar">
+			<div class="tabs-container"></div>
+			<a class="tab" href="index.html">Home</a>
+			<a class="tab" href="about.html">About</a>
+			<a class="tab" href="resume.html">Build Resume</a>
+			<a class="tab" href="signup.html">Sign Up</a>
+			<a class="tab" href="login.html">Login</a>
+      <a class="tab" href="privacypolicy.html">Privacy Policy</a>
+			</div>
+		</nav>
+		
+    </nav>
+
+
     </head>
     <body>
     <div class="nav">
     <button id="cmd" onclick="printpdf()" class="navbtn"><i class="fas fa-download"></i></button>
     </div>
+
+
+    <!-- footer-section -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <ul class="ul">
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul class="ul">
+            <li><a href="#">Resume Builder</a></li>
+            <li><a href="#">CV Templates</a></li>
+            <li><a href="#">Career Advice</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Support</h3>
+          <ul class="ul">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="privacypolicy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Connect With Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Resume Builder. All rights reserved.</p>
+      </div>
+    </footer>
+
         
     <div class="resume" id="resume">
         <section id="print">
@@ -268,6 +332,7 @@ transform: translate(-60%,-4.8%);
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.min.js"></script>
+
     <script>
     function printpdf() {
       var content = document.getElementById("resume");

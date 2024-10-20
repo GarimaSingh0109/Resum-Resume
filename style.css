@@ -358,11 +358,18 @@ body {
     padding-bottom: 10px;
 }
 
+.ul{
+   padding: 0;
+   list-style: none;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   text-align: center;
+
 .ul {
     padding: 0;
     list-style: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
+
 
 }
 
