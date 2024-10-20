@@ -150,10 +150,7 @@ button:hover {
     text-decoration: underline;
 }
 
-.footer-section h3{
-    margin-bottom: 14px;
-    font-size: 28px;
-}
+
 
 .navbar {
     background-color: var(--deep-teal);
