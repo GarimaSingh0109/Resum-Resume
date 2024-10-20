@@ -1,22 +1,21 @@
-document.getElementById('loginForm').addEventListener('submit', function (event) {
+document.getElementById('signupForm').addEventListener('submit', function (event) {
     event.preventDefault();
 
     var formData = new FormData(this);
 
-    fetch('login-process.php', {
+    fetch('signup-process.php', {
         method: 'POST',
         body: formData
     })
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            window.location.href = 'index.html';
+            window.location.href = 'login.html';
         } else {
-            alert('Login failed: ' + data.message);
+            alert('Sign Up failed: ' + data.message);
         }
     })
     .catch(error => {
         console.log('Error:', error);
     });
 });
-

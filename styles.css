@@ -1,10 +1,19 @@
+:root {
+    --deep-blue: #1a2a3a;
+    --medium-blue: #2c3e50;
+    --light-blue: #3498db;
+    --pale-blue: #ecf0f1;
+}
+
 * {
     margin: 0; 
     padding: 0;
     box-sizing: border-box;
 }
 body{
-    background-color: rgb(174, 168, 168);
+    background-color: var(--deep-blue);
+    font-family: 'Roboto', sans-serif;
+    color: var(--pale-blue);
 }
 .contact h2,h3{
     max-width: 50rem;
@@ -131,4 +140,113 @@ body{
     border: black;
     box-shadow: 0 0 5px 4px black;
     font-weight: 600;
+}
+
+.container {
+    background-color: var(--medium-blue);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    margin: 4rem auto;
+    text-align: center;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--light-blue);
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.logo:hover {
+    color: var(--soft-gold);
+}
+
+h2 {
+    color: var(--pale-blue);
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--pale-blue);
+    color: var(--deep-blue);
+    font-size: 1rem;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--light-blue);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.login-btn, .signup-btn {
+    background-color: transparent;
+    border: 2px solid var(--light-blue);
+    color: var(--light-blue);
+    margin-top: 15px;
+}
+
+.login-btn:hover, .signup-btn:hover {
+    background-color: var(--light-blue);
+    color: white;
+}
+
+.navbar {
+    background-color: var(--medium-blue);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    color: var(--light-blue);
+    font-size: 1.8rem;
+    margin-bottom: 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin-left: 1rem;
+}
+
+.navbar ul li a {
+    color: var(--pale-blue);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: var(--light-blue);
 }
