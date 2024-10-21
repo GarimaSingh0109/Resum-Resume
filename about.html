@@ -245,10 +245,7 @@ body {
     transition: color 0.3s ease;
 }
 
-/* Main Content Placeholder */
-.content {
-    padding: 20px;
-}
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -324,7 +321,72 @@ body {
             height: 100%;
             background-color: #3f10ea;
         }
-
+.panel-1{
+    width: 100vw;
+    height: auto;
+    position: relative;
+}
+.about{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.about h1{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+.about p{
+    width: 70%;
+    font-size: 1.8rem;
+}
+.cards{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    padding-bottom: 5rem;
+}
+.card{
+    width: 30%;
+    padding: 2rem;
+    border-radius: 2rem;
+    background-color: #f8f9fa;
+}
+.card:hover{
+    scale: 105%;
+}
+.card h2{
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+.card p{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.card ul li{
+    font-size: 1.5rem;
+}
+.card img{
+    margin-bottom: 2rem;
+}
+@media (max-width:450px){
+    .cards{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+    .card{
+        width: 90%;
+    }
+}
     </style>
 </head>
 <body>
@@ -368,40 +430,54 @@ body {
     </nav>
     
 </nav>
-    <div class="content1">
-        <div class="content">
-            <div class="action">
-    
+    <div class="panel-1">
+        <div class="about">
+            <h1>About</h1>
+            <p>LinkedIn Resume Builder simplifies your job search by converting your LinkedIn profile into a professional resume. In just a few clicks, you can generate a polished resume from your profile, saving time and effort. With accurate data and a selection of professional templates, it’s the easiest way to create a standout resume quickly and efficiently.</p>
+        </div>
+        <div class="cards">
+            <!-- Our Mission Card -->
+            <div class="card">
+                <img src="images/Gemini_Generated_Image_fx9dejfx9dejfx9d.jpg" alt="">
                 <h2>Our Mission</h2>
                 <p>
-                    The LinkedIn Resume Builder is designed to make your job search easier and faster by transforming your LinkedIn profile into a polished, professional resume. 
-                    We understand the challenges of job hunting and the importance of having an up-to-date resume. Our mission is to provide a simple, fast, and reliable solution 
+                    The LinkedIn Resume Builder aims to simplify your job search by transforming your LinkedIn profile into a polished, professional resume. 
+                    We recognize the challenges of job hunting and the importance of having an up-to-date resume. Our mission is to offer a fast, reliable solution 
                     that saves you time and effort.
                 </p>
             </div>
-            
-            <h2>How It Works</h2>
-            <p>
-                Our tool integrates with LinkedIn to gather essential details from your profile, including your work experience, education, and skills. 
-                With just a few clicks, you can convert your profile into a beautifully formatted resume. Here’s a simple breakdown of how it works:
-            </p>
-            <ul>
-                <li>Enter your LinkedIn profile URL in our resume form.</li>
-                <li>Choose a resume template from our professionally designed options.</li>
-                <li>Generate a downloadable resume in PDF format within seconds.</li>
-            </ul>
-    
-            <h2>Why Use LinkedIn Resume Builder?</h2>
-            <p>
-                Here are a few reasons why professionals prefer our tool:
-            </p>
-            <ul>
-                <li><strong>Time-saving:</strong> No need to manually update or format your resume.</li>
-                <li><strong>Professional templates:</strong> Choose from various modern and classic designs.</li>
-                <li><strong>Easy to use:</strong> Generate resumes in just a few clicks.</li>
-                <li><strong>Accurate data:</strong> Directly pulls information from your LinkedIn profile.</li>
-            </ul>
+        
+            <!-- How It Works Card -->
+            <div class="card">
+                <img src="images/Gemini_Generated_Image_52rg8r52rg8r52rg.jpg" alt="">
+                <h2>How It Works</h2>
+                <p>
+                    Our tool seamlessly integrates with LinkedIn to pull essential details from your profile, such as work experience, education, and skills. 
+                    In just a few clicks, you can convert your profile into a beautifully formatted resume. Here’s how it works:
+                </p>
+                <ul>
+                    <li>Enter your LinkedIn profile URL in our resume form.</li>
+                    <li>Select a resume template from our professionally designed options.</li>
+                    <li>Download your resume in PDF format within seconds.</li>
+                </ul>
+            </div>
+        
+            <!-- Why Use LinkedIn Resume Builder Card -->
+            <div class="card">
+                <img src="images/Gemini_Generated_Image_ootrdvootrdvootr.jpg" alt="">
+                <h2>Why Choose Us?</h2>
+                <p>
+                    Here are some reasons why professionals prefer our tool:
+                </p>
+                <ul>
+                    <li><strong>Time-saving:</strong> No manual updates or formatting required.</li>
+                    <li><strong>Professional templates:</strong> Choose from a variety of modern and classic designs.</li>
+                    <li><strong>User-friendly:</strong> Generate resumes in just a few clicks.</li>
+                    <li><strong>Accurate data:</strong> Information is directly pulled from your LinkedIn profile.</li>
+                </ul>
+            </div>
         </div>
+        
     </div>
     <!-- <div class="back-button">
         <a href="index.html">Go Back to Home</a>
