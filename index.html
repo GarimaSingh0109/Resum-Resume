@@ -95,15 +95,18 @@
             margin: 0 auto;
         }
 
-        .testimonial-card {
+        .testimonial-card:hover {
             background-color: #f9f9f9;
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             width: calc(33.33% - 30px);
             text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transform: scale(1.05); 
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
         }
-
+        
         .testimonial-card img {
             width: 80px;
             height: 80px;
