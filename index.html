@@ -95,7 +95,7 @@
             margin: 0 auto;
         }
 
-        .testimonial-card:hover {
+        .testimonial-card {
             background-color: #f9f9f9;
             padding: 30px;
             border-radius: 8px;
@@ -103,9 +103,13 @@
             width: calc(33.33% - 30px);
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            transform: scale(1.05); 
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
         }
+        
+        .testimonial-card:hover {
+        transform: scale(1.05); /* Slightly enlarge the card */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add a shadow */
+        }
+
         
         .testimonial-card img {
             width: 80px;
