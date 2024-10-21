@@ -40,6 +40,25 @@
     </style>
     <!-- header section ends -->
 
+    <!-- progress bar section -->
+    <div class="progressSec">
+        <div class="progress-bar">
+            <div class="step step1p active">
+                <span class="circle">1</span>
+                <span class="label">Step 1</span>
+            </div>
+            <div class="line line1"></div>
+            <div class="step step2p">
+                <span class="circle">2</span>
+                <span class="label">Step 2</span>
+            </div>
+            <div class="line line2"></div>
+            <div class="step step3p">
+                <span class="circle">3</span>
+                <span class="label">Step 3</span>
+            </div>
+        </div>    
+    </div>
     <!-- main section start -->
     <div class="form-container">
         <h2>Fill Your Information</h2>
@@ -47,20 +66,25 @@
         <!-- Personal Information -->
         <div class="section" id="personal-info">
             <h3>Personal Information</h3>
-            <label>Name:</label>
-            <input type="text" id="name" placeholder="Enter your name">
+            <div class="pInfo">
+                <div class="pInfoLeft">
+                    <label>Name:</label>
+                    <input type="text" id="name" placeholder="Enter your name">
 
-            <label>Profile:</label>
-            <textarea id="profile" placeholder="Write about yourself"></textarea>
-
-            <label>Email:</label>
-            <input type="email" id="email" placeholder="Enter your email">
-            
-            <label>Contact Number:</label>
-            <input type="tel" id="contact" placeholder="Enter your contact number">
-            
-            <label>Location:</label>
-            <input type="text" id="location" placeholder="Enter your location">
+                    <label>Email:</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                    
+                    <label>Contact Number:</label>
+                    <input type="tel" id="contact" placeholder="Enter your contact number">
+                    
+                    <label>Location:</label>
+                    <input type="text" id="location" placeholder="Enter your location">
+                </div>
+                <div class="pInfoRight">
+                    <label>Profile:</label>
+                    <textarea id="profile" placeholder="Write about yourself"></textarea>
+                </div>
+            </div>
         </div>
 
         <!-- Education -->
@@ -99,20 +123,23 @@
             <h3>Experience</h3>
             <div id="experience-fields">
                 <div class="experience-entry">
-                    <label>Job Position:</label>
-                    <input type="text" placeholder="Enter job position">
+                    <div class="expLeft">
+                        <label>Job Position:</label>
+                        <input type="text" placeholder="Enter job position">
 
-                    <label>Company Name:</label>
-                    <input type="text" placeholder="Enter company name">
+                        <label>Company Name:</label>
+                        <input type="text" placeholder="Enter company name">
 
-                    <label>Start Year:</label>
-                    <input type="text" placeholder="Start Year">
+                        <label>Start Year:</label>
+                        <input type="text" placeholder="Start Year">
 
-                    <label>End Year:</label>
-                    <input type="text" placeholder="End Year">
-
-                    <label>Description:</label>
-                    <textarea placeholder="Describe your job experience"></textarea>
+                        <label>End Year:</label>
+                        <input type="text" placeholder="End Year">
+                    </div>
+                    <div class="expRight">
+                        <label>Description:</label>
+                        <textarea id="expdes" placeholder="Describe your job experience"></textarea>
+                    </div>
                 </div>
             </div>
             <button type="button" id="add-experience">Add Another Job</button>
@@ -121,11 +148,16 @@
         <!-- Achievements and Certifications -->
         <div class="section" id="achievements">
             <h3>Achievements and Certifications</h3>
-            <label>Heading:</label>
-            <input type="text" placeholder="e.g., 'Best Employee of the Year'">
-
-            <label>Description:</label>
-            <textarea placeholder="Describe your achievement or certification"></textarea>
+            <div class="achive">
+                <div class="achiveLeft">
+                    <label>Heading:</label>
+                    <input type="text" placeholder="e.g., 'Best Employee of the Year'">
+                </div>
+                <div class="achiveRight">
+                    <label>Description:</label>
+                    <textarea placeholder="Describe your achievement or certification"></textarea>
+                </div>
+            </div>
         </div>
 
         <!-- Projects (Optional) -->
@@ -133,17 +165,20 @@
             <h3>Projects (Optional)</h3>
             <div id="project-fields">
                 <div class="project-entry">
-                    <label>Project Title:</label>
-                    <input type="text" placeholder="Enter project title">
+                    <div class="projectLeft">
+                        <label>Project Title:</label>
+                        <input type="text" placeholder="Enter project title">
 
-                    <label>Description:</label>
-                    <textarea placeholder="Describe the project"></textarea>
+                        <label>Role/Responsibilities:</label>
+                        <textarea placeholder="Describe your role"></textarea>
 
-                    <label>Role/Responsibilities:</label>
-                    <textarea placeholder="Describe your role"></textarea>
-
-                    <label>Link (Optional):</label>
-                    <input type="url" placeholder="Enter project link">
+                        <label>Link (Optional):</label>
+                        <input type="url" placeholder="Enter project link">
+                    </div>
+                    <div class="projectRight">
+                        <label>Description:</label>
+                        <textarea id="projectdesc" placeholder="Describe the project"></textarea>
+                    </div>
                 </div>
             </div>
             <button type="button" id="add-project">Add Another Project</button>
@@ -157,7 +192,7 @@
         </div>
 
         <!-- Buttons -->
-        <div class="buttons">
+        <div class="buttons step1btns">
             <button type="button" id="next-step" onclick="proceedToNextStep(2)">Next Step</button>
         </div>
     </div>
@@ -167,15 +202,15 @@
         <h2>Select a Resume Template</h2>
         
         <div class="template-section">
-            <div class="template-card" onclick="selectTemplate('basic')">
+            <div id="basic" class="template-card" onclick="selectTemplate('basic')">
                 <img src="templates/basic.jpg" alt="Basic Template">
                 <p>Basic</p>
             </div>
-            <div class="template-card" onclick="selectTemplate('classic')">
+            <div id="classic" class="template-card" onclick="selectTemplate('classic')">
                 <img src="templates/classic.jpg" alt="Classic Template">
                 <p>Classic</p>
             </div>
-            <div class="template-card" onclick="selectTemplate('modern')">
+            <div id="modern" class="template-card" onclick="selectTemplate('modern')">
                 <img src="templates/modern.jpg" alt="Modern Template">
                 <p>Modern</p>
             </div>

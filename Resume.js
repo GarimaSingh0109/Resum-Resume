@@ -1,3 +1,17 @@
+
+// logic for progress Bar
+const step = document.querySelectorAll('.step'); //progress bar step class
+const step1p = document.querySelector('.step1p'); //progress bar step class
+const step2p = document.querySelector('.step2p'); //progress bar step class
+const step3p = document.querySelector('.step3p'); //progress bar step class
+const line1 = document.querySelector('.line1');
+const line2 = document.querySelector('.line2');
+const nextstep1 = document.querySelector('#next-step');
+const nextstep2 = document.querySelector('#next-step-2');
+const prevstep2 = document.querySelector('#prev-step-2');
+const prevstep3 = document.querySelector('#prev-step-3');
+
+
 // Dynamically adding more Education sections
 document.getElementById('add-education').addEventListener('click', function() {
     const educationFields = document.getElementById('education-fields');
@@ -28,6 +42,7 @@ document.getElementById('add-experience').addEventListener('click', function() {
     const newExperience = document.createElement('div');
     newExperience.classList.add('experience-entry');
     newExperience.innerHTML = `
+    <div class="expLeft">
         <label>Job Position:</label>
         <input type="text" placeholder="Enter job position">
 
@@ -39,9 +54,11 @@ document.getElementById('add-experience').addEventListener('click', function() {
 
         <label>End Year:</label>
         <input type="text" placeholder="End Year">
-
+    </div>
+    <div class="expRight">
         <label>Description:</label>
-        <textarea placeholder="Describe your job experience"></textarea>
+        <textarea id="expdes" placeholder="Describe your job experience"></textarea>
+    </div>
     `;
     experienceFields.appendChild(newExperience);
 });
@@ -52,17 +69,20 @@ document.getElementById('add-project').addEventListener('click', function() {
     const newProject = document.createElement('div');
     newProject.classList.add('project-entry');
     newProject.innerHTML = `
+    <div class="projectLeft">
         <label>Project Title:</label>
         <input type="text" placeholder="Enter project title">
-
-        <label>Description:</label>
-        <textarea placeholder="Describe the project"></textarea>
 
         <label>Role/Responsibilities:</label>
         <textarea placeholder="Describe your role"></textarea>
 
         <label>Link (Optional):</label>
         <input type="url" placeholder="Enter project link">
+    </div>
+    <div class="projectRight">
+        <label>Description:</label>
+        <textarea id="projectdesc" placeholder="Describe the project"></textarea>
+    </div>
     `;
     projectFields.appendChild(newProject);
 });
@@ -102,19 +122,45 @@ document.getElementById('next-step').addEventListener('click', function() {
     const contact = document.getElementById('contact').value.trim();
     const location = document.getElementById('location').value.trim();
     const stepone = document.querySelector('.form-container')
-    
+
     if (!name || !profile || !email || !contact || !location) {
         alert('Please fill out all required fields in Step 1.');
         return;
     }
     stepone.style.display = 'none';
+    step1p.querySelector('.circle').textContent = '✓';
+    line1.style.backgroundColor = '#007bff'
+    step2p.classList.add('active');
     showStep(2);
+});
+
+// card color change when click on card
+const basicCard = document.querySelector('#basic');
+const classicCard = document.querySelector('#classic');
+const modernCard = document.querySelector('#modern');
+basicCard.addEventListener('click',()=>{
+    basicCard.style.backgroundColor = '#ADD8E6';
+    classicCard.style.backgroundColor = '#f4f4f4';
+    modernCard.style.backgroundColor = '#f4f4f4';
+});
+classicCard.addEventListener('click',()=>{
+    basicCard.style.backgroundColor = '#f4f4f4';
+    classicCard.style.backgroundColor = '#ADD8E6';
+    modernCard.style.backgroundColor = '#f4f4f4';
+});
+modernCard.addEventListener('click',()=>{
+    basicCard.style.backgroundColor = '#f4f4f4';
+    classicCard.style.backgroundColor = '#f4f4f4';
+    modernCard.style.backgroundColor = '#ADD8E6';
 });
 
 // Handle previous step button for Step 2
 document.getElementById('prev-step-2').addEventListener('click', function() {
     const stepone = document.querySelector('.form-container')
     stepone.style.display = '';
+    line1.style.backgroundColor = 'lightgray'
+    step1p.querySelector('.circle').textContent = '1';
+    step2p.classList.remove('active');
     showStep(1);
 });
 
@@ -140,7 +186,9 @@ document.getElementById('next-step-2').addEventListener('click', function() {
     const resumeContent = generateResumeHTML(name, profile, email, contact, location, educationEntries, experienceEntries, projectEntries, selectedTemplate);
     
     document.getElementById('resume-display').innerHTML = resumeContent;
-
+    step2p.querySelector('.circle').textContent = '✓';
+    line2.style.backgroundColor = '#007bff'
+    step3p.classList.add('active');
     showStep(3);
 });
 
@@ -239,6 +287,10 @@ function generateResumeHTML(name, profile, email, contact, location, educationEn
 
 // Review resume on Step 3
 document.getElementById('prev-step-3').addEventListener('click', function() {
+    line2.style.backgroundColor = 'lightgray'
+    step3p.classList.remove('active');
+    step2p.querySelector('.circle').textContent = '2';
+    step3p.querySelector('.circle').textContent = '3';
     showStep(2);
 });
 
@@ -257,6 +309,7 @@ document.getElementById('download-resume').addEventListener('click', function() 
 
     // Generate and download the PDF
     html2pdf().from(resumeElement).set(options).save();
+    step3p.querySelector('.circle').textContent = '✓';
 });
 
 
@@ -264,3 +317,11 @@ document.getElementById('download-resume').addEventListener('click', function() 
 document.getElementById('reset').addEventListener('click', function() {
     location.reload();
 });
+
+
+// nextstep1.addEventListener('click',()=>{
+//     step1p.classList.remove('active')
+//     step1p.classList.add('completed');
+//     step2p.classList.add('active');
+//     console.log("click")
+// });
