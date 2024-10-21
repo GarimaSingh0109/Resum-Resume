@@ -1,341 +1,186 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resume Builder from LinkedIn</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-
-
-    <link rel="stylesheet" href="style.css">
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Resume/CV Builder</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
     <style>
-        :root {
-            --deep-teal: #003d4d; /* Updated primary color */
-            --off-white: #f8f9fa; /* Updated background color */
-            --dark-slate: #2f4f4f; /* Text color */
-            --soft-gold: #d9c79e; /* Accent color */
-        }
+      @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
 
+*{
+    margin: 0%;
+    padding: 0%;
+    font-weight: 500;
+    font-size: 14px;
+}
+body{
+    background: #ddd7f7;
+    display: grid;
+    place-items: center;
+    font-weight: 450;
+    opacity: 1;
+}
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-</head>
-    <style>
-      :root {
-        --deep-teal: #003d4d; /* Updated primary color */
-        --off-white: #f8f9fa; /* Updated background color */
-        --dark-slate: #2f4f4f; /* Text color */
-        --soft-gold: #d9c79e; /* Accent color */
-      }
+.none
+{
+    display: none;
+}
+.resume
+{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 50px;
+    width: 800px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+#print
+{
+    background-color: #fff;
+    padding: 30px 50px;
+    height: 1120px;
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        outline: none;
-        border: none;
-        text-decoration: none;
-        text-transform: capitalize;
-        transition: 0.2s linear;
-      }
+}
 
-      body {
-        background-color: var(--off-white);
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh; /* Ensure body takes full height */
-      }
+.head
+{
+    display: grid;
+    grid-template-columns: 3fr 1.5fr;
+}
+.head .main .name
+{
+    font-size: 55px;
+    font-family: 'Raleway', sans-serif;
+}
+.head .main  span:nth-child(2)
+{
+    color: rgb(98, 96, 96);
+    font-size: 55px;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 5px;
+}
+.head .main .post
+{
+font-family: 'Barlow', sans-serif;
+}
+.head .contacts
+{
+    text-align: right;
+    padding-top: 7px;
+}
+.head .contacts .content
+{
+    font-weight: 500;
+    padding-right: 5px;
+}
+.head .contacts .symbol
+{
+    margin-right: 5px;
+    font-size: 15px;
+    width: 17px;
+    height: 17px;
+}
+.line
+{
+    height: 0.5px;
+    background-color: rgb(87, 87, 87);
+    margin: 25px 0;
+    margin-bottom: 50px;
+}
+.mainbody
+{
+    display: grid;
+    grid-template-columns: 10fr 1fr 17fr;
+    height: 900px;
+}
+.mainbody .border
+{
+    background-color: rgb(87, 87, 87);
+    width: 3px;
+    opacity: 2;
+}
+.mainbody .rightside
+{
+    padding-left: 15px;
+}
+.title
+{
+    font-weight: 700;
+    font-size: 18px;
+    border: none;
+    padding-bottom: 3px;
+    border-bottom: 2px rgb(9, 80, 72) solid;
+}
+.skill
+{
+    margin-bottom: 6px;
+}
+button
+{
+    margin: 15px 0;
+}
+.language
+{
+    margin-bottom:6px;
+}
+.language span:nth-child(odd)
+{
+    font-weight: 700;
+}
+.edublock{
+    margin-bottom: 10px;
+}
+.edublock .head
+{
+    font-weight: 700;
+    font-size: 17px;
+}
 
-      .container {
-        margin: 50px auto; /* Center horizontally */
-        padding: 20px;
-        max-width: 500px; /* Set a max-width for the container */
-        background-color: #fff;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        border-radius: 10px; /* Added rounded corners */
-        transition: box-shadow 0.3s ease;
-        display: flex; /* Use flexbox to center items */
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
-        height: calc(100vh - 180px); /* Full height minus margins */
-      }
-
-      .container:hover {
-        box-shadow: 0 0 20px rgba(0, 77, 79, 0.8); /* Glow effect on hover */
-      }
-
-      h1 {
-        text-align: center;
-        color: var(--dark-slate); /* Updated heading color */
-      }
-
-      form {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%; /* Make form take full width of container */
-      }
-
-      label {
-        margin: 10px 0 5px;
-        color: var(--dark-slate); /* Updated label color */
-        font-weight: 500;
-      }
-
-      input[type="url"],
-      input[type="email"],
-      input[type="tel"],
-      select,
-      button {
-        padding: 10px;
-        font-size: 16px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        margin-bottom: 20px;
-        outline: none;
-        width: 100%; /* Full width for input fields */
-      }
-
-      input[type="url"]:focus,
-      input[type="email"]:focus,
-      input[type="tel"]:focus,
-      select:focus {
-        border-color: var(--purple);
-      }
-
-      button {
-        background-color: var(--deep-teal);
-        color: white;
-        border: none;
-        cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-      }
-
-      button:hover {
-        background-color: var(--soft-gold); /* Soft gold hover color */
-        color: var(--deep-teal);
-        transform: scale(1.05);
-      }
-
-      .navbar {
-        background-color: var(--deep-teal);
-        padding: 30px 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .navbar h1 {
-        color: white;
-        margin-left: 15px;
-        font-size: 2rem;
-        transition: color 0.3s ease;
-      }
-
-      .navbar h1:hover {
-        color: var(--soft-gold);
-      }
-
-      .navbar ul {
-        list-style-type: none;
-        margin-right: 30px;
-        padding: 0;
-        display: flex;
-        gap: 20px;
-      }
-
-      .navbar ul li {
-        display: inline;
-      }
-
-      .navbar ul li a {
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
-        transition: color 0.3s ease;
-      }
-
-      .navbar ul li a:hover {
-        color: var(--soft-gold);
-      }
-
-      .content {
-        padding: 20px;
-        text-align: center;
-      }
-
-      /* footer section styles */
-
-      :root {
-        --deep-teal: #003d4d;
-        --off-white: #f8f9fa;
-        --dark-slate: #2f4f4f;
-        --soft-gold: #d9c79e;
-      }
-      .footer {
-        width: 100%;
-        background-color: var(--deep-teal);
-        color: white;
-        padding: 13px 0;
-      }
-      .footer-content {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-      }
-
-      .ul {
-        padding: 0;
-        list-style: none;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        text-align: center;
-      }
-      .footer-bottom {
-        text-align: center;
-        color: #fff;
-        font-size: 14px;
-        margin: 0px;
-        margin-top: 3px;
-      }
-      .footer-bottom p{
-        margin:0 0 10px;
-      }
-
-      .footer a {
-        color: var(--soft-gold);
-        text-decoration: none;
-        font-size: 16px;
-      }
-
-      .social-icons {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 20px;
-      }
-      .social-icons a:hover {
-        color: var(--light-grey);
-        transform: scale(1.2) translateY(-5px);
-      }
-
-      .footer a:hover {
-        text-decoration: underline;
-      }
-
-      .footer-section h3 {
-        margin-bottom: 14px;
-        font-size: 28px;
-      }
-      /* footer section style ends */
-
-      /* Responsive adjustments */
-      @media (max-width: 768px) {
-        .navbar {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-
-        .navbar ul {
-          flex-direction: column;
-          gap: 10px;
-        }
-
-        .navbar h1 {
-          margin-bottom: 10px;
-        }
-
-        .container {
-          max-width: 90%; /* Adjusted width for mobile */
-        }
-        .footer-section h3 {
-          font-size: 18px;
-        }
-
-        .footer a {
-          font-size: 13px;
-        }
-
-        .footer-section {
-          margin-bottom: 0;
-          gap: 18px;
-        }
-
-        .footer-bottom {
-          font-size: 12px;
-          margin: 0px;
-          margin-top: 8px;
-        }
-      }
-
-      @media (max-width: 450px) {
-        .footer-section h3 {
-          font-size: 14px;
-        }
-
-        .footer a {
-          font-size: 11px;
-        }
-
-
-        .footer-section {
-          margin-bottom: 0;
-          }
-        .navbar  img{
-        width: 100px;
-        padding: 0px 6px;
-        margin-right: -64px;
-        }
-
-        .navbar h1 {
-            color: white;
-            margin-left: -38rem;
-            font-size: 2rem;
-          transition: color 0.3s ease;
-        }
-
-        
-
-        .footer-bottom {
-          font-size: 10px;
-          margin: 0px;
-          margin-top: 5px;
-        }
-      }
-      @media (max-width: 400px) {
-        .navbar ul {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-evenly;
-          width: 100%;
-        }
-        .navbar ul li {
-          justify-content: space-evenly !important;
-        }
-        .navbar ul li a {
-          color: #eee7e7;
-          font-size: 20px;
-        }
-        .navbar ul li a:hover {
-          color: #ffffff;
-          font-size: 22px;
-        }
-      }
+.navbtn
+{
+position: fixed;
+top: 80%;
+left: 4%;
+transform: translate(-40%,-4%);
+height: 60px;
+width: 60px;
+border-radius: 50%;
+border:#fff 4px solid;
+transition: 300ms ease-in-out;
+box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+.navbtn:nth-child(2)
+{
+top: 50%;
+left: 4.4%;
+transform: translate(-50%,-4.4%);
+}
+.navbtn:nth-child(3)
+{
+top: 60%;
+left: 4.8%;
+transform: translate(-60%,-4.8%);
+}
+.navbtn:hover
+{
+    background-color: #003d4d;
+    color: #fff;
+    border: #fff 3px solid;
+    height: 65px;
+    width: 65px;
+}
+.input-checkbox{
+    margin-right: 10px;
+}
+.education-head{
+    font-weight: 700;
+    font-size: 17px;
+}  
     </style>
+
   </head>
   <body>
     <!-- Navbar -->
@@ -344,62 +189,24 @@
         <h1>Resum Resume</h1>
         <nav class="navbar">
 			<div class="tabs-container"></div>
-			<a class="tab" href="#home">Home</a>
+			<a class="tab" href="index.html">Home</a>
 			<a class="tab" href="about.html">About</a>
 			<a class="tab" href="resume.html">Build Resume</a>
 			<a class="tab" href="signup.html">Sign Up</a>
 			<a class="tab" href="login.html">Login</a>
+      <a class="tab" href="privacypolicy.html">Privacy Policy</a>
 			</div>
 		</nav>
 		
     </nav>
 
-    <div class="container">
-      <form id="resumeForm">
-        <label for="linkedin-url">LinkedIn Profile URL</label>
-        <input
-          type="url"
-          id="linkedin-url"
-          name="linkedin-url"
-          placeholder="Enter your LinkedIn URL"
-          required
-        />
 
-        <label for="email">Email Address</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Enter your email address"
-          required
-        />
-
-        <label for="phone">Phone Number</label>
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          placeholder="Enter your phone number"
-          required
-        />
-
-        <label for="template">Choose a Resume Template</label>
-        <select
-          id="template"
-          name="template"
-          placeholder="Choose Template"
-          required
-        >
-          <option value="classic">Choose Template</option>
-          <option value="classic">Classic Template</option>
-          <option value="modern">Modern Template</option>
-          <option value="minimalist">Minimalist Template</option>
-          <option value="custom">Custom Template</option>
-        </select>
-
-        <button type="submit">Generate Resume</button>
-      </form>
+    </head>
+    <body>
+    <div class="nav">
+    <button id="cmd" onclick="printpdf()" class="navbtn"><i class="fas fa-download"></i></button>
     </div>
+
 
     <!-- footer-section -->
     <footer class="footer">
@@ -425,7 +232,7 @@
           <ul class="ul">
             <li><a href="#">FAQ</a></li>
             <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="privacypolicy.html">Privacy Policy</a></li>
           </ul>
         </div>
         <div class="footer-section">
@@ -443,24 +250,295 @@
       </div>
     </footer>
 
+        
+    <div class="resume" id="resume">
+        <section id="print">
+             <div class="head">
+                <div class="main">
+                    <span class="name" contenteditable="true">YOUR</span> <span contenteditable="true">NAME</span>
+                    <div class="post" contenteditable="true">YOUR JOB PROFILE</div>
+                </div>
+                <div class="contacts">
+                <span contenteditable="true" class="content">231-3212-2132</span><span class="symbol"> <i class="fas fa-phone"></i></span><br>
+                <span contenteditable="true" class="content">samplemail@email.in</span><span class="symbol"> <i class="fas fa-envelope"></i></span><br>
+                <span contenteditable="true" class="content">linkedin/username.com</span><span class="symbol"> <i class="fab fa-linkedin"></i></span><br>
+                <span contenteditable="true" class="content">sample street-India</span><span class="symbol"> <i class="fas fa-map-marker-alt"></i></i></span>
+                </div>
+            </div>
+        
+            <div class="line"></div>
+            <div class="mainbody">
+                <div class="leftside">
+                <span class="title">MY SKILLS</span><br><br><div>
+                <div class="skill"><span><input type="checkbox" class="input-checkbox"></span><span><i class="fas fa-chevron-circle-right"></i></span>   <span contenteditable="true">write your skill here</span></div>
+                <div id="skills"></div>
+                <button id="skilladd" type="button" class="btn btn-success" onclick="addskill()"><i class="fas fa-plus-circle"></i> Skill</button> 
+                <button id="skillrem" type="button" class="btn btn-danger" onclick="remskill(event)"><i class="fas fa-minus-circle"></i> Skill</button></div>
+                <br><br><span class="title">LANGUAGES</span><br><br><div>
+                <div class="language"><span><input type="checkbox" class="input-checkbox"></span><span contenteditable="true">LANGNAME</span> - <span contenteditable="true">level u know</span></div>
+                <div id="languages"></div>
+                <button id="langadd" type="button" class="btn btn-success" onclick="addLang()"><i class="fas fa-plus-circle"></i> Language</button>
+                 
+                <button id="langrem" type="button" class="btn btn-danger" onclick="remLang(event)"><i class="fas fa-minus-circle"></i> Language</button></div>
+                <br><br><span class="title">ACHIEVEMENTS</span><br><br><div>
+                <div class="achieve" ><span><input type="checkbox" class="input-checkbox"></span><span contenteditable="true">Write your achievement</span></div>
+                <div id="achievement"></div>
+                <button id="achadd" type="button" class="btn btn-success" onclick="addAch()"><i class="fas fa-plus-circle"></i> Achievement</button>
+                 
+                <button id="achrem" type="button" class="btn btn-danger" onclick="remAch(event)" style="margin-top: 0;"><i class="fas fa-minus-circle"></i> Achievement</button></div>
+                <br><br><span class="title">INTERESTS</span><br><br><div>
+                <div class="achieve" ><span><input type="checkbox" class="input-checkbox"></span><span contenteditable="true">Write interest</span></div>
+                <div id="interest"></div>
+                <button id="Intadd" type="button" class="btn btn-success" onclick="addInt()"><i class="fas fa-plus-circle"></i> Interest</button>
+                 
+                <button id="Intrem" type="button" class="btn btn-danger" onclick="remInt(event)"><i class="fas fa-minus-circle"></i> Interest</button></div>
+                </div>
+                
+                <div class="border"></div>
+                <div class="rightside">
+                <span class="title">PROFILE</span><br><br>
+                <div contenteditable="true">
+                Here u can write the basic information about your career like your forte, something about yourself that
+                you want your interviewer to know. Try to keep it brief and only provide necessary information. Do not include information which is
+                already written in your resume in some other section.</div>
+                <br><br><span class="title">EDUCATION</span><br><br><div>
+                <div id="education">
+                    <div class="edublock">
+                        <span><input type="checkbox" class="input-checkbox"></span>
+                        <span class="education-head" contenteditable="true">YOUR DEGREE</span>
+                        <div ><span contenteditable="true">Institute name</span> - <span contenteditable="true">Passing Year</span></div>
+                    </div>
+                </div>
+                    
+                <button id="eduadd" type="button" class="btn btn-success" onclick="addedu()"><i class="fas fa-plus-circle"></i> Education</button>
+                 
+                <button id="edurem" type="button" class="btn btn-danger" onclick="remedu(event)"><i class="fas fa-minus-circle"></i> Education</button></div>
+                <br><br>
+                <div class="new-section-div"><div><span><input type="checkbox" class="input-checkbox"></span><span class="title" contenteditable="true">NEW SECTION</span><br><br>
+                <div contenteditable="true">
+                This is the description part of your new section. Try to stay within limit and write something which has less 
+                than 400 characters. The spaces and symbols you use will also be included so use them for an indentation effect.</div>
+                </div>
+                    
+                <div id="newsec"></div>
+                <button id="secadd" type="button" class="btn btn-success" onclick="addsec()"><i class="fas fa-plus-circle"></i> Section</button>
+                 
+                <button id="secrem" type="button" class="btn btn-danger" onclick="remsec(event)"><i class="fas fa-minus-circle"></i> Section</button>
+            </div>
+            </div>
+        </section>
+     </div>
+    </body>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.min.js"></script>
+
     <script>
-      document
-        .getElementById("resumeForm")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-
-          const linkedInUrl = document.getElementById("linkedin-url").value;
-          const email = document.getElementById("email").value;
-          const phone = document.getElementById("phone").value;
-          const template = document.getElementById("template").value;
-
-          if (linkedInUrl && email && phone && template) {
-            alert(
-              `Generating resume using ${template} template for LinkedIn profile: ${linkedInUrl}, Email: ${email}, Phone: ${phone}`
-            );
-            // Add logic to send this data to your backend for processing
+    function printpdf() {
+      var content = document.getElementById("resume");
+    
+      const allButtons = document.querySelectorAll("#print button");
+      allButtons.forEach(button => {
+          button.classList.add("none");
+      });
+      let allInputCheckboxes = document.querySelectorAll(".input-checkbox");
+      allInputCheckboxes.forEach(input => {
+          input.classList.add("none");
+      })
+    
+    allButtons.forEach(button => {
+        button.classList.remove("none");
+    })
+    allInputCheckboxes.forEach(input => {
+        input.classList.remove("none");
+    })
+    
+      html2pdf(content, {
+          html2canvas: { scale: 1, logging: true, dpi: 500 }
+      });
+    }
+    
+    function addedu() {
+      const head = document.createElement('div');
+      document.getElementById("education").appendChild(head);
+      head.innerHTML = ('<div class="edublock"><span><input type="checkbox" class="input-checkbox"></span><span class="education-head" contenteditable="true">YOUR DEGREE</span><div ><span contenteditable="true">Institute name</span> - <span contenteditable="true">Passing Year</span></div></div>');
+      saveresume();
+    }
+    function remedu(event) {
+      let val = 0;
+      let empty = true;
+      const allInputCheckboxes = event.target.parentElement.getElementsByClassName("input-checkbox");
+      const array = Array.from(allInputCheckboxes);
+      if (array.length === 0) {
+          alert("No fields are present to be deleted!")
+      }
+      else {
+          console.log(array);
+          array.forEach(element => {
+              if (element.checked === true) {
+                  val = 1;
+                  element.parentElement.parentElement.remove();
+              }
+          })
+          if (val === 0) alert("Please select the checkboxes to delete the required field!")
+      }
+      saveresume();
+    }
+    
+    
+    function addskill() {
+      const head = document.createElement('div');
+      document.getElementById("skills").appendChild(head);
+      head.innerHTML = ('<div class="skill"><span><input type="checkbox" class="input-checkbox"></span><span><i class="fas fa-chevron-circle-right"></i></span>   <span contenteditable="true">write your skill here</span></div>');
+      saveresume();
+    }
+    
+    function remskill(event) {
+      let val = 0;
+      const allInputCheckboxes = event.target.parentElement.getElementsByClassName("input-checkbox");
+      const array = Array.from(allInputCheckboxes);
+      if (array.length === 0) {
+          alert("No fields are present to be deleted!")
+      }
+      else {
+          console.log(array);
+          array.forEach(element => {
+              if (element.checked === true) {
+                  val = 1;
+                  element.parentElement.parentElement.remove();
+              }
+          })
+          if (val === 0) alert("Please select the checkboxes to delete the required field!")
+      }
+      saveresume();
+    }
+    
+    
+    function addLang() {
+      const head = document.createElement('div');
+      document.getElementById("languages").appendChild(head);
+      head.innerHTML = ('<div class="language"><span><input type="checkbox" class="input-checkbox"></span><span contenteditable="true">LANGNAME</span> - <span contenteditable="true">level u know</span></div>');
+      saveresume();
+    }
+    function remLang(event) {
+      let val = 0;
+      const allInputCheckboxes = event.target.parentElement.getElementsByClassName("input-checkbox");
+      const array = Array.from(allInputCheckboxes);
+      if (array.length === 0) {
+          alert("No fields are present to be deleted!")
+      }
+      else {
+          console.log(array);
+          array.forEach(element => {
+              if (element.checked === true) {
+                  val = 1;
+                  element.parentElement.parentElement.remove();
+              }
+          })
+          if (val === 0) alert("Please select the checkboxes to delete the required field!")
+      }
+      saveresume();
+    }
+    
+    
+    function addAch() {
+      const head = document.createElement('div');
+      document.getElementById("achievement").appendChild(head);
+      head.innerHTML = ('<div class="achieve" ><span><input type="checkbox" class="input-checkbox"></span><span contenteditable="true">Write your achievement</span></div>');
+      saveresume();
+    }
+    function remAch(event) {
+      let val = 0;
+      const allInputCheckboxes = event.target.parentElement.getElementsByClassName("input-checkbox");
+      const array = Array.from(allInputCheckboxes);
+      if (array.length === 0) {
+          alert("No fields are present to be deleted!")
+      }
+      else {
+          console.log(array);
+          array.forEach(element => {
+              if (element.checked === true) {
+                  val = 1;
+                  element.parentElement.parentElement.remove();
+              }
+          })
+          if (val === 0) alert("Please select the checkboxes to delete the required field!")
+      }
+      saveresume();
+    }
+    
+    
+    function addInt() {
+      const head = document.createElement('div');
+      document.getElementById("interest").appendChild(head);
+      head.innerHTML = ('<div class="achieve" ><span><input type="checkbox" class="input-checkbox"></span><span contenteditable="true">Write interest</span></div>');
+      saveresume();
+    }
+    function remInt(event) {
+      let val = 0;
+      const allInputCheckboxes = event.target.parentElement.getElementsByClassName("input-checkbox");
+      const array = Array.from(allInputCheckboxes);
+      if (array.length === 0) {
+          alert("No fields are present to be deleted!")
+      }
+      else {
+          array.forEach(element => {
+              if (element.checked === true) {
+                  val = 1;
+                  element.parentElement.parentElement.remove();
+              }
+          })
+          if (val === 0) alert("Please select the checkboxes to delete the required field!")
+      }
+      saveresume();
+    }
+    
+    let maxNewSection = 1;
+    function addsec() {
+      if (maxNewSection < 2) {
+          const head = document.createElement('div');
+          document.getElementById("newsec").appendChild(head);
+          if (maxNewSection === 0) {
+              head.innerHTML = ('<div><span><input type="checkbox" class="input-checkbox"></span><span class="title" contenteditable="true">NEW SECTION</span><br><br><div contenteditable="true">This is the description part of your new section. Try to stay within limit and write something which has less than 400 characters. The spaces and symbols you use will also be included so use them for an indentation effect.</div></div>');
           }
-        });
+          else {
+              head.innerHTML = ('<div><br><br><span><input type="checkbox" class="input-checkbox"></span><span class="title" contenteditable="true">NEW SECTION</span><br><br><div contenteditable="true">This is the description part of your new section. Try to stay within limit and write something which has less than 400 characters. The spaces and symbols you use will also be included so use them for an indentation effect.</div></div>');
+          }
+    
+          maxNewSection = maxNewSection + 1;
+      }
+      else {
+          alert("Atmost 2 NEW SECTION can be added!")
+    
+      }
+      saveresume();
+    }
+    function remsec(event) {
+      let val = 0;
+      const allInputCheckboxes = event.target.parentElement.getElementsByClassName("input-checkbox");
+      const array = Array.from(allInputCheckboxes);
+      if (array.length === 0) {
+          alert("No fields are present to be deleted!")
+      }
+      else {
+          console.log(array);
+          array.forEach(element => {
+              if (element.checked === true) {
+                  val = 1;
+                  maxNewSection = maxNewSection - 1;
+                  element.parentElement.parentElement.remove();
+              }
+          })
+          if (val === 0) alert("Please select the checkboxes to delete the required field!")
+      }
+      saveresume();
+    }
+    
+    function saveresume() {
+      var sec = document.getElementById("print");
+      value1 = sec.innerHTML;
+      var info = document.getElementById("custinfo");
+      info.value = value1;
+    }
     </script>
-  </body>
 </html>

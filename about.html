@@ -303,9 +303,48 @@ body {
     }
 }
 
+#progress-container {
+            width: 100%;
+            height: 5px;
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden; 
+            position: fixed;
+            top: 0;
+            left: 0; 
+            z-index: 9999; 
+        }
+
+        #progress-bar {
+            height: 100%;
+            background-color: #3f10ea;
+        }
+
     </style>
 </head>
 <body>
+
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+      </div>
+    
+      <script>
+    let lastScrollPercentage = 0; 
+    
+    function updateProgressBar() {
+        const scrollTop = window.scrollY; 
+        const windowHeight = document.documentElement.scrollHeight - window.innerHeight; 
+        const scrollPercentage = (scrollTop / windowHeight) * 100; 
+    
+        const progressBar = document.getElementById('progress-bar');
+        
+        
+        lastScrollPercentage += (scrollPercentage - lastScrollPercentage) * 0.1; 
+        progressBar.style.width = lastScrollPercentage + '%'; 
+    }
+    window.addEventListener('scroll', updateProgressBar);
+    
+      </script>
 
    <!-- Navbar -->
    <nav class="navbar">
@@ -313,11 +352,13 @@ body {
     <h1>Resum Resume</h1>
     <nav class="navbar">
         <div class="tabs-container"></div>
-        <a class="tab" href="#home">Home</a>
+        <a class="tab" href="index.html">Home</a>
         <a class="tab" href="about.html">About</a>
         <a class="tab" href="resume.html">Build Resume</a>
+        <a class="tab" href="resume_tips.html">Resume Tips</a>
         <a class="tab" href="signup.html">Sign Up</a>
         <a class="tab" href="login.html">Login</a>
+        <a class="tab" href="privacypolicy.html">Privacy Policy</a>
         </div>
     </nav>
 
@@ -385,7 +426,7 @@ body {
             <ul class="ul">
               <li><a href="#">FAQ</a></li>
               <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="privacypolicy.html">Privacy Policy</a></li>
             </ul>
           </div>
           <div class="footer-section">

@@ -1,10 +1,4 @@
-:root{
 
-
-    --soft-teal: #003d4d;
-
-
-}
 
 * {
     margin: 0;
@@ -18,65 +12,76 @@
     transition: .2s linear;
 }
 
-html{
+html {
     font-size: 62.5%;
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
     overflow-x: hidden;
 }
 
-section{
+section {
     padding: 2rem 9%;
 }
 
 .heading {
     text-align: center;
     font-size: 4rem;
-    color: var(--dark-slate); /* Dark Slate color */
+    color: var(--dark-slate);
+    /* Dark Slate color */
     padding: 1rem;
     margin: 2rem 0;
-    background: var(--deep-teal); /* Changed background to Deep Teal */
+    background: var(--deep-teal);
+    /* Changed background to Deep Teal */
 }
 
 .heading span {
-    color: var(--soft-gold); /* Soft Gold for span */
+    color: var(--soft-gold);
+    /* Soft Gold for span */
 }
 
 .btn {
     display: inline-block;
     margin-top: 1rem;
     border-radius: 5rem;
-    background: var(--soft-gold); /* Soft Gold button background */
-    color: var(--dark-slate); /* Dark Slate text color */
+    background: var(--soft-gold);
+    /* Soft Gold button background */
+    color: var(--dark-slate);
+    /* Dark Slate text color */
     padding: 0.9rem 3.5rem;
     cursor: pointer;
     font-size: 1.7rem;
 }
 
 .btn:hover {
-    background: var(--deep-teal); /* Deep Teal on hover */
+    background: var(--deep-teal);
+    /* Deep Teal on hover */
 }
+
 .btn {
-  display: inline-block;
-  margin-top: 1rem;
-  border-radius: 5rem;
-  background: #ffffff;
-  color: #fff;
-  padding: 0.9rem 3.5rem;
-  cursor: pointer;
-  font-size: 1.7rem;
-  background-color: #3f10ea;
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #ffffff;
+    color: #fff;
+    padding: 0.9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+    background-color: #3f10ea;
 }
+
 .btn:hover {
-  background: var(--purple);
-  background-color: #f03c0b;
-  color: white;
+    background: var(--purple);
+    background-color: #f03c0b;
+    color: white;
 }
 
 header {
     position: fixed;
-    top: 0; left: 0; right: 0;
-    background: var(--soft-teal); /*Changed background to Deep Teal */
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--soft-teal);
+    /*Changed background to Deep Teal */
     padding: 2rem 9%;
     display: flex;
     align-items: center;
@@ -91,11 +96,12 @@ header .logo {
     font-family: 'Poppins', sans-serif;
     color: #353047;
 
-    color: var(--off-white); /* White logo for contrast */
+    color: var(--off-white);
+    /* White logo for contrast */
     font-weight: bolder;
 }
 
-.logo img{
+.logo img {
     width: 100px;
     padding: 0px 6px;
     margin-right: -14px;
@@ -103,21 +109,24 @@ header .logo {
 
 header .logo:hover {
     font-size: 3rem;
-    color: var(--soft-gold); /* Soft Gold on hover for logo */
+    color: var(--soft-gold);
+    /* Soft Gold on hover for logo */
     font-weight: bolder;
     text-decoration: none;
 }
+
 header .logo {
-  font-size: 3rem;
-  color: white;
-  font-weight: bolder;
-  font-size: 2.5rem;
+    font-size: 3rem;
+    color: white;
+    font-weight: bolder;
+    font-size: 2.5rem;
 }
 
 
 
 header .logo span {
-    color: var(--off-white); /* Updated to match logo color */
+    color: var(--off-white);
+    /* Updated to match logo color */
 
 }
 
@@ -125,46 +134,47 @@ header .logo span {
 header .navbar a {
     font-size: 2rem;
     padding: 15px;
-    color: white
-
+    color: white;
 }
 
 header .navbar a:hover {
-    color: var(--soft-gold); /* Soft Gold on hover */
-    text-decoration: none; /* Ensure no underline by default */
+    color: var(--soft-gold);
+    /* Soft Gold on hover */
+    text-decoration: none;
+    /* Ensure no underline by default */
 }
 
 header .icons a {
     font-size: 2.5rem;
-    color: white
+    color: white;
     margin-left: 1.5rem;
 }
 
-  header .navbar a {
-  font-size: 2rem;
-  padding: 0 1.5rem;
-  color: #ffffff;
-  font-size: 1.8rem;
+header .navbar a {
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #ffffff;
+    font-size: 1.8rem;
 }
 
 header .navbar a:hover {
-  color: var(--red);
-  text-decoration: none;
-  color: #ffffff;
+    color: var(--red);
+    text-decoration: none;
+    color: #ffffff;
 }
 
 header .icons a {
-  font-size: 2.5rem;
-  color: #ffffff;
-  margin-left: 1.5rem;
-  font-size: 2.2rem;
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-left: 1.5rem;
+    font-size: 2.2rem;
 }
 
 header .icons a:hover {
-  color: var(--purple);
-  color: #ffffff;
-  text-decoration: none;
- }
+    color: var(--purple);
+    color: #ffffff;
+    text-decoration: none;
+}
 
 header #toggler {
     display: none;
@@ -173,7 +183,8 @@ header #toggler {
 header .fa-bars {
     font-size: 3rem;
 
-    color: var(--off-white); /* White for better visibility */
+    color: var(--off-white);
+    /* White for better visibility */
     border-radius: .5rem;
     padding: .5rem 1.5rem;
     cursor: pointer;
@@ -183,8 +194,10 @@ header .fa-bars {
 
 /* Default light mode styles */
 body {
-    background-color: var(--off-white); /* Changed from #ffffff to Off-White */
-    color: var(--dark-slate); /* Changed from #000000 to Dark Slate */
+    background-color: var(--off-white);
+    /* Changed from #ffffff to Off-White */
+    color: var(--dark-slate);
+    /* Changed from #000000 to Dark Slate */
 }
 
 
@@ -195,76 +208,89 @@ body {
 }
 
 
-.home .content h3{
-  font-size: 5rem;
-  color: #333;
-  font-size: 4.5rem;
-  font-weight: 600;
-  line-height: 6rem;
+.home .content h3 {
+    font-size: 5rem;
+    color: #333;
+    font-size: 4.5rem;
+    font-weight: 600;
+    line-height: 6rem;
 }
+
 /* Add more styles as needed for other elements */
 
-.home{
+.home {
     display: flex;
     align-items: center;
     min-height: 100vh;
     background: url(images/background-home.png) no-repeat;
     background-size: cover;
     background-position: center;
-    animation: floatInFromRight 2s ease-out forwards; /* Image floats from right */
+    animation: floatInFromRight 2s ease-out forwards;
+    /* Image floats from right */
 }
+
 .home {
-  display: flex;
-  align-items: center;
-  min-height: 100vh;
-  background: url(images/background-home.png) no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-height: 110vh;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(images/background-home.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 110vh;
 }
+
 /* Dark mode styles */
 .dark-mode {
     background-color: #121212;
     color: #ffffff;
-  }
+}
 
 .home .content {
     max-width: 50rem;
-    opacity: 0; /* Ensure the text is hidden initially */
-    animation: floatInFromTop 2s ease-out forwards; /* Text floats from top */
+    opacity: 0;
+    /* Ensure the text is hidden initially */
+    animation: floatInFromTop 2s ease-out forwards;
+    /* Text floats from top */
 }
 
 .home .content h3,
 .home .content p,
 .home .content a {
-    opacity: 0; /* Initially hidden */
-    animation: floatInFromTop 2s ease-out forwards; /* Text enters from the top */
-    animation-delay: 0.5s; /* Delay for a smooth entrance */
+    opacity: 0;
+    /* Initially hidden */
+    animation: floatInFromTop 2s ease-out forwards;
+    /* Text enters from the top */
+    animation-delay: 0.5s;
+    /* Delay for a smooth entrance */
 }
 
 .home .content p {
-  font-size: 1.5rem;
-  color: #999;
-  padding: 1rem 0;
-  line-height: 1.5;
-  margin-bottom: 2rem;
-  color: grey;
-}
-.home .content h3{
-    font-size: 5rem;
-    color: var(--dark-slate); /* Changed from #333 to Dark Slate */
+    font-size: 1.5rem;
+    color: #999;
+    padding: 1rem 0;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    color: grey;
 }
 
-.home .content span{
+.home .content h3 {
+    font-size: 5rem;
+    color: var(--dark-slate);
+    /* Changed from #333 to Dark Slate */
+}
+
+.home .content span {
     font-size: 3.5rem;
-    color: var(--soft-gold); /* Changed from var(--purple) to Soft Gold */
+    color: var(--soft-gold);
+    /* Changed from var(--purple) to Soft Gold */
     padding: 1rem 0;
     line-height: 1.5;
 }
 
-.home .content p{
+.home .content p {
     font-size: 1.5rem;
-    color: #666; /* Changed from #999 to a darker gray for better readability */
+    color: #666;
+    /* Changed from #999 to a darker gray for better readability */
     padding: 1rem 0;
     line-height: 1.5;
 }
@@ -272,22 +298,28 @@ body {
 @keyframes floatInFromTop {
     0% {
         opacity: 0;
-        transform: translateY(0); /* Starting position from above */
+        transform: translateY(0);
+        /* Starting position from above */
     }
+
     100% {
         opacity: 1;
-        transform: translateY(0); /* Final position */
+        transform: translateY(0);
+        /* Final position */
     }
 }
 
 @keyframes floatInFromRight {
     0% {
         opacity: 0;
-        transform: translateX(50px); /* Starting position from the right */
+        transform: translateX(50px);
+        /* Starting position from the right */
     }
+
     100% {
         opacity: 1;
-        transform: translateX(0); /* Final position */
+        transform: translateX(0);
+        /* Final position */
     }
 }
 
@@ -299,13 +331,15 @@ body {
     --dark-slate: #2f4f4f;
     --soft-gold: #d9c79e;
 }
+
 .footer {
     width: 100%;
     background-color: var(--deep-teal);
     color: white;
     padding: 13px 0;
 }
-.footer-content{
+
+.footer-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -320,6 +354,7 @@ body {
     color: #fff;
     border-bottom: 2px solid #3f10ea;
     padding-bottom: 10px;
+}
 
 .ul{
    padding: 0;
@@ -327,13 +362,21 @@ body {
    font-family: Verdana, Geneva, Tahoma, sans-serif;
    text-align: center;
 
+.ul {
+    padding: 0;
+    list-style: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+
+
 }
-.footer-bottom{
+
+.footer-bottom {
     text-align: center;
     color: #fff;
     font-size: 14px;
     margin: 0px;
-    margin-top:10px;
+    margin-top: 10px;
 }
 
 
@@ -362,11 +405,8 @@ body {
 }
 
 .footer .footer-section .social-icons a:hover {
-    color: white;
-    text-decoration: none;
-
     color: #3f10ea;
- main
+    text-decoration: none;
 }
 
 .footer a {
@@ -375,15 +415,16 @@ body {
     font-size: 16px;
 }
 
- .social-icons{
+.social-icons {
     display: flex;
     justify-content: space-between;
-    margin-top:20px
- }
- .social-icons a:hover{
+    margin-top: 20px
+}
+
+.social-icons a:hover {
     color: var(--light-grey);
     transform: scale(1.2) translateY(-5px);
- }
+}
 
 
 
@@ -391,10 +432,11 @@ body {
     text-decoration: underline;
 }
 
-.footer-section h3{
+.footer-section h3 {
     margin-bottom: 14px;
     font-size: 28px;
 }
+
 /* footer section style ends */
 
 
@@ -429,26 +471,30 @@ body {
         top: 100%;
         left: 0;
         right: 0;
-        background: #f9f9f9; /* Updated background to a softer light color */
+        background: #f9f9f9;
+        /* Updated background to a softer light color */
         border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
 
-    header #toggler:checked ~ .navbar {
+    header #toggler:checked~.navbar {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
 
     header .navbar a {
         margin: 1.5rem;
         padding: 1.5rem;
-        background: #ffffff; /* Updated to a cleaner white */
+        background: #ffffff;
+        /* Updated to a cleaner white */
         border: 0.1rem solid rgba(0, 0, 0, 0.1);
-        color: var(--dark-slate); /* Changed text color to Dark Slate */
+        color: var(--dark-slate);
+        /* Changed text color to Dark Slate */
         display: block;
     }
 
     header .navbar a:hover {
-        color: var(--soft-gold); /* Hover color set to Soft Gold */
+        color: var(--soft-gold);
+        /* Hover color set to Soft Gold */
     }
 
     .home .content h3 {
@@ -477,13 +523,13 @@ body {
 
     .footer-section {
         margin-bottom: 0;
-        gap:18px;
+        gap: 18px;
     }
 
-    .footer-bottom{
+    .footer-bottom {
         font-size: 12px;
         margin: 0px;
-        margin-top:8px;
+        margin-top: 8px;
     }
 
 
@@ -512,10 +558,10 @@ body {
 
     }
 
-    .footer-bottom{
+    .footer-bottom {
         font-size: 10px;
         margin: 0px;
-        margin-top:5px;
+        margin-top: 5px;
     }
 }
 
@@ -530,6 +576,7 @@ body {
     color: blue;
     font-weight: bold;
 }
+
 .navbar {
     position: relative;
 }
@@ -569,65 +616,67 @@ body {
 }
 
 /* Features section */
-.features h2{
-  font-weight: 600;
+.features h2 {
+    font-weight: 600;
 }
-.features-card img{
-  width:80%;
-  height: 40%;
-  object-fit: cover;
+
+.features-card img {
+    width: 80%;
+    height: 40%;
+    object-fit: cover;
 }
-.features-card h3{
-  color: #003d4d;
+
+.features-card h3 {
+    color: #003d4d;
 }
-.features-card p{
-  margin-bottom: 0;
-  color: grey;
+
+.features-card p {
+    margin-bottom: 0;
+    color: grey;
 }
 
 /* testimonials features section */
-.testimonials h2{
-  font-weight: 600;
+.testimonials h2 {
+    font-weight: 600;
 }
-.testimonial-card img{
-  height: 9rem;
-  width: 9rem;
-  border: 0.3rem solid white;
+
+.testimonial-card img {
+    height: 9rem;
+    width: 9rem;
+    border: 0.3rem solid white;
 }
-.testimonial-card h3{
-  color: #003d4d;
-  font-size: 2rem;
+
+.testimonial-card h3 {
+    color: #003d4d;
+    font-size: 2rem;
 }
-.testimonial-card p{
-  color: grey;
+
+.testimonial-card p {
+    color: grey;
 
 }
 
 /* Footer section */
-.footer{
-  background-color: #003d4d;
-  padding-bottom: 2rem;
-}
-.footer-section h3{
-  font-size: 2.5rem;
-}
-.footer-section ul li{
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-    .footer-section ul li a{
-      color:#000;
+.footer {
+    background-color: #003d4d;
+    padding-bottom: 2rem;
 }
 
-.footer-bottom p{
-  font-size: 1.5rem;
-  font-weight: 500;
+.footer-section h3 {
+    font-size: 2.5rem;
 }
 
-.footer-bottom{
-  display: flex;
-  justify-content: center;
-  align-content: center;
+.footer-section ul li a {
+    color: #000;
 }
 
+.footer-bottom p {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
 
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
