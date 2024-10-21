@@ -5,6 +5,70 @@ body {
     padding: 20px;
 }
 
+/* progress bar section css */
+.progressSec{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+.progress-bar {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.line {
+    width: 100px;
+    height: 2px;
+    background-color: lightgray;
+}
+
+.label {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/* Active step */
+.step.active .circle {
+    background-color: #007bff;
+}
+
+@media (max-width: 768px) {
+    .progress-bar {
+        flex-direction: column;
+    }
+
+    .line {
+        width: 2px;
+        height: 50px;
+    }
+}
+
+
+/* step 1 css  */
 .form-container {
     width: 90%;
     margin: auto;
@@ -13,7 +77,77 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-
+.pInfo{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.pInfoLeft{
+    width: 40%;
+}
+.pInfoRight{
+    width: 50%;
+}
+#profile{
+    height: 25rem;
+}
+#education-fields{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.education-entry{
+    width: 40%;
+}
+#skills-input{
+    width: 40%;
+}
+.experience-entry{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.expLeft{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+.expRight{
+    width: 40%;
+}
+#expdes{
+    height: 25rem;
+}
+.achive{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.achiveLeft{
+    width: 40%;
+}
+.achiveRight{
+    width: 40%;
+}
+.project-entry{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.projectLeft{
+    width: 40%;
+}
+.projectRight{
+    width: 40%;
+}
+#projectdesc{
+    height: 20rem;
+}
+#languages-input{
+    width: 40%;
+}
 h2, h3 {
     color: #333;
 }
@@ -51,7 +185,6 @@ textarea {
 textarea {
     resize: vertical;
 }
-
 button {
     padding: 10px 15px;
     border: none;
@@ -109,7 +242,12 @@ button:focus {
     height: auto;
     margin-bottom: 10px;
 }
-
+.template-card p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    color: black;
+}
 .buttons {
     margin-top: 20px;
     display: flex;
@@ -127,6 +265,10 @@ button:focus {
 
 .buttons button:hover {
     background-color: #0056b3;
+}
+.step1btns{
+    display: flex;
+    justify-content: right;
 }
 
 /* Step 3 Styles */
@@ -192,3 +334,4 @@ button {
     background-color: #5cb85c; /* Bootstrap success color */
     color: white;
 }
+
