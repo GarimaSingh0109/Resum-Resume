@@ -102,8 +102,15 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             width: calc(33.33% - 30px);
             text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+        transform: scale(1.05); /* Slightly enlarge the card */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add a shadow */
         }
 
+        
         .testimonial-card img {
             width: 80px;
             height: 80px;
