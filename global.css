@@ -9,6 +9,10 @@ body {
   height: 100%;
   width: 100%;
   font-family: "Poppins", sans-serif;
+  background-color: var(--off-white);
+    /* Changed from #ffffff to Off-White */
+    color: var(--dark-slate);
+    /* Changed from #000000 to Dark Slate */
 }
 
 
@@ -22,4 +26,441 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+
+
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--soft-teal);
+    /*Changed background to Deep Teal */
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+
+header .logo {
+    font-size: 3rem;
+
+    font-family: 'Poppins', sans-serif;
+    color: #353047;
+
+    color: var(--off-white);
+    /* White logo for contrast */
+    font-weight: bolder;
+}
+
+/* header .logo {
+  font-size: 3rem;
+  color: white;
+  font-weight: bolder;
+  font-size: 2.5rem;
+} */
+
+
+header .logo:hover {
+    font-size: 3rem;
+    color: var(--soft-gold);
+    /* Soft Gold on hover for logo */
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+header .logo span {
+    color: var(--off-white);
+    /* Updated to match logo color */
+
+}
+
+
+
+header .navbar a {
+    font-size: 2rem;
+    padding: 15px;
+    color: white;
+}
+
+
+header .navbar a:hover {
+    color: var(--soft-gold);
+    /* Soft Gold on hover */
+    text-decoration: none;
+    /* Ensure no underline by default */
+}
+
+
+header .icons a {
+    font-size: 2.5rem;
+    color: white;
+    margin-left: 1.5rem;
+}
+
+
+header .navbar a {
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #ffffff;
+    font-size: 1.8rem;
+}
+
+
+header .navbar a:hover {
+    color: var(--red);
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+header .icons a {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-left: 1.5rem;
+    font-size: 2.2rem;
+}
+
+
+header .icons a:hover {
+    color: var(--purple);
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+header #toggler {
+    display: none;
+}
+
+
+header .fa-bars {
+    font-size: 3rem;
+
+    color: var(--off-white);
+    /* White for better visibility */
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+
+/* footer section styles */
+
+:root {
+    --deep-teal: #003d4d;
+    --off-white: #f8f9fa;
+    --dark-slate: #2f4f4f;
+    --soft-gold: #d9c79e;
+}
+
+/* Chatbot Styles */
+.chatbot-container {
+    position: fixed;
+    bottom: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.chatbot-button {
+    background-color: #007bff; /* Change to your preferred color */
+    border: none;
+    border-radius: 50%;
+    padding: 5px; /* Smaller padding */
+    cursor: pointer;
+    position: relative;
+    width: 50px; /* Adjusted size */
+    height: 50px; /* Adjusted size */
+}
+
+.chatbot-button img {
+    width: 30px; /* Adjusted image size */
+    height: 30px; /* Adjusted image size */
+}
+
+.tooltip-text {
+    display: none; /* Hide by default */
+    position: absolute;
+    bottom: 100%; /* Position above the button */
+    right: 50%;
+    transform: translateX(50%);
+    background-color: #333; /* Background color for tooltip */
+    color: #fff; /* Tooltip text color */
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.chatbot-button:hover .tooltip-text {
+    display: block; /* Show on hover */
+}
+
+
+
+
+
+
+
+
+
+.footer {
+    width: 100%;
+    background-color: var(--deep-teal);
+    color: white;
+    padding: 13px 0;
+}
+
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+
+
+.footer .footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #fff;
+    border-bottom: 2px solid #3f10ea;
+    padding-bottom: 10px;
+}
+
+
+.footer-bottom {
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    margin: 0px;
+    margin-top: 10px;
+}
+
+
+
+.footer .footer-section ul li a {
+
+    color: rgb(88, 88, 88);
+
+    color: #2f4f4f;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+.footer .footer-section ul li a:hover {
+    color: white;
+    text-decoration: none;
+
+    color: #3f10ea;
+}
+
+
+.footer .footer-section .social-icons a {
+    margin-right: 10px;
+    color: #2f4f4f;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+
+.footer .footer-section .social-icons a:hover {
+    color: #3f10ea;
+    text-decoration: none;
+}
+
+
+.footer a {
+    color: var(--soft-gold);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
+.footer-section h3 {
+    margin-bottom: 14px;
+    font-size: 28px;
+}
+
+
+/* footer section style ends */
+
+
+/* media queries */
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+
+    header {
+        padding: 2rem;
+        background-color: 003d4d;
+    }
+
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #f9f9f9;
+        /* Updated background to a softer light color */
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+
+    header #toggler:checked~.navbar {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+
+    header .navbar a {
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #ffffff;
+        /* Updated to a cleaner white */
+        border: 0.1rem solid rgba(0, 0, 0, 0.1);
+        color: var(--dark-slate);
+        /* Changed text color to Dark Slate */
+        display: block;
+    }
+
+
+    header .navbar a:hover {
+        color: var(--soft-gold);
+        /* Hover color set to Soft Gold */
+    }
+
+
+    .footer-section h3 {
+        font-size: 18px;
+    }
+
+
+    .footer a {
+        font-size: 13px;
+    }
+
+
+    .footer-section {
+        margin-bottom: 0;
+        gap: 18px;
+    }
+
+
+    .footer-bottom {
+        font-size: 12px;
+        margin: 0px;
+        margin-top: 8px;
+    }
+
+
+
+    .footer-section h3 {
+        font-size: 14px;
+    }
+
+
+    .footer a {
+        font-size: 11px;
+    }
+
+
+    .footer-section {
+        margin-bottom: 0;
+
+    }
+
+
+    .footer-bottom {
+        font-size: 10px;
+        margin: 0px;
+        margin-top: 5px;
+    }
+
+
+.navbar {
+    position: relative;
+}
+
+
+/* Footer section */
+.footer {
+    background-color: #003d4d;
+    padding-bottom: 2rem;
+}
+
+
+.footer-section h3 {
+    font-size: 2.5rem;
+}
+
+
+.footer-section ul li {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+
+.footer-section ul li a {
+    color: #000;
+}
+
+
+.footer-bottom p {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
 }

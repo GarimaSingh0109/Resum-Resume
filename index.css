@@ -1,0 +1,1091 @@
+:root {
+    --soft-teal: #003d4d;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+
+section {
+    padding: 2rem 9%;
+}
+
+
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    color: var(--dark-slate);
+    /* Dark Slate color */
+    padding: 1rem;
+    margin: 2rem 0;
+    background: var(--deep-teal);
+    /* Changed background to Deep Teal */
+}
+
+
+.heading span {
+    color: var(--soft-gold);
+    /* Soft Gold for span */
+}
+
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: var(--soft-gold);
+    /* Soft Gold button background */
+    color: var(--dark-slate);
+    /* Dark Slate text color */
+    padding: 0.9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+
+.btn:hover {
+    background: var(--deep-teal);
+    /* Deep Teal on hover */
+}
+
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #ffffff;
+    color: #fff;
+    padding: 0.9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+    background-color: #3f10ea;
+}
+
+
+.btn:hover {
+    background: var(--purple);
+    background-color: #f03c0b;
+    color: white;
+}
+
+
+.logo img {
+    width: 100px;
+    padding: 0px 6px;
+    margin-right: -14px;
+}
+
+
+
+
+.dark-mode button {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+
+
+.home .content h3 {
+    font-size: 5rem;
+    color: #333;
+    font-size: 4.5rem;
+    font-weight: 600;
+    line-height: 6rem;
+}
+
+
+/* Add more styles as needed for other elements */
+
+.home {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(images/background-home.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: floatInFromRight 2s ease-out forwards;
+    /* Image floats from right */
+}
+
+
+.home {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(images/background-home.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 110vh;
+}
+
+
+/* Dark mode styles */
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+
+.home .content {
+    max-width: 50rem;
+    opacity: 0;
+    /* Ensure the text is hidden initially */
+    animation: floatInFromTop 2s ease-out forwards;
+    /* Text floats from top */
+}
+
+
+.home .content h3,
+.home .content p,
+.home .content a {
+    opacity: 0;
+    /* Initially hidden */
+    animation: floatInFromTop 2s ease-out forwards;
+    /* Text enters from the top */
+    animation-delay: 0.5s;
+    /* Delay for a smooth entrance */
+}
+
+
+.home .content p {
+    font-size: 1.5rem;
+    color: #999;
+    padding: 1rem 0;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    color: grey;
+}
+
+
+.home .content h3 {
+    font-size: 5rem;
+    color: var(--dark-slate);
+    /* Changed from #333 to Dark Slate */
+}
+
+
+.home .content span {
+    font-size: 3.5rem;
+    color: var(--soft-gold);
+    /* Changed from var(--purple) to Soft Gold */
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+
+.home .content p {
+    font-size: 1.5rem;
+    color: #666;
+    /* Changed from #999 to a darker gray for better readability */
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+
+@keyframes floatInFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+        /* Starting position from above */
+    }
+
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        /* Final position */
+    }
+
+}
+
+
+@keyframes floatInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+        /* Starting position from the right */
+    }
+
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        /* Final position */
+    }
+
+}
+
+
+.ul{
+   padding: 0;
+   list-style: none;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   text-align: center;
+
+.ul {
+    padding: 0;
+    list-style: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+
+
+}
+
+
+.social-icons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px
+}
+
+
+.social-icons a:hover {
+    color: var(--light-grey);
+    transform: scale(1.2) translateY(-5px);
+}
+
+
+    section {
+        padding: 2rem;
+    }
+
+
+    .home {
+        background-position: left;
+    }
+
+
+}
+
+
+@media (max-width: 768px) {
+    html .fa-bars {
+        display: block;
+    }
+
+
+    .home .content h3 {
+        font-size: 5rem;
+    }
+
+
+    .home .content span {
+        font-size: 2.5rem;
+    }
+
+
+    .icons-container .icons h3 {
+        font-size: 2rem;
+    }
+
+
+    .icons-container .icons span {
+        font-size: 1.7rem;
+    }
+
+
+
+}
+
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+
+    .heading {
+        font-size: 3rem;
+    }
+
+}
+
+
+
+.tab:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: blue;
+}
+
+
+
+.tab.active {
+    color: blue;
+    font-weight: bold;
+}
+
+
+#tabs {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+}
+
+
+.tab {
+    position: relative;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 19px;
+    color: black;
+
+
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+
+.tab:hover {
+    background-color: black;
+}
+
+
+.cursor {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    background: black;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+
+/* Features section */
+.features h2 {
+    font-weight: 600;
+}
+
+
+.features-card img {
+    width: 80%;
+    height: 40%;
+    object-fit: cover;
+}
+
+
+.features-card h3 {
+    color: #003d4d;
+}
+
+
+.features-card p {
+    margin-bottom: 0;
+    color: grey;
+}
+
+
+/* testimonials features section */
+.testimonials h2 {
+    font-weight: 600;
+}
+
+
+.testimonial-card img {
+    height: 9rem;
+    width: 9rem;
+    border: 0.3rem solid white;
+}
+
+
+.testimonial-card h3 {
+    color: #003d4d;
+    font-size: 2rem;
+}
+
+
+.testimonial-card p {
+    color: grey;
+
+}
+
+.features {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+.features h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.features-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.features-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 30px);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s, z-index 0.3s;
+    position: relative;
+    z-index: 1;
+}
+
+.features-card:hover {
+    transform: translateY(-10px) scale(1.1);
+    box-shadow: 0 4px 8px #0073b1; 
+    z-index: 3;
+}
+
+.features-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.features-card h3 {
+    color: #6e65f0;
+    margin: 15px 0;
+    font-size: 22px;
+}
+
+.features-card p {
+    color: #52525a;
+    font-size: 16px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+
+.testimonials h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.testimonial-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 30px);
+    text-align: center;
+}
+
+.testimonial-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.testimonial-card h3 {
+    color:  #6e65f0;
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.testimonial-card p {
+    color: #52525a;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.features {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+/* <label for = "dark-mode-toggle" style="margin: 20px; display: block; text-align: center;"><label for="dark-mode-toggle"><input type="checkbox" id="dark-mode-toggle" />Toggle Dark Mode </label></label>.features-card {
+
+.features-card {
+    background-color: white;
+    padding : 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 30px);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s, z-index 0.3s;
+    position: relative;
+    z-index: 1;
+} */
+
+.features-card:hover {
+    transform: translateY(-10px) scale(1.1);
+    box-shadow: 0 4px 8px #0073b1;
+    z-index: 3;
+}
+
+
+ /* Features Section */
+ .features {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+  }
+
+  /* <label for = "dark-mode-toggle" style="margin: 20px; display: block; text-align: center;"><label for="dark-mode-toggle"><input type="checkbox" id="dark-mode-toggle" />Toggle Dark Mode </label></label>.features-card {
+
+    /* <label for ="dark-mode-toggle" style="margin: 20px; display: block; text-align: center;"><label for="dark-mode-toggle"><input type="checkbox" id="dark-mode-toggle" />Toggle Dark Mode </label></label> */
+
+  .features-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 30px);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s, z-index 0.3s;
+    position: relative;
+    z-index: 1;
+  }
+  */ .features-card:hover {
+    transform: translateY(-10px) scale(1.1);
+    box-shadow: 0 4px 8px #0073b1;
+    z-index: 3;
+  }
+
+  /* < !-- Features Section --><style>.features {
+
+    .features-card img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+
+        .features {
+        padding: 60px 20px;
+        background-color: #f9f9f9;
+        /* Consider changing this to a darker tone if needed 
+    } */
+
+    .features h2 {
+        text-align: center;
+        color: #333;
+        /* Consider changing this for better contrast */
+        margin-bottom: 40px;
+        font-size: 32px;
+    }
+
+    .features-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .features-card {
+        background-color: #fff;
+        /* You might want to change this to a softer off-white */
+        
+        border-radius: 18px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: calc(25% - 30px);
+        text-align: center;
+
+        transition: transform 0.3s, box-shadow 0.3s, z-index 0.3s;
+        position: relative;
+        z-index: 1;
+    }
+
+    .features-card:hover {
+        transform: translateY(-10px) scale(1.1);
+        box-shadow: 0 4px 8px #0073b1;
+        /* Consider adjusting this to match the modern minimalist theme */
+        z-index: 3;
+    }
+
+    .features-card img {
+        width: 100%;
+        /* Set the width for the icon images */
+        height: 185px;
+        /* Set the height for the icon images */
+        /* margin-bottom: 20px; */
+        border-radius: 10px 10px 0 0;
+        /* Rounded corners for the images */
+        transition: transform 0.3s ease;
+    }
+
+    .features-card:hover {
+        transform: translateY(-5px);
+        /* Slight lift effect on hover */
+    }
+
+    .features-card h3 {
+        color: var(--deep-teal);
+        /* Use the deep teal color for headings */
+        margin: 15px 0;
+        font-size: 22px;
+    }
+
+    .features-card p {
+        color: var(--dark-slate);
+        /* Use dark slate for paragraph text */
+        font-size: 16px;
+    }
+
+    /* Testimonials Section */
+    .testimonials {
+        padding: 60px 20px;
+        background-color: var(--off-white);
+        /* Use the off-white background color */
+    }
+
+    .testimonials h2 {
+        text-align: center;
+        color: var(--dark-slate);
+        /* Use dark slate for heading text */
+        margin-bottom: 40px;
+        font-size: 32px;
+    }
+
+
+    .testimonial-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+
+    .features-card h3 {
+        color: #aca7eb;
+        margin: 15px 0;
+        font-size: 22px;
+    }
+
+
+
+    .testimonial-card {
+        background-color: var(--off-white);
+        /* Use off-white for testimonial cards */
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: calc(33.33% - 30px);
+        text-align: center;
+    }
+
+    .features-card p {
+        color: #666;
+        font-size: 16px;
+    }
+
+
+    .testimonial-card img {
+        width: 80px;
+        /* Profile image width */
+        height: 80px;
+        /* Profile image height */
+        border-radius: 50%;
+        /* Circular shape for profile images */
+        margin-bottom: 20px;
+    }
+
+    .testimonial-card h3 {
+        color: var(--deep-teal);
+        /* Use deep teal for testimonial headings */
+        margin: 10px 0;
+        font-size: 20px;
+    }
+
+    .testimonial-card p {
+        color: var(--dark-slate);
+        /* Use dark slate for testimonial text */
+        font-size: 16px;
+        font-style: italic;
+        /* Italic style for testimonial text */
+    }
+
+    /* Footer Styles */
+    .footer {
+        background-color: var(--deep-teal);
+        /* Use deep teal for footer background */
+        color: #ffffff;
+        /* White text for footer */
+        padding: 40px 0;
+        padding-bottom:0;
+    }
+
+    .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        /* Max width for footer content */
+        margin: 0 auto;
+        /* Center footer content */
+        padding: 0 20px;
+    }
+
+    .footer-section {
+        flex: 1;
+        /* Flexible sections in footer */
+        margin-bottom: 20px;
+        /* Space between footer sections */
+        min-width: 200px;
+        /* Minimum width for each section */
+    }
+
+
+    .text {
+        padding-right: 20px;
+        /* Right padding for text sections */
+        max-width: 50%;
+        /* Maximum width for text sections */
+    }
+
+    .testimonial-card h3 {
+        color: #aca7eb;
+        margin: 10px 0;
+        font-size: 20px;
+    }
+
+
+
+    .image {
+        max-width: 50%;
+        /* Maximum width for image sections */
+    }
+
+    .testimonial-card p {
+        color: #666;
+        font-size: 16px;
+        font-style: italic;
+    }
+
+
+
+    .image img {
+        width: 100%;
+        /* Full width for images */
+        height: auto;
+        /* Maintain aspect ratio */
+        border-radius: 5px;
+        /* Rounded corners for images */
+    }
+
+    .footer-section h3 {
+        font-size: 18px;
+        /* Font size for section headings */
+        font-weight: 700;
+        /* Bold weight for section headings */
+        margin-bottom: 15px;
+        /* Space below section headings */
+        color: #ffffff;
+        /* White color for headings */
+    }
+
+    .footer-section ul {
+        list-style-type: none;
+        /* No bullet points for list */
+        padding: 0;
+        /* No padding for list */
+    }
+
+    .footer-section ul li {
+        margin-bottom: 8px;
+        /* Space between list items */
+    }
+
+    .footer-section ul li a {
+        color: #e0e0e0;
+        /* Light grey for links */
+        text-decoration: none;
+        /* No underline for links */
+        transition: color 0.3s ease;
+        /* Smooth transition for color change */
+    }
+
+    .footer-section ul li a:hover {
+        color: #ffffff;
+        /* White color on hover */
+        text-decoration: underline;
+        /* Underline on hover */
+    }
+
+  .features h2 {
+    text-align: center;
+    color: #333;
+    /* Consider changing this for better contrast */
+    margin-bottom: 40px;
+    font-size: 32px;
+  }
+
+  .features-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .features-card {
+    background-color: #fff;
+    /* You might want to change this to a softer off-white */
+
+    border-radius: 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 30px);
+    text-align: center;
+
+    transition: transform 0.3s, box-shadow 0.3s, z-index 0.3s;
+    position: relative;
+    z-index: 1;
+  }
+
+  .features-card:hover {
+    transform: translateY(-10px) scale(1.1);
+    box-shadow: 0 4px 8px #0073b1;
+    /* Consider adjusting this to match the modern minimalist theme */
+    z-index: 3;
+  }
+
+  .features-card img {
+    width: 100%;
+    /* Set the width for the icon images */
+    height: 185px;
+    /* Set the height for the icon images */
+    /* margin-bottom: 20px; */
+    border-radius: 10px 10px 0 0;
+    /* Rounded corners for the images */
+    transition: transform 0.3s ease;
+  }
+
+  .features-card:hover {
+    transform: translateY(-5px);
+    /* Slight lift effect on hover */
+  }
+
+  .features-card h3 {
+    color: var(--deep-teal);
+    /* Use the deep teal color for headings */
+    margin: 15px 0;
+    font-size: 22px;
+  }
+
+  .features-card p {
+    color: var(--dark-slate);
+    /* Use dark slate for paragraph text */
+    font-size: 16px;
+  }
+
+  /* Testimonials Section */
+  .testimonials {
+    padding: 60px 20px;
+    background-color: var(--off-white);
+    /* Use the off-white background color */
+  }
+
+  .testimonials h2 {
+    text-align: center;
+    color: var(--dark-slate);
+    /* Use dark slate for heading text */
+    margin-bottom: 40px;
+    font-size: 32px;
+  }
+
+  .testimonial-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .features-card h3 {
+    color: #aca7eb;
+    margin: 15px 0;
+    font-size: 22px;
+  }
+
+  .testimonial-card {
+    background-color: var(--off-white);
+    /* Use off-white for testimonial cards */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 30px);
+    text-align: center;
+  }
+
+  .features-card p {
+    color: #666;
+    font-size: 16px;
+  }
+
+  .testimonial-card img {
+    width: 80px;
+    /* Profile image width */
+    height: 80px;
+    /* Profile image height */
+    border-radius: 50%;
+    /* Circular shape for profile images */
+    margin-bottom: 20px;
+  }
+
+  .testimonial-card h3 {
+    color: var(--deep-teal);
+    /* Use deep teal for testimonial headings */
+    margin: 10px 0;
+    font-size: 20px;
+  }
+
+  .testimonial-card p {
+    color: var(--dark-slate);
+    /* Use dark slate for testimonial text */
+    font-size: 16px;
+    font-style: italic;
+    /* Italic style for testimonial text */
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      /* Stack navbar items vertically */
+      align-items: flex-start;
+      /* Align items to the start */
+    }
+
+    .navbar ul {
+      flex-direction: column;
+      /* Stack navbar links vertically */
+      gap: 10px;
+      /* Space between navbar links */
+      margin-top: 10px;
+      /* Space above navbar links */
+    }
+
+    .hero-content {
+      flex-direction: column;
+      /* Stack hero content vertically */
+    }
+
+    .hero-text {
+      padding-right: 0;
+      /* Remove right padding for hero text */
+      margin-bottom: 30px;
+      /* Space below hero text */
+    }
+
+    .features-card,
+    .testimonial-card {
+      width: 100%;
+      /* Full width for cards on small screens */
+    }
+  }
+
+  /* testimonial section */
+  .testimonials {
+    text-align: center;
+    /* Center the text for better presentation */
+    margin-top: 50px;
+    /* Add some top margin */
+  }
+
+  .testimonials h2 {
+    color: #333;
+    /* Initial text color */
+    font-size: 3rem;
+    /* Increase font size for visibility */
+    position: relative;
+    /* Required for the pseudo-element */
+    display: inline-block;
+    /* Make the element fit the content */
+    padding: 10px;
+    /* Add some padding for aesthetics */
+    transition: color 0.4s ease, transform 0.4s ease;
+    /* Smooth transition */
+    margin: 0;
+    /* Remove default margin */
+    background: linear-gradient(90deg, #ff6f61, #de8c3e);
+    /* Gradient background */
+
+    background-clip: text; /* Standard property */
+    -webkit-background-clip: text; /* Clip background to text */ /* For Safari and older versions of Chrome */
+
+    -webkit-text-fill-color: transparent;
+    /* Fill color to transparent for effect */
+  }
+
+  .testimonials h2::before {
+    content: "";
+    /* Create a pseudo-element */
+    position: absolute;
+    /* Position it absolutely */
+    left: 0;
+    right: 0;
+    bottom: 10%;
+    /* Position it just below the text */
+    height: 5px;
+    /* Set height for the underline */
+    background-color: #ff6f61;
+    /* Initial color of the underline */
+    transform: scaleX(0);
+    /* Start with no width */
+    transition: transform 0.4s ease, background-color 0.4s ease;
+    /* Smooth transition for the underline */
+  }
+
+  .testimonials h2:hover {
+    color: #ff6f61;
+    /* Change text color on hover */
+    transform: translateY(-10px) rotate(1deg);
+    /* Move the text up and slightly rotate */
+  }
+
+  .testimonials h2:hover::before {
+    transform: scaleX(1);
+    /* Scale the underline to full width */
+    background-color: #de8c3e;
+    /* Change underline color on hover */
+  }
+
+  .testimonials h2:hover {
+    box-shadow: 0 10px 30px rgba(255, 111, 97, 0.6);
+    /* Add a shadow effect on hover */
+  }
+
+
