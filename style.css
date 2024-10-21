@@ -1,6 +1,4 @@
-:root {
-    --soft-teal: #003d4d;
-}
+
 
 * {
     margin: 0;
@@ -666,11 +664,6 @@ body {
 
 .footer-section h3 {
     font-size: 2.5rem;
-}
-
-.footer-section ul li {
-    font-size: 1.5rem;
-    font-weight: 500;
 }
 
 .footer-section ul li a {
