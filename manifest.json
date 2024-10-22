@@ -1,0 +1,32 @@
+{
+  "name": "Fuzzy app",
+  "short_name": "Fuzzy app",
+  "lang": "en-US",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "white",
+  "theme_color": "#122636",
+  "description": "fuzzy app",
+  "icons": [
+    {
+      "src": "assets/images/logo/512.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    
+    {
+      "src": "assets/images/logo/512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/images/icon.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+   
+  ]
+}

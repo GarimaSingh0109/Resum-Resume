@@ -1,104 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register & Login</title>
-    <link rel="stylesheet" href="login.css" />
+    <meta name="description" content="fuzzy" />
+    <meta name="keywords" content="fuzzy" />
+    <meta name="author" content="fuzzy" />
+    <link rel="manifest" href="manifest.json" />
+    <link
+      rel="icon"
+      href="favicon.png"
+      type="image/x-icon"
+    />
+    <title>fuzzy app</title>
+    <link rel="apple-touch-icon" href="favicon.png" />
+    <meta name="theme-color" content="#122636" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="fuzzy" />
+    <meta
+      name="msapplication-TileImage"
+      content="favicon.png"
+    />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- iconsax css -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="bootstrap.min.css"
+    />
+    <!-- bootstrap css -->
+    <link
+      rel="stylesheet"
+      id="rtl-link"
+      type="text/css"
+      href="bootstrap.min.css"
+    />
+    <!-- Theme css -->
+    <link
+      rel="stylesheet"
+      id="change-link"
+      type="text/css"
+      href="Auth.css"
+    />
   </head>
-  <body>
-    <div class="container">
-      <div class="forms-container">
-        <div class="signin-signup">
-          <form action="#" class="sign-in-form">
-            <h2 class="title">Sign in</h2>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
-            </div>
-            <input type="submit" value="Login" class="btn solid" />
-            <p class="social-text">Or Sign in with social platforms</p>
-            <div class="social-media">
-        
 
-              <a href="https://github.com/YourGitHubProfile" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width="40" height="40" style="margin-left: 5px;">
-              </a>
-            </div>
-          </form>
-          <form action="#" class="sign-up-form">
-            <h2 class="title">Sign up</h2>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
-            </div>
-            <input type="submit" class="btn" value="Sign up" />
-            <p class="social-text">Or Sign up with social platforms</p>
-            <div class="social-media">
-            
-              <a href="https://github.com/YourGitHubProfile" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width="40" height="40" style="margin-left: 5px;">
-              </a>
-            </div>
-          </form>
+  <body class="auth-body">
+    <!-- login section start -->
+    <div class="auth-img">
+      <img
+        class="img-fluid auth-bg"
+        src="auth_bg.jpg"
+        alt="auth_bg"
+      />
+      <div class="auth-content">
+        <div>
+          <h2>Hello Again!</h2>
+          <h4 class="p-0">Welcome back, You have been missed!</h4>
         </div>
       </div>
-
-      <div class="panels-container">
-        <a href="index.html" class="homeBtn">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20" width="30" height="30">
-            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-          </svg>
-        </a>
-        <div class="panel left-panel">
-          <div class="content">
-            <h3>New here ?</h3>
-            <p>
-                Discover new experiences with AmbuFlow! <br>Get access to exclusive content and features. <br> Create your account.
-            </p>
-            <a href="index.html" class="homeBtn">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20" width="30" height="30">
-                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-              </svg>
-            </a>
-            <button class="btn transparent" id="sign-up-btn">
-              Sign up
-            </button>
-          </div>
-          <img src="img/log.svg" class="image" alt="" />
-        </div>
-        <div class="panel right-panel">
-          
-          <div class="content">
-            
-            <h3>One of us ?</h3>
-            <p>
-                Welcome to our community
-            </p>
-            <button class="btn transparent" id="sign-in-btn">
-              Sign in
-            </button>
-            
-          </div>
-          <img src="img/register.svg" class="image" alt="" />
-        </div>
-        
-      </div>
-      
     </div>
-    <script src="login.js"></script>
+
+    <form id="loginForm" class="auth-form" target="_blank">
+      <div class="custom-container">
+        <div class="form-group">
+          <label for="inputusername" class="form-label">Email</label>
+          <div class="form-input mb-4">
+            <input
+              style="color: white"
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Enter Your Email"
+            />
+            <i class="iconsax icons" data-icon="mail"></i>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="inputPassword" class="form-label">Password</label>
+          <div class="form-input">
+            <input
+              style="color: aliceblue"
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder="Enter Your Password"
+            />
+            <i class="iconsax icons" data-icon="key"></i>
+          </div>
+        </div>
+        <div class="option mt-3">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="flexCheckDefault"
+            />
+            <label class="form-check-label" for="flexCheckDefault"
+              >Remember me</label
+            >
+          </div>
+          <a class="forgot" href="forgot-password.html">Forgot password?</a>
+        </div>
+
+        <div class="submit-btn">
+          <a
+            href="landing.html"
+            class="btn auth-btn w-100"
+            style="color: rgb(13, 12, 12); font-weight: 700"
+            type="submit"
+            id="login_btn"
+            >Login</a
+          >
+        </div>
+        <div class="division">
+          <span>OR</span>
+        </div>
+
+        <ul class="social-media">
+          <li>
+            <a href="https://www.facebook.com/login/" target="_blank">
+              <img
+                class="img-fluid icons"
+                src="facebook.svg"
+                alt="facebook"
+              />
+            </a>
+          </li>
+          <li id="googlelog">
+            <a target="_blank">
+              <img
+                class="img-fluid icons"
+                src="google.svg"
+                alt="Google"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.apple.com/in/" target="_blank" id="applelog">
+              <img
+                class="img-fluid icons"
+                src="apple.svg"
+                alt="Apple"
+              />
+            </a>
+          </li>
+        </ul>
+
+        <h4 class="signup">
+          Don’t have an account ?<a href="create-account.html"> Sign up</a>
+        </h4>
+      </div>
+    </form>
   </body>
+  <script src="assets/js/index.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="firebase.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/homescreen-popup.js"></script>
+
+  <!-- Sweetalert CDN for Popup -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"
+    integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script> -->
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script> -->
+
+  <!-- Our script must be loaded after firebase references -->
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
+    import {
+      getAuth,
+      signInWithEmailAndPassword,
+      signInWithPopup,
+      GoogleAuthProvider,
+      signInWithRedirect
+      // onAuthStateChanged
+    } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyBfaKgDgfXKqn8QUWYZfBTOJ87bnc0o0TQ",
+      authDomain: "fuzzy-2414a.firebaseapp.com",
+      projectId: "fuzzy-2414a",
+      storageBucket: "fuzzy-2414a.appspot.com",
+      messagingSenderId: "93043591842",
+      appId: "1:93043591842:web:655dc3a677a1880e35a5fb",
+      measurementId: "G-39MSVLK2KJ",
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const secondAuth = getAuth();
+    const googleProvider = new GoogleAuthProvider();
+
+    document.getElementById("login_btn").addEventListener("click", (e) => {
+      e.preventDefault();
+
+      login();
+    });
+
+    const login = () => {
+      let email = document.getElementById("email").value;
+      let password = document.getElementById("password").value;
+
+      //  Validate Form Inputs
+      if (email.trim() === "" || password.trim() === "") {
+        swal("Enter Credentials", "All Inputs Field are required", "info");
+      } else {
+        signInWithEmailAndPassword(auth, email, password)
+          .then((UserCredential) => {
+            if (UserCredential) {
+              window.location.replace("landing.html");
+            }
+          })
+          .catch((err) => {
+            if (
+              err.code === "auth/invalid-login-credentials" ||
+              err.code === "auth/user-not-found"
+            ) {
+              // Handle invalid login credentials
+              swal({
+                title: "Error",
+                text: "Invalid email or password",
+                icon: "error",
+              });
+            } else if (err.code === "auth/invalid-email") {
+              swal({
+                title: "Error",
+                text: "Invalid email address",
+                icon: "error",
+              });
+            } else {
+              // Handle other errors
+              swal({
+                title: "Error",
+                text: `${err.code}`,
+                icon: "error",
+              });
+            }
+          });
+      }
+    };
+
+    document.getElementById("googlelog").addEventListener("click", () => {
+      signInWithPopup(auth, googleProvider)
+        .then((result) => {
+          if(!result){
+          swal('Invalid Email','User with this email does not exist.', 'error');
+          } else {
+            window.location.replace("landing.html");
+          }
+
+        })
+        .catch((error) => {
+          if (error.code === "auth/internal-error") {
+            swal(
+              "Error Occured",
+              "please check your internet connection",
+              "error"
+            );
+          } else if (error.code === "auth/popup-blocked") {
+            // Popup was blocked, inform the user
+            swal("Popup blocked", "Please enable popups for this site.", 'error');
+          } else {
+            // Handle other errors
+            swal('Error', `${error.code}`, 'error')
+          }
+        });
+    });
+
+
+  </script>
 </html>
