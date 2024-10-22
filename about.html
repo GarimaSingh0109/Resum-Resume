@@ -414,22 +414,29 @@ body {
       </script>
 
    <!-- Navbar -->
-   <nav class="navbar">
-    <img src="images/logo.png" alt="logo">
-    <h1>Resum Resume</h1>
     <nav class="navbar">
-        <div class="tabs-container"></div>
+        <img src="images/logo.png" alt="logo">
         <a class="tab" href="index.html">Home</a>
         <a class="tab" href="about.html">About</a>
         <a class="tab" href="resume.html">Build Resume</a>
         <a class="tab" href="resume_tips.html">Resume Tips</a>
         <a class="tab" href="signup.html">Sign Up</a>
         <a class="tab" href="login.html">Login</a>
-        <a class="tab" href="privacypolicy.html">Privacy Policy</a>
         </div>
     </nav>
-    
-</nav>
+    <!-- navbar styling -->
+    <style> 
+        .navbar{
+            padding-left: 7rem;
+            padding-right: 7rem;
+        }
+        .tab{
+            color: white;
+            font-size: 2rem;
+        }
+    </style>
+
+    <!-- main section  -->
     <div class="panel-1">
         <div class="about">
             <h1>About</h1>
@@ -524,7 +531,27 @@ body {
           <p>&copy; 2024 Resume Builder. All rights reserved.</p>
         </div>
       </footer>
-
+      <style>
+        .footer-section{
+            display: flex;
+            justify-content: left;
+            flex-direction: column;
+        }
+        .ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+        }
+        li{
+            text-align: left;
+        }
+        .footer a{
+            color: white;
+        }
+        .footer p{
+            margin-top: 2rem;
+        }
+      </style>
     <script>
         const toggler = document.getElementById("toggler");
         const body = document.body;
