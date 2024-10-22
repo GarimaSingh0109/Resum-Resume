@@ -337,13 +337,14 @@ body {
     padding-bottom: 5rem;
 }
 .about h1{
-    font-size: 4rem;
+    font-size: 5rem;
     margin-bottom: 1rem;
     font-weight: 600;
 }
 .about p{
     width: 70%;
     font-size: 1.8rem;
+    font-style: italic;
 }
 .cards{
     width: 100%;
@@ -357,9 +358,16 @@ body {
     padding: 2rem;
     border-radius: 2rem;
     background-color: #f8f9fa;
+    transition: all;
+    transition-duration: 1s;
+    transition-delay: 0s;
+   
 }
 .card:hover{
     scale: 105%;
+    transform: scale(1.02);
+    box-shadow: 2px 3px 4px 4px rgb(51, 9, 88);
+
 }
 .card h2{
     font-size: 2.8rem;
@@ -432,7 +440,7 @@ body {
 </nav>
     <div class="panel-1">
         <div class="about">
-            <h1>About</h1>
+            <h1 style="color: #4c0359;">About</h1>
             <p>LinkedIn Resume Builder simplifies your job search by converting your LinkedIn profile into a professional resume. In just a few clicks, you can generate a polished resume from your profile, saving time and effort. With accurate data and a selection of professional templates, it’s the easiest way to create a standout resume quickly and efficiently.</p>
         </div>
         <div class="cards">
