@@ -10,7 +10,7 @@ const nextstep1 = document.querySelector('#next-step');
 const nextstep2 = document.querySelector('#next-step-2');
 const prevstep2 = document.querySelector('#prev-step-2');
 const prevstep3 = document.querySelector('#prev-step-3');
-
+let selecttemp = 0;
 
 // Dynamically adding more Education sections
 document.getElementById('add-education').addEventListener('click', function() {
@@ -121,9 +121,10 @@ document.getElementById('next-step').addEventListener('click', function() {
     const email = document.getElementById('email').value.trim();
     const contact = document.getElementById('contact').value.trim();
     const location = document.getElementById('location').value.trim();
+    const skills = document.getElementById('skills_input').value.trim();
     const stepone = document.querySelector('.form-container')
 
-    if (!name || !profile || !email || !contact || !location) {
+    if (!name || !profile || !email || !contact || !location || !skills) {
         alert('Please fill out all required fields in Step 1.');
         return;
     }
@@ -142,16 +143,19 @@ basicCard.addEventListener('click',()=>{
     basicCard.style.backgroundColor = '#ADD8E6';
     classicCard.style.backgroundColor = '#f4f4f4';
     modernCard.style.backgroundColor = '#f4f4f4';
+    selecttemp = 1;
 });
 classicCard.addEventListener('click',()=>{
     basicCard.style.backgroundColor = '#f4f4f4';
     classicCard.style.backgroundColor = '#ADD8E6';
     modernCard.style.backgroundColor = '#f4f4f4';
+    selecttemp = 2;
 });
 modernCard.addEventListener('click',()=>{
     basicCard.style.backgroundColor = '#f4f4f4';
     classicCard.style.backgroundColor = '#f4f4f4';
     modernCard.style.backgroundColor = '#ADD8E6';
+    selecttemp = 3;
 });
 
 // Handle previous step button for Step 2
@@ -177,13 +181,13 @@ document.getElementById('next-step-2').addEventListener('click', function() {
     const email = document.getElementById('email').value.trim();
     const contact = document.getElementById('contact').value.trim();
     const location = document.getElementById('location').value.trim();
-
+    const skills = document.getElementById('skills_input').value.trim();
     const educationEntries = collectEducationData();
     const experienceEntries = collectExperienceData();
     const projectEntries = collectProjectData();
 
     // Generate resume HTML based on the selected template
-    const resumeContent = generateResumeHTML(name, profile, email, contact, location, educationEntries, experienceEntries, projectEntries, selectedTemplate);
+    const resumeContent = generateResumeHTML(name, profile, email, contact, location, educationEntries, skills, experienceEntries, projectEntries, selectedTemplate);
     
     document.getElementById('resume-display').innerHTML = resumeContent;
     step2p.querySelector('.circle').textContent = '✓';
@@ -199,6 +203,7 @@ function collectResumeData() {
     const email = document.getElementById('email').value.trim();
     const contact = document.getElementById('contact').value.trim();
     const location = document.getElementById('location').value.trim();
+    const skills = document.getElementById('skills_input').value.trim();
     const education = collectEducationData();
     const experience = collectExperienceData();
     const projects = collectProjectData();
@@ -210,6 +215,7 @@ function collectResumeData() {
         contact,
         location,
         education,
+        skills,
         experience,
         projects,
         template: selectedTemplate
@@ -247,7 +253,7 @@ function collectProjectData() {
 }
 
 // Function to generate resume HTML based on selected template
-function generateResumeHTML(name, profile, email, contact, location, educationEntries, experienceEntries, projectEntries, template) {
+function generateResumeHTML(name, profile, email, contact, location, educationEntries, skills, experienceEntries, projectEntries, template) {
     let educationHTML = educationEntries.map(edu => `
         <div>
             <strong>${edu.institute}</strong> (${edu.startYear} - ${edu.endYear})<br>
@@ -272,10 +278,14 @@ function generateResumeHTML(name, profile, email, contact, location, educationEn
         </div>
     `).join('');
 
+        // which template will show in review logic
+if(selecttemp === 1){
     return `
         <h1>${name}</h1>
         <p>${profile}</p>
         <p>Email: ${email} | Contact: ${contact} | Location: ${location}</p>
+        <br>
+        <p><b>Skills:</b> ${skills}</>
         <h2>Education</h2>
         ${educationHTML}
         <h2>Experience</h2>
@@ -284,6 +294,142 @@ function generateResumeHTML(name, profile, email, contact, location, educationEn
         ${projectHTML}
     `;
 }
+else if(selecttemp === 2){
+    return `
+        <div class="resume classic">
+        <h1 id="name">${name}</h1>
+        <div class="resumemain">
+            <div class="resumeleft">
+                <p id="profile">${profile}</p>
+                <h2>Contact Information</h2>
+                <p>Email: <span id="email">${email}</span></p>
+                <p>Contact No: <span id="contact">${contact}</span></p>
+                <p>Location: <span id="location">${location}</span></p>
+                <h2>Skills</h2>
+                <p id="skills">${skills}</p>
+                <h2>Education</h2>
+                <div id="education">
+                ${educationHTML}
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="resumeright">
+                <h2>Experience</h2>
+                <div id="experience">
+                ${experienceHTML}
+                </div>
+        
+                <h2>Achievements and Certifications</h2>
+                <div id="achievements">
+                    <!-- Achievements data will be filled here -->
+                </div>
+        
+                <h2>Projects</h2>
+                <div id="projects">
+                ${projectHTML}
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+    #profile{
+        height: auto;
+    }
+    #resume-display h2{
+        margin: 0px 0 5px;
+    }
+    .classic{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .resume.classic{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+    }
+    .resumemain{
+        display: flex;
+        justify-content: space-between;
+    }
+    .resumeleft{
+        width: 40%;
+    }
+    .resumeright{
+        width: 40%;
+    }
+    .line{
+        height: 100%;
+        width: 3px;
+        background-color: gray;
+    }
+    </style>
+    `;
+}
+else if(selecttemp ===3){
+    return `
+    <div class="resume modern">
+        <h1 id="name">${name}</h1>
+        <p id="profile">${profile}</p>
+        <h2>Contact Information</h2>
+        <p><i class="fa-solid fa-envelope"></i> Email: <span id="email">${email}</span></p>
+        <p><i class="fa-solid fa-address-book"></i> Contact No: <span id="contact">${contact}</span></p>
+        <p><i class="fa-solid fa-location-dot"></i> Location: <span id="location">${location}</span></p>
+        
+        <h2>Education</h2>
+        <div id="education">
+        ${educationHTML}
+        </div>
+
+        <h2>Skills</h2>
+        <p id="skills">${skills}</p>
+
+        <h2>Experience</h2>
+        <div id="experience">
+        ${experienceHTML}
+        </div>
+
+        <h2>Achievements and Certifications</h2>
+        <div id="achievements">
+            <!-- Achievements data will be filled here -->
+        </div>
+
+        <h2>Projects</h2>
+        <div id="projects">
+        ${projectHTML}
+        </div>
+    </div>
+    <style>
+        h1, h2 {
+            color: #333;
+        }
+
+        h1 {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            margin-top: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+        #profile{
+            height: auto;
+        }
+        #resume-display h2{
+            margin: 0px 0 5px;
+        }
+    </style>
+    `;
+}
+    
+}
+    
 
 // Review resume on Step 3
 document.getElementById('prev-step-3').addEventListener('click', function() {
@@ -317,11 +463,3 @@ document.getElementById('download-resume').addEventListener('click', function() 
 document.getElementById('reset').addEventListener('click', function() {
     location.reload();
 });
-
-
-// nextstep1.addEventListener('click',()=>{
-//     step1p.classList.remove('active')
-//     step1p.classList.add('completed');
-//     step2p.classList.add('active');
-//     console.log("click")
-// });
