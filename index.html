@@ -48,14 +48,52 @@
             transition: transform 0.3s, box-shadow 0.3s, z-index 0.3s;
             position: relative;
             z-index: 1;
+           
         }
+        
 
         .features-card:hover {
             transform: translateY(-10px) scale(1.1);
             box-shadow: 0 4px 8px #0073b1; 
             z-index: 3;
+            animation-name: cardani;
+            animation-duration: 1s;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            border: 2px solid red;
         }
+        @keyframes cardani {
+          10%{
+            border-color: #ff6f61;
+          }
+          20%{
+            border-color: #de8c3e;
+          }
+          30%{
+            border-color: brown;
+          }
+          40%{
+            border-color: aqua;
+          }
 
+          50%{
+            border-color: chartreuse;
+          }
+          60%{
+            border-color: burlywood;
+          }
+          70%{
+            border-color: red;
+          }
+
+          80%{
+            border-color: blue;
+          }
+
+          90%{
+            border-color: black;
+          }
+        }
         .features-card img {
             width: 60px;
             height: 60px;
@@ -267,7 +305,44 @@
         transform: translateY(-10px) scale(1.1);
         box-shadow: 0 4px 8px #0073b1;
         z-index: 3;
+        border: 2px solid grey;
+        animation-name: cardanii;
+        animation-duration: 2s;
+        animation-delay:0s;
+        animation-iteration-count: infinite;
       }
+      @keyframes cardanii {
+          10%{
+            border-color: #ff6f61;
+          }
+          20%{
+            border-color: #de8c3e;
+          }
+          30%{
+            border-color: brown;
+          }
+          40%{
+            border-color: aqua;
+          }
+
+          50%{
+            border-color: chartreuse;
+          }
+          60%{
+            border-color: burlywood;
+          }
+          70%{
+            border-color: red;
+          }
+
+          80%{
+            border-color: blue;
+          }
+
+          90%{
+            border-color: black;
+          }
+        }
 
       /* < !-- Features Section --><style>.features {
 
@@ -852,6 +927,9 @@
             height: 100%;
             background-color: #3f10ea;
         }
+        #resumec{
+          columns: rgb(20, 198, 8);
+        }
       
     </style>
   </head>
@@ -884,7 +962,7 @@
     <!-- home section starts -->
     <section class="home" id="Home">
         <div class="content">
-            <h3>Build Your Resume in Seconds from LinkedIn</h3>
+            <h3 id="resumec">Build Your Resume in Seconds from LinkedIn</h3>
             <p>Easily generate a professional resume using your LinkedIn profile. Select a template, enter your LinkedIn URL,
                 and get a downloadable resume in a few clicks. Save time and create a resume that stands out.</p>
             <a href="signup.html" class="btn">Get Started</a>
