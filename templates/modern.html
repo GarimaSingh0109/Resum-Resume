@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="templates.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Modern Template</title>
 </head>
 <body>
@@ -11,9 +12,9 @@
         <h1 id="name">[Name]</h1>
         <p id="profile">[Profile]</p>
         <h2>Contact Information</h2>
-        <p>Email: <span id="email">[Email]</span></p>
-        <p>Contact No: <span id="contact">[Contact]</span></p>
-        <p>Location: <span id="location">[Location]</span></p>
+        <p><i class="fa-solid fa-envelope"></i> Email: <span id="email">[Email]</span></p>
+        <p><i class="fa-solid fa-address-book"></i> Contact No: <span id="contact">[Contact]</span></p>
+        <p><i class="fa-solid fa-location-dot"></i> Location: <span id="location">[Location]</span></p>
         
         <h2>Education</h2>
         <div id="education">
@@ -38,5 +39,42 @@
             <!-- Projects data will be filled here -->
         </div>
     </div>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+
+        .resume {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        h1 {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            margin-top: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+        .modern {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </body>
 </html>

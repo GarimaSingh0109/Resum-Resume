@@ -148,6 +148,9 @@ body {
 #languages-input{
     width: 40%;
 }
+#skills_input{
+    width: 40%;
+}
 h2, h3 {
     color: #333;
 }
