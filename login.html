@@ -1,104 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register & Login</title>
-    <link rel="stylesheet" href="login.css" />
 
-  </head>
-  <body>
-    <div class="container">
-      <div class="forms-container">
-        <div class="signin-signup">
-          <form action="#" class="sign-in-form">
-            <h2 class="title">Sign in</h2>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
-            </div>
-            <input type="submit" value="Login" class="btn solid" />
-            <p class="social-text">Or Sign in with social platforms</p>
-            <div class="social-media">
-        
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - LinkedIn Resume Builder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="images/favicon-removebg-preview.png">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Add any additional styles specific to the login page */
+    .container {
+      max-width: 600px;
+      /* Increased width */
+      margin-top: 50px;
+    }
+  </style>
+</head>
 
-              <a href="https://github.com/YourGitHubProfile" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width="40" height="40" style="margin-left: 5px;">
-              </a>
-            </div>
-          </form>
-          <form action="#" class="sign-up-form">
-            <h2 class="title">Sign up</h2>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
-            </div>
-            <input type="submit" class="btn" value="Sign up" />
-            <p class="social-text">Or Sign up with social platforms</p>
-            <div class="social-media">
-            
-              <a href="https://github.com/YourGitHubProfile" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width="40" height="40" style="margin-left: 5px;">
-              </a>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <div class="panels-container">
-        <a href="index.html" class="homeBtn">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20" width="30" height="30">
-            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-          </svg>
-        </a>
-        <div class="panel left-panel">
-          <div class="content">
-            <h3>New here ?</h3>
-            <p>
-                Discover new experiences with AmbuFlow! <br>Get access to exclusive content and features. <br> Create your account.
-            </p>
-            <a href="index.html" class="homeBtn">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20" width="30" height="30">
-                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-              </svg>
-            </a>
-            <button class="btn transparent" id="sign-up-btn">
-              Sign up
-            </button>
-          </div>
-          <img src="img/log.svg" class="image" alt="" />
-        </div>
-        <div class="panel right-panel">
-          
-          <div class="content">
-            
-            <h3>One of us ?</h3>
-            <p>
-                Welcome to our community
-            </p>
-            <button class="btn transparent" id="sign-in-btn">
-              Sign in
-            </button>
-            
-          </div>
-          <img src="img/register.svg" class="image" alt="" />
-        </div>
-        
-      </div>
-      
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Resum Resume</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="resume.html">Build Resume</a></li>
+        <li class="nav-item"><a class="nav-link" href="signup.html">Sign Up</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+      </ul>
     </div>
-    <script src="login.js"></script>
-  </body>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8"> <!-- Adjusted column width -->
+        <div class="card shadow">
+          <div class="card-body">
+            <h2 class="text-center mb-4">Login to Your Account</h2>
+            <form id="loginForm" action="#" method="POST">
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email Address" required>
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" placeholder="Password" required>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Login</button>
+            </form>
+            <button class="btn btn-link btn-block" onclick="window.location.href='signup.html'">Create an
+              Account</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer mt-5">
+    <!-- Footer content (same as in signup.html) -->
+  </footer>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      // Add login form submission logic here
+      console.log('Login form submitted');
+    });
+  </script>
+</body>
+
 </html>
