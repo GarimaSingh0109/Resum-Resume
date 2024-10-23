@@ -319,9 +319,3 @@ document.getElementById('reset').addEventListener('click', function() {
 });
 
 
-// nextstep1.addEventListener('click',()=>{
-//     step1p.classList.remove('active')
-//     step1p.classList.add('completed');
-//     step2p.classList.add('active');
-//     console.log("click")
-// });
