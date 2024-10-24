@@ -23,7 +23,9 @@ const expbtn = document.querySelector('#add-experience');
 expfield.style.display = 'none';
 expbtn.style.display = 'none';
 const achive = document.querySelector('.achive');
+const achivebtm = document.querySelector('#add-achivement');
 achive.style.display = 'none';
+achivebtm.style.display = 'none';
 const projfield = document.querySelector('#project-fields');
 const projbtn = document.querySelector('#add-project');
 projfield.style.display = 'none';
@@ -82,10 +84,12 @@ caret4.addEventListener('click',()=>{
 caret5.addEventListener('click',()=>{
     if(achive.style.display === 'none'){
         achive.style.display = '';
+        achivebtm.style.display = '';
         caret5.style.transform = 'rotate(180deg)';
     }
     else{
         achive.style.display = 'none';
+        achivebtm.style.display = 'none';
         caret5.style.transform = 'rotate(0)';
     }
 })

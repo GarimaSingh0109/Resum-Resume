@@ -62,6 +62,23 @@ document.getElementById('add-experience').addEventListener('click', function() {
     `;
     experienceFields.appendChild(newExperience);
 });
+// Dynamically adding more Achivements sections
+document.getElementById('add-achivement').addEventListener('click', function() {
+    const achiveFields = document.querySelector('.achive');
+    const newAchive = document.createElement('div');
+    newAchive.classList.add('achive-entry');
+    newAchive.innerHTML = `
+    <div class="achiveLeft">
+        <label>Heading:</label>
+        <input type="text" placeholder="e.g., Best Employee of the Year">
+    </div>
+    <div class="achiveRight">
+        <label>Description:</label>
+        <textarea placeholder="Describe your achievement or certification"></textarea>
+    </div>
+    `;
+    achiveFields.appendChild(newAchive);
+});
 
 // Dynamically adding more Projects
 document.getElementById('add-project').addEventListener('click', function() {
@@ -181,9 +198,10 @@ document.getElementById('next-step-2').addEventListener('click', function() {
     const educationEntries = collectEducationData();
     const experienceEntries = collectExperienceData();
     const projectEntries = collectProjectData();
+    const achiveEntries = collectAchiveData();
 
     // Generate resume HTML based on the selected template
-    const resumeContent = generateResumeHTML(name, profile, email, contact, location, educationEntries, experienceEntries, projectEntries, selectedTemplate);
+    const resumeContent = generateResumeHTML(name, profile, email, contact, location, educationEntries, experienceEntries, projectEntries, achiveEntries, selectedTemplate);
     
     document.getElementById('resume-display').innerHTML = resumeContent;
     step2p.querySelector('.circle').textContent = '✓';
@@ -202,6 +220,7 @@ function collectResumeData() {
     const education = collectEducationData();
     const experience = collectExperienceData();
     const projects = collectProjectData();
+    const achive = collectAchiveData();
     
     return {
         name,
@@ -212,11 +231,12 @@ function collectResumeData() {
         education,
         experience,
         projects,
+        achive,
         template: selectedTemplate
     };
 }
 
-// Functions to collect education, experience, and project data
+// Functions to collect education, experience, project and achievement data
 function collectEducationData() {
     return Array.from(document.querySelectorAll('.education-entry')).map(entry => ({
         institute: entry.querySelector('input[placeholder="Enter institute name"]').value,
@@ -246,8 +266,15 @@ function collectProjectData() {
     }));
 }
 
+function collectAchiveData() {
+    return Array.from(document.querySelectorAll('.achive-entry')).map(entry => ({
+        title: entry.querySelector('input[placeholder="e.g., Best Employee of the Year"]').value,
+        description: entry.querySelector('textarea[placeholder="Describe your achievement or certification"]').value,
+    }));
+}
+
 // Function to generate resume HTML based on selected template
-function generateResumeHTML(name, profile, email, contact, location, educationEntries, experienceEntries, projectEntries, template) {
+function generateResumeHTML(name, profile, email, contact, location, educationEntries, experienceEntries, projectEntries, achiveEntries, template) {
     let educationHTML = educationEntries.map(edu => `
         <div>
             <strong>${edu.institute}</strong> (${edu.startYear} - ${edu.endYear})<br>
@@ -272,6 +299,13 @@ function generateResumeHTML(name, profile, email, contact, location, educationEn
         </div>
     `).join('');
 
+    let achiveHTML = achiveEntries.map(achi=>`
+    <div>
+        <strong>${achi.title}</strong><br>
+        <p>${achi.description}</p>
+    </div>
+    `).join('');
+
     return `
         <h1>${name}</h1>
         <p>${profile}</p>
@@ -282,6 +316,8 @@ function generateResumeHTML(name, profile, email, contact, location, educationEn
         ${experienceHTML}
         <h2>Projects</h2>
         ${projectHTML}
+        <h2>Achivements and Certifications</h2>
+        ${achiveHTML}
     `;
 }
 
