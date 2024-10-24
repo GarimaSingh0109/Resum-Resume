@@ -83,13 +83,52 @@ header {
     left: 0;
     right: 0;
     background: var(--soft-teal);
-    /*Changed background to Deep Teal */
-    padding: 2rem 9%;
+    padding: 1.5rem 9%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);/
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 2.5rem;
+    font-family: 'Poppins', sans-serif;
+    color: var(--off-white);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+header .navbar {
+    display: flex;
+    align-items: center;
+}
+
+header .navbar a {
+    font-size: 1.7rem;
+    padding: 0.5rem 1.5rem;
+    color: var(--off-white);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+header .navbar a:hover {
+    color: var(--soft-gold);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+header .icons a {
+    font-size: 2.2rem;
+    color: var(--off-white);
+    margin-left: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+header .icons a:hover {
+    color: var(--soft-gold);
+    transform: scale(1.1);
 }
 
 header .logo {
