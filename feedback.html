@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      :root {
+        --bg-color: hsl(230, 58%, 93%);
+        --primary-color: hsl(230, 58%, 30%);
+        --secondary-color: hsl(232, 47%, 50%);
+        --accent-color-1: hsl(230, 58%, 75%);
+        --accent-color-2: hsl(210, 66.7%, 98.8%);
+      }
+      /* Updated Star Rating Styles */
+      .star-rating {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center; /* Center the stars horizontally */
+        align-items: center; /* Center the stars vertically if needed */
+        margin: 0 auto; /* Ensure it doesn't shift due to outer spacing */
+      }
+
+      .star-rating input {
+        display: none;
+      }
+
+      .star-rating label {
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
+        background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%23ffffff" stroke="%23000000" stroke-width="1" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+      }
+
+      .star-rating label:hover,
+      .star-rating label:hover ~ label,
+      .star-rating input:checked ~ label {
+        background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%23ffff00" stroke="%23000000" stroke-width="1" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>');
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #fafcfe;
+        color: var(--primary-color);
+      }
+      .content {
+        max-width: 1200px;
+        margin: 40px auto; /* Keep vertical margin for spacing from header and footer */
+        padding: 40px; /* Add significant padding inside the content area */
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 6px rgba(53, 46, 46, 0.285);
+        position: relative;
+      }
+      .feedback-header {
+        background-color: transparent; /* Remove the dark background */
+        position: relative;
+        padding: 10px 20px;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .feedback-header h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+      .feedback-header img {
+        max-width: 100%;
+        height: auto;
+        z-index: -1;
+        max-height: 500px; /* Adjust as needed */
+        object-fit: cover;
+        margin-bottom: 20px;
+      }
+      .feedback-header,
+      .feedback-header img {
+        border: none !important;
+        border-bottom: none !important;
+        text-decoration: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+      }
+
+      main {
+        padding: 20px;
+      }
+      h2 {
+        font-size: 18px;
+        color: var(--secondary-color);
+        margin: 20px 0;
+      }
+      .tickmarks {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+        width: 100%; /* Ensure tick marks take the full width of the container */
+      }
+
+      .tickmarks span {
+        display: inline-block;
+        padding: 8px 12px;
+        border: 2px solid #007bff; /* Border color for the circle */
+        border-radius: 30%; /* Make the span circular */
+        background-color: transparent;
+        color: #007bff;
+        font-weight: bold;
+        transition: transform 0.3s ease, background-color 0.3s ease,
+          color 0.3s ease;
+        cursor: pointer;
+      }
+
+      /* Hover effect */
+      .tickmarks span:hover {
+        transform: scale(1.5); /* Make the span larger when hovered */
+        background-color: #007bff;
+        color: white; /* Change text color on hover */
+      }
+
+      input[type="range"] {
+        width: 100%;
+        margin: 10px 0;
+      }
+      textarea {
+        width: 100%;
+        height: 100px;
+        margin: 10px 0;
+        padding: 10px;
+        border: 1px solid var(--bg-color);
+      }
+      select {
+        margin: 5px 0;
+        padding: 5px;
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+      button:hover {
+        background-color: var(--secondary-color);
+      }
+      @media (min-width: 768px) {
+        .content {
+          flex-direction: row;
+        }
+        header,
+        main {
+          flex: 1;
+        }
+        .center-select {
+          display: flex;
+          justify-content: center; /* Centers the selects horizontally */
+          align-items: center; /* Vertically centers them if the container has a height */
+          gap: 10px; /* Optional: Adds some space between the selects */
+        }
+      }
+
+      /* Hover effects for images in the feedback header */
+      .feedback-header img {
+        transition: transform 0.3s ease, filter 0.3s ease;
+      }
+
+      .feedback-header img:hover {
+        transform: scale(1.05);
+        filter: brightness(1.1);
+      }
+
+      /* Hover effect for the content div */
+      .content {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .content:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Hover effect for form fields */
+      /* General Input and Select Styles */
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      textarea,
+      select,
+      input[type="range"] {
+        transition: transform 0.3s ease, border 0.3s ease,
+          background-color 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      input[type="text"]:hover,
+      input[type="email"]:hover,
+      input[type="number"]:hover,
+      textarea:hover,
+      select:hover,
+      input[type="range"]:hover {
+        transform: scale(1.02);
+        border: 2px solid #007bff;
+        background-color: #f0f8ff;
+        box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+      }
+
+      /* Focus styles */
+      input[type="text"]:focus,
+      input[type="email"]:focus,
+      input[type="number"]:focus,
+      textarea:focus,
+      select:focus,
+      input[type="range"]:focus {
+        border: 2px solid #0056b3;
+        outline: none;
+        box-shadow: 0 0 8px rgba(0, 86, 179, 0.3);
+      }
+
+      /* Hover effect for star rating */
+      .star-rating label {
+        transition: color 0.3s ease, transform 0.3s ease, filter 0.3s ease;
+      }
+
+      .star-rating label:hover,
+      .star-rating label:hover ~ label {
+        color: #ffb400;
+        transform: scale(1.2);
+        filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.1));
+      }
+
+      /* Hover effect for the feedback button */
+      #feedback-btn {
+        transition: background-color 0.3s ease, transform 0.3s ease,
+          box-shadow 0.3s ease;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+        text-transform: uppercase;
+      }
+
+      #feedback-btn:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 86, 179, 0.3);
+      }
+
+      #feedback-btn:active {
+        transform: scale(1);
+        box-shadow: 0 2px 6px rgba(0, 86, 179, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <header class="feedback-header">
+        
+        <img src="feedbackformimg.jpeg"/>
+      </header>
+      <main>
+        <form id="feedbackForm">
+          <h2>How would you rate your overall experience?</h2>
+          <div class="star-rating">
+            <input type="radio" id="star5" name="rating" value="5" /><label
+              for="star5"
+              title="5 stars"
+            ></label>
+            <input type="radio" id="star4" name="rating" value="4" /><label
+              for="star4"
+              title="4 stars"
+            ></label>
+            <input type="radio" id="star3" name="rating" value="3" /><label
+              for="star3"
+              title="3 stars"
+            ></label>
+            <input type="radio" id="star2" name="rating" value="2" /><label
+              for="star2"
+              title="2 stars"
+            ></label>
+            <input type="radio" id="star1" name="rating" value="1" /><label
+              for="star1"
+              title="1 star"
+            ></label>
+          </div>
+          <h2>
+            How satisfied are you overall with the support of our website?
+          </h2>
+          <div class="tickmarks">
+            <span>0</span>
+            <span>2</span>
+            <span>4</span>
+            <span>6</span>
+            <span>8</span>
+            <span>10</span>
+          </div>
+          <input type="range" id="score" min="0" max="10" value="5" />
+          <textarea
+            id="comment"
+            placeholder="Please tell us your reasons for giving this score here..."
+          ></textarea>
+          <h2>When did you start using our learning platform?</h2>
+          <select id="month">
+            <option value="">Month</option>
+            <option value="1">January</option>
+            <option value="2">February</option>
+            <option value="3">March</option>
+            <option value="4">April</option>
+            <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+            <!-- Add other months -->
+          </select>
+          <select id="year">
+            <option value="">Year</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <!-- Add other years -->
+          </select>
+          <button type="submit" id="feedback-btn">Send Feedback</button>
+        </form>
+      </main>
+    </div>
+
+    <script>
+      document
+        .getElementById("feedbackForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent form submission
+
+          // Get values from the form
+          const rating = document.querySelector(
+            'input[name="rating"]:checked'
+          )?.value;
+          const score = document.getElementById("score").value;
+          const comment = document.getElementById("comment").value;
+          const month = document.getElementById("month").value;
+          const year = document.getElementById("year").value;
+
+          // Create feedback object
+          const feedback = {
+            rating: rating,
+            satisfactionScore: score,
+            comment: comment,
+            startMonth: month,
+            startYear: year,
+          };
+
+          // Get existing feedback from local storage
+          const feedbackList =
+            JSON.parse(localStorage.getItem("feedbackList")) || [];
+
+          // Add the new feedback to the list
+          feedbackList.push(feedback);
+
+          // Save updated feedback list back to local storage
+          localStorage.setItem("feedbackList", JSON.stringify(feedbackList));
+          alert(
+            "Thank you for your feedback! Your response has been recorded."
+          );
+          // Clear the form inputs
+          this.reset();
+        });
+    </script>
+
+    <script>
+      // Get the current year
+      const currentYear = new Date().getFullYear();
+
+      // Update the HTML content
+      document.getElementById("current-year").textContent = currentYear;
+    </script>
+  </body>
+</html>
