@@ -293,7 +293,7 @@ document.getElementById('prev-step-3').addEventListener('click', function() {
     step3p.querySelector('.circle').textContent = '3';
     showStep(2);
 });
-
+// download resume freature added
 document.getElementById('download-resume').addEventListener('click', function() {
     // Select the resume element
     const resumeElement = document.getElementById('resume-display');
