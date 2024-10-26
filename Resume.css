@@ -148,6 +148,9 @@ body {
 #languages-input{
     width: 40%;
 }
+#skills_input{
+    width: 40%;
+}
 h2, h3 {
     color: #333;
 }
@@ -158,7 +161,6 @@ h2{
 h3{
     font-size: 2rem;
     margin-bottom: 1rem;
-    font-weight: 400;
 }
 
 .section {
@@ -335,4 +337,3 @@ button {
     background-color: #5cb85c; /* Bootstrap success color */
     color: white;
 }
-
