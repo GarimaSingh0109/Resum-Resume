@@ -101,7 +101,7 @@ body {
 .education-entry{
     width: 40%;
 }
-#skills-input{
+#skillsinput{
     width: 40%;
 }
 .experience-entry{
@@ -122,8 +122,13 @@ body {
 }
 .achive{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     position: relative;
+}
+.achive-entry{
+    display: flex;
+    justify-content: space-between;
 }
 .achiveLeft{
     width: 40%;
@@ -148,8 +153,31 @@ body {
 #languages-input{
     width: 40%;
 }
-#skills_input{
-    width: 40%;
+#pinfodesc{
+    display: flex;
+    justify-content: right;
+}
+#expdesc{
+    display: flex;
+    justify-content: right;
+}
+#achivedesc{
+    display: flex;
+    justify-content: right;
+}
+#projdesc{
+    display: flex;
+    justify-content: right;
+}
+#limitwarning{
+    width: 90%;
+    font-size: 1.15rem;
+    color: red;
+    align-self: center;
+    text-align: center;
+}
+#dummy1{
+    opacity: 50%;
 }
 h2, h3 {
     color: #333;
@@ -161,6 +189,7 @@ h2{
 h3{
     font-size: 2rem;
     margin-bottom: 1rem;
+    font-weight: 400;
 }
 
 .section {
@@ -337,4 +366,3 @@ button {
     background-color: #5cb85c; /* Bootstrap success color */
     color: white;
 }
-

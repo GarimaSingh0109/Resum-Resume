@@ -63,6 +63,24 @@ document.getElementById('add-experience').addEventListener('click', function() {
     experienceFields.appendChild(newExperience);
 });
 
+// Dynamically adding more Achivements sections
+document.getElementById('add-achivement').addEventListener('click', function() {
+    const achiveFields = document.querySelector('.achive');
+    const newAchive = document.createElement('div');
+    newAchive.classList.add('achive-entry');
+    newAchive.innerHTML = `
+    <div class="achiveLeft">
+        <label>Heading:</label>
+        <input type="text" placeholder="e.g., Best Employee of the Year">
+    </div>
+    <div class="achiveRight">
+        <label>Description:</label>
+        <textarea placeholder="Describe your achievement or certification"></textarea>
+    </div>
+    `;
+    achiveFields.appendChild(newAchive);
+});
+
 // Dynamically adding more Projects
 document.getElementById('add-project').addEventListener('click', function() {
     const projectFields = document.getElementById('project-fields');
@@ -121,7 +139,7 @@ document.getElementById('next-step').addEventListener('click', function() {
     const email = document.getElementById('email').value.trim();
     const contact = document.getElementById('contact').value.trim();
     const location = document.getElementById('location').value.trim();
-    const skills = document.getElementById('skills_input').value.trim();
+    const skills = document.getElementById('skillsinput').value.trim();
     const stepone = document.querySelector('.form-container')
 
     if (!name || !profile || !email || !contact || !location || !skills) {
@@ -181,13 +199,13 @@ document.getElementById('next-step-2').addEventListener('click', function() {
     const email = document.getElementById('email').value.trim();
     const contact = document.getElementById('contact').value.trim();
     const location = document.getElementById('location').value.trim();
-    const skills = document.getElementById('skills_input').value.trim();
+    const skills = document.getElementById('skillsinput').value.trim();
     const educationEntries = collectEducationData();
     const experienceEntries = collectExperienceData();
     const projectEntries = collectProjectData();
 
     // Generate resume HTML based on the selected template
-    const resumeContent = generateResumeHTML(name, profile, email, contact, location, educationEntries, skills, experienceEntries, projectEntries, selectedTemplate);
+    const resumeContent = generateResumeHTML(name, profile, email, contact, location, skills, educationEntries, experienceEntries, projectEntries, selectedTemplate);
     
     document.getElementById('resume-display').innerHTML = resumeContent;
     step2p.querySelector('.circle').textContent = '✓';
@@ -203,7 +221,7 @@ function collectResumeData() {
     const email = document.getElementById('email').value.trim();
     const contact = document.getElementById('contact').value.trim();
     const location = document.getElementById('location').value.trim();
-    const skills = document.getElementById('skills_input').value.trim();
+    const skills = document.getElementById('skillsinput').value.trim();
     const education = collectEducationData();
     const experience = collectExperienceData();
     const projects = collectProjectData();
@@ -214,8 +232,8 @@ function collectResumeData() {
         email,
         contact,
         location,
-        education,
         skills,
+        education,
         experience,
         projects,
         template: selectedTemplate
@@ -253,7 +271,7 @@ function collectProjectData() {
 }
 
 // Function to generate resume HTML based on selected template
-function generateResumeHTML(name, profile, email, contact, location, educationEntries, skills, experienceEntries, projectEntries, template) {
+function generateResumeHTML(name, profile, email, contact, location,  skills, educationEntries, experienceEntries, projectEntries, template) {
     let educationHTML = educationEntries.map(edu => `
         <div>
             <strong>${edu.institute}</strong> (${edu.startYear} - ${edu.endYear})<br>
@@ -277,9 +295,8 @@ function generateResumeHTML(name, profile, email, contact, location, educationEn
             <a href="${proj.link}" target="_blank">Project Link</a>
         </div>
     `).join('');
-
-        // which template will show in review logic
-if(selecttemp === 1){
+ // which template will show in review logic
+ if(selecttemp === 1){
     return `
         <h1>${name}</h1>
         <p>${profile}</p>
@@ -312,7 +329,7 @@ else if(selecttemp === 2){
                 ${educationHTML}
                 </div>
             </div>
-            <div class="line"></div>
+            <div class="linetemp"></div>
             <div class="resumeright">
                 <h2>Experience</h2>
                 <div id="experience">
@@ -358,7 +375,7 @@ else if(selecttemp === 2){
     .resumeright{
         width: 40%;
     }
-    .line{
+    .linetemp{
         height: 100%;
         width: 3px;
         background-color: gray;
