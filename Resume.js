@@ -43,22 +43,23 @@ document.getElementById('add-experience').addEventListener('click', function() {
     newExperience.classList.add('experience-entry');
     newExperience.innerHTML = `
     <div class="expLeft">
-        <label>Job Position:</label>
-        <input type="text" placeholder="Enter job position">
+                        <label>Job Position:</label>
+                        <input type="text" placeholder="Enter job position">
 
-        <label>Company Name:</label>
-        <input type="text" placeholder="Enter company name">
+                        <label>Company Name:</label>
+                        <input type="text" placeholder="Enter company name">
 
-        <label>Start Year:</label>
-        <input type="text" placeholder="Start Year">
+                        <label>Start Year:</label>
+                        <input type="text" placeholder="Start Year">
 
-        <label>End Year:</label>
-        <input type="text" placeholder="End Year">
-    </div>
-    <div class="expRight">
-        <label>Description:</label>
-        <textarea id="expdes" placeholder="Describe your job experience"></textarea>
-    </div>
+                        <label>End Year:</label>
+                        <input type="text" placeholder="End Year">
+                    </div>
+                    <div class="expRight">
+                        <label>Description:</label>
+                        <textarea id="expdes" placeholder="Describe your job experience"></textarea>
+                        <p id="expdesc"></p>
+                    </div>
     `;
     experienceFields.appendChild(newExperience);
 });
@@ -87,19 +88,20 @@ document.getElementById('add-project').addEventListener('click', function() {
     newProject.classList.add('project-entry');
     newProject.innerHTML = `
     <div class="projectLeft">
-        <label>Project Title:</label>
-        <input type="text" placeholder="Enter project title">
+                        <label>Project Title:</label>
+                        <input type="text" placeholder="Enter project title">
 
-        <label>Role/Responsibilities:</label>
-        <textarea placeholder="Describe your role"></textarea>
+                        <label>Role/Responsibilities:</label>
+                        <textarea placeholder="Describe your role"></textarea>
 
-        <label>Link (Optional):</label>
-        <input type="url" placeholder="Enter project link">
-    </div>
-    <div class="projectRight">
-        <label>Description:</label>
-        <textarea id="projectdesc" placeholder="Describe the project"></textarea>
-    </div>
+                        <label>Link (Optional):</label>
+                        <input type="url" placeholder="Enter project link">
+                    </div>
+                    <div class="projectRight">
+                        <label>Description:</label>
+                        <textarea id="projectdesc" placeholder="Describe the project"></textarea>
+                        <p id="projdesc"></p>
+                    </div>
     `;
     projectFields.appendChild(newProject);
 });
@@ -329,7 +331,7 @@ document.getElementById('prev-step-3').addEventListener('click', function() {
     step3p.querySelector('.circle').textContent = '3';
     showStep(2);
 });
-
+// download resume freature added
 document.getElementById('download-resume').addEventListener('click', function() {
     // Select the resume element
     const resumeElement = document.getElementById('resume-display');
