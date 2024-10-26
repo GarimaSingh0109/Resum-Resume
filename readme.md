@@ -91,7 +91,36 @@ The website consists of the following key sections:
 ├── styles.css          # Custom CSS styles (inlined in HTML)
 ```
 
+### Developer Setup 🛠️
+For developers who want to contribute:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/linkedin-resume-builder.git
+   cd linkedin-resume-builder
+   ```
+2. Install necessary dependencies (if using Node.js, Python, etc.).
+
+3. Run the development server:
+   ```bash
+   npm start   # Or appropriate command
+   ```
+
 ---
+### Developer Setup 🛠️
+For developers who want to contribute:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/linkedin-resume-builder.git
+   cd linkedin-resume-builder
+   ```
+2. Install necessary dependencies (if using Node.js, Python, etc.).
+
+3. Run the development server:
+   ```bash
+   npm start   # Or appropriate command
+   ```
 
 ## Usage 📄
 
