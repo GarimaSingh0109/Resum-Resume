@@ -14,10 +14,8 @@ const education = document.querySelector('#education-fields');
 const edubtn = document.querySelector('#add-education');
 education.style.display = 'none';
 edubtn.style.display = 'none';
-const slabel = document.querySelector('#skill-label')
-const sinput = document.querySelector('#skills-input')
-slabel.style.display = 'none';
-sinput.style.display = 'none';
+const slabelinput = document.querySelector('.slabelinput')
+slabelinput.style.display = 'none';
 const expfield = document.querySelector('#experience-fields');
 const expbtn = document.querySelector('#add-experience');
 expfield.style.display = 'none';
@@ -56,14 +54,12 @@ caret2.addEventListener('click',()=>{
     }
 })
 caret3.addEventListener('click',()=>{
-    if(slabel.style.display === 'none'){
-        slabel.style.display = '';
-        sinput.style.display = '';
+    if(slabelinput.style.display === 'none'){
+        slabelinput.style.display = '';
         caret3.style.transform = 'rotate(180deg)';
     }
     else{
-        slabel.style.display = 'none';
-        sinput.style.display = 'none';
+        slabelinput.style.display = 'none';
         caret3.style.transform = 'rotate(0)';
     }
 })

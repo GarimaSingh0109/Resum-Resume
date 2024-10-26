@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Build Resume</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Resume Builder - Step 1</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="Resume.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
-    <!-- header section starts --> 
+    <!-- header section starts -->
     <header>
         <a href="#" class="logo">Resum Resume<span>.</span></a>
                  
@@ -115,8 +116,10 @@
         <!-- Skills -->
         <div class="section" id="skills">
             <h3>Skills <i id="caret3" class="fa-solid fa-caret-down"></i></h3>
-            <label id="skill-label">Skills (Comma Separated) :</label>
-            <input type="text" id="skills-input" placeholder="e.g., C, C++, Python">
+            <div class="slabelinput">
+                <label >Skills (Comma Separated) :</label>
+                <input type="text" id="skillsinput" placeholder="e.g., C, C++, Python">
+            </div>
         </div>
 
         <!-- Experience -->
@@ -146,6 +149,7 @@
             <button type="button" id="add-experience">Add Another Job</button>
         </div>
 
+        <!-- Achievements and Certifications -->
         <!-- Achievements and Certifications -->
         <div class="section" id="achievements">
             <h3>Achievements and Certifications <i id="caret5" class="fa-solid fa-caret-down"></i></h3>
@@ -276,7 +280,6 @@
             <p>&copy; 2024 Resume Builder. All rights reserved.</p>
         </div>
     </footer>
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
     <script src="Resume.js"></script>
