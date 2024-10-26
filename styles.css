@@ -3,32 +3,37 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     background-color: rgb(174, 168, 168);
 }
-.contact h2,h3{
+
+.contact h2, h3 {
     max-width: 50rem;
     margin: 0 auto;
     text-align: center;
     margin-bottom: 2rem;
 }
-.top_header{
-    background-color:  #aca7eb;
-    height: 8rem
+
+.top_header {
+    background-color: #aca7eb;
+    height: 8rem;
 }
-.top_header h2{
+
+.top_header h2 {
     font-size: 4rem;
     font-weight: 490;
     padding-top: 30px;
 }
 
-.col{
+.col {
     max-width: 50rem;
     margin: 0 auto;
     text-align: center;
     margin-bottom: 1.5rem;
 }
-.contact_info{
+
+.contact_info {
     margin-top: 7rem;
     position: relative;
     display: flex;
@@ -37,81 +42,93 @@ body{
     align-items: center;
     padding: 20px 30px;
     width: 52vw;
-    height:22vh;
-    background-color:black;
+    height: 22vh;
+    background-color: black;
     border-radius: 0.8rem;
     border: 0.5px solid white;
     overflow: hidden;
     cursor: pointer;
+    transition: color 0.4s; /* Smooth transition for text color change */
 }
-.contact_info>h2{
+
+.contact_info > h2 {
     margin-bottom: 20px;
     color: white;
 }
-.contact_info>p{
+
+.contact_info > p {
     display: flex;
     align-items: center;
-    gap:10px;
+    gap: 10px;
     margin-block: 5px;
-    cursor:auto;
     color: white;
 }
-.contact_info p>i{
+
+.contact_info p > i {
     font-weight: 600;
-} 
-.contact_info p>a{
-    color:white;
 }
-.contact_info::after{
+
+.contact_info p > a {
+    color: white;
+}
+
+/* Background transition effect */
+.contact_info::after {
     content: "";
     position: absolute;
     bottom: -100%;
     background: #aca7eb;
-    width:100%;
+    width: 100%;
     height: 100%;
     transition: 0.4s;
     z-index: 1;    
 }
-.contact_info:hover.contact_info::after{
+
+.contact_info:hover::after {
     bottom: 0;
 }
-.contact_info:hover.contact_info h2,
-.contact_info:hover.contact_info p,
-.contact_info:hover.contact_info i,
-.contact_info:hover.contact_info a{
+
+.contact_info:hover h2,
+.contact_info:hover p,
+.contact_info:hover i,
+.contact_info:hover a {
     color: black;
-    z-index: 2;
+    z-index: 2; /* Ensure text is above the background */
 }
 
-.contact form{
+.contact form {
     max-width: 50rem;
     margin: 0.9rem auto;
     text-align: center;
     margin-bottom: 2rem;
 }
-.contact form .input_box{
+
+.contact form .input_box {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
 .contact form .input_box input,
-.contact form textarea{
+.contact form textarea {
     width: 100%;
     padding: 1.2rem;
     font-size: 1rem;
     color: white;
-    background-color:black;
-    border-radius: .8rem;
+    background-color: black;
+    border-radius: 0.8rem;
     margin: 0.5rem 0;
 }
-.contact form .input_box input{
-    width: 49%;
+
+.contact form .input_box input {
+    width: 49%; /* Maintain space between inputs */
 }
-.contact form textarea{
+
+.contact form textarea {
     resize: none;
 }
 
-.contact form .btn{
+.contact form .btn {
     text-align: center;
     margin-top: 2rem;
     cursor: pointer;
@@ -123,12 +140,13 @@ body{
     font-weight: 400;
     background-color: #111;
     color: white;
-    transition: 0.5s;
+    transition: background-color 0.5s, color 0.5s, box-shadow 0.5s;
 }
-.contact form .btn:hover{
-    background-color:blue;
+
+.contact form .btn:hover {
+    background-color: blue;
     color: black;
-    border: black;
-    box-shadow: 0 0 5px 4px black;
+    border: 1px solid black; /* Change to a solid border */
+    box-shadow: 0 0 5px 4px black; /* Enhance shadow effect */
     font-weight: 600;
 }

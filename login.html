@@ -5,52 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register & Login</title>
     <link rel="stylesheet" href="login.css" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM1aM3G7+9IfYfP1nH0okF1TO2z05fS/3YBhuC" crossorigin="anonymous" />
   </head>
   <body>
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
+          <!-- Sign In Form -->
           <form action="#" class="sign-in-form">
             <h2 class="title">Sign in</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
+              <input type="text" placeholder="Username" required />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="password" placeholder="Password" required />
             </div>
             <input type="submit" value="Login" class="btn solid" />
             <p class="social-text">Or Sign in with social platforms</p>
             <div class="social-media">
-        
-
-              <a href="https://github.com/YourGitHubProfile" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width="40" height="40" style="margin-left: 5px;">
+              <a href="https://github.com/YourGitHubProfile" target="_blank" rel="noopener noreferrer">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width="40" height="40" />
               </a>
             </div>
           </form>
+
+          <!-- Sign Up Form -->
           <form action="#" class="sign-up-form">
             <h2 class="title">Sign up</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
+              <input type="text" placeholder="Username" required />
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" />
+              <input type="email" placeholder="Email" required />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="password" placeholder="Password" required />
             </div>
             <input type="submit" class="btn" value="Sign up" />
             <p class="social-text">Or Sign up with social platforms</p>
             <div class="social-media">
-            
-              <a href="https://github.com/YourGitHubProfile" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width="40" height="40" style="margin-left: 5px;">
+              <a href="https://github.com/YourGitHubProfile" target="_blank" rel="noopener noreferrer">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width="40" height="40" />
               </a>
             </div>
           </form>
@@ -60,45 +60,28 @@
       <div class="panels-container">
         <a href="index.html" class="homeBtn">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20" width="30" height="30">
-            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
           </svg>
         </a>
         <div class="panel left-panel">
           <div class="content">
-            <h3>New here ?</h3>
-            <p>
-                Discover new experiences with AmbuFlow! <br>Get access to exclusive content and features. <br> Create your account.
-            </p>
-            <a href="index.html" class="homeBtn">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20" width="30" height="30">
-                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-              </svg>
-            </a>
-            <button class="btn transparent" id="sign-up-btn">
-              Sign up
-            </button>
+            <h3>New here?</h3>
+            <p>Discover new experiences with AmbuFlow! Get access to exclusive content and features. Create your account.</p>
+            <button class="btn transparent" id="sign-up-btn">Sign up</button>
           </div>
-          <img src="img/log.svg" class="image" alt="" />
+          <img src="img/log.svg" class="image" alt="Sign Up" />
         </div>
         <div class="panel right-panel">
-          
           <div class="content">
-            
-            <h3>One of us ?</h3>
-            <p>
-                Welcome to our community
-            </p>
-            <button class="btn transparent" id="sign-in-btn">
-              Sign in
-            </button>
-            
+            <h3>One of us?</h3>
+            <p>Welcome to our community</p>
+            <button class="btn transparent" id="sign-in-btn">Sign in</button>
           </div>
-          <img src="img/register.svg" class="image" alt="" />
+          <img src="img/register.svg" class="image" alt="Sign In" />
         </div>
-        
       </div>
-      
     </div>
+    
     <script src="login.js"></script>
   </body>
 </html>

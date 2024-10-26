@@ -9,108 +9,130 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
-    <style>
-  
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #E0B1CB;
-            /* 
-#231942, #5E548E, , #BE95C4, #E0B1CB */
-        }
+   <style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #E0B1CB;
+        margin: 0;
+        padding: 0;
+    }
 
-        .container {
-            max-width: 1200px;
-            margin: 50px auto;
-            padding: 40px;
-            /* padding-top: 10px; */
-        }
+    .container {
+        max-width: 1000px;
+        margin: 60px auto;
+        padding: 20px;
+    }
 
-        h2 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 40px;
-            font-size: 32px;
-        }
+    h2 {
+        text-align: center;
+        color: #231942;
+        margin-bottom: 30px;
+        font-size: 28px;
+        font-weight: 700;
+    }
 
-        .faq-card {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 15px;
-        }
+    .faq-card {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 15px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
 
-        .faq-card h5 {
-            font-size: 18px;
-            cursor: pointer;
-            position: relative;
-        }
+    .faq-card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
 
-        .faq-card h5::after {
-            content: "\f078"; /* FontAwesome icon for caret-down */
-            font-family: FontAwesome;
-            position: absolute;
-            right: 0;
-            transition: transform 0.3s ease;
-        }
+    .faq-card h5 {
+        font-size: 18px;
+        color: #5E548E;
+        font-weight: 500;
+        cursor: pointer;
+        position: relative;
+        margin: 0;
+    }
 
-        .faq-card.active h5::after {
-            transform: rotate(180deg);
-        }
+    .faq-card h5::after {
+        content: "\f078";
+        font-family: FontAwesome;
+        position: absolute;
+        right: 0;
+        transition: transform 0.3s ease;
+    }
 
-        .faq-card p {
-            display: none;
-            color: #666;
-            margin-top: 10px;
-            line-height: 1.6;
-        }
+    .faq-card.active h5::after {
+        transform: rotate(180deg);
+    }
 
-        .faq-card.active p {
-            display: block;
-        }
+    .faq-card p {
+        display: none;
+        color: #666;
+        margin-top: 10px;
+        line-height: 1.6;
+    }
 
-        .faq-card:hover {
-            box-shadow: 0 4px 8px #0073b1;
-        }
+    .faq-card.active p {
+        display: block;
+    }
 
-        .scroll-to-top {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: #0073b1;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            text-align: center;
-            line-height: 50px;
-            cursor: pointer;
-            font-size: 20px;
-            display: none;
-        }
+    .scroll-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #0073b1;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        cursor: pointer;
+        font-size: 20px;
+        display: none;
+        transition: background-color 0.2s ease;
+    }
 
-        .scroll-to-top.visible {
-            display: block;
-        }
+    .scroll-to-top.visible {
+        display: block;
+    }
 
-        
-        .footer {
-            background-color: #0073b1;
-            color: #ffffff;
-            padding: 40px 0;
-            text-align: center;
-        }
+    .scroll-to-top:hover {
+        background-color: #005580;
+    }
 
-        .footer p {
-            color: #ffffff;
-            margin: 0;
-        }
-        .back-button{
-            display: flex;
-            justify-content: center;
-        }
-    </style>
+    .footer {
+        background-color: #231942;
+        color: #ffffff;
+        padding: 20px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .footer p {
+        margin: 0;
+    }
+
+    .back-button {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .back-button a {
+        color: #0073b1;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s ease;
+    }
+
+    .back-button a:hover {
+        color: #005580;
+        text-decoration: underline;
+    }
+</style>
+
 </head>
 
 <body>
