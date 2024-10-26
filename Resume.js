@@ -63,6 +63,24 @@ document.getElementById('add-experience').addEventListener('click', function() {
     experienceFields.appendChild(newExperience);
 });
 
+// Dynamically adding more Achivements sections
+document.getElementById('add-achivement').addEventListener('click', function() {
+    const achiveFields = document.querySelector('.achive');
+    const newAchive = document.createElement('div');
+    newAchive.classList.add('achive-entry');
+    newAchive.innerHTML = `
+    <div class="achiveLeft">
+        <label>Heading:</label>
+        <input type="text" placeholder="e.g., Best Employee of the Year">
+    </div>
+    <div class="achiveRight">
+        <label>Description:</label>
+        <textarea placeholder="Describe your achievement or certification"></textarea>
+    </div>
+    `;
+    achiveFields.appendChild(newAchive);
+});
+
 // Dynamically adding more Projects
 document.getElementById('add-project').addEventListener('click', function() {
     const projectFields = document.getElementById('project-fields');
@@ -311,7 +329,7 @@ else if(selecttemp === 2){
                 ${educationHTML}
                 </div>
             </div>
-            <div class="line"></div>
+            <div class="linetemp"></div>
             <div class="resumeright">
                 <h2>Experience</h2>
                 <div id="experience">
@@ -357,7 +375,7 @@ else if(selecttemp === 2){
     .resumeright{
         width: 40%;
     }
-    .line{
+    .linetemp{
         height: 100%;
         width: 3px;
         background-color: gray;
