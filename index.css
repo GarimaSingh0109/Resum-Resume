@@ -38,7 +38,7 @@ section {
 
 .heading span {
     color: var(--soft-gold);
-    /* Soft Gold for span */
+    
 }
 
 .btn {
@@ -58,7 +58,6 @@ section {
     background: var(--deep-teal);
     /* Deep Teal on hover */
 }
-
 .btn {
     display: inline-block;
     margin-top: 1rem;
@@ -72,9 +71,9 @@ section {
 }
 
 .btn:hover {
-    background: var(--purple);
-    background-color: #f03c0b;
-    color: white;
+  background: var(--purple);
+  background-color: #f03c0b;
+  color: white;
 }
 
 header {
@@ -136,16 +135,31 @@ header .logo span {
 header .navbar a {
     font-size: 2rem;
     padding: 15px;
-    color: white;
+    color: white
+
 }
 
 header .navbar a:hover {
-    color: var(--soft-gold);
-    /* Soft Gold on hover */
-    text-decoration: none;
-    /* Ensure no underline by default */
+    color: var(--soft-gold); /* Soft Gold on hover */
+    text-decoration: none; /* Ensure no underline by default */
 }
 
+header .navbar-about:hover  a:hover {
+    color: #003d4d;; /* Soft Gold on hover */
+    text-decoration: none; /* Ensure no underline by default */
+}
+header .navbar-resume:hover  a:hover {
+    color: #003d4d;; /* Soft Gold on hover */
+    text-decoration: none; /* Ensure no underline by default */
+}
+header .navbar-tips:hover  a:hover {
+    color: #003d4d;; /* Soft Gold on hover */
+    text-decoration: none; /* Ensure no underline by default */
+}
+header .navbar-login:hover  a:hover {
+    color: #003d4d;; /* Soft Gold on hover */
+    text-decoration: none; /* Ensure no underline by default */
+}
 header .icons a {
     font-size: 2.5rem;
     color: white;
@@ -160,9 +174,9 @@ header .navbar a {
 }
 
 header .navbar a:hover {
-    color: var(--red);
-    text-decoration: none;
-    color: #ffffff;
+  color: var(--red);
+  text-decoration: none;
+  color: #ffffff;
 }
 
 header .icons a {
@@ -185,8 +199,7 @@ header #toggler {
 header .fa-bars {
     font-size: 3rem;
 
-    color: var(--off-white);
-    /* White for better visibility */
+    color: var(--off-white); /* White for better visibility */
     border-radius: .5rem;
     padding: .5rem 1.5rem;
     cursor: pointer;
@@ -409,8 +422,10 @@ body {
 .footer .footer-section .social-icons a:hover {
     color: #3f10ea;
     text-decoration: none;
-}
 
+    color: #3f10ea;
+ main
+}
 .footer a {
     color: var(--soft-gold);
     text-decoration: none;
