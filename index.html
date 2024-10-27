@@ -1,5 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Resume Builder - Home</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <link rel="icon" href="images/favicon-removebg-preview.png">
+    <link rel="stylesheet" href="style.css">
+    <label for ="dark-mode-toggle">
+        <input type="checkbox" id="dark-mode-toggle" />
+        Toggle Dark Mode
+    </label>
+    <style>
+        /* Features Section */
+        .features {
+            padding: 60px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .features h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+            font-size: 32px;
+        }
+
+        .features-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .features-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: calc(25% - 30px);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s, z-index 0.3s;
+            position: relative;
+            z-index: 1;
+        }
+
+        .features-card:hover {
+            transform: translateY(-10px) scale(1.1);
+            box-shadow: 0 4px 8px #0073b1; 
+            z-index: 3;
+        }
+
+        .features-card img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 20px;
+        }
+
+        .features-card h3 {
+            color: #6e65f0;
+            margin: 15px 0;
+            font-size: 22px;
+        }
+
+        .features-card p {
+            color: #52525a;
+            font-size: 16px;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 60px 20px;
+            background-color: #ffffff;
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+            font-size: 32px;
+        }
+
+        .testimonial-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: calc(33.33% - 30px);
+            text-align: center;
+        }
+
+        .testimonial-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-card h3 {
+            color:  #6e65f0;
+            margin: 10px 0;
+            font-size: 20px;
+        }
+
+        .testimonial-card p {
+            color: #52525a;
+            font-size: 16px;
+            font-style: italic;
+        }
+
+        /* Chatbot Styles */
+        .chatbot-container {
+            position: fixed;
+            bottom: 20px; /* Adjust as needed */
+            right: 20px; /* Adjust as needed */
+            z-index: 1000; /* Ensure it appears above other elements */
+        }
+
+        .chatbot-button {
+            background-color: #007bff; /* Change to your preferred color */
+            border: none;
+            border-radius: 50%;
+            padding: 5px; /* Smaller padding */
+            cursor: pointer;
+            position: relative;
+            width: 50px; /* Adjusted size */
+            height: 50px; /* Adjusted size */
+        }
+
+        .chatbot-button img {
+            width: 30px; /* Adjusted image size */
+            height: 30px; /* Adjusted image size */
+        }
+
+        .tooltip-text {
+            display: none; /* Hide by default */
+            position: absolute;
+            bottom: 100%; /* Position above the button */
+            right: 50%;
+            transform: translateX(50%);
+            background-color: #333; /* Background color for tooltip */
+            color: #fff; /* Tooltip text color */
+            padding: 5px;
+            border-radius: 5px;
+            white-space: nowrap; /* Prevent text from wrapping */
+        }
+
+        .chatbot-button:hover .tooltip-text {
+            display: block; /* Show on hover */
+        }
+    </style>
+    </style>
 
 
 <head>
@@ -24,8 +189,7 @@
 			background-color: #f9f9f9;
 		}
 
-
-
+		/* <label for = "dark-mode-toggle" style="margin: 20px; display: block; text-align: center;"><label for="dark-mode-toggle"><input type="checkbox" id="dark-mode-toggle" />Toggle Dark Mode </label></label>.features-card {
 		
 		.features-card {
 			background-color: white;
@@ -657,7 +821,153 @@
 
   <body>
     <!-- header section starts -->
+<body>
+    <!-- header section starts -->
+    <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+        <a href="#" class="logo">Resum Resume<span>.</span></a>
+                 
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="about.html">About</a>
+            <a href="resume.html">Build Resume</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="login.html">Login</a>
+        </nav>
+    
+        <div class="icons">
+            <a href="about.html" class="fas fa-info-circle"></a>
+            <a href="#" class="fas fa-envelope"></a>
+            <a href="login.html" id="loginIcon" class="fas fa-user"></a>
+        </div>
+    </header> 
+    <!-- header section ends -->
+    
+    <!-- home section starts -->
+    <section class="home" id="Home">
+        <div class="content">
+            <h3>Build Your Resume in Seconds from LinkedIn</h3>
+            <p>Easily generate a professional resume using your LinkedIn profile. Select a template, enter your LinkedIn URL,
+                and get a downloadable resume in a few clicks. Save time and create a resume that stands out.</p>
+            <a href="signup.html" class="btn">Get Started</a>
+        </div>
+    </section>
+    <!-- home section ends-->
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Our Features</h2>
+        <div class="features-cards">
+            <div class="features-card">
+                <img src="assets/joao-ferrao-4YzrcDNcRVg-unsplash.jpg" alt="Easy to Use">
+                <h3>Easy to Use</h3>
+                <p>Create a professional resume effortlessly with our user-friendly interface.</p>
+            </div>
+            <div class="features-card">
+                <img src="assets/instant resume.jpg" alt="Instant Resume">
+                <h3>Instant Resume</h3>
+                <p>Generate a polished resume in seconds using your LinkedIn profile data.</p>
+            </div>
+            <div class="features-card">
+                <img src="assets/securedata.jpg" alt="Secure Data">
+                <h3>Secure Data</h3>
+                <p>Your personal information is safe with our secure and encrypted platform.</p>
+            </div>
+            <div class="features-card">
+                <img src="assets/support.jpg" alt="24/7 Support">
+                <h3>24/7 Support</h3>
+                <p>Our dedicated support team is available round the clock to assist you.</p>
+            </div>
+        </div>
+    </section>
 
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Users Say</h2>
+        <div class="testimonial-cards">
+            <div class="testimonial-card">
+                <img src="assets/jondoe.jpg" alt="User 1">
+                <h3>Jane Doe</h3>
+                <p>"This resume builder transformed my LinkedIn profile into a professional resume effortlessly. Highly recommended!"</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="assets/john_smith.jpg" alt="User 2">
+                <h3>John Smith</h3>
+                <p>"I was amazed at how quickly I was able to generate a resume. The process was smooth and the result was perfect."</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="assets/emily_johnson.jpg" alt="User 3">
+                <h3>Emily Johnson</h3>
+                <p>"The platform is user-friendly and secure. I felt confident that my data was protected. Great service!"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- <a href="chatbot.html">
+        <div class="fixed bottom-0 right-2 chatbot-container">
+          <button class="chatbot-button group">
+            <img class="h-20" src="./images/chatbot.gif" alt="chatbot">
+            <span class="tooltip-text">
+              Welcome to SOrt Smart! <br>
+              How can I help You? ^_^ 
+            </span>
+          </button>
+        </div>
+      </a>-->
+
+    <!-- Chatbot Button -->
+    <a href="chatbot.html">
+        <div class="chatbot-container">
+            <button class="chatbot-button group">
+                <img class="h-20" src="chatbot.gif" alt="chatbot">
+                <span class="tooltip-text">
+                    Welcome to Resum Resume! <br>
+                    How can I help You? ^_^ 
+                </span>
+            </button>
+        </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Resume Builder</a></li>
+                    <li><a href="cv.html">CV Templates</a></li>
+                    <li><a href="#">Career Advice</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Resume Builder. All rights reserved.</p>
+        </div>
+    </footer>
     <div id="progress-container">
       <div id="progress-bar"></div>
     </div>
@@ -680,7 +990,6 @@
   window.addEventListener('scroll', updateProgressBar);
   
     </script>
-
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
@@ -709,7 +1018,11 @@
         <a href="resume_tips.html">Resume Tips</a>
 	<li><a href="ats_score_finder.html">ATS Score Finder</a></li>
         <a href="login.html">Login</a>
+<<<<<<< HEAD
 >>>>>>> e797cd5380a7bba17d40456f0bf0f651bbc38d43
+=======
+      <a href="privacypolicy.html">Privacy Policy</a>
+>>>>>>> main
       </nav>
 
       <div class="icons">
@@ -839,7 +1152,7 @@
           <ul class="ul">
             <li><a href="#">FAQ</a></li>
             <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="privacypolicy.html">Privacy Policy</a></li>
           </ul>
         </div>
         <div class="footer-section">
@@ -943,7 +1256,6 @@
             });
         });
         </script>
-
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -1088,7 +1400,15 @@
 				<ul>
 					<li><a href="/Faqs.html">FAQ</a></li>
 					<li><a href="#">Contact Us</a></li>
+<<<<<<< HEAD
 					<li><a href="#">Privacy Policy</a></li>
+=======
+ privacy
+					<li><a href="privacypolicy.html">Privacy Policy</a></li>
+
+					<li><a href="/privacy-policy.html">Privacy Policy</a></li>
+ main
+>>>>>>> main
 				</ul>
 			</div>
 			<div class="footer-section">
