@@ -215,3 +215,23 @@ function updateWarningDisplay() {
         realbtn.style.display = 'block';
     }
 }
+
+const panel1 = document.querySelector('.panel1');
+const panel2 = document.querySelector('.panel2');
+const autobtn = document.querySelector('#autobtn');
+const manualbtn = document.querySelector('#manulbtn');
+panel2.style.display = 'none';
+
+autobtn.addEventListener('click',()=>{
+    panel1.style.display = 'none';
+    panel2.style.display = '';
+    autobtn.style.backgroundColor = 'rgb(74, 74, 74)';
+    manualbtn.style.backgroundColor = 'blue';
+})
+
+manualbtn.addEventListener('click',()=>{
+    panel1.style.display = '';
+    panel2.style.display = 'none';
+    autobtn.style.backgroundColor = 'blue';
+    manualbtn.style.backgroundColor = 'rgb(74, 74, 74)';
+})

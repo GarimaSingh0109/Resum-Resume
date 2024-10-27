@@ -4,14 +4,117 @@ body {
     margin: 0;
     padding: 20px;
 }
-
+/* hero section */
+.herosection{
+    height: 100vh;
+    width: 100%;
+    background-image: url(images/hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 5rem;
+    position: relative;
+}
+.herocontent{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    gap: 2rem;
+}
+.herocontent h1{
+    width: 60%;
+    font-size: 5rem;
+    font-weight: 800;
+    color: white;
+}
+.herocontent p{
+    width: 60%;
+    font-size: 2rem;
+    font-weight: 400;
+    color: white;
+}
+.herostep{
+    height: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.heros{
+    background-color: #5cb85c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    padding: 1.5rem 1.5rem;
+}
+.herostep h2{
+    font-size: 2rem;
+    font-weight: 500;
+    color: white;
+    line-height: 2rem;
+    margin: 0;
+    line-height: 2.5rem;
+}
+.herostep i{
+    font-size: 3rem;
+    margin-right: 1rem;
+    color: white;
+}
+.herobtn{
+    display: flex;
+    height: 40%;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    text-align: center;
+}
+.herobtn .button{
+    background-color: blue;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 3rem;
+    padding: 1.5rem;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+}
+.herobtn .button:hover{
+    scale: 105%;
+}
+.herobtn #manulbtn{
+    background-color: rgb(74, 74, 74);
+}
+.panel1{
+    position: relative;
+}
+.panel2{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+}
+.panel2 h1{
+    font-size: 4rem;
+}
+.panel2 p{
+    font-size: 2rem;
+}
 /* progress bar section css */
 .progressSec{
+    height: 15rem;
     width: 100%;
     position: relative;
     display: flex;
     justify-content: center;
     margin-bottom: 5rem;
+    background-color: rgba(137, 137, 137, 0.25);
 }
 .progress-bar {
     width: 70%;
