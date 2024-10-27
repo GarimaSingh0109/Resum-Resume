@@ -147,6 +147,7 @@
                 <div class="pInfoRight">
                     <label>Profile:</label>
                     <textarea id="profile" placeholder="Write about yourself"></textarea>
+                    <p id="pinfodesc">0/150</p>
                 </div>
             </div>
         </div>
@@ -203,6 +204,7 @@
                     <div class="expRight">
                         <label>Description:</label>
                         <textarea id="expdes" placeholder="Describe your job experience"></textarea>
+                        <p id="expdesc"></p>
                     </div>
                 </div>
             </div>
@@ -213,16 +215,21 @@
         <div class="section" id="achievements">
             <h3>Achievements and Certifications <i id="caret5" class="fa-solid fa-caret-down"></i></h3>
             <div class="achive">
-                <div class="achiveLeft">
-                    <label>Heading:</label>
-                    <input type="text" placeholder="e.g., 'Best Employee of the Year'">
-                </div>
-                <div class="achiveRight">
-                    <label>Description:</label>
-                    <textarea placeholder="Describe your achievement or certification"></textarea>
+                <div class="achive-entry">
+                    <div class="achiveLeft">
+                        <label>Heading:</label>
+                        <input type="text" placeholder="e.g., Best Employee of the Year">
+                    </div>
+                    <div class="achiveRight">
+                        <label>Description:</label>
+                        <textarea id="achivedes" placeholder="Describe your achievement or certification"></textarea>
+                        <p id="achivedesc"></p>
+                    </div>
                 </div>
             </div>
+            <button type="button" id="add-achivement">Add Another Achievement</button> 
         </div>
+
 
         <!-- Projects (Optional) -->
         <div class="section" id="projects">
@@ -242,6 +249,7 @@
                     <div class="projectRight">
                         <label>Description:</label>
                         <textarea id="projectdesc" placeholder="Describe the project"></textarea>
+                        <p id="projdesc"></p>
                     </div>
                 </div>
             </div>
@@ -257,7 +265,9 @@
 
         <!-- Buttons -->
         <div class="buttons step1btns">
+            <p id="limitwarning"><strong>Warning:</strong> Your description is over the character limit. Please modify it before moving to the next step.</p>
             <button type="button" id="next-step" onclick="proceedToNextStep(2)">Next Step</button>
+            <button type="button" id="dummy1" >Next Step</button>
         </div>
     </div>
 

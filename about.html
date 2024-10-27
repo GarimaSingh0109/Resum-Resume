@@ -541,6 +541,8 @@
         });
 
     </script>
+
+    <!-- main section  -->
     <div class="panel-1">
         <div class="about">
             <h1>About</h1>
@@ -642,8 +644,29 @@
         <div class="footer-bottom">
             <p>&copy; 2024 Resume Builder. All rights reserved.</p>
         </div>
-    </footer>
 
+      </footer>
+      <style>
+        .footer-section{
+            display: flex;
+            justify-content: left;
+            flex-direction: column;
+        }
+        .ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+        }
+        li{
+            text-align: left;
+        }
+        .footer a{
+            color: white;
+        }
+        .footer p{
+            margin-top: 2rem;
+        }
+      </style>
     <script>
         const toggler = document.getElementById("toggler");
         const body = document.body;
