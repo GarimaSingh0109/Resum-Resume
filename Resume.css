@@ -1,0 +1,364 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+/* progress bar section css */
+.progressSec{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+.progress-bar {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.line {
+    width: 100px;
+    height: 2px;
+    background-color: lightgray;
+}
+
+.label {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/* Active step */
+.step.active .circle {
+    background-color: #007bff;
+}
+
+@media (max-width: 768px) {
+    .progress-bar {
+        flex-direction: column;
+    }
+
+    .line {
+        width: 2px;
+        height: 50px;
+    }
+}
+
+
+/* step 1 css  */
+.form-container {
+    width: 90%;
+    margin: auto;
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.pInfo{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.pInfoLeft{
+    width: 40%;
+}
+.pInfoRight{
+    width: 50%;
+}
+#profile{
+    height: 25rem;
+}
+#education-fields{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.education-entry{
+    width: 40%;
+}
+#skills-input{
+    width: 40%;
+}
+.experience-entry{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.expLeft{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+.expRight{
+    width: 40%;
+}
+#expdes{
+    height: 25rem;
+}
+.achive{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.achiveLeft{
+    width: 40%;
+}
+.achiveRight{
+    width: 40%;
+}
+.project-entry{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.projectLeft{
+    width: 40%;
+}
+.projectRight{
+    width: 40%;
+}
+#projectdesc{
+    height: 20rem;
+}
+#languages-input{
+    width: 40%;
+}
+#pinfodesc{
+    display: flex;
+    justify-content: right;
+}
+#expdesc{
+    display: flex;
+    justify-content: right;
+}
+#achivedesc{
+    display: flex;
+    justify-content: right;
+}
+#projdesc{
+    display: flex;
+    justify-content: right;
+}
+#limitwarning{
+    width: 90%;
+    font-size: 1.15rem;
+    color: red;
+    align-self: center;
+    text-align: center;
+}
+#dummy1{
+    opacity: 50%;
+}
+h2, h3 {
+    color: #333;
+}
+h2{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+h3{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+textarea {
+    resize: vertical;
+}
+button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.3s; /* Added transition for scaling effect */
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Added scaling effect on hover */
+}
+
+button:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Add custom focus style */
+}
+
+/* Step 2 CSS */
+#step-2{
+    width: 90%;
+    margin: auto;
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.template-section {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.template-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 25%;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s; /* Added box-shadow transition */
+}
+
+.template-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Added shadow on hover */
+}
+
+.template-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.template-card p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    color: black;
+}
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: #0056b3;
+}
+.step1btns{
+    display: flex;
+    justify-content: right;
+}
+
+/* Step 3 Styles */
+#step-3{
+    width: 90%;
+    margin: auto;
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.step-section {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    margin-top: 20px;
+}
+
+#resume-display {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+#resume-display h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+#resume-display h2 {
+    font-size: 1.5em;
+    margin: 15px 0 5px;
+}
+
+#resume-display h3 {
+    font-size: 1.2em;
+    margin: 10px 0 5px;
+}
+
+#resume-display p {
+    margin: 5px 0;
+}
+
+/* Button Styles */
+button {
+    margin: 10px 5px;
+    padding: 10px 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#prev-step-3 {
+    background-color: #f0ad4e; /* Bootstrap warning color */
+    color: white;
+}
+
+#download-resume {
+    background-color: #5cb85c; /* Bootstrap success color */
+    color: white;
+}
+
