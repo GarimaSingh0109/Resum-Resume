@@ -73,7 +73,7 @@ section {
 
 .btn:hover {
     background: var(--purple);
-    background-color: #f03c0b;
+    background-color: #003d4d;
     color: white;
 }
 
