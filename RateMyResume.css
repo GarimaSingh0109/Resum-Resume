@@ -79,6 +79,7 @@ body{
     border-radius: 3rem 0 0 0;
     border-right: 1px solid white;
     border-bottom: 2px solid white;
+    cursor: pointer;
 }
 .ratingboardhead{
     width: 50%;
@@ -90,6 +91,7 @@ body{
     border-radius: 0 3rem 0 0;
     border-left: 1px solid white;
     border-bottom: 2px solid white;
+    cursor: pointer;
 }
 .ratingHead h1{
     color: white;
@@ -97,8 +99,119 @@ body{
 .rating{
     width: 100%;
     min-height: 50vh;
+    padding: 3rem;   
     border-radius: 0 0 3rem 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.ratingboard{
+    width: 100%;
+    min-height: 50vh;
+    padding: 3rem;   
+    position: relative;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-evenly;
+}
+.card{
+    width: 30%;
+    height: 35rem;
+    background-color: #003d4d;
+    border-radius: 2rem;
+    padding: 2rem;
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.card img{
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 2rem;
+    margin-bottom: 1.5rem;
+}
+.card h2{
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+.card h3{
+    font: 1.3rem;
+    font-weight: 400;
+}
+.card .star-rating{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+}
+.card .star-rating i{
+    font-size: 2.5rem;
+    color: rgb(236, 236, 236);
+}
+form {
+    background-color: #003d4d;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form h2 {
+    font-size: 1.7rem;
+    text-align: center;
+    color: white;
+}
+.form-group {
+    margin-bottom: 15px;
+    width: 100%;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+    font-size: 1.3rem;
+}
+input[type="text"],
+input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid white;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: white;
+    background-color: transparent;
+}
+button {
+    width: 40%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button:hover {
+    background-color: #45a049;
+}
+.download-button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 1.5rem;
+}
+.download-button:hover {
+    background-color: #37913b;
 }
