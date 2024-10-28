@@ -25,6 +25,7 @@ section {
     padding: 2rem 9%;
 }
 
+
 .heading {
     text-align: center;
     font-size: 4rem;
@@ -363,7 +364,7 @@ body {
    list-style: none;
    font-family: Verdana, Geneva, Tahoma, sans-serif;
    text-align: center;
-
+}
 .ul {
     padding: 0;
     list-style: none;
@@ -451,6 +452,10 @@ body {
     header {
         padding: 2rem;
         background-color: 003d4d;
+    }
+
+    .hidemobile{
+        display: none;
     }
 
     section {

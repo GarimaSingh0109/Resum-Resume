@@ -881,26 +881,52 @@
   </head>
 
 <body>
-    <!-- header section starts -->
-    <header>
-        <input type="checkbox" name="" id="toggler">
-        <label for="toggler" class="fas fa-bars"></label>
-        <a href="#" class="logo">Resum Resume<span>.</span></a>
-                 
-        <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="about.html">About</a>
-            <a href="resume.html">Build Resume</a>
-            <a href="signup.html">Sign Up</a>
-            <a href="login.html">Login</a>
-        </nav>
     
-        <div class="icons">
-            <a href="about.html" class="fas fa-info-circle"></a>
-            <a href="#" class="fas fa-envelope"></a>
-            <a href="login.html" id="loginIcon" class="fas fa-user"></a>
-        </div>
-    </header> 
+     <!-- header section starts -->
+     <header>
+      <input type="checkbox" name="" id="toggler">
+      <label for="toggler" class="fas fa-bars"></label>
+      <a href="#" class="logo">Resum Resume<span>.</span></a>
+       <ul class="sidebar"> 
+        <li onclick="hidesidebar()">
+          <path
+              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></a></li> 
+      <nav class="navbar">
+    
+      </ul> 
+      
+      <ul>
+      <nav class="navbar">
+         <li class="hidemobile"> <a href="#home">Home</a></li>
+         <li class="hidemobile"> <a href="about.html">About</a></li>
+          <li class="hidemobile"><a href="resume.html">Build Resume</a></li>
+          <li class="hidemobile"> <a href="signup.html">Sign Up</a></li>
+          <li class="hidemobile"><a href="login.html">Login</a></li>
+          <li class="menu" onclick=showsidebar()><a href="#"></a></li>
+          <style>
+           
+          </style>
+        
+      </nav>
+    </ul>
+  
+      <div class="icons">
+          <a href="about.html" class="fas fa-info-circle"></a>
+          <a href="#" class="fas fa-envelope"></a>
+          <a href="login.html" id="loginIcon" class="fas fa-user"></a>
+      </div>
+  </header> 
+  <script>
+    function showsidebar() {
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.style.display = 'flex';
+  document.getElementById('navbar').style.display='block';
+}
+function hidesidebar() {
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.style.display = 'none';
+}
+  </script>
     <!-- header section ends -->
     
     <!-- home section starts -->
