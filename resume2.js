@@ -235,3 +235,106 @@ manualbtn.addEventListener('click',()=>{
     autobtn.style.backgroundColor = 'blue';
     manualbtn.style.backgroundColor = 'rgb(74, 74, 74)';
 })
+
+$(document).ready(function () {
+    //cities of india
+    const cities = [
+        "Mumbai", "Delhi", "Bangalore", "Hyderabad", "Ahmedabad",
+        "Chennai", "Kolkata", "Surat", "Pune", "Jaipur", 
+        "Lucknow", "Kanpur", "Nagpur", "Indore", "Thane",
+        "Bhopal", "Visakhapatnam", "Pimpri-Chinchwad", "Patna", "Vadodara",
+        "Ghaziabad", "Ludhiana", "Agra", "Nashik", "Faridabad",
+        "Meerut", "Rajkot", "Kalyan-Dombivli", "Vasai-Virar", "Varanasi",
+        "Srinagar", "Aurangabad", "Dhanbad", "Amritsar", "Navi Mumbai",
+        "Allahabad", "Howrah", "Ranchi", "Gwalior", "Jabalpur",
+        "Coimbatore", "Vijayawada", "Jodhpur", "Madurai", "Raipur",
+        "Kota", "Guwahati", "Chandigarh", "Solapur", "Hubli-Dharwad",
+        "Bareilly", "Moradabad", "Mysore", "Gurgaon", "Aligarh","Dehradun"
+    ];
+
+    //some Popular institutes
+    const collegesAndUniversities = [
+        "Indian Institute of Technology (IIT) Bombay", 
+        "Indian Institute of Technology (IIT) Delhi",
+        "Indian Institute of Technology (IIT) Madras",
+        "Indian Institute of Science (IISc) Bangalore",
+        "All India Institute of Medical Sciences (AIIMS) New Delhi",
+        "Jawaharlal Nehru University (JNU) Delhi",
+        "University of Delhi (DU)", 
+        "Banaras Hindu University (BHU) Varanasi",
+        "National Institute of Technology (NIT) Trichy",
+        "Indian Institute of Technology (IIT) Kanpur",
+        "Birla Institute of Technology and Science (BITS) Pilani",
+        "University of Calcutta",
+        "University of Mumbai",
+        "Savitribai Phule Pune University",
+        "Aligarh Muslim University (AMU)",
+        "University of Hyderabad",
+        "Anna University Chennai",
+        "Vellore Institute of Technology (VIT)",
+        "National Institute of Technology (NIT) Karnataka",
+        "Indian Statistical Institute (ISI) Kolkata",
+        "Jadavpur University",
+        "Manipal Academy of Higher Education",
+        "Amity University",
+        "Symbiosis International University Pune",
+        "Lovely Professional University (LPU)",
+        "Christ University Bangalore",
+        "Shiv Nadar University",
+        "Indian Institute of Management (IIM) Ahmedabad",
+        "Indian Institute of Foreign Trade (IIFT)",
+        "Tata Institute of Social Sciences (TISS) Mumbai",
+        "Panjab University",
+        "University of Rajasthan",
+        "Osmania University",
+        "SRM Institute of Science and Technology",
+        "Indian Institute of Technology (IIT) Kharagpur",
+        "Indian Institute of Technology (IIT) Roorkee",
+        "National Law School of India University (NLSIU) Bangalore",
+        "Guru Gobind Singh Indraprastha University",
+        "Chandigarh University",
+        "Kalinga Institute of Industrial Technology (KIIT) Bhubaneswar",
+        "Nirma University Ahmedabad",
+        "Jamia Millia Islamia (JMI) Delhi",
+        "National Institute of Fashion Technology (NIFT) Delhi",
+        "Narsee Monjee Institute of Management Studies (NMIMS)",
+        "Indian Institute of Technology (IIT) Guwahati",
+        "Institute of Chemical Technology (ICT) Mumbai",
+        "National Institute of Design (NID) Ahmedabad",
+        "Delhi Technological University (DTU)",
+        "Presidency University Kolkata",
+        "Punjab Engineering College (PEC) Chandigarh",
+        "Graphic Era Univesity (GEU)"
+      ];
+      //courses list
+      const courses = [
+        "Bachelor of Technology (B.Tech)", "Bachelor of Engineering (B.E.)", "Bachelor of Computer Applications (BCA)", "Bachelor of Medicine, Bachelor of Surgery (MBBS)", "Bachelor of Dental Surgery (BDS)", "Bachelor of Ayurvedic Medicine and Surgery (BAMS)", "Bachelor of Science in Nursing (B.Sc Nursing)", "Bachelor of Pharmacy (B.Pharm)", "Bachelor of Arts (BA)", "Bachelor of Fine Arts (BFA)", "Bachelor of Social Work (BSW)", "Bachelor of Commerce (B.Com)", "Bachelor of Business Administration (BBA)","Bachelor of Management Studies (BMS)", "Bachelor of Science (B.Sc)", "Bachelor of Science in Agriculture (B.Sc Agri)", "Bachelor of Environmental Science", "Bachelor of Laws (LLB)", "BA LLB", "BBA LLB", "Bachelor of Architecture (B.Arch)", "Bachelor of Design (B.Des)", "Bachelor of Interior Design", "Master of Technology (M.Tech)", "Master of Engineering (M.E.)", "Master of Computer Applications (MCA)", "Doctor of Medicine (MD)", "Master of Surgery (MS)", "Master of Dental Surgery (MDS)", "Master of Science in Nursing (M.Sc Nursing)", "Master of Pharmacy (M.Pharm)", "Master of Arts (MA)", "Master of Fine Arts (MFA)", "Master of Social Work (MSW)", "Master of Commerce (M.Com)", "Master of Business Administration (MBA)", "Master of Management Studies (MMS)", "Master of Science (M.Sc)", "Master of Environmental Science", "Master of Laws (LLM)", "Master of Architecture (M.Arch)", "Master of Design (M.Des)", "Bachelor of Science in IT (BSc. IT)"
+      ];
+      //Job Roles list 
+      const jobRoles = [
+        "Software Engineer", "Data Scientist", "Web Developer", "Product Manager", "Digital Marketing Specialist",
+        "Graphic Designer", "Financial Analyst", "Sales Executive", "Human Resources Manager", "Mechanical Engineer",
+        "Civil Engineer", "Content Writer", "UX/UI Designer", "Network Engineer", "Operations Manager",
+        "Business Analyst", "Data Analyst", "Electrical Engineer", "Medical Doctor", "Nurse",
+        "Pharmacist", "Lawyer", "Accountant", "Teacher", "Professor",
+        "Marketing Manager", "Social Media Manager", "Customer Service Representative", "Research Scientist", "Project Manager"
+      ];     
+      
+    $("#location").autocomplete({
+      source: cities,
+      minLength: 1 // Show suggestions after typing 1 character
+    });
+    $("#institutePH").autocomplete({
+        source: collegesAndUniversities,
+        minLength: 1 // Show suggestions after typing 1 character
+    });
+    $("#coursePH").autocomplete({
+        source: courses,
+        minLength: 1 // Show suggestions after typing 1 character
+    });
+    $("#jobrolePH").autocomplete({
+        source: jobRoles,
+        minLength: 1 // Show suggestions after typing 1 character
+    });
+  });
+  
