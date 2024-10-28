@@ -196,7 +196,7 @@ header .fa-bars {
 
 /* Default light mode styles */
 body {
-    background-color: var(--off-white);
+    background-color: #e4e3e3;
     /* Changed from #ffffff to Off-White */
     color: var(--dark-slate);
     /* Changed from #000000 to Dark Slate */
@@ -354,7 +354,7 @@ body {
     margin-bottom: 20px;
     font-weight: 600;
     color: #fff;
-    border-bottom: 2px solid #3f10ea;
+    /* border-bottom: 2px solid #3f10ea; */
     padding-bottom: 10px;
 }
 
@@ -475,7 +475,7 @@ body {
         right: 0;
         background: #f9f9f9;
         /* Updated background to a softer light color */
-        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+        /* border-top: 0.1rem solid rgba(0, 0, 0, 0.1); */
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
 

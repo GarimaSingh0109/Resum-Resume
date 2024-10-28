@@ -280,8 +280,8 @@
 }
       /* Features Section */
       .features {
-        padding: 60px 20px;
-        background-color: #f9f9f9;
+        padding: 70px 30px;
+        background-color: #f0d2d2;
       }
 
       /* <label for = "dark-mode-toggle" style="margin: 20px; display: block; text-align: center;"><label for="dark-mode-toggle"><input type="checkbox" id="dark-mode-toggle" />Toggle Dark Mode </label></label>.features-card {
@@ -289,11 +289,11 @@
 		/* <label for ="dark-mode-toggle" style="margin: 20px; display: block; text-align: center;"><label for="dark-mode-toggle"><input type="checkbox" id="dark-mode-toggle" />Toggle Dark Mode </label></label> */
 
       .features-card {
-        background-color: white;
-        padding: 30px;
-        border-radius: 8px;
+        background-color: rgb(255, 255, 255);
+        padding: 10px;
+        border-radius: 5px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        width: calc(25% - 30px);
+        width: calc(55% - 20px);
         text-align: center;
         transition: transform 0.3s, box-shadow 0.3s, z-index 0.3s;
         position: relative;
@@ -318,7 +318,7 @@
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
-			gap: 30px;
+			gap: 60px;
 			max-width: 1200px;
 			margin: 0 auto;
 		}
@@ -329,7 +329,7 @@
 			
 			border-radius: 18px;
 			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-			width: calc(25% - 30px);
+			width: calc(100% - 30px);
 			text-align: center;
 
 			transition: transform 0.3s, box-shadow 0.3s, z-index 0.3s;
@@ -450,11 +450,11 @@
 
 		/* Footer Styles */
 		.footer {
-			background-color: var(--deep-teal);
+			background-color: #003d4d;
 			/* Use deep teal for footer background */
 			color: #ffffff;
 			/* White text for footer */
-			padding: 40px 0;
+			padding: 20px 0;
 			padding-bottom:0;
 		}
 
@@ -462,11 +462,11 @@
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-between;
-			max-width: 1200px;
+			max-width: 900px;
 			/* Max width for footer content */
 			margin: 0 auto;
 			/* Center footer content */
-			padding: 0 20px;
+			padding: 0 10px;
 		}
 
 		.footer-section {
@@ -541,7 +541,7 @@
 
 		.footer-section ul li a {
 			color: #e0e0e0;
-      font-size: 16px;
+      font-size: 12px;
 			/* Light grey for links */
 			text-decoration: none;
 			/* No underline for links */
@@ -559,6 +559,7 @@
       .features h2 {
         text-align: center;
         color: #333;
+        font-weight: bold;
         /* Consider changing this for better contrast */
         margin-bottom: 40px;
         font-size: 32px;
@@ -625,8 +626,8 @@
 
       /* Testimonials Section */
       .testimonials {
-        padding: 60px 20px;
-        background-color: var(--off-white);
+        padding: 0px 20px;
+        background-color: #e4e3e3;
         /* Use the off-white background color */
       }
 
@@ -639,6 +640,7 @@
       }
 
       .testimonial-cards {
+        padding-bottom: 70px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -654,11 +656,11 @@
       }
 
       .testimonial-card {
-        background-color: var(--off-white);
+        background-color: #ffffff;
         /* Use off-white for testimonial cards */
         padding: 30px;
         border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 10px 10px rgba(247, 242, 242, 0.1);
         width: calc(33.33% - 30px);
         text-align: center;
       }
@@ -745,15 +747,17 @@
         /* Increase font size for visibility */
         position: relative;
         /* Required for the pseudo-element */
-        display: inline-block;
+        /* display: inline-block; */
         /* Make the element fit the content */
         padding: 10px;
+        padding-bottom: 50px;
         /* Add some padding for aesthetics */
         transition: color 0.4s ease, transform 0.4s ease;
         /* Smooth transition */
         margin: 0;
+        font-weight: bold;
         /* Remove default margin */
-        background: linear-gradient(90deg, #ff6f61, #de8c3e);
+        background: linear-gradient(90deg, #333, #333);
         /* Gradient background */
 
         background-clip: text; /* Standard property */
@@ -774,32 +778,32 @@
         /* Position it just below the text */
         height: 5px;
         /* Set height for the underline */
-        background-color: #ff6f61;
+        /* background-color: #ff6f61; */
         /* Initial color of the underline */
         transform: scaleX(0);
         /* Start with no width */
-        transition: transform 0.4s ease, background-color 0.4s ease;
+        /* transition: transform 0.4s ease, background-color 0.4s ease; */
         /* Smooth transition for the underline */
       }
 
       .testimonials h2:hover {
         color: #ff6f61;
         /* Change text color on hover */
-        transform: translateY(-10px) rotate(1deg);
+        /* transform: translateY(-10px) rotate(1deg); */
         /* Move the text up and slightly rotate */
       }
 
-      .testimonials h2:hover::before {
-        transform: scaleX(1);
+      /* .testimonials h2:hover::before { */
+        /* transform: scaleX(1); */
         /* Scale the underline to full width */
-        background-color: #de8c3e;
+        /* background-color: #181818; */
         /* Change underline color on hover */
-      }
+      /* } */
 
-      .testimonials h2:hover {
-        box-shadow: 0 10px 30px rgba(255, 111, 97, 0.6);
+      /* .testimonials h2:hover { */
+        /* box-shadow: 0 10px 30px rgba(255, 111, 97, 0.6); */
         /* Add a shadow effect on hover */
-      }
+      /* } */
 
       /* Responsive Styles */
       @media (max-width: 768px) {
