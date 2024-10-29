@@ -32,14 +32,49 @@ myratinghead.addEventListener('click',()=>{
     ratingboardhead.style.backgroundColor = 'blue';
 })
 
-// JavaScript Logic
-function toggleStar(star) {
-  // Check if the star is already solid
-  if (star.classList.contains("fa-solid")) {
-    star.classList.remove("fa-solid");
-    star.classList.add("fa-regular");
-  } else {
-    star.classList.remove("fa-regular");
-    star.classList.add("fa-solid");
-  }
-}
+// JavaScript to handle star rating functionality
+const cards = document.querySelectorAll('.card');
+cards.forEach(card => {
+    const stars = card.querySelectorAll('.star');
+    let numstar = 0;
+
+    // Loop through each star and add event listeners
+    stars.forEach(star => {
+        star.addEventListener('click', () => {
+            // Set the rating based on the data-rating attribute
+            numstar = parseInt(star.getAttribute('data-rating'));
+
+            // Update star icons based on the selected rating
+            stars.forEach((s, index) => {
+                const starIcon = s.querySelector('i');
+                if (index < numstar) {
+                    starIcon.classList.remove('fa-regular'); // Remove empty star
+                    starIcon.classList.add('fa-solid');      // Add filled star
+                } else {
+                    starIcon.classList.remove('fa-solid');    // Remove filled star
+                    starIcon.classList.add('fa-regular');     // Add empty star
+                }
+            });
+        });
+    });
+});
+
+let skillcoins = 0;
+const coinsdata = document.querySelector('#SkillCoins');
+
+const updateCoins = () => {
+    coinsdata.textContent = skillcoins;
+};
+updateCoins();
+
+const submitButtons = document.querySelectorAll('.submitbtn');
+submitButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        if(button.disabled != true){
+            skillcoins += 5;
+            updateCoins();
+            button.disabled = true; // Disable the button after it’s clicked
+        }
+    });
+});
+
