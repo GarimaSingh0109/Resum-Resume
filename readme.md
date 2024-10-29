@@ -12,7 +12,7 @@ This project is a **LinkedIn Resume Builder** that allows users to generate prof
 ---
 
 **Discord Link:-** https://discord.gg/GJ5BfwVd
-
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 ## Features 🚀
 
 - **Easy-to-Use Interface**: A user-friendly interface allows users to effortlessly create a resume.
@@ -22,7 +22,7 @@ This project is a **LinkedIn Resume Builder** that allows users to generate prof
 - **24/7 Support**: Support is available around the clock to assist users 💬.
 
 ---
-
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 ## Project Structure 📁
 
 The website consists of the following key sections:
@@ -34,7 +34,7 @@ The website consists of the following key sections:
 5. **Footer**: A simple footer providing basic information about the website.
 
 ---
-
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 ## Technologies Used 💻
 
 - **HTML5**: For the structure of the webpage.
@@ -43,7 +43,7 @@ The website consists of the following key sections:
 - **JavaScript/jQuery**: To handle dynamic behavior (included via CDN).
 
 ---
-
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 ## 📸 Screenshots
 
 **💻Desktop and📱Mobile View**
@@ -54,7 +54,7 @@ The website consists of the following key sections:
 </div>
 
 ---
-
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 ## Getting Started 🏁
 
 ### Prerequisites
@@ -90,7 +90,7 @@ The website consists of the following key sections:
 ├── Hero Section.jpg    # Image displayed in the hero section
 ├── styles.css          # Custom CSS styles (inlined in HTML)
 ```
-
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 ### Developer Setup 🛠️
 For developers who want to contribute:
 
@@ -107,6 +107,7 @@ For developers who want to contribute:
    ```
 
 ---
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 ### Contributing 🤝
 Contributions are welcome! Here’s how to get started:
 
@@ -116,18 +117,18 @@ Contributions are welcome! Here’s how to get started:
 4. Push to the branch: `git push origin feature/your-feature-name`.
 5. Open a pull request with a detailed description.
 
-
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 ## Usage 📄
 
 1. **Home Page**: Introduces users to the service with a description and a call-to-action button.
 2. **Build Resume**: Users enter their LinkedIn URL to create a resume.
 3. **Sign-Up/Login**: Users can create an account or log in to manage their resume.
 4. **Features & Testimonials**: Displays the platform’s features and user feedback.
-
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 ## Responsive Design 📏
 
 The project uses Bootstrap’s grid system to ensure the website is fully responsive across different screen sizes. Additional media queries are included for further fine-tuning the layout for mobile devices.
-
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 ## License 📜
 
 This project is licensed under the MIT License. See the `LICENSE` file for more information.
