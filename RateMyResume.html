@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="RateMyResume.css">
+</head>
+<body>
+    <!-- header section starts --> 
+    <header>
+        <a href="#" class="logo">Resum Resume<span>.</span></a>
+                 
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="about.html">About</a>
+            <a href="resume.html">Build Resume</a>
+            <a href="RateMyResume.html">RateMyResume</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="login.html">Login</a>
+        </nav>
+    
+        <div class="icons">
+            <a href="about.html" class="fas fa-info-circle"></a>
+            <a href="#" class="fas fa-envelope"></a>
+            <a href="login.html" id="loginIcon" class="fas fa-user"></a>
+            <i class="fa-solid fa-coins"></i> <p id="SkillCoins"></p>
+        </div>
+    </header> 
+    <style>
+        body{
+            padding: 0;
+        }
+        header{
+            position: relative;
+        }
+        footer{
+            margin-top: 5rem;
+        }
+    </style>
+    <!-- header section ends -->
+
+    <!-- hero section start -->
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>Welcome to RateMyResume!</h1>
+            <p>Share your resume to get constructive feedback and ratings, or help others improve by rating their resumes. Earn SkillCoins (in-app currency) as you rate others, and unlock premium features to enhance your own resume.</p>
+            <ul class="features-list">
+                <li>📄 Upload Your Resume for Feedback</li>
+                <li>⭐ Rate Other Resumes on a 5-Star Scale</li>
+                <li>💰 Earn Currency with Each Rating</li>
+                <li>🔑 Access Premium Templates and Keyword Suggestions</li>
+            </ul>
+            <p><strong><i class="fa-solid fa-coins"></i> SkillCoins:</strong> Rate others' resumes to earn SkillCoins, and use them to unlock premium features like advanced templates and personalized keyword suggestions!</p>
+        </div>
+    </div>
+    <!-- hero section ends -->
+
+    <!-- panel 1 start  -->
+    <div class="panel1">
+        <div class="ratingBox">
+            <div class="ratingHead">
+                <div class="myrating">
+                    <h1>My Rating</h1>
+                </div>
+                <div class="ratingboardhead">
+                    <h1>Rating Board</h1>
+                </div>
+            </div>
+            <div class="rating">
+                <div class="mycards">
+
+                </div>
+                <form id="resumeForm">
+                    <h2>Upload Your Resume</h2>
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="jobRole">Job Role:</label>
+                        <input type="text" id="jobRole" name="jobRole" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="resume">Resume (PDF):</label>
+                        <input type="file" id="resume" name="resume" accept="application/pdf" required>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="ratingboard">
+                <div class="card card1">
+                    <img src="images/sample-resume1.jpg" alt="">
+                    <div class="personinfo">
+                        <h2>Olivia Wilson</h2>
+                        <h3>Graphic Designer</h3>
+                    </div>
+                    <a href="path/to/your-resume.pdf" download="My_Resume.pdf" class="download-button">Download & View</a>
+                    <div class="star-rating">
+                    <div class="star" data-rating="1"><i class="fa-regular fa-star"></i></div>
+                    <div class="star" data-rating="2"><i class="fa-regular fa-star"></i></div>
+                    <div class="star" data-rating="3"><i class="fa-regular fa-star"></i></div>
+                    <div class="star" data-rating="4"><i class="fa-regular fa-star"></i></div>
+                    <div class="star" data-rating="5"><i class="fa-regular fa-star"></i></div>
+                    </div>
+                    <div class="submitbtn">
+                        Submit
+                    </div>
+                </div>
+                <div class="card card2">
+                    <img src="images/sample-resume2.jpg" alt="">
+                    <div class="personinfo">
+                        <h2>Richard Sanchez</h2>
+                        <h3>Marketing Manager</h3>
+                    </div>
+                    <a href="path/to/your-resume.pdf" download="My_Resume.pdf" class="download-button">Download & View</a>
+                    <div class="star-rating">
+                    <div class="star" data-rating="1"><i class="fa-regular fa-star"></i></div>
+                    <div class="star" data-rating="2"><i class="fa-regular fa-star"></i></div>
+                    <div class="star" data-rating="3"><i class="fa-regular fa-star"></i></div>
+                    <div class="star" data-rating="4"><i class="fa-regular fa-star"></i></div>
+                    <div class="star" data-rating="5"><i class="fa-regular fa-star"></i></div>
+                    </div>
+                    <div class="submitbtn">
+                        Submit
+                    </div>
+                </div>
+                <div class="card card3">
+                    <img src="images/sample-resume6.jpg" alt="">
+                    <div class="personinfo">
+                        <h2>Raj Patel</h2>
+                        <h3>Software Engineer</h3>
+                    </div>
+                    <a href="path/to/your-resume.pdf" download="My_Resume.pdf" class="download-button">Download & View</a>
+                    <div class="star-rating">
+                    <div class="star" data-rating="1"><i class="fa-regular fa-star"></i></div>
+                    <div class="star" data-rating="2"><i class="fa-regular fa-star"></i></div>
+                    <div class="star" data-rating="3"><i class="fa-regular fa-star"></i></div>
+                    <div class="star" data-rating="4"><i class="fa-regular fa-star"></i></div>
+                    <div class="star" data-rating="5"><i class="fa-regular fa-star"></i></div>
+                    </div>
+                    <div class="submitbtn">
+                        Submit
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- panel 1 ends -->
+
+    <!-- footer section start -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Resume Builder</a></li>
+                    <li><a href="cv.html">CV Templates</a></li>
+                    <li><a href="#">Career Advice</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Resume Builder. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- jQuery UI library -->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script src="Resume.js"></script>
+    <script src="RateMyResume.js"></script>
+</body>
+</html>

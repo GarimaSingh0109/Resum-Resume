@@ -227,6 +227,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    flex-wrap: wrap;
     position: relative;
 }
 .achive-entry{
@@ -468,6 +470,7 @@ button {
 #download-resume {
     background-color: #5cb85c; /* Bootstrap success color */
     color: white;
+
 }
 .ui-autocomplete {
     max-height: 150px;
@@ -476,4 +479,4 @@ button {
     border: 1px solid #ddd;
     background-color: #fff;
   }
-  
+
