@@ -101,7 +101,7 @@ body {
 .education-entry{
     width: 40%;
 }
-#skills-input{
+#skillsinput{
     width: 40%;
 }
 .experience-entry{
@@ -123,6 +123,8 @@ body {
 .achive{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+
     flex-wrap: wrap;
     position: relative;
 }
@@ -366,4 +368,3 @@ button {
     background-color: #5cb85c; /* Bootstrap success color */
     color: white;
 }
-
