@@ -124,6 +124,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    flex-wrap: wrap;
     position: relative;
 }
 .achive-entry{
