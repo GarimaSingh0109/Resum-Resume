@@ -1,6 +1,4 @@
-Here's a single markdown file that combines all essential information from the project description, instructions, and contributing guidelines. This format is suitable if you'd like to keep everything in one place.
 
-```markdown
 # LinkedIn Resume Builder ✨
 
 This project is a LinkedIn Resume Builder that allows users to generate professional resumes from their LinkedIn profiles in just a few clicks. The website is designed with a clean and responsive UI using Bootstrap, focusing on simplicity and ease of use.
@@ -79,7 +77,7 @@ For developers who want to contribute:
 2. Install necessary dependencies if applicable (e.g., Node.js, Python).
 3. Run the development server:
    ```bash
-   npm start   # Or the appropriate command for your setup
+   npm start   
    ```
 
 ## Contributing 🤝
