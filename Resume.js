@@ -70,14 +70,13 @@ document.getElementById('add-achivement').addEventListener('click', function() {
     newAchive.classList.add('achive-entry');
     newAchive.innerHTML = `
     <div class="achiveLeft">
-                        <label>Heading:</label>
-                        <input type="text" placeholder="e.g., Best Employee of the Year">
-                    </div>
-                    <div class="achiveRight">
-                        <label>Description:</label>
-                        <textarea id="achivedes" placeholder="Describe your achievement or certification"></textarea>
-                        <p id="achivedesc"></p>
-                    </div>
+        <label>Heading:</label>
+        <input type="text" placeholder="e.g., Best Employee of the Year">
+    </div>
+    <div class="achiveRight">
+        <label>Description:</label>
+        <textarea placeholder="Describe your achievement or certification"></textarea>
+    </div>
     `;
     achiveFields.appendChild(newAchive);
 });

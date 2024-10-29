@@ -122,8 +122,13 @@ body {
 }
 .achive{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
     position: relative;
+}
+.achive-entry{
+    display: flex;
+    justify-content: space-between;
 }
 .achiveLeft{
     width: 40%;
