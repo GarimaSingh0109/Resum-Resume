@@ -30,13 +30,13 @@ body{
 
 .hero-content h1 {
     font-size: 4rem;
-    color: #333;
+    color: #003d4d;
     margin-bottom: 15px;
 }
 
 .hero-content p {
     font-size: 1.2em;
-    color: #555;
+    color: #003d4d;
     margin-bottom: 25px;
     line-height: 1.6;
 }
@@ -45,7 +45,7 @@ body{
     list-style: none;
     padding: 0;
     font-size: 1.1em;
-    color: #333;
+    color: #003d4d;
     margin-bottom: 30px;
 }
 
@@ -243,4 +243,115 @@ button:hover {
 }
 .download-button:hover {
     background-color: #37913b;
+}
+
+/* panel 2 css */
+.panel2{
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7rem;
+}
+.boxcontent{
+    width: 100%;
+    height: 40%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    position: relative;
+    border-bottom: 2px solid gainsboro;
+}
+.boxcontent h2{
+    color: #003d4d;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+.boxcontent p{
+    color: #003d4d;
+    width: 70%;
+    font-size: 1.7rem;
+    margin-bottom: 1.3rem;
+}
+.boxcontent #p2{
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #4CAF50;
+}
+.keywordbox{
+    width: 90%;
+    height: 100%;
+    position: relative;
+    border-radius: 3rem;
+    border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+}
+.mainbox{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    padding: 5rem;
+    position: relative;
+    justify-content: space-between;
+}
+.keyleft{
+    width: 45%;
+    height: 100%;
+    padding: 3rem;
+    border: 2px solid #333;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.keyright{
+    width: 45%;
+    height: 100%;
+    padding: 3rem;
+    border: 2px solid #333;
+    border-radius: 2rem;
+    position: relative;
+}
+.jobrole{
+    color: black;
+    display: flex;
+    justify-content: space-between;
+}
+.jobrole label{
+    color: #003d4d;
+    font-size: 2rem;
+    font-weight: 600;
+}
+#job-role{
+    font-size: 1.7rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border-radius: 1rem;
+    background-color: rgb(185, 185, 185);
+}
+.keyleft button{
+    width: 100%;
+}
+#keyword-suggestions{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#keyword-suggestions p{
+    color: #003d4d;
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+#keyword-suggestions button{
+    background-color: blue;
+    font-size: 1.7rem;
+    width: auto;
 }
