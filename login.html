@@ -16,15 +16,23 @@
 <!-- Navbar section -->
 <header>
     <a href="index.html"><h1>Resum Resume<span>.</span></h1></a>
-    <nav>
-        <ul id="nav-menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about.html">About Us</a></li>
-            <li><a href="#resume.html">Resume</a></li>
-            <li><a href="#signup.html">Sign Up</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
-    </nav>
+    <nav> 
+      <ul id="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="signup.html">Sign Up</a></li>
+          <li id="login-link"><a href="login.html">Login</a></li>
+      </ul>
+  </nav>
+  
+  <script>
+      // Hide the "Login" link if the user is on the login page
+      if (window.location.pathname.endsWith("login.html")) {
+          document.getElementById("login-link").style.display = "none";
+      }
+  </script>
+  
     <div class="nav-controls">
       <a href="about.html" class="fas fa-info-circle"></a>
       <a href="login.html" id="loginIcon" class="fas fa-user"></a>
