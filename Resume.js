@@ -199,13 +199,14 @@ document.getElementById('next-step-2').addEventListener('click', function() {
     const email = document.getElementById('email').value.trim();
     const contact = document.getElementById('contact').value.trim();
     const location = document.getElementById('location').value.trim();
+    const githubid = document.getElementById('githubid').value.trim();
     const skills = document.getElementById('skillsinput').value.trim();
     const educationEntries = collectEducationData();
     const experienceEntries = collectExperienceData();
     const projectEntries = collectProjectData();
 
     // Generate resume HTML based on the selected template
-    const resumeContent = generateResumeHTML(name, profile, email, contact, location, skills, educationEntries, experienceEntries, projectEntries, selectedTemplate);
+    const resumeContent = generateResumeHTML(name, profile, email, contact, location, githubid, skills, educationEntries, experienceEntries, projectEntries, selectedTemplate);
     
     document.getElementById('resume-display').innerHTML = resumeContent;
     step2p.querySelector('.circle').textContent = '✓';
@@ -221,6 +222,7 @@ function collectResumeData() {
     const email = document.getElementById('email').value.trim();
     const contact = document.getElementById('contact').value.trim();
     const location = document.getElementById('location').value.trim();
+    const githubid = document.getElementById('githubid').value.trim();
     const skills = document.getElementById('skillsinput').value.trim();
     const education = collectEducationData();
     const experience = collectExperienceData();
@@ -232,6 +234,7 @@ function collectResumeData() {
         email,
         contact,
         location,
+        githubid,
         skills,
         education,
         experience,
@@ -271,7 +274,7 @@ function collectProjectData() {
 }
 
 // Function to generate resume HTML based on selected template
-function generateResumeHTML(name, profile, email, contact, location,  skills, educationEntries, experienceEntries, projectEntries, template) {
+function generateResumeHTML(name, profile, email, contact, location, githubid, skills, educationEntries, experienceEntries, projectEntries, template) {
     let educationHTML = educationEntries.map(edu => `
         <div>
             <strong>${edu.institute}</strong> (${edu.startYear} - ${edu.endYear})<br>
@@ -300,7 +303,7 @@ function generateResumeHTML(name, profile, email, contact, location,  skills, ed
     return `
         <h1>${name}</h1>
         <p>${profile}</p>
-        <p>Email: ${email} | Contact: ${contact} | Location: ${location}</p>
+        <p>Email: ${email} | Contact: ${contact} | Location: ${location} | Github: ${githubid}</p>
         <br>
         <p><b>Skills:</b> ${skills}</>
         <h2>Education</h2>
@@ -321,6 +324,7 @@ else if(selecttemp === 2){
                 <h2>Contact Information</h2>
                 <p>Email: <span id="email">${email}</span></p>
                 <p>Contact No: <span id="contact">${contact}</span></p>
+                <p>Github: <span id="githubid">${githubid}</span></p>
                 <p>Location: <span id="location">${location}</span></p>
                 <h2>Skills</h2>
                 <p id="skills">${skills}</p>
@@ -391,6 +395,7 @@ else if(selecttemp ===3){
         <h2>Contact Information</h2>
         <p><i class="fa-solid fa-envelope"></i> Email: <span id="email">${email}</span></p>
         <p><i class="fa-solid fa-address-book"></i> Contact No: <span id="contact">${contact}</span></p>
+        <p><i class="fa-brands fa-github"></i> Github: <span id="contact">${githubid}</span></p>
         <p><i class="fa-solid fa-location-dot"></i> Location: <span id="location">${location}</span></p>
         
         <h2>Education</h2>
