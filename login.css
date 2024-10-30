@@ -280,3 +280,45 @@ form {
       font-size: 1.2rem;
   }
 }
+:root {
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --header-bg: #00796b;
+  --button-bg: #6e8efb;
+  --button-text: #ffffff;
+}
+
+body.dark-mode {
+  --background-color: #1e1e1e;
+  --text-color: #ffffff;
+  --header-bg: #333333;
+  --button-bg: #444444;
+  --button-text: #ffffff;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+  background-color: var(--header-bg);
+}
+
+Dark Mode Toggle Button
+.dark-mode-btn {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  padding: 8px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode-btn:hover {
+  background-color: #555;
+}

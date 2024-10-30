@@ -11,27 +11,30 @@
   <!-- Progress Bar -->
   <div id="progress-container">
     <div id="progress-bar"></div>
-</div>
+  </div>
 
-<!-- Navbar section -->
-<header>
+  <!-- Navbar section -->
+  <header>
     <a href="index.html"><h1>Resum Resume<span>.</span></h1></a>
     <nav>
-        <ul id="nav-menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about.html">About Us</a></li>
-            <li><a href="#resume.html">Resume</a></li>
-            <li><a href="#signup.html">Sign Up</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
+      <ul id="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about.html">About Us</a></li>
+        <li><a href="#resume.html">Resume</a></li>
+        <li><a href="#signup.html">Sign Up</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
     </nav>
     <div class="nav-controls">
       <a href="about.html" class="fas fa-info-circle"></a>
       <a href="login.html" id="loginIcon" class="fas fa-user"></a>
-        <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+      <button id="menu-toggle" aria-label="Toggle menu">☰</button>
     </div>
-</header>
+    <!-- Dark Mode Toggle -->
+    <button id="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button>
+  </header>
 
+  <!-- Main Content -->
   <div class="container">
     <div class="forms-container">
       <div class="signin-signup">
@@ -62,47 +65,58 @@
     </div>
   </div>
 
-
+  <!-- Footer -->
   <footer class="footer">
     <div class="footer-content">
-        <div class="footer-section">
-            <h3>About Us</h3>
-            <ul>
-                <li><a href="#">Our Story</a></li>
-                <li><a href="#">Team</a></li>
-                <li><a href="#">Careers</a></li>
-            </ul>
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="#">Resume Builder</a></li>
+          <li><a href="cv.html">CV Templates</a></li>
+          <li><a href="#">Career Advice</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="Faqs.html">FAQ</a></li>
+          <li><a href="comment.html">Contact Us</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Connect With Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
         </div>
-        <div class="footer-section">
-            <h3>Services</h3>
-            <ul>
-                <li><a href="#">Resume Builder</a></li>
-                <li><a href="cv.html">CV Templates</a></li>
-                <li><a href="#">Career Advice</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>Support</h3>
-            <ul>
-                <li><a href="Faqs.html">FAQ</a></li>
-                <li><a href="comment.html">Contact Us</a></li>
-                <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>Connect With Us</h3>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
+      </div>
     </div>
     <div class="footer-bottom">
-        <p>&copy; 2024 Resume Builder. All rights reserved.</p>
+      <p>&copy; 2024 Resume Builder. All rights reserved.</p>
     </div>
-</footer>
+  </footer>
+
   <script src="login.js"></script>
+  <script>
+    // JavaScript for Dark Mode Toggle
+    const toggleButton = document.getElementById('dark-mode-toggle');
+    const body = document.body;
+
+    toggleButton.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      toggleButton.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌙';
+    });
+  </script>
 </body>
 </html>
