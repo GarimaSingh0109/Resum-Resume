@@ -36,10 +36,10 @@
     <div class="forms-container">
       <div class="signin-signup">
         <form action="#" class="sign-up-form">
-          <h2 class="title">Sign up</h2>
+          <h2 class="title" style="color: rgb(75, 73, 73); font-size: 40px;">Login</h2>
           <div class="input-field">
             <i class="fas fa-user"></i>
-            <input type="text" placeholder="Username" required />
+            <input type="text" placeholder="Username" required/>
           </div>
           <div class="input-field">
             <i class="fas fa-envelope"></i>
@@ -49,19 +49,58 @@
             <i class="fas fa-lock"></i>
             <input type="password" placeholder="Password" required />
           </div>
-          <input type="submit" class="btn" value="Sign up" />
-          <p class="social-text">Or Sign up with social platforms</p>
-          <div class="social-media">
-            <a href="https://github.com/YourGitHubProfile" target="_blank">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width="40" height="40" style="margin-left: 5px;">
-            </a>
+          <!--Add Forget password link-->
+          <div class="forgot-password" style="color: rgb(53, 53, 149); text-align: end; margin: 5px 0;">
+            <a href="#" onclick="forgotPassword()">Forgot Password?</a>
           </div>
-          <input type="submit" class="btn" value="Login" />
+          <!--Made sign up button Login Button-->
+          <input type="submit" class="btn solid" value="Login" />
+
+          <!--Add link For go back to sign-up page-->
+          <p style="margin-left: 90px;margin-bottom: 5px;">Don't have an account? <a href="signup.html" target="_blank" style="color: rgba(33, 35, 156, 0.8);">Sign up here!</a></p>
+
+        <div style="background-color: antiquewhite; margin-left: 10px;text-align:center;padding:5px 30px;">
+          <div class="Social-platform" style="margin-top: 10px;">
+          <p class="social-text" > Sign up with social platforms</p>
+          </div>
+          
+          <div class="social-media" style="margin-top:10px;font-size: 20px;">
+            <a href="https://github.com/YourGitHubProfile" target="_blank" class="social-icon">
+              <i class="fab fa-github"></i>
+            </a>
+          
+            <!--Add more social media-->
+            <a href="https://www.google.com" target="_blank" class="social-icon">
+              <i class="fab fa-google"></i>
+            </a>
+          
+            <a href="https://facebook.com/YourPage" target="_blank" class="social-icon">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+
+          </div>
+        </div>
         </form>
       </div>
     </div>
   </div>
 
+  <script>
+    function forgotPassword() {
+          const email = prompt('Please enter your email address:');
+          if (email) {
+            firebase
+              .auth()
+              .sendPasswordResetEmail(email)
+              .then(() => {
+                alert('Password reset email sent!');
+              })
+              .catch((error) => {
+                console.error('Error:', error.message);
+              });
+            }
+    }
+  </script>
 
   <footer class="footer">
     <div class="footer-content">
