@@ -1,0 +1,52 @@
+.card {
+    transform: scale(0.7);
+    font-size: 30px;
+}
+
+header {
+    height: 120px;
+    margin: 5px;
+    border-radius: 16px;
+}
+
+.footer {
+    height: 300px;
+}
+
+.footer h3 {
+    text-decoration: none;
+}
+
+.footer h3:hover {
+    text-decoration: underline;
+}
+
+.footer ul li {
+    margin-bottom: 5px;
+}
+
+.footer i {
+    font-size: 25px;
+    transition: 0.1s linear;
+    margin: 15px;
+}
+
+.footer i:hover {
+    transform: scale(1.7);
+}
+
+.footer .insta:hover {
+    color: pink;
+}
+
+.footer .tweet:hover {
+    color: white;
+}
+
+.footer .book:hover {
+    color: blue;
+}
+
+.footer .lkedin:hover {
+    color: blue;
+}
