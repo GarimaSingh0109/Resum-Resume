@@ -273,8 +273,90 @@ function collectProjectData() {
     }));
 }
 
+// Declare global variables to store fetched data
+let followers = 0;
+let following = 0;
+let totalRepos = 0;
+let totalStars = 0;
+let topRepos = [];
+let languagePercentages = [];
+
+// Fetch data from the user's GitHub username
+const gitusername = document.getElementById('githubid')
+async function fetchGitHubData(gitusername) {
+    const userUrl = `https://api.github.com/users/${gitusername}`;
+    const reposUrl = `https://api.github.com/users/${gitusername}/repos`;
+
+    try {
+        const userDataResponse = await fetch(userUrl);
+        const userData = await userDataResponse.json();
+
+        const reposDataResponse = await fetch(reposUrl);
+        const reposData = await reposDataResponse.json();
+
+        if (userData.message === "Not Found") {
+            return { error: "User not found!" };
+        }
+
+        // Extract data and assign to global variables
+        followers = userData.followers;
+        following = userData.following;
+        totalRepos = userData.public_repos;
+
+        // Total Stars Earned
+        totalStars = reposData.reduce((acc, repo) => acc + repo.stargazers_count, 0);
+
+        // Top 5 Repos by Stars
+        topRepos = reposData
+            .sort((a, b) => b.stargazers_count - a.stargazers_count)
+            .slice(0, 5)
+            .map(repo => ({ name: repo.name, stars: repo.stargazers_count }));
+
+        // Languages used and their counts
+        const languageCounts = {};
+        reposData.forEach(repo => {
+            if (repo.language) {
+                languageCounts[repo.language] = (languageCounts[repo.language] || 0) + 1;
+            }
+        });
+
+        // Calculate percentages
+        const totalRepoCount = reposData.length;
+        languagePercentages = Object.keys(languageCounts).map(language => {
+            const count = languageCounts[language];
+            return {
+                language,
+                percentage: ((count / totalRepoCount) * 100).toFixed(2), // Calculate percentage
+            };
+        });
+
+        // Sort languages by count in descending order
+        languagePercentages.sort((a, b) => b.percentage - a.percentage);
+
+        // Return collected data
+        return {
+            followers,
+            following,
+            totalRepos,
+            totalStars,
+            topRepos,
+            languagePercentages, // Return sorted language percentages
+        };
+    } catch (error) {
+        console.error("Error fetching GitHub data:", error);
+        return { error: "Error fetching data. Please try again." };
+    }
+}
+// Function to initiate fetching and logging data
+async function init() {
+    const username = "mohitranag18"; // Replace with the actual username
+    const data = await fetchGitHubData(username);
+}
+// Call the init function
+init();
+
 // Function to generate resume HTML based on selected template
-function generateResumeHTML(name, profile, email, contact, location, githubid, skills, educationEntries, experienceEntries, projectEntries, template) {
+function generateResumeHTML(name, profile, email, contact, location, githubid, skills, educationEntries, experienceEntries, projectEntries, template,) {
     let educationHTML = educationEntries.map(edu => `
         <div>
             <strong>${edu.institute}</strong> (${edu.startYear} - ${edu.endYear})<br>
