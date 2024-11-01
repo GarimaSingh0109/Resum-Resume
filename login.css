@@ -84,12 +84,13 @@ input::placeholder {
 }
 
 .forgot-password a {
-    color: #d66f6f66;
+    color: #b22222;
     text-decoration: none;
 }
 
 .forgot-password a:hover {
     text-decoration: underline;
+    color: #8b0000;
 }
 
 .login-btn {
