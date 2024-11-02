@@ -157,6 +157,7 @@ document.getElementById('next-step').addEventListener('click', function() {
 const basicCard = document.querySelector('#basic');
 const classicCard = document.querySelector('#classic');
 const modernCard = document.querySelector('#modern');
+const developerCard = document.querySelector('#developer');
 basicCard.addEventListener('click',()=>{
     basicCard.style.backgroundColor = '#ADD8E6';
     classicCard.style.backgroundColor = '#f4f4f4';
@@ -174,6 +175,13 @@ modernCard.addEventListener('click',()=>{
     classicCard.style.backgroundColor = '#f4f4f4';
     modernCard.style.backgroundColor = '#ADD8E6';
     selecttemp = 3;
+});
+developerCard.addEventListener('click',()=>{
+    basicCard.style.backgroundColor = '#f4f4f4';
+    classicCard.style.backgroundColor = '#f4f4f4';
+    modernCard.style.backgroundColor = '#f4f4f4';
+    developerCard.style.backgroundColor = '#ADD8E6';
+    selecttemp = 4;
 });
 
 // Handle previous step button for Step 2
@@ -531,6 +539,145 @@ else if(selecttemp ===3){
     </style>
     `;
 }
+else if(selecttemp === 4){
+    return `
+    <div class="resume">
+        <div class="persnalinfo">
+            <div class="namepro">
+                <h2>${name}</h2>
+                <p>${profile}</p>
+            </div>
+            <div class="nameline"></div>
+            <div class="contactinfo">
+                <h2>Contact Info</h2>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Contact No:</strong> ${contact}</p>
+                <p><strong>Location:</strong> ${location}</p>
+            </div>
+        </div>
+        <div class="gitdata">
+            <h3><i class="fa-brands fa-github"></i> ${githubid}</h3>
+            <ul class="ul">
+                <li><strong>${followers}</strong> Followers</li>
+                <li><strong>${following}</strong> Following</li>
+                <li><strong>${totalRepos}</strong> Repos</li>
+                <li><strong>${totalStars}</strong> Star Earned</li>
+            </ul>
+            <h4>Most used Lang.</h4>
+            <ul>
+            ${languagePercentages.map(lang => `<li>${lang.language}: ${lang.percentage}%</li>`).join("")}
+            </ul>
+            <h4>Top 5 Repos</h4>
+            <ul>
+            ${topRepos.map(repo => `<li>${repo.name} - <i class="fa-regular fa-star"></i> ${repo.stars}</li>`).join("")}
+            </ul>
+        </div>
+        <div class="skilldata">
+            <h2>Skills</h2>
+            <p>${skills}</p>
+        </div>
+        <div class="educationandexp">
+            <div class="educationinfo">
+                <h2>Education</h2>
+                <div id="education">
+                ${educationHTML}
+                </div>
+            </div>
+            <div class="eduline"></div>
+            <div class="experience">
+                <h2>Experience</h2>
+                <div id="experience">
+                ${experienceHTML}
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .resume{
+            margin: 0;
+            position: relative;
+            color: #333;
+        }
+        .persnalinfo{
+            background-color: rgb(227, 227, 227);
+            padding: 2rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            height: auto;
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+            border-radius: 2rem;
+        }
+        .namepro{
+            width: 45%;
+            text-align: left;
+        }
+        .nameline{
+            background-color: #333;
+            width: 2px;
+            height: auto;
+        }
+        .contactinfo{
+            width: 45%;
+            text-align: left;
+        }
+        .gitdata{
+            background-color: rgb(227, 227, 227);
+            padding: 2rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            height: auto;
+            border-radius: 2rem;
+            margin-top: 1rem;
+        }
+        .ul{
+            display: flex;
+            gap: 5rem;
+            flex-wrap: wrap;
+        }
+        ul{
+            list-style-type: none;
+        }
+        .skilldata{
+            background-color: rgb(227, 227, 227);
+            padding: 2rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            height: auto;
+            border-radius: 2rem;
+            margin-top: 1rem;
+        }
+        .educationandexp{
+            min-height: 15rem;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 1rem;
+            background-color: rgb(227, 227, 227);
+            border-radius: 2rem;
+            padding: 2rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+        .educationinfo{
+            width: 45%;
+            height: 100%;
+            
+        }
+        .eduline{
+            background-color: #333;
+            width: 2px;
+            height: auto;
+        }
+        .experience{
+            width: 45%;
+            height: 100%;
+            text-align: left;
+        }
+    </style>
+    `;
+}
     
 }
     
@@ -550,7 +697,7 @@ document.getElementById('download-resume').addEventListener('click', function() 
 
     // Set PDF options for better fitting and styling
     const options = {
-        margin: 0.5,                    // Margin in inches
+        margin: 0.2,                    // Margin in inches
         filename: 'resume.pdf',         // Filename
         image: { type: 'jpeg', quality: 0.98 },  // Image quality
         html2canvas: { scale: 2 },      // Higher scale for better quality
