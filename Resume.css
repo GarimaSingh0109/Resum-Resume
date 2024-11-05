@@ -409,7 +409,25 @@ button:focus {
     display: flex;
     justify-content: right;
 }
-
+.premium{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+#coinicon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+#coinicon p{
+    font-size: 2rem;
+    margin: 0;
+}
+.fa-coins{
+    font-size: 2rem;
+    color: rgb(246, 180, 0);
+}
 /* Step 3 Styles */
 #step-3{
     width: 90%;

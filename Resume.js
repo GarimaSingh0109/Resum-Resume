@@ -162,27 +162,37 @@ basicCard.addEventListener('click',()=>{
     basicCard.style.backgroundColor = '#ADD8E6';
     classicCard.style.backgroundColor = '#f4f4f4';
     modernCard.style.backgroundColor = '#f4f4f4';
+    developerCard.style.backgroundColor = '#f4f4f4'
     selecttemp = 1;
 });
 classicCard.addEventListener('click',()=>{
     basicCard.style.backgroundColor = '#f4f4f4';
     classicCard.style.backgroundColor = '#ADD8E6';
     modernCard.style.backgroundColor = '#f4f4f4';
+    developerCard.style.backgroundColor = '#f4f4f4'
     selecttemp = 2;
 });
 modernCard.addEventListener('click',()=>{
     basicCard.style.backgroundColor = '#f4f4f4';
     classicCard.style.backgroundColor = '#f4f4f4';
     modernCard.style.backgroundColor = '#ADD8E6';
+    developerCard.style.backgroundColor = '#f4f4f4'
     selecttemp = 3;
 });
-developerCard.addEventListener('click',()=>{
-    basicCard.style.backgroundColor = '#f4f4f4';
-    classicCard.style.backgroundColor = '#f4f4f4';
-    modernCard.style.backgroundColor = '#f4f4f4';
-    developerCard.style.backgroundColor = '#ADD8E6';
-    selecttemp = 4;
-});
+const coinicon = document.querySelector('#coinicon');
+const getpremium = document.querySelector('#getpremium');
+getpremium.addEventListener('click',()=>{
+        developerCard.addEventListener('click',()=>{
+            basicCard.style.backgroundColor = '#f4f4f4';
+            classicCard.style.backgroundColor = '#f4f4f4';
+            modernCard.style.backgroundColor = '#f4f4f4';
+            developerCard.style.backgroundColor = '#ADD8E6';
+            selecttemp = 4;
+        });
+        coinicon.style.display = 'none';
+        getpremium.style.display = 'none';
+})
+
 
 // Handle previous step button for Step 2
 document.getElementById('prev-step-2').addEventListener('click', function() {
