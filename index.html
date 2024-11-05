@@ -1125,7 +1125,176 @@
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script>
+        // GSAP Animations
+        gsap.from("header", {
+          duration: 1,
+          y: -50,
+          opacity: 0,
+          ease: "power2.out"
+        });
+    
+        gsap.from(".home .content", {
+          duration: 1,
+          x: -100,
+          opacity: 0,
+          delay: 0.5,
+          ease: "power2.out"
+        });
+    
+        gsap.from(".features h2", {
+          duration: 1,
+          y: -50,
+          opacity: 0,
+          delay: 1,
+          ease: "power2.out"
+        });
+    
+        gsap.from(".features-card", {
+          duration: 1,
+          y: 50,
+          opacity: 0,
+          stagger: 0.3,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".features",
+            start: "top 75%"
+          }
+        });
+    
+        gsap.from(".testimonials h2", {
+          duration: 1,
+          y: -50,
+          opacity: 0,
+          delay: 1.5,
+          ease: "power2.out"
+        });
+    
+        gsap.to(".testimonial-card", {
+          duration: 1,
+          y: 50,
+          
+          stagger: 0.3,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".testimonials",
+            start: "top 75%"
+          }
+        });
+    
+        gsap.from("footer", {
+          duration: 1,
+          y: 50,
+        
+          delay: 2,
+          ease: "power2.out"
+        });
+      </script>
+       <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileNavbar = document.querySelector('.mobile-navbar');
+        
+        menuToggle.addEventListener('change', function () {
+          if (this.checked) {
+            mobileNavbar.classList.add('active');
+          } else {
+            mobileNavbar.classList.remove('active');
+          }
+        });
+    
+        document.getElementById('toggler').addEventListener('change', function () {
+          const icon = document.querySelector('.theme-mode');
+          if (this.checked) {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+          } else {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+          }
+        });
+    
+        // GSAP Animations for Navbar Links
+        const navbarLinks = document.querySelectorAll('.navbar a');
+        navbarLinks.forEach((link, index) => {
+          gsap.from(link, {
+            duration: 0.5,
+            delay: index * 0.1,
+            opacity: 0,
+            y: -20,
+            ease: "power2.out"
+          });
+        });
+    
+        // GSAP Animation for Header
+        gsap.from("header", {
+          duration: 1,
+          y: -50,
+          opacity: 0,
+          ease: "power2.out"
+        });
+    
+        // Home Section Animation
+        gsap.from(".home .content", {
+          duration: 1,
+          x: -100,
+          opacity: 0,
+          delay: 0.5,
+          ease: "power2.out"
+        });
+    
+        // Features Section Animation
+        gsap.from(".features h2", {
+          duration: 1,
+          y: -50,
+          opacity: 0,
+          delay: 1,
+          ease: "power2.out"
+        });
+    
+        gsap.from(".features-card", {
+          duration: 1,
+          y: 50,
+          opacity: 0,
+          stagger: 0.3,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".features",
+            start: "top 75%"
+          }
+        });
+    
+        // Testimonials Section Animation
+        gsap.from(".testimonials h2", {
+          duration: 1,
+          y: -50,
+          opacity: 0,
+          delay: 1.5,
+          ease: "power2.out"
+        });
+    
+        gsap.from(".testimonial-card", {
+          duration: 1,
+          y: 50,
+          opacity: 0,
+          stagger: 0.3,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".testimonials",
+            start: "top 75%"
+          }
+        });
+    
+        // Footer Animation
+        gsap.from("footer", {
+          duration: 1,
+          y: 50,
+          opacity: 0,
+          delay: 2,
+          ease: "power2.out"
+        });
+      </script>
   </body>
 
 </html>
