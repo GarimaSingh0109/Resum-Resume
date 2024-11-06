@@ -1,282 +1,189 @@
-/* Reset default margin and padding */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  padding: 0;
+/* General Reset */
+* {
   margin: 0;
-}
-a {
-  text-decoration: none;
-  color: inherit;
-}
-/* Progress Bar */
-#progress-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 9px;
-  z-index: 99990;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#progress-bar {
-  height: 9px;
-  width: 0;
-  background: linear-gradient(90deg, rgb(38, 166, 154) 0%, rgb(102, 187, 106) 50%, rgb(76, 175, 80) 100%);
-  box-shadow: 0 0 4px rgba(38, 166, 154, 0.7), 0 0 10px rgba(76, 175, 80, 0.7);
-  transition: width 0.09s ease-in-out;
-  border-radius: 10px;
+/* Body Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f3f4f6;
+  color: #333;
 }
 
-/* Header and Navigation */
+/* Header Styling */
 header {
-  background-color: #00796b;
-  color: white;
-  padding: 15px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 2rem;
+  background-color: #004d40; /* Dark teal */
+  color: #fff;
 }
 
 header h1 {
-  font-size: 1.5rem;
-  margin: 0;
-  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
 }
 
-nav ul {
-  list-style-type: none;
+header nav ul {
+  list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 1rem;
 }
 
-nav ul li a {
-  color: white;
-  transition: color 0.3s;
+header nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
 }
 
-nav ul li a:hover {
-  color: #e0f7fa;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 7px;
-}
-
-.nav-controls {
+header .nav-controls {
   display: flex;
-  align-items: center;
+  gap: 1rem;
 }
 
-#menu-toggle {
+header #menu-toggle {
   background: none;
   border: none;
-  color: white;
+  color: #fff;
   font-size: 1.5rem;
   cursor: pointer;
-  margin-left: 15px;
-  display: none;
 }
 
+/* Container for Forms */
 .container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  width: 90%;
-  max-width: 600px;
-  background: #fff;
-  border-radius: 10px;
-  margin: 20px auto;
-  padding: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  align-items: center;
+  margin-top: 50px;
 }
 
 .forms-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: #ffffff;
+  width: 90%;
+  max-width: 400px;
   padding: 2rem;
-  width: 100%;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .title {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
   text-align: center;
+  color: #004d40;
 }
 
+/* Input Fields Styling */
 .input-field {
-  position: relative;
   display: flex;
   align-items: center;
+  margin-bottom: 1rem;
   border: 1px solid #ccc;
-  border-radius: 5px;
   padding: 0.5rem;
+  border-radius: 5px;
 }
 
 .input-field i {
-  color: #666;
   margin-right: 0.5rem;
+  color: #004d40;
 }
 
 .input-field input {
-  width: 100%;
-  padding: 0.75rem;
   border: none;
   outline: none;
+  flex: 1;
+  font-size: 1rem;
 }
 
+/* Button Styling */
 .btn {
-  background-color: #6e8efb;
-  color: #fff;
+  width: 100%;
   padding: 0.75rem;
-  font-weight: 600;
+  background-color: #004d40;
+  color: #ffffff;
   border: none;
   border-radius: 5px;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
 }
 
 .btn:hover {
-  background-color: #a777e3;
+  background-color: #02665e;
 }
 
-/* Social Media */
-.social-media a img {
-  transition: transform 0.3s ease;
+/* Social Media Icon Styling */
+.social-media a {
+  display: inline-block;
+  margin: 0 10px;
+  transition: transform 0.3s;
 }
 
-.social-media a img:hover {
+.social-media a:hover {
   transform: scale(1.1);
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    display: none;
-    width: 100%;
-    position: absolute;
-    background-color: #00796b;
-    top: 100%;
-    left: 0;
-    padding: 15px 0;
-    z-index: 9999;
-  }
-  nav ul li {
-    margin: 10px 0;
-    text-align: center;
-  }
-  #menu-toggle {
-    display: block; /* Show menu toggle button */
-  }
-
-  .container {
-    width: 100%;
-    margin-top: 20px;
-  }
-
-  .forms-container {
-    padding: 1.5rem;
-  }
+.social-media img {
+  width: 30px;
+  height: 30px;
 }
 
-/* Footer */
+/* Footer Styling */
 .footer {
-  background-color: #00796b;
+  background-color: #004d40;
   color: #ffffff;
-  padding: 40px 20px;
-  margin-top: 20px;
+  padding: 1.5rem 2rem;
+  margin-top: 30px;
 }
 
 .footer-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.footer-section {
-  flex: 1;
-  min-width: 200px;
-  margin-bottom: 20px;
+  gap: 1rem;
 }
 
 .footer-section h3 {
-  font-size: 1.3rem;
-  margin-bottom: 15px;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
 
 .footer-section ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+  list-style: none;
 }
 
-.footer-section ul li {
-  margin-bottom: 10px;
-}
-
-.footer-section ul li a {
+.footer-section a {
   color: #ffffff;
   text-decoration: none;
-  transition: color 0.3s;
 }
 
-.footer-section ul li a:hover {
-  color: #b2dfdb;
-}
-
-.social-icons {
-  display: flex;
-  gap: 10px;
-}
-
-.social-icons a {
-  color: #ffffff;
-  font-size: 1.5rem;
-  transition: color 0.3s;
-}
-
-.social-icons a:hover {
-  color: #b2dfdb;
+.footer-section a:hover {
+  text-decoration: underline;
 }
 
 .footer-bottom {
   text-align: center;
-  padding-top: 20px;
+  margin-top: 1rem;
   font-size: 0.9rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  margin-top: 20px;
-  color: #e0f2f1;
 }
 
-/* Responsive Footer Styles */
+/* Responsive Styling */
 @media (max-width: 768px) {
+  header nav ul {
+    display: none;
+  }
+
+  header #menu-toggle {
+    display: inline;
+  }
+
   .footer-content {
-      flex-direction: column;
-      align-items: center;
-  }
-
-  .footer-section {
-      width: 100%;
-      text-align: center;
-      margin-bottom: 30px;
-  }
-
-  .footer-section h3 {
-      font-size: 1.2rem;
+    flex-direction: column;
+    align-items: center;
   }
 }
