@@ -1,108 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Register & Login</title>
-  <link rel="stylesheet" href="login.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-</head>
-<body>
-  <!-- Progress Bar -->
-  <div id="progress-container">
-    <div id="progress-bar"></div>
-</div>
-
-<!-- Navbar section -->
-<header>
-    <a href="index.html"><h1>Resum Resume<span>.</span></h1></a>
-    <nav>
-        <ul id="nav-menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about.html">About Us</a></li>
-            <li><a href="#resume.html">Resume</a></li>
-            <li><a href="#signup.html">Sign Up</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
-    </nav>
-    <div class="nav-controls">
-      <a href="about.html" class="fas fa-info-circle"></a>
-      <a href="login.html" id="loginIcon" class="fas fa-user"></a>
-        <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register & Login</title>
+    <link rel="stylesheet" href="login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Progress Bar -->
+    <div id="progress-container">
+      <div id="progress-bar"></div>
     </div>
-</header>
 
-  <div class="container">
-    <div class="forms-container">
-      <div class="signin-signup">
-        <form action="#" class="sign-up-form">
-          <h2 class="title">Sign up</h2>
-          <div class="input-field">
-            <i class="fas fa-user"></i>
-            <input type="text" placeholder="Username" required />
-          </div>
-          <div class="input-field">
-            <i class="fas fa-envelope"></i>
-            <input type="email" placeholder="Email" required />
-          </div>
-          <div class="input-field">
-            <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Password" required />
-          </div>
-          <input type="submit" class="btn" value="Sign up" />
-          <p class="social-text">Or Sign up with social platforms</p>
-          <div class="social-media">
-            <a href="https://github.com/YourGitHubProfile" target="_blank">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width="40" height="40" style="margin-left: 5px;">
-            </a>
-          </div>
-          <input type="submit" class="btn" value="Login" />
-        </form>
+    <!-- Navbar section -->
+    <header>
+      <a href="index.html"
+        ><h1>Resum Resume<span>.</span></h1></a
+      >
+      <nav>
+        <ul id="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about.html">About Us</a></li>
+          <li><a href="#resume.html">Resume</a></li>
+          <li><a href="#signup.html">Sign Up</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+      <div class="nav-controls">
+        <a href="about.html" class="fas fa-info-circle"></a>
+        <a href="login.html" id="loginIcon" class="fas fa-user"></a>
+        <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form action="#" class="sign-up-form">
+            <h2 class="title">Sign up</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Username" required />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" placeholder="Email" required />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" required />
+            </div>
+            <input type="submit" class="btn" value="Sign up" />
+            <p class="social-text">Or Sign up with social platforms</p>
+            <div class="social-media">
+              <a href="https://github.com/YourGitHubProfile" target="_blank">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+                  alt="GitHub"
+                  width="40"
+                  height="40"
+                  style="margin-left: 5px"
+                />
+              </a>
+            </div>
+            <input type="submit" class="btn" value="Login" />
+          </form>
+        </div>
       </div>
     </div>
-  </div>
 
-
-  <footer class="footer">
-    <div class="footer-content">
-        <div class="footer-section">
+    <footer class="footer">
+      <div class="footer-content">
+        <!-- created 2 divs for keeping about us and services together   and support and connect with us together -->
+        <div class="footer-division">
+          <div class="footer-section">
             <h3>About Us</h3>
             <ul>
-                <li><a href="#">Our Story</a></li>
-                <li><a href="#">Team</a></li>
-                <li><a href="#">Careers</a></li>
+              <li><a href="#">Our Story</a></li>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Careers</a></li>
             </ul>
-        </div>
-        <div class="footer-section">
+          </div>
+          <div class="footer-section">
             <h3>Services</h3>
             <ul>
-                <li><a href="#">Resume Builder</a></li>
-                <li><a href="cv.html">CV Templates</a></li>
-                <li><a href="#">Career Advice</a></li>
+              <li><a href="#">Resume Builder</a></li>
+              <li><a href="cv.html">CV Templates</a></li>
+              <li><a href="#">Career Advice</a></li>
             </ul>
+          </div>
         </div>
-        <div class="footer-section">
+        <!-- created 2 divs for keeping about us and services together   and support and connect with us together -->
+        <div class="footer-division">
+          <div class="footer-section">
             <h3>Support</h3>
             <ul>
-                <li><a href="Faqs.html">FAQ</a></li>
-                <li><a href="comment.html">Contact Us</a></li>
-                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="Faqs.html">FAQ</a></li>
+              <li><a href="comment.html">Contact Us</a></li>
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
             </ul>
-        </div>
-        <div class="footer-section">
+          </div>
+          <div class="footer-section">
             <h3>Connect With Us</h3>
             <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
             </div>
+          </div>
         </div>
-    </div>
-    <div class="footer-bottom">
+      </div>
+      <div class="footer-bottom">
         <p>&copy; 2024 Resume Builder. All rights reserved.</p>
-    </div>
-</footer>
-  <script src="login.js"></script>
-</body>
+      </div>
+    </footer>
+    <script src="login.js"></script>
+  </body>
 </html>
