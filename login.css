@@ -23,7 +23,12 @@ a {
 #progress-bar {
   height: 9px;
   width: 0;
-  background: linear-gradient(90deg, rgb(38, 166, 154) 0%, rgb(102, 187, 106) 50%, rgb(76, 175, 80) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(38, 166, 154) 0%,
+    rgb(102, 187, 106) 50%,
+    rgb(76, 175, 80) 100%
+  );
   box-shadow: 0 0 4px rgba(38, 166, 154, 0.7), 0 0 10px rgba(76, 175, 80, 0.7);
   transition: width 0.09s ease-in-out;
   border-radius: 10px;
@@ -239,6 +244,11 @@ form {
   color: #b2dfdb;
 }
 
+.footer-division {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
 .social-icons {
   display: flex;
   gap: 10px;
@@ -266,17 +276,21 @@ form {
 /* Responsive Footer Styles */
 @media (max-width: 768px) {
   .footer-content {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .footer-section {
-      width: 100%;
-      text-align: center;
-      margin-bottom: 30px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
   }
 
   .footer-section h3 {
-      font-size: 1.2rem;
+    font-size: 1.2rem;
+  }
+  .social-icons {
+    align-items: center;
+    justify-content: center;
   }
 }
