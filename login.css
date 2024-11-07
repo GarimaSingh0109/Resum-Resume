@@ -86,7 +86,7 @@ nav ul li a:hover {
   align-items: center;
   justify-content: center;
   width: 90%;
-  max-width: 600px;
+  max-width: 500px;
   background: #fff;
   border-radius: 10px;
   margin: 20px auto;
@@ -97,9 +97,10 @@ nav ul li a:hover {
 .forms-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   padding: 2rem;
   width: 100%;
+  min-height: 580px;
 }
 
 form {
@@ -110,27 +111,28 @@ form {
 }
 
 .title {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: #333;
   text-align: center;
+  margin: 20px 0;
 }
 
 .input-field {
   position: relative;
   display: flex;
   align-items: center;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  width: 100%;
   padding: 0.5rem;
+  margin-top: 15px;
 }
 
 .input-field i {
-  color: #666;
-  margin-right: 0.5rem;
+  color: #625e5e;
+  margin-right: 10px;
 }
 
 .input-field input {
+  font-size: 15px;
   width: 100%;
   padding: 0.75rem;
   border: none;
@@ -140,11 +142,13 @@ form {
 .btn {
   background-color: #6e8efb;
   color: #fff;
-  padding: 0.75rem;
+  padding: 18px;
   font-weight: 600;
   border: none;
-  border-radius: 5px;
+  border-radius: 18px;
   cursor: pointer;
+  width: 60%;
+  margin-left:95px;
   transition: background-color 0.3s ease;
 }
 
@@ -153,13 +157,36 @@ form {
 }
 
 /* Social Media */
-.social-media a img {
-  transition: transform 0.3s ease;
+.social-media {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.social-media a img:hover {
-  transform: scale(1.1);
+.social-icon-frame {
+  display: inline-flex; 
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #333;
+  border-radius: 50%; 
+  padding: 15px; 
+  margin: 5px; 
+  background-color: transparent; 
+  width: 45px; 
+  height: 45px; 
+  transition: transform 0.3s; 
 }
+
+.social-icon:hover {
+  transform: scale(1.5); 
+}
+
+.social-icon {
+  font-size: 22px; 
+  color: inherit; 
+  transition: none; 
+}
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
