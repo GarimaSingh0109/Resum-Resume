@@ -16,20 +16,22 @@ body {
     position: relative;
 }
 .herocontent{
-    height: 50%;
+    height: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
     text-align: center;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 .herocontent h1{
     width: 60%;
     font-size: 5rem;
     font-weight: 800;
     color: white;
+    margin-bottom: 0;
+    border: 0;
 }
 .herocontent p{
     width: 60%;
@@ -38,7 +40,7 @@ body {
     color: white;
 }
 .herostep{
-    height: 10%;
+    height: 20%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -58,6 +60,7 @@ body {
     line-height: 2rem;
     margin: 0;
     line-height: 2.5rem;
+    border: 0;
 }
 .herostep i{
     font-size: 3rem;
@@ -192,7 +195,7 @@ body {
     width: 50%;
 }
 #profile{
-    height: 25rem;
+    height: 17rem;
 }
 #education-fields{
     position: relative;
