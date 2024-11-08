@@ -78,3 +78,39 @@ submitButtons.forEach(button => {
     });
 });
 
+// panel 2 logic
+const keywords = {
+    "Software Developer": ["JavaScript", "React", "Node.js", "API", "Agile", "Version Control"],
+    "Data Analyst": ["SQL", "Python", "Excel", "Data Visualization", "Machine Learning", "Tableau"],
+    "Graphic Designer": ["Adobe Photoshop", "Illustrator", "InDesign", "Branding", "Typography", "Creative Suite"]
+  };
+
+function showKeywords() {
+    if(skillcoins < 5){
+        alert("You dont have enough Skill coins to use this feature!")
+    }
+    else{
+        const role = document.getElementById("job-role").value;
+        const suggestions = keywords[role] || [];
+
+        const keywordDisplay = document.getElementById("keyword-suggestions");
+        if (suggestions.length) {
+          keywordDisplay.innerHTML = `
+            <p><strong>Suggested Keywords:</strong><br><span id="keyword-text">${suggestions.join(", ")}</span></p>
+            <button onclick="copyKeywords()">Copy</button>
+          `
+          skillcoins -= 5;
+          updateCoins();
+          ;
+        } else {
+          keywordDisplay.innerHTML = "<p>No keywords available for this role.</p>";
+        }
+    }
+}
+  
+function copyKeywords() {
+  const keywordText = document.getElementById("keyword-text").innerText;
+  navigator.clipboard.writeText(keywordText)
+    .then(() => alert("Keywords copied to clipboard!"))
+    .catch(err => console.error("Failed to copy keywords:", err));
+}  
