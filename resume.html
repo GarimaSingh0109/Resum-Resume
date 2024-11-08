@@ -1,109 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Build Resume</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="Resume.css">
 </head>
-
 <body>
-
     <!-- header section starts --> 
-    
-
-    <!-- header section starts -->
     <header>
-        <!-- <input type="checkbox" name="" id="toggler">
-          <label for="toggler" class="fas fa-bars"></label> -->
         <a href="#" class="logo">Resum Resume<span>.</span></a>
-
+                 
         <nav class="navbar">
             <a href="#home">Home</a>
             <a href="about.html">About</a>
             <a href="resume.html">Build Resume</a>
             <a href="RateMyResume.html">RateMyResume</a>
-
-            <!-- <a href="signup.html">Sign Up</a> -->
-            <!-- <a href="login.html">Login</a> -->
-        </nav>
-
-        <div class="auth-and-theme">
-            <!-- Login/Signup dynamically added, adding JS below, you can see -->
-            <div id="auth-links">
-                <a href="signup.html" id="signup-link">Sign Up</a>
-                <a href="login.html" id="login-link">Login</a>
-            </div>
-
-            <!-- Hamburger menu for small screens -->
-            <div class="hamburger">
-                <input type="checkbox" id="menu-toggle" class="menu-toggle">
-                <label for="menu-toggle" class="fas fa-bars menu-icon"></label>
-            </div>
-            <!-- Dark mode toggle, better in last of nav -->
-            <div class="dark-mod">
-                <input type="checkbox" name="" id="toggler" class="dark-mode-toggle">
-                <label for="toggler" class="fas fa-moon theme-mode"></label>
-            </div>
-        </div>
-
-    </header>
-    <nav class="mobile-navbar">
-        <div class="main-links">
-            <a href="#home">Home</a>
-            <a href="about.html">About</a>
-            <a href="resume.html">Build Resume</a>
-        </div>
-        <div class="auth-links">
             <a href="signup.html">Sign Up</a>
             <a href="login.html">Login</a>
+        </nav>
+    
+        <div class="icons">
+            <a href="about.html" class="fas fa-info-circle"></a>
+            <a href="#" class="fas fa-envelope"></a>
+            <a href="login.html" id="loginIcon" class="fas fa-user"></a>
         </div>
-    </nav>
-    <script>
-        // Get the menu toggle checkbox and mobile navbar elements
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileNavbar = document.querySelector('.mobile-navbar');
-
-        // Event listener to show/hide mobile navbar based on checkbox state
-        menuToggle.addEventListener('change', function () {
-            if (this.checked) {
-                mobileNavbar.style.transform = 'translateY(0)'; // Slide down into view
-            } else {
-                mobileNavbar.style.transform = 'translateY(-100%)'; // Slide up out of view
-            }
-        });
-    </script>
-    <script>
-        document.getElementById('toggler').addEventListener('change', function () {
-            // document.body.classList.toggle('dark-mode-toggle', this.checked);
-
-            // Change icon between darl and light
-            const icon = document.querySelector('.theme-mode');
-            if (this.checked) {
-                icon.classList.remove('fa-sun');
-                icon.classList.add('fa-moon');
-            } else {
-                icon.classList.remove('fa-moon');
-                icon.classList.add('fa-sun');
-            }
-        });
-
-    </script>
+    </header> 
     <style>
-        body {
+        body{
             padding: 0;
         }
-
-        header {
+        header{
             position: relative;
         }
-
-        footer {
+        footer{
             margin-top: 5rem;
         }
     </style>
@@ -157,12 +89,12 @@
                 <span class="circle">3</span>
                 <span class="label">Step 3</span>
             </div>
-        </div>
+        </div>    
     </div>
     <!-- main section start -->
     <div class="form-container">
         <h2>Fill Your Information</h2>
-
+        
         <!-- Personal Information -->
         <div class="section" id="personal-info">
             <h3>Personal Information <i id="caret1" class="fa-solid fa-caret-down"></i></h3>
@@ -173,10 +105,10 @@
 
                     <label>Email:</label>
                     <input type="email" id="email" placeholder="Enter your email">
-
+                    
                     <label>Contact Number:</label>
                     <input type="tel" id="contact" placeholder="Enter your contact number">
-
+                    
                     <label>Location:</label>
                     <input type="text" id="location" placeholder="Enter your location">
                 </div>
@@ -310,7 +242,7 @@
     <!-- Step 2: Template Selection Section -->
     <div id="step-2" class="step-section" style="display: none;">
         <h2>Select a Resume Template</h2>
-
+        
         <div class="template-section">
             <div id="basic" class="template-card" onclick="selectTemplate('basic')">
                 <img src="templates/basic.jpg" alt="Basic Template">
@@ -325,7 +257,7 @@
                 <p>Modern</p>
             </div>
         </div>
-
+        
         <!-- Navigation Buttons -->
         <div class="buttons">
             <button id="prev-step-2" onclick="showStep(1)">Prev Step</button>
@@ -342,15 +274,6 @@
 
     <button id="prev-step-3">Edit Previous Steps</button>
     <button id="download-resume">Download Resume</button>
-    </div>
-
-        <h2>Review Your Resume</h2>
-        <div id="resume-display">
-            <!-- Generated resume will be displayed here -->
-        </div>
-
-        <button id="prev-step-3">Edit Previous Steps</button>
-        <button id="download-resume">Download Resume</button>
     </div>
 
 </div>
@@ -411,5 +334,4 @@
     <script src="Resume.js"></script>
     <script src="resume2.js"></script>
 </body>
-
 </html>
