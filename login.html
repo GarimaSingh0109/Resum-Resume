@@ -6,12 +6,13 @@
   <title>Register & Login</title>
   <link rel="stylesheet" href="login.css" />
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
 <body>
 
-<!-- header section starts -->
-  <header>
+<!-- header section starts --> 
+<header>
   <a href="index.html" class="logo">Resum Resume<span>.</span></a>
            
   <nav class="navbar">
@@ -27,8 +28,9 @@
       <a href="about.html"><i class="fas fa-info-circle"></i></a>
       <a href="#" ><i class="fas fa-envelope"></i></a>
       <a href="login.html" id="loginIcon"><i class="fas fa-user"></i></a>
-  </header> 
-  <style>
+      <i class="fa-solid fa-coins"></i> <p id="SkillCoins"></p></div>
+</header>
+<style>
   body{
       padding: 0;
   }
@@ -65,21 +67,22 @@
       margin-left: 1rem;
       line-height: 2.3rem;
   }
-  .icons i {
+  .icons i{
       margin-left: 1.5rem;
   }
   .icons p{
       display: inline;
       color: white;
       font-size: 2.3rem;
+      margin: 0;
       margin-left: 1rem;
       line-height: 2.3rem;
   }
-  .fa-coins i{
+  .fa-coins{
       font-size: 2rem;
       color: rgb(246, 180, 0);
   }
-  </style>
+</style>
 <!-- header section ends -->
 
   <div class="container">
@@ -287,6 +290,8 @@ color: #e0f2f1;
 }
 
 </style>
-  <script src="login.js"></script>
+
+<script src="login.js"></script>
+<script src="RateMyResume.js"></script>
 </body>
 </html>
