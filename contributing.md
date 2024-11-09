@@ -1,155 +1,101 @@
-
-# LinkedIn Resume Builder ✨
-
-This project is a LinkedIn Resume Builder that allows users to generate professional resumes from their LinkedIn profiles in just a few clicks. The website is designed with a clean and responsive UI using Bootstrap, focusing on simplicity and ease of use.
-
-## Features 🚀
-
-- **Easy-to-Use Interface:** A user-friendly interface allows users to effortlessly create a resume.
-- **Instant Resume Generation:** Quickly build a resume by entering your LinkedIn profile URL.
-- **Secure Data:** Personal information is protected through encrypted communication 🔒.
-- **Responsive Design:** The website is mobile-first and adjusts seamlessly to different screen sizes 📱.
-- **24/7 Support:** Support is available around the clock to assist users 💬.
-
-## Project Structure 📁
-
-The website consists of the following key sections:
-
-- **Navbar:** A top navigation bar with links to the homepage, resume builder, sign-up, and login pages.
-- **Hero Section:** A CTA section encouraging users to start building their resume.
-- **Features Section:** Highlights core features of the platform.
-- **Testimonials Section:** Displays user feedback and testimonials to boost credibility.
-- **Footer:** A simple footer providing basic information about the website.
-
-## Technologies Used 💻
-
-- **HTML5:** Structure of the webpage.
-- **CSS3:** Styling and layout, using Google Font Roboto for typography.
-- **Bootstrap 4.5:** Ensures responsiveness and aesthetic appeal.
-- **JavaScript/jQuery:** Handles dynamic behavior.
-
-## Screenshots 📸
-
-- **Desktop and Mobile View:** Available to preview on both desktop and mobile screens.
-
-## Getting Started 🏁
-
-### Prerequisites
-
-- A modern web browser (Chrome, Firefox, Safari, etc.)
-- Internet connection to load external resources (Bootstrap, fonts)
-
-### Installation
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/your-username/linkedin-resume-builder.git
-   cd linkedin-resume-builder
-   ```
-
-2. **Open the index.html file:**
-   ```bash
-   open index.html
-   ```
-
-### File Structure 📂
-
-```plaintext
-├── index.html          # Main homepage
-├── resume.html         # Resume builder page
-├── signup.html         # Sign-up page
-├── login.html          # Log-in page
-├── about.html          # About page
-├── Hero Section.jpg    # Image displayed in the hero section
-├── styles.css          # Custom CSS styles (inlined in HTML)
-```
-
-## Developer Setup 🛠️
-
-For developers who want to contribute:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/linkedin-resume-builder.git
-   cd linkedin-resume-builder
-   ```
-
-2. Install necessary dependencies if applicable (e.g., Node.js, Python).
-3. Run the development server:
-   ```bash
-   npm start   
-   ```
-
-## Contributing 🤝
-
-We welcome contributions in various forms, including code, documentation, and feedback. Here’s how you can get started:
-
-### How to Contribute
-
-1. **Fork the Repository**
-
-   Navigate to the [GitHub repository](https://github.com/your-username/linkedin-resume-builder) and click **Fork** to create your copy.
-
-2. **Clone Your Fork**
-
-   ```bash
-   git clone https://github.com/your-username/linkedin-resume-builder.git
-   cd linkedin-resume-builder
-   ```
-
-3. **Create a Branch**
-
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-
-4. **Make Changes**
-
-   Implement changes or new features following the project's coding style.
-
-5. **Commit Your Changes**
-
-   ```bash
-   git add .
-   git commit -m "Add description of your changes"
-   ```
-
-6. **Push to Your Branch**
-
-   ```bash
-   git push origin feature/your-feature-name
-   ```
-
-7. **Open a Pull Request**
-
-   In the original repository, click **Pull Requests** and submit a pull request with a detailed description of your changes.
-
-### Reporting Issues
-
-If you encounter issues, please report them in the [Issues section](https://github.com/your-username/linkedin-resume-builder/issues) with a detailed description.
-
-### Code of Conduct
-
-By participating in this project, you agree to adhere to a respectful and inclusive code of conduct.
-
-## Usage 📄
-
-- **Home Page:** Introduces users to the service with a description and CTA button.
-- **Build Resume:** Users enter their LinkedIn URL to create a resume.
-- **Sign-Up/Login:** Users can create an account or log in to manage their resume.
-- **Features & Testimonials:** Displays platform features and user feedback.
-
-## Responsive Design 📏
-
-This project uses Bootstrap’s grid system to ensure full responsiveness across screen sizes, with additional media queries for layout fine-tuning on mobile devices.
-
-## Thank You!
-
-Thank you for contributing to the LinkedIn Resume Builder! Your contributions help us build a better tool for users. Happy coding!
+Here's the revised `CONTRIBUTING.md` file with your additional instructions:
 
 ---
 
-**Screenshot Discord Link:** [Join Discord](https://discord.gg/GJ5BfwVd)
-```
+# Contributing to LinkedIn Resume Builder 🤝
 
-Replace `your-username` in the GitHub links with the actual username if this will be published in your repository. This combined format keeps everything accessible in a single file for simplicity and easy access for contributors.
+Thank you for your interest in contributing to the LinkedIn Resume Builder project! We appreciate your help in making this project better. Please follow the guidelines below to ensure a smooth contribution process.
+
+## Table of Contents 📚
+
+- [Forking the Repository](#forking-the-repository)
+- [Setting Up the Development Environment](#setting-up-the-development-environment)
+- [Submitting Issues](#submitting-issues)
+- [Submitting Pull Requests](#submitting-pull-requests)
+- [Coding Style and Best Practices](#coding-style-and-best-practices)
+- [Running Tests](#running-tests)
+- [Code of Conduct](#code-of-conduct)
+
+## Forking the Repository 🍴
+
+1. Click on the **Fork** button at the top right corner of the repository page.
+2. Clone your forked repository to your local machine:
+
+   ```bash
+   git clone https://github.com/your-username/linkedin-resume-builder.git
+   ```
+
+3. Navigate to the project directory:
+
+   ```bash
+   cd linkedin-resume-builder
+   ```
+
+
+## Submitting Issues 🐛
+
+If you find a bug or have a feature request, please submit an issue by following these steps:
+
+1. Navigate to the **Issues** tab of the repository.
+2. Click on the **New Issue** button.
+3. Fill out the issue template with the necessary details. Please include:
+   - A brief description of the issue.
+   - Screenshots (if applicable) to illustrate the problem.
+
+## Submitting Pull Requests 🔄
+
+To submit a pull request:
+
+1. **Star the Repository** ⭐: If you find this project helpful, please star the repository to show your support!
+
+2. Ensure your fork is up to date with the main repository:
+
+   ```bash
+   git checkout main
+   git pull upstream main
+   ```
+
+3. Create a new branch for your feature or fix:
+
+   ```bash
+   git checkout -b your-branch-name
+   ```
+
+4. Make your changes and commit them:
+
+   ```bash
+   git add .
+   git commit -m "Add a brief description of your changes"
+   ```
+
+5. Push your branch to your forked repository:
+
+   ```bash
+   git push origin your-branch-name
+   ```
+
+6. Go to the original repository and create a pull request. In your pull request:
+   - Write a brief description of the changes.
+   - Include before and after screenshots (if applicable).
+   - Mention the issue number that your pull request addresses.
+
+7. After your pull request is merged, please delete your forked repository and fork it again to avoid clashes when merging other issues.
+
+## Coding Style and Best Practices 💻
+
+- Follow the [JavaScript Standard Style](https://standardjs.com/) for coding conventions.
+- Write clear and concise commit messages.
+- Ensure your code is well-documented and easy to understand.
+- Add screenshot in issue and pr description.
+  
+
+
+
+## Code of Conduct 📜
+
+By participating in this project, you agree to abide by the [Code of Conduct](CODE_OF_CONDUCT.md). Please treat everyone with respect and kindness.
+
+---
+
+Thank you for contributing to the LinkedIn Resume Builder project! We appreciate your help in making it a better resource for everyone. If you have any questions, feel free to reach out!
+
