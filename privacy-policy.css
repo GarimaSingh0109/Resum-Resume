@@ -7,6 +7,9 @@ body {
     padding: 0;
     overflow: auto;
 }
+h2{
+    cursor: pointer;
+}
 
 .header {
     background-color: #00424F;
@@ -20,7 +23,9 @@ body {
     right: 0;
     z-index: 1000;
 }
-
+h1{
+    cursor: pointer;
+}
 .content {
     max-width: 800px;
     margin: 20px auto;
@@ -62,7 +67,7 @@ body {
 
 .footer {
     text-align: center;
-    padding: 10px;
+    padding: 2px;
     background-color: #00424F;
     color: white;
     position: fixed;
