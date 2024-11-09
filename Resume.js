@@ -153,45 +153,81 @@ document.getElementById('next-step').addEventListener('click', function() {
     showStep(2);
 });
 
-// card color change when click on card
+const coinsdata = document.querySelector('#SkillCoins'); // Element to display skill coins
+
+// Function to get skill coins from localStorage
+const getSkillCoins = () => parseInt(localStorage.getItem('skillCoins'), 10) || 0;
+
+// Function to update skill coins in localStorage and display
+const updateCoins = (newAmount) => {
+    localStorage.setItem('skillCoins', newAmount);
+    updateCoinsDisplay();
+};
+
+// Function to update the displayed skill coins on the page
+const updateCoinsDisplay = () => {
+    coinsdata.textContent = getSkillCoins();
+};
+
+// Call updateCoinsDisplay on page load
+updateCoinsDisplay();
+
+// Card color change when clicked
 const basicCard = document.querySelector('#basic');
 const classicCard = document.querySelector('#classic');
 const modernCard = document.querySelector('#modern');
 const developerCard = document.querySelector('#developer');
-basicCard.addEventListener('click',()=>{
+
+basicCard.addEventListener('click', () => {
     basicCard.style.backgroundColor = '#ADD8E6';
     classicCard.style.backgroundColor = '#f4f4f4';
     modernCard.style.backgroundColor = '#f4f4f4';
-    developerCard.style.backgroundColor = '#f4f4f4'
+    developerCard.style.backgroundColor = '#f4f4f4';
     selecttemp = 1;
 });
-classicCard.addEventListener('click',()=>{
+
+classicCard.addEventListener('click', () => {
     basicCard.style.backgroundColor = '#f4f4f4';
     classicCard.style.backgroundColor = '#ADD8E6';
     modernCard.style.backgroundColor = '#f4f4f4';
-    developerCard.style.backgroundColor = '#f4f4f4'
+    developerCard.style.backgroundColor = '#f4f4f4';
     selecttemp = 2;
 });
-modernCard.addEventListener('click',()=>{
+
+modernCard.addEventListener('click', () => {
     basicCard.style.backgroundColor = '#f4f4f4';
     classicCard.style.backgroundColor = '#f4f4f4';
     modernCard.style.backgroundColor = '#ADD8E6';
-    developerCard.style.backgroundColor = '#f4f4f4'
+    developerCard.style.backgroundColor = '#f4f4f4';
     selecttemp = 3;
 });
+
+// Premium Template Logic
 const coinicon = document.querySelector('#coinicon');
 const getpremium = document.querySelector('#getpremium');
-getpremium.addEventListener('click',()=>{
-        developerCard.addEventListener('click',()=>{
+
+getpremium.addEventListener('click', () => {
+    if (getSkillCoins() < 10) {
+        alert("You don't have enough Skill coins to use this template!");
+    } else {
+        // Deduct coins and update display
+        updateCoins(getSkillCoins() - 10);
+
+        // Enable the developer card selection
+        developerCard.addEventListener('click', () => {
             basicCard.style.backgroundColor = '#f4f4f4';
             classicCard.style.backgroundColor = '#f4f4f4';
             modernCard.style.backgroundColor = '#f4f4f4';
             developerCard.style.backgroundColor = '#ADD8E6';
             selecttemp = 4;
         });
+
+        // Hide coin icon and premium button once premium template is unlocked
         coinicon.style.display = 'none';
         getpremium.style.display = 'none';
-})
+    }
+});
+
 
 
 // Handle previous step button for Step 2
@@ -221,10 +257,11 @@ document.getElementById('next-step-2').addEventListener('click', function() {
     const skills = document.getElementById('skillsinput').value.trim();
     const educationEntries = collectEducationData();
     const experienceEntries = collectExperienceData();
+    const achiveEntries = collectAchiveData();
     const projectEntries = collectProjectData();
 
     // Generate resume HTML based on the selected template
-    const resumeContent = generateResumeHTML(name, profile, email, contact, location, githubid, skills, educationEntries, experienceEntries, projectEntries, selectedTemplate);
+    const resumeContent = generateResumeHTML(name, profile, email, contact, location, githubid, skills, educationEntries, experienceEntries, achiveEntries, projectEntries, selectedTemplate);
     
     document.getElementById('resume-display').innerHTML = resumeContent;
     step2p.querySelector('.circle').textContent = '✓';
@@ -244,6 +281,7 @@ function collectResumeData() {
     const skills = document.getElementById('skillsinput').value.trim();
     const education = collectEducationData();
     const experience = collectExperienceData();
+    const achive = collectAchiveData();
     const projects = collectProjectData();
     
     return {
@@ -256,6 +294,7 @@ function collectResumeData() {
         skills,
         education,
         experience,
+        achive,
         projects,
         template: selectedTemplate
     };
@@ -279,6 +318,13 @@ function collectExperienceData() {
         startYear: entry.querySelector('input[placeholder="Start Year"]').value,
         endYear: entry.querySelector('input[placeholder="End Year"]').value,
         description: entry.querySelector('textarea[placeholder="Describe your job experience"]').value,
+    }));
+}
+
+function collectAchiveData() {
+    return Array.from(document.querySelectorAll('.achive-entry')).map(entry => ({
+        heading: entry.querySelector('input[placeholder="e.g., Best Employee of the Year"]').value,
+        description: entry.querySelector('textarea[placeholder="Describe your achievement or certification"]').value,
     }));
 }
 
@@ -374,7 +420,7 @@ async function init() {
 init();
 
 // Function to generate resume HTML based on selected template
-function generateResumeHTML(name, profile, email, contact, location, githubid, skills, educationEntries, experienceEntries, projectEntries, template,) {
+function generateResumeHTML(name, profile, email, contact, location, githubid, skills, educationEntries, experienceEntries, achiveEntries, projectEntries, template) {
     let educationHTML = educationEntries.map(edu => `
         <div>
             <strong>${edu.institute}</strong> (${edu.startYear} - ${edu.endYear})<br>
@@ -390,6 +436,13 @@ function generateResumeHTML(name, profile, email, contact, location, githubid, s
         </div>
     `).join('');
 
+    let achiveHTML = achiveEntries.map(achi => `
+        <div>
+            <strong>${achi.heading}</strong><br>
+            <p>${achi.description}</p>
+        </div>
+    `).join('');
+
     let projectHTML = projectEntries.map(proj => `
         <div>
             <strong>${proj.title}</strong><br>
@@ -398,6 +451,7 @@ function generateResumeHTML(name, profile, email, contact, location, githubid, s
             <a href="${proj.link}" target="_blank">Project Link</a>
         </div>
     `).join('');
+
  // which template will show in review logic
  if(selecttemp === 1){
     return `
@@ -410,6 +464,8 @@ function generateResumeHTML(name, profile, email, contact, location, githubid, s
         ${educationHTML}
         <h2>Experience</h2>
         ${experienceHTML}
+        <h2>Achievements and Certifications</h2>
+        ${achiveHTML}
         <h2>Projects</h2>
         ${projectHTML}
     `;
@@ -442,7 +498,7 @@ else if(selecttemp === 2){
         
                 <h2>Achievements and Certifications</h2>
                 <div id="achievements">
-                    <!-- Achievements data will be filled here -->
+                ${achiveHTML}
                 </div>
         
                 <h2>Projects</h2>
@@ -513,7 +569,7 @@ else if(selecttemp ===3){
 
         <h2>Achievements and Certifications</h2>
         <div id="achievements">
-            <!-- Achievements data will be filled here -->
+        ${achiveHTML}
         </div>
 
         <h2>Projects</h2>

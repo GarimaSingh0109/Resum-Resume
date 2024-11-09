@@ -4,6 +4,20 @@ body {
     margin: 0;
     padding: 20px;
 }
+.icons{
+    display: flex;
+    align-items: center;
+}
+.icons i{
+    margin-left: 1.5rem;
+}
+.icons p{
+    display: inline;
+    color: white;
+    font-size: 2.3rem;
+    margin-left: 1rem;
+    line-height: 2.3rem;
+}
 /* hero section */
 .herosection{
     height: 100vh;
