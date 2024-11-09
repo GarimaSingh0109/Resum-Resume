@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume Builder - Step 1</title>
+    <title>Build Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="Resume.css">
 </head>
 <body>
-    <!-- header section starts -->
+    <!-- header section starts --> 
     <header>
         <a href="#" class="logo">Resum Resume<span>.</span></a>
                  
@@ -16,6 +17,7 @@
             <a href="#home">Home</a>
             <a href="about.html">About</a>
             <a href="resume.html">Build Resume</a>
+            <a href="RateMyResume.html">RateMyResume</a>
             <a href="signup.html">Sign Up</a>
             <a href="login.html">Login</a>
         </nav>
@@ -24,6 +26,7 @@
             <a href="about.html" class="fas fa-info-circle"></a>
             <a href="#" class="fas fa-envelope"></a>
             <a href="login.html" id="loginIcon" class="fas fa-user"></a>
+            <i class="fa-solid fa-coins"></i> <p id="SkillCoins"></p>
         </div>
     </header> 
     <style>
@@ -32,13 +35,43 @@
         }
         header{
             position: relative;
-            margin-bottom: 5rem;
         }
         footer{
             margin-top: 5rem;
         }
     </style>
     <!-- header section ends -->
+
+    <!-- hero section start -->
+    <div class="herosection">
+        <div class="herocontent">
+            <h1>Build Your Perfect Resume in Just 3 Simple Steps!</h1>
+            <p>Effortlessly create a professional resume that stands out!</p>
+        </div>
+        <div class="herostep">
+            <div class="one heros">
+                <i class="fa-solid fa-keyboard"></i>
+                <h2>Fill Your Info /<br>Upload LinkedIn Profile</h2>
+            </div>
+            <i class="fa-solid fa-chevron-right"></i>
+            <div class="two heros">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <h2>Choose Your Template</h2>
+            </div>
+            <i class="fa-solid fa-chevron-right"></i>
+            <div class="three heros">
+                <i class="fa-solid fa-download"></i>
+                <h2>Review and Download</h2>
+            </div>
+        </div>
+        <div class="herobtn">
+            <div class="button" id="manulbtn">Build Resume Manually</div>
+            <div class="button" id="autobtn">Build Resume Automatically</div>
+        </div>
+    </div>
+    <!-- hero section ends -->
+
+<div class="panel1">
 
     <!-- progress bar section -->
     <div class="progressSec">
@@ -65,7 +98,7 @@
         
         <!-- Personal Information -->
         <div class="section" id="personal-info">
-            <h3>Personal Information</h3>
+            <h3>Personal Information <i id="caret1" class="fa-solid fa-caret-down"></i></h3>
             <div class="pInfo">
                 <div class="pInfoLeft">
                     <label>Name:</label>
@@ -83,20 +116,24 @@
                 <div class="pInfoRight">
                     <label>Profile:</label>
                     <textarea id="profile" placeholder="Write about yourself"></textarea>
+                    <p id="pinfodesc">0/150</p>
+
+                    <label>Github Username:</label>
+                    <input type="text" id="githubid" placeholder="Enter your username, Ex. johnsmith07">
                 </div>
             </div>
         </div>
 
         <!-- Education -->
         <div class="section" id="education">
-            <h3>Education</h3>
+            <h3>Education <i id="caret2" class="fa-solid fa-caret-down"></i></h3>
             <div id="education-fields">
                 <div class="education-entry">
                     <label>Institute:</label>
-                    <input type="text" placeholder="Enter institute name">
+                    <input type="text" id="institutePH" placeholder="Enter institute name">
 
                     <label>Course:</label>
-                    <input type="text" placeholder="Enter course name">
+                    <input type="text" id="coursePH" placeholder="Enter course name">
 
                     <label>Start Year:</label>
                     <input type="text" placeholder="Start Year">
@@ -113,19 +150,19 @@
 
         <!-- Skills -->
         <div class="section" id="skills">
-            <h3>Skills</h3>
-            <label>Skills (Comma Separated) :</label>
-            <input type="text" id="skills-input" placeholder="e.g., C, C++, Python">
+            <h3>Skills <i id="caret3" class="fa-solid fa-caret-down"></i></h3>
+            <label id="skill-label">Skills (Comma Separated) :</label>
+            <input type="text" id="skillsinput" placeholder="e.g., C, C++, Python">
         </div>
 
         <!-- Experience -->
         <div class="section" id="experience">
-            <h3>Experience</h3>
+            <h3>Experience <i id="caret4" class="fa-solid fa-caret-down"></i></h3>
             <div id="experience-fields">
                 <div class="experience-entry">
                     <div class="expLeft">
                         <label>Job Position:</label>
-                        <input type="text" placeholder="Enter job position">
+                        <input type="text" id="jobrolePH" placeholder="Enter job position">
 
                         <label>Company Name:</label>
                         <input type="text" placeholder="Enter company name">
@@ -139,6 +176,7 @@
                     <div class="expRight">
                         <label>Description:</label>
                         <textarea id="expdes" placeholder="Describe your job experience"></textarea>
+                        <p id="expdesc"></p>
                     </div>
                 </div>
             </div>
@@ -147,22 +185,27 @@
 
         <!-- Achievements and Certifications -->
         <div class="section" id="achievements">
-            <h3>Achievements and Certifications</h3>
+            <h3>Achievements and Certifications <i id="caret5" class="fa-solid fa-caret-down"></i></h3>
             <div class="achive">
-                <div class="achiveLeft">
-                    <label>Heading:</label>
-                    <input type="text" placeholder="e.g., 'Best Employee of the Year'">
-                </div>
-                <div class="achiveRight">
-                    <label>Description:</label>
-                    <textarea placeholder="Describe your achievement or certification"></textarea>
+                <div class="achive-entry">
+                    <div class="achiveLeft">
+                        <label>Heading:</label>
+                        <input type="text" placeholder="e.g., Best Employee of the Year">
+                    </div>
+                    <div class="achiveRight">
+                        <label>Description:</label>
+                        <textarea id="achivedes" placeholder="Describe your achievement or certification"></textarea>
+                        <p id="achivedesc"></p>
+                    </div>
                 </div>
             </div>
+            <button type="button" id="add-achivement">Add Another Achievement</button> 
         </div>
+
 
         <!-- Projects (Optional) -->
         <div class="section" id="projects">
-            <h3>Projects (Optional)</h3>
+            <h3>Projects (Optional) <i id="caret6" class="fa-solid fa-caret-down"></i></h3>
             <div id="project-fields">
                 <div class="project-entry">
                     <div class="projectLeft">
@@ -178,6 +221,7 @@
                     <div class="projectRight">
                         <label>Description:</label>
                         <textarea id="projectdesc" placeholder="Describe the project"></textarea>
+                        <p id="projdesc"></p>
                     </div>
                 </div>
             </div>
@@ -186,14 +230,16 @@
 
         <!-- Languages (Optional) -->
         <div class="section" id="languages">
-            <h3>Languages (Optional)</h3>
-            <label>Languages (Comma Separated):</label>
+            <h3>Languages (Optional) <i id="caret7" class="fa-solid fa-caret-down"></i></h3>
+            <label id="langlabel">Languages (Comma Separated):</label>
             <input type="text" id="languages-input" placeholder="e.g., English, Hindi, French">
         </div>
 
         <!-- Buttons -->
         <div class="buttons step1btns">
+            <p id="limitwarning"><strong>Warning:</strong> Your description is over the character limit. Please modify it before moving to the next step.</p>
             <button type="button" id="next-step" onclick="proceedToNextStep(2)">Next Step</button>
+            <button type="button" id="dummy1" >Next Step</button>
         </div>
     </div>
 
@@ -214,6 +260,14 @@
                 <img src="templates/modern.jpg" alt="Modern Template">
                 <p>Modern</p>
             </div>
+            <div id="developer" class="template-card" onclick="selectTemplate('developer')">
+                <img src="templates/developer.jpg" alt="Developer Template">
+                <p>Developer</p>
+                <div class="premium">
+                    <div id="coinicon"><i class="fa-solid fa-coins"></i> <p id="SkillCoins">10</p></div>
+                    <button id="getpremium">Get Premium</button>
+                </div>
+            </div>
         </div>
         
         <!-- Navigation Buttons -->
@@ -224,7 +278,7 @@
     </div>
 
     <!-- Step 3: Review and Finalize Resume -->
-<div class="step-section" id="step-3" style="display: none;">
+    <div class="step-section" id="step-3" style="display: none;">
     <h2>Review Your Resume</h2>
     <div id="resume-display">
         <!-- Generated resume will be displayed here -->
@@ -232,8 +286,13 @@
 
     <button id="prev-step-3">Edit Previous Steps</button>
     <button id="download-resume">Download Resume</button>
-</div>
+    </div>
 
+</div>
+<div class="panel2">
+    <h1>This feature is Currently in Working.</h1>
+    <p>Till then you can use our Manual feature.</p>
+</div>
     <!-- footer section start -->
     <footer class="footer">
         <div class="footer-content">
@@ -276,8 +335,15 @@
         </div>
     </footer>
 
+    <!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- jQuery UI library -->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
     <script src="Resume.js"></script>
+    <script src="resume2.js"></script>
 </body>
 </html>
