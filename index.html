@@ -17,6 +17,7 @@
     Toggle Dark Mode
   </label> -->
   <style>
+
     /* Features Section */
     .features {
       padding: 60px 20px;
@@ -180,6 +181,8 @@
       /* Show on hover */
     }
   </style>
+
+
 
 
   <head>
@@ -899,6 +902,36 @@
           background-color: #3f10ea;
         }
       </style>
+
+      <style>
+        #scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 80px;
+    background-color: #007bff; /* Blue button color */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 24px;
+    display: none; /* Hidden initially */
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+#scroll-to-top:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    #scroll-to-top {
+        padding: 12px;
+        font-size: 20px;
+    }
+}
+      </style>
     </head>
 
   <body>
@@ -1041,6 +1074,9 @@
       </div>
     </section>
 
+    <button id="scroll-to-top" aria-label="Scroll to Top">
+      <i class="fas fa-arrow-up"></i> <!-- Font Awesome Arrow Icon -->
+  </button>
 
     <!-- Chatbot Button -->
     <a href="chatbot.html">
@@ -1124,7 +1160,28 @@
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script>
+        // Get the button
+const scrollToTopButton = document.getElementById("scroll-to-top");
 
+// Show or hide the button based on scroll position
+window.onscroll = function () {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollToTopButton.style.display = "block"; // Show button
+    } else {
+        scrollToTopButton.style.display = "none"; // Hide button
+    }
+};
+
+// Smooth scroll to the top when button is clicked
+scrollToTopButton.onclick = function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+};
+
+      </script>
 
   </body>
 
