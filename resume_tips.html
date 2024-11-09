@@ -393,60 +393,137 @@
     <!-- footer section -->
     <footer class="footer">
         <div class="footer-content">
-          <div class="footer-section">
-            <h3>About Us</h3>
-            <ul class="ul">
-              <li><a href="#">Our Story</a></li>
-              <li><a href="#">Team</a></li>
-              <li><a href="#">Careers</a></li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h3>Services</h3>
-            <ul class="ul">
-              <li><a href="#">Resume Builder</a></li>
-              <li><a href="#">CV Templates</a></li>
-              <li><a href="#">Career Advice</a></li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h3>Support</h3>
-            <ul class="ul">
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h3>Connect With Us</h3>
-            <div class="social-icons">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-x-twitter"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
             </div>
-          </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Resume Builder</a></li>
+                    <li><a href="cv.html">CV Templates</a></li>
+                    <li><a href="#">Career Advice</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="Faqs.html">FAQ</a></li>
+                    <li><a href="comment.html">Contact Us</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2024 Resume Builder. All rights reserved.</p>
+            <p>&copy; 2024 Resume Builder. All rights reserved.</p>
         </div>
-      </footer>
-      <script>
-        const toggler = document.getElementById("toggler");
-        const body = document.body;
-        const closeBtn = document.querySelector(".close-btn");
-  
-        closeBtn.addEventListener("click", function () {
-          toggler.checked = false;
-          body.classList.remove("sidebar-active");
-        });
-        toggler.addEventListener("change", function () {
-          if (toggler.checked) {
-            body.classList.add("sidebar-active");
-          } else {
-            body.classList.remove("sidebar-active");
-          }
-        });
-      </script>
+    </footer>
+    <style>
+      /* Footer */
+    .footer {
+      background-color: #003d4d;
+      color: #ffffff;
+      padding: 40px 20px;
+      margin-top: 20px;
+    }
+    
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .footer-section {
+      flex: 1;
+      min-width: 200px;
+      margin-bottom: 20px;
+    }
+    
+    .footer-section h3 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+    .footer .footer-section h3{
+        border-bottom: 0;
+    }
+    .footer-section ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .footer-section ul li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-section ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      transition: color 0.3s;
+      font-size: 1.5rem;
+    }
+    
+    .footer-section ul li a:hover {
+      color: #b2dfdb;
+    }
+    
+    .social-icons {
+      display: flex;
+      gap: 1.2rem;
+    }
+    
+    .social-icons a {
+      color: #ffffff;
+      font-size: 1.8rem;
+      transition: color 0.3s;
+    }
+    
+    .social-icons a:hover {
+      color: #b2dfdb;
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 20px;
+      color: #e0f2f1;
+    }
+    
+    /* Responsive Footer Styles */
+    @media (max-width: 768px) {
+      .footer-content {
+          flex-direction: column;
+          align-items: center;
+      }
+    
+      .footer-section {
+          width: 100%;
+          text-align: center;
+          margin-bottom: 30px;
+      }
+    
+      .footer-section h3 {
+          font-size: 1.2rem;
+      }
+    }
+    
+    </style>
 </body>
 </html>
