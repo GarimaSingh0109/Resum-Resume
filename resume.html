@@ -10,33 +10,45 @@
 </head>
 <body>
     <!-- header section starts --> 
-    <header>
-        <a href="#" class="logo">Resum Resume<span>.</span></a>
+   <header>
+        <a href="/" class="logo">Resum Resume<span>.</span></a>
                  
         <nav class="navbar">
-            <a href="#home">Home</a>
+            <a href="/">Home</a>
             <a href="about.html">About</a>
             <a href="resume.html">Build Resume</a>
             <a href="RateMyResume.html">RateMyResume</a>
             <a href="signup.html">Sign Up</a>
             <a href="login.html">Login</a>
         </nav>
-    
-        <div class="icons">
-            <a href="about.html" class="fas fa-info-circle"></a>
-            <a href="#" class="fas fa-envelope"></a>
-            <a href="login.html" id="loginIcon" class="fas fa-user"></a>
-            <i class="fa-solid fa-coins"></i> <p id="SkillCoins"></p>
+
+        <div class="auth-and-theme">
+            <div id="auth-links">
+                <a href="signup.html" id="signup-link">Sign Up</a>
+                <a href="login.html" id="login-link">Login</a>
+            </div>
+
+            <!-- Hamburger menu for small screens -->
+            <div class="hamburger">
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="fas fa-bars menu-icon"></label>
+            </div>
+
+            <!-- Dark mode toggle -->
+            <div class="dark-mod">
+                <input type="checkbox" name="" id="toggler" class="dark-mode-toggle">
+                <label for="toggler" class="fas fa-moon theme-mode"></label>
+            </div>
         </div>
     </header> 
     <style>
-        body{
+        body {
             padding: 0;
         }
-        header{
+        header {
             position: relative;
         }
-        footer{
+        footer {
             margin-top: 5rem;
         }
     </style>
@@ -299,34 +311,34 @@
             <div class="footer-section">
                 <h3>About Us</h3>
                 <ul>
-                    <li><a href="#">Our Story</a></li>
-                    <li><a href="#">Team</a></li>
-                    <li><a href="#">Careers</a></li>
+                    <li><a href="/">Our Story</a></li>
+                    <li><a href="/">Team</a></li>
+                    <li><a href="/">Careers</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h3>Services</h3>
                 <ul>
-                    <li><a href="#">Resume Builder</a></li>
+                    <li><a href="/">Resume Builder</a></li>
                     <li><a href="cv.html">CV Templates</a></li>
-                    <li><a href="#">Career Advice</a></li>
+                    <li><a href="/">Career Advice</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h3>Support</h3>
                 <ul>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="/">FAQ</a></li>
+                    <li><a href="/">Contact Us</a></li>
+                    <li><a href="/">Privacy Policy</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h3>Connect With Us</h3>
                 <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="/"><i class="fab fa-twitter"></i></a>
+                    <a href="/"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="/"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>

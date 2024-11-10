@@ -382,134 +382,59 @@ button:focus {
     text-align: center;
     width: 25%;
     cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s; /* Added box-shadow transition */
+    transition: transform 0.3s, box-shadow 0.3s; /* Added transition for scaling effect */
 }
 
 .template-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Added shadow on hover */
+    transform: scale(1.05); /* Added scaling effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.template-card img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
+.template-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
 }
-.template-card p{
+
+.template-name {
     font-size: 1.5rem;
-    font-weight: 500;
-    margin-top: 1rem;
-    color: black;
-}
-.buttons {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
+    color: #333;
+    margin-top: 10px;
 }
 
-.buttons button {
-    padding: 10px 20px;
+.template-card.selected {
+    border-color: #007bff;
+}
+
+.submit-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.submit-button {
+    font-size: 1.5rem;
+    padding: 15px 40px;
     background-color: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
-
-.buttons button:hover {
+.submit-button:hover {
     background-color: #0056b3;
 }
-.step1btns{
-    display: flex;
-    justify-content: right;
-}
-.premium{
-    margin-top: 1rem;
-    display: flex;
-    justify-content: space-between;
-}
-#coinicon{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-}
-#coinicon p{
-    font-size: 2rem;
-    margin: 0;
-}
-.fa-coins{
-    font-size: 2rem;
-    color: rgb(246, 180, 0);
-}
-/* Step 3 Styles */
-#step-3{
-    width: 90%;
-    margin: auto;
-    background: #f4f4f4;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-.step-section {
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    margin-top: 20px;
-}
 
-#resume-display {
-    margin-top: 20px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #fff;
+.submit-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
 }
-
-#resume-display h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
+.template-image-container {
+    max-height: 150px; /* Set a fixed maximum height for the image */
+    overflow: hidden; /* Hide any overflowing content */
+    border-radius: 8px; /* Add a border radius for rounded corners */
 }
-
-#resume-display h2 {
-    font-size: 1.5em;
-    margin: 15px 0 5px;
+h4{
+    color: #333;
+    font-weight: 400;
 }
-
-#resume-display h3 {
-    font-size: 1.2em;
-    margin: 10px 0 5px;
-}
-
-#resume-display p {
-    margin: 5px 0;
-}
-
-/* Button Styles */
-button {
-    margin: 10px 5px;
-    padding: 10px 15px;
-    font-size: 1em;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#prev-step-3 {
-    background-color: #f0ad4e; /* Bootstrap warning color */
-    color: white;
-}
-
-#download-resume {
-    background-color: #5cb85c; /* Bootstrap success color */
-    color: white;
-}
-.ui-autocomplete {
-    max-height: 150px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    border: 1px solid #ddd;
-    background-color: #fff;
-  }
-  
