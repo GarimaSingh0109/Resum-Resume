@@ -1088,6 +1088,513 @@
       </div>
       <div class="footer-bottom">
           <p>&copy; 2024 Resume Builder. All rights reserved.</p>
+        </div>
+    </footer>
+    <div id="progress-container">
+      <div id="progress-bar"></div>
+    </div>
+  
+    <script>
+  let lastScrollPercentage = 0; 
+  
+  function updateProgressBar() {
+      const scrollTop = window.scrollY; 
+      const windowHeight = document.documentElement.scrollHeight - window.innerHeight; 
+      const scrollPercentage = (scrollTop / windowHeight) * 100; 
+  
+      
+      const progressBar = document.getElementById('progress-bar');
+      
+     
+      lastScrollPercentage += (scrollPercentage - lastScrollPercentage) * 0.1; 
+      progressBar.style.width = lastScrollPercentage + '%'; 
+  }
+  window.addEventListener('scroll', updateProgressBar);
+  
+    </script>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- header section begins -->
+
+    <header>
+      <input type="checkbox" name="" id="toggler" />
+      <label for="toggler" class="fas fa-bars"></label>
+
+      <a href="#" class="logo" id=""><span id="newlogo"></span></a>
+      <a href="#" class="logo">Resum Resume</a>
+
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="about.html">About</a>
+        <a href="resume.html">Build Resume</a>
+        <a href="resume_tips.html">Resume Tips</a>
+	<li><a href="ats_score_finder.html">ATS Score Finder</a></li>
+        <a href="login.html">Login</a>
+      <a href="feedback.html"> feedback</a>
+      </nav>
+
+      <div class="icons">
+        <a href="about.html" class="fas fa-info-circle"></a>
+        <a href="#" class="fas fa-envelope"></a>
+        <a href="login.html" id="loginIcon" class="fas fa-user"></a>
+      </div>
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- home section starts -->
+
+    <section class="home" id="Home">
+      <div class="content">
+        <h3>Build Your Resume in Seconds from LinkedIn</h3>
+        <p>
+          Easily generate a professional resume using your LinkedIn profile.
+          Select a template, enter your LinkedIn URL, and get a downloadable
+          resume in a few clicks. Save time and create a resume that stands out.
+        </p>
+        <a href="login.html" class="btn">Get Started</a>
+      </div>
+    </section>
+
+    <!-- home section ends-->
+
+    <!-- Features Section -->
+    <section class="features">
+      <h2>Our Features</h2>
+      <div class="features-cards">
+        <div class="features-card">
+          <img
+            src="assets/joao-ferrao-4YzrcDNcRVg-unsplash.jpg"
+            alt="Easy to Use"
+          />
+          <h3>Easy to Use</h3>
+          <p>
+            Create a professional resume effortlessly with our user-friendly
+            interface.
+          </p>
+        </div>
+        <div class="features-card">
+          <img src="assets/instant resume.jpg" alt="Instant Resume" />
+          <h3>Instant Resume</h3>
+          <p>
+            Generate a polished resume in seconds using your LinkedIn profile
+            data.
+          </p>
+        </div>
+        <div class="features-card">
+          <img src="assets/securedata.jpg" alt="Secure Data" />
+          <h3>Secure Data</h3>
+          <p>
+            Your personal information is safe with our secure and encrypted
+            platform.
+          </p>
+        </div>
+        <div class="features-card">
+          <img src="assets/support.jpg" alt="24/7 Support" />
+          <h3>24/7 Support</h3>
+          <p>
+            Our dedicated support team is available round the clock to assist
+            you.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+      <h2>What Our Users Say</h2>
+
+      <div class="testimonial-cards">
+        <div class="testimonial-card">
+          <img src="assets/jondoe.jpg" alt="User 1" />
+          <h3>Jane Doe</h3>
+          <p>
+            "This resume builder transformed my LinkedIn profile into a
+            professional resume effortlessly. Highly recommended!"
+          </p>
+        </div>
+        <div class="testimonial-card">
+          <img src="assets/john_smith.jpg" alt="User 2" />
+          <h3>John Smith</h3>
+          <p>
+            "I was amazed at how quickly I was able to generate a resume. The
+            process was smooth and the result was perfect."
+          </p>
+        </div>
+        <div class="testimonial-card">
+          <img src="assets/emily_johnson.jpg" alt="User 3" />
+          <h3>Emily Johnson</h3>
+          <p>
+            "The platform is user-friendly and secure. I felt confident that my
+            data was protected. Great service!"
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <button class="scroll-to-top" id="scrollToTopBtn">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- footer-section -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <ul class="ul">
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul class="ul">
+            <li><a href="#">Resume Builder</a></li>
+            <li><a href="#">CV Templates</a></li>
+            <li><a href="#">Career Advice</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Support</h3>
+          <ul class="ul">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="privacypolicy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Connect With Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Resume Builder. All rights reserved.</p>
+      </div>
+    </footer>
+
+
+        
+        <!-- header section ends -->
+    
+    
+        <!-- home section starts -->
+    
+        <section class="home" id="Home">
+    
+            <div class="content">
+                <h3>Build Your Resume in Seconds from LinkedIn</h3>
+                <p>Easily generate a professional resume using your LinkedIn profile. Select a template, enter your LinkedIn URL,
+                    and get a downloadable resume in a few clicks. Save time and create a resume that stands out. </p>
+                <a href="login.html" class="btn">Get Started</a>
+            </div>
+    
+        </section>
+    
+        <!-- home section ends-->
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Our Features</h2>
+        <div class="features-cards">
+            <div class="features-card">
+                <img src="assets/joao-ferrao-4YzrcDNcRVg-unsplash.jpg" alt="Easy to Use" >
+                <h3>Easy to Use</h3>
+                <p>Create a professional resume effortlessly with our user-friendly interface.</p>
+            </div>
+            <div class="features-card">
+                <img src="assets/instant resume.jpg" alt="Instant Resume">
+                <h3>Instant Resume</h3>
+                <p>Generate a polished resume in seconds using your LinkedIn profile data.</p>
+            </div>
+            <div class="features-card">
+                <img src="assets/securedata.jpg" alt="Secure Data">
+                <h3>Secure Data</h3>
+                <p>Your personal information is safe with our secure and encrypted platform.</p>
+            </div>
+            <div class="features-card">
+                <img src="assets/support.jpg" alt="24/7 Support">
+                <h3>24/7 Support</h3>
+                <p>Our dedicated support team is available round the clock to assist you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Users Say</h2>
+        <div class="testimonial-cards">
+            <div class="testimonial-card">
+                <img src="assets/jondoe.jpg" alt="User 1">
+                <h3>Jane Doe</h3>
+                <p>"This resume builder transformed my LinkedIn profile into a professional resume effortlessly. Highly recommended!"</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="assets/john_smith.jpg" alt="User 2">
+                <h3>John Smith</h3>
+                <p>"I was amazed at how quickly I was able to generate a resume. The process was smooth and the result was perfect."</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="assets/emily_johnson.jpg" alt="User 3">
+                <h3>Emily Johnson</h3>
+                <p>"The platform is user-friendly and secure. I felt confident that my data was protected. Great service!"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Resume Builder</a></li>
+                    <li><a href="#">CV Templates</a></li>
+                    <li><a href="#">Career Advice</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/GarimaSingh0109/Resum-Resume" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Resume Builder. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>// Wait for the DOM to be fully loaded
+        document.addEventListener("DOMContentLoaded", function () {
+            // Select all sections you want to animate
+            const sections = document.querySelectorAll("section, header, footer");
+        
+            // Animate each section with a fade-in effect and additional properties
+            sections.forEach((section) => {
+                gsap.set(section, { opacity: 0, scale: 0.9 }); // Initial state
+                gsap.to(section, {
+                    opacity: 1,
+                    scale: 1,
+                    duration: 1,
+                    delay: 0.5,
+                    stagger: 0.3,
+                    ease: "back.out(1.7)" // Use a bounce effect for the animation
+                });
+            });
+        
+            // Animate the navbar items
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach((tab, index) => {
+                gsap.set(tab, { opacity: 0, y: -20, scale: 0.9 }); // Initial state
+                gsap.to(tab, {
+                    opacity: 1,
+                    y: 0,
+                    scale: 1,
+                    duration: 0.5,
+                    delay: 1 + index * 0.2,
+                    ease: "back.out(1.7)" // Bounce effect
+                });
+            });
+        
+            // Add animations for icons
+            const icons = document.querySelectorAll('.icons a');
+            icons.forEach((icon, index) => {
+                gsap.set(icon, { opacity: 0, y: -20, rotation: -15 }); // Initial state
+                gsap.to(icon, {
+                    opacity: 1,
+                    y: 0,
+                    rotation: 0,
+                    duration: 0.5,
+                    delay: 1 + index * 0.3,
+                    ease: "back.out(1.7)" // Bounce effect
+                });
+            });
+        
+            // Animate the home section content
+            const homeContent = document.querySelector('.home .content');
+            gsap.set(homeContent, { opacity: 0, y: 30 }); // Initial state
+            gsap.to(homeContent, {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                delay: 1.5,
+                ease: "power2.out" // Smooth easing
+            });
+        
+            // Animate the features cards
+            const featuresCards = document.querySelectorAll('.features-card');
+            featuresCards.forEach((card, index) => {
+                gsap.set(card, { opacity: 0, y: 20 }); // Initial state
+                gsap.to(card, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.5,
+                    delay: 1.5 + index * 0.2,
+                    ease: "power2.out" // Smooth easing
+                });
+            });
+        
+            // Animate testimonials section
+            const testimonialCards = document.querySelectorAll('.testimonial-card');
+            testimonialCards.forEach((card, index) => {
+                gsap.set(card, { opacity: 0, scale: 0.9 }); // Initial state
+                gsap.to(card, {
+                    opacity: 1,
+                    scale: 1,
+                    duration: 0.5,
+                    delay: 2 + index * 0.3,
+                    ease: "back.out(1.7)" // Bounce effect
+                });
+            });
+        });
+        </script>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+
+
+	<!-- header section begins -->
+
+		
+
+		<div class="icons">
+			<a href="about.html" class="fas fa-info-circle"></a>
+			<a href="#" class="fas fa-envelope"></a>
+			<a href="login.html" id="loginIcon" class="fas fa-user"></a>
+		</div>
+	</header>
+
+	<!-- header section ends -->
+
+	<!-- home section starts -->
+
+	<section class="home" id="Home">
+		<div class="content">
+			<h3>Build Your Resume in Seconds from LinkedIn</h3>
+			<p>
+				Easily generate a professional resume using your LinkedIn
+				profile. Select a template, enter your LinkedIn URL, and get
+				a downloadable resume in a few clicks. Save time and create
+				a resume that stands out.
+			</p>
+			<a href="login.html" class="btn">Get Started</a>
+		</div>
+	</section>
+
+	<!-- home section ends-->
+
+	<!-- Features Section -->
+	<section class="features">
+		<h2>Our Features</h2>
+		<div class="features-cards">
+			<div class="features-card">
+				<img src="assets/joao-ferrao-4YzrcDNcRVg-unsplash.jpg" alt="Easy to Use" />
+				<h3>Easy to Use</h3>
+				<p>
+					Create a professional resume effortlessly with our
+					user-friendly interface.
+				</p>
+			</div>
+			<div class="features-card">
+				<img src="assets/instant resume.jpg" alt="Instant Resume" />
+				<h3>Instant Resume</h3>
+				<p>
+					Generate a polished resume in seconds using your
+					LinkedIn profile data.
+				</p>
+			</div>
+			<div class="features-card">
+				<img src="assets/securedata.jpg" alt="Secure Data" />
+				<h3>Secure Data</h3>
+				<p>
+					Your personal information is safe with our secure and
+					encrypted platform.
+				</p>
+			</div>
+			<div class="features-card">
+				<img src="assets/support.jpg" alt="24/7 Support" />
+				<h3>24/7 Support</h3>
+				<p>
+					Our dedicated support team is available round the clock
+					to assist you.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Testimonials Section -->
+	<section class="testimonials">
+		<h2>What Our Users Say</h2>
+
+		<div class="testimonial-cards">
+			<div class="testimonial-card">
+				<img src="assets/jondoe.jpg" alt="User 1" />
+				<h3>Jane Doe</h3>
+				<p>
+					"This resume builder transformed my LinkedIn profile
+					into a professional resume effortlessly. Highly
+					recommended!"
+				</p>
+			</div>
+			<div class="testimonial-card">
+				<img src="assets/john_smith.jpg" alt="User 2" />
+				<h3>John Smith</h3>
+				<p>
+					"I was amazed at how quickly I was able to generate a
+					resume. The process was smooth and the result was
+					perfect."
+				</p>
+			</div>
+			<div class="testimonial-card">
+				<img src="assets/emily_johnson.jpg" alt="User 3" />
+				<h3>Emily Johnson</h3>
+				<p>
+					"The platform is user-friendly and secure. I felt
+					confident that my data was protected. Great service!"
+				</p>
+			</div>
+		</div>
+	</section>
+
+
+	
+      </footer>
+      <div id="progress-container">
+        <div id="progress-bar"></div>
       </div>
   </footer>
   <style>
