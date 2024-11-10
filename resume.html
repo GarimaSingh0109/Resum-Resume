@@ -1,110 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Build Resume</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="Resume.css">
 </head>
-
 <body>
-
     <!-- header section starts --> 
-    
-
-    <!-- header section starts -->
     <header>
-        <!-- <input type="checkbox" name="" id="toggler">
-          <label for="toggler" class="fas fa-bars"></label> -->
-        <a href="#" class="logo">Resum Resume<span>.</span></a>
-
+        <a href="index.html" class="logo">Resum Resume<span>.</span></a>
+                 
         <nav class="navbar">
-            <a href="#home">Home</a>
+            <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="resume.html">Build Resume</a>
             <a href="RateMyResume.html">RateMyResume</a>
-
-            <!-- <a href="signup.html">Sign Up</a> -->
-            <!-- <a href="login.html">Login</a> -->
-        </nav>
-
-        <div class="auth-and-theme">
-            <!-- Login/Signup dynamically added, adding JS below, you can see -->
-            <div id="auth-links">
-                <a href="signup.html" id="signup-link">Sign Up</a>
-                <a href="login.html" id="login-link">Login</a>
-            </div>
-
-            <!-- Hamburger menu for small screens -->
-            <div class="hamburger">
-                <input type="checkbox" id="menu-toggle" class="menu-toggle">
-                <label for="menu-toggle" class="fas fa-bars menu-icon"></label>
-            </div>
-            <!-- Dark mode toggle, better in last of nav -->
-            <div class="dark-mod">
-                <input type="checkbox" name="" id="toggler" class="dark-mode-toggle">
-                <label for="toggler" class="fas fa-moon theme-mode"></label>
-            </div>
-        </div>
-
-    </header>
-    <nav class="mobile-navbar">
-        <div class="main-links">
-            <a href="#home">Home</a>
-            <a href="about.html">About</a>
-            <a href="resume.html">Build Resume</a>
-        </div>
-        <div class="auth-links">
             <a href="signup.html">Sign Up</a>
             <a href="login.html">Login</a>
-        </div>
-    </nav>
-    <script>
-        // Get the menu toggle checkbox and mobile navbar elements
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileNavbar = document.querySelector('.mobile-navbar');
-
-        // Event listener to show/hide mobile navbar based on checkbox state
-        menuToggle.addEventListener('change', function () {
-            if (this.checked) {
-                mobileNavbar.style.transform = 'translateY(0)'; // Slide down into view
-            } else {
-                mobileNavbar.style.transform = 'translateY(-100%)'; // Slide up out of view
-            }
-        });
-    </script>
-    <script>
-        document.getElementById('toggler').addEventListener('change', function () {
-            // document.body.classList.toggle('dark-mode-toggle', this.checked);
-
-            // Change icon between darl and light
-            const icon = document.querySelector('.theme-mode');
-            if (this.checked) {
-                icon.classList.remove('fa-sun');
-                icon.classList.add('fa-moon');
-            } else {
-                icon.classList.remove('fa-moon');
-                icon.classList.add('fa-sun');
-            }
-        });
-
-    </script>
+        </nav>
+    
+        <div class="icons">
+            <a href="about.html"><i class="fas fa-info-circle"></i></a>
+            <a href="#" ><i class="fas fa-envelope"></i></a>
+            <a href="login.html" id="loginIcon"><i class="fas fa-user"></i></a>
+            <i class="fa-solid fa-coins"></i> <p id="SkillCoins"></p></div>
+    </header> 
     <style>
-        body {
+        body{
             padding: 0;
         }
-
-        header {
-            position: relative;
+        .logo{
+            font-size: 2.3rem;
         }
-
-        footer {
+        header{
+            height: 8rem;
+            position: relative;
+            padding-left: 3rem;
+            padding-right: 3rem;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        footer{
             margin-top: 5rem;
+        }
+        .navbar{
+            width: 60%;
+        }
+        .navbar a{
+            font-weight: 400;
+        }
+        .icons{
+            display: flex;
+            align-items: center;
+            width: 16%;
+        }
+        .icons a{
+            font-size: 2rem;
+            display: inline;
+            color: white;
+            margin-left: 1rem;
+            line-height: 2.3rem;
+        }
+        .icons p{
+            display: inline;
+            color: white;
+            font-size: 2.3rem;
+            margin-left: 1rem;
+            line-height: 2.3rem;
+        }
+        .fa-coins i{
+            font-size: 2rem;
+            color: rgb(246, 180, 0);
         }
     </style>
     <!-- header section ends -->
@@ -157,12 +127,12 @@
                 <span class="circle">3</span>
                 <span class="label">Step 3</span>
             </div>
-        </div>
+        </div>    
     </div>
     <!-- main section start -->
     <div class="form-container">
         <h2>Fill Your Information</h2>
-
+        
         <!-- Personal Information -->
         <div class="section" id="personal-info">
             <h3>Personal Information <i id="caret1" class="fa-solid fa-caret-down"></i></h3>
@@ -173,10 +143,10 @@
 
                     <label>Email:</label>
                     <input type="email" id="email" placeholder="Enter your email">
-
+                    
                     <label>Contact Number:</label>
                     <input type="tel" id="contact" placeholder="Enter your contact number">
-
+                    
                     <label>Location:</label>
                     <input type="text" id="location" placeholder="Enter your location">
                 </div>
@@ -184,6 +154,9 @@
                     <label>Profile:</label>
                     <textarea id="profile" placeholder="Write about yourself"></textarea>
                     <p id="pinfodesc">0/150</p>
+
+                    <label>Github Username:</label>
+                    <input type="text" id="githubid" placeholder="Enter your username, Ex. johnsmith07">
                 </div>
             </div>
         </div>
@@ -310,7 +283,7 @@
     <!-- Step 2: Template Selection Section -->
     <div id="step-2" class="step-section" style="display: none;">
         <h2>Select a Resume Template</h2>
-
+        
         <div class="template-section">
             <div id="basic" class="template-card" onclick="selectTemplate('basic')">
                 <img src="templates/basic.jpg" alt="Basic Template">
@@ -324,8 +297,16 @@
                 <img src="templates/modern.jpg" alt="Modern Template">
                 <p>Modern</p>
             </div>
+            <div id="developer" class="template-card" onclick="selectTemplate('developer')">
+                <img src="templates/developer.jpg" alt="Developer Template">
+                <p>Developer</p>
+                <div class="premium">
+                    <div id="coinicon"><i class="fa-solid fa-coins"></i> <p id="SkillCoins">10</p></div>
+                    <button id="getpremium">Get Premium</button>
+                </div>
+            </div>
         </div>
-
+        
         <!-- Navigation Buttons -->
         <div class="buttons">
             <button id="prev-step-2" onclick="showStep(1)">Prev Step</button>
@@ -344,61 +325,174 @@
     <button id="download-resume">Download Resume</button>
     </div>
 
-        <h2>Review Your Resume</h2>
-        <div id="resume-display">
-            <!-- Generated resume will be displayed here -->
-        </div>
-
-        <button id="prev-step-3">Edit Previous Steps</button>
-        <button id="download-resume">Download Resume</button>
-    </div>
-
 </div>
 <div class="panel2">
     <h1>This feature is Currently in Working.</h1>
     <p>Till then you can use our Manual feature.</p>
 </div>
-    <!-- footer section start -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>About Us</h3>
-                <ul>
-                    <li><a href="#">Our Story</a></li>
-                    <li><a href="#">Team</a></li>
-                    <li><a href="#">Careers</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Services</h3>
-                <ul>
-                    <li><a href="#">Resume Builder</a></li>
-                    <li><a href="cv.html">CV Templates</a></li>
-                    <li><a href="#">Career Advice</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Support</h3>
-                <ul>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Connect With Us</h3>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
+    
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>About Us</h3>
+            <ul>
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Careers</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Services</h3>
+            <ul>
+                <li><a href="#">Resume Builder</a></li>
+                <li><a href="cv.html">CV Templates</a></li>
+                <li><a href="#">Career Advice</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="Faqs.html">FAQ</a></li>
+                <li><a href="comment.html">Contact Us</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Connect With Us</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Resume Builder. All rights reserved.</p>
-        </div>
-    </footer>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Resume Builder. All rights reserved.</p>
+    </div>
+</footer>
+<style>
+  /* Footer */
+.footer {
+    background-color: #003d4d;
+    padding-bottom: 2rem;
+}
+
+.footer-section h3 {
+    font-size: 2.5rem;
+}
+
+.footer-section ul li {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.footer-section ul li a {
+    color: #000;
+}
+
+.footer-bottom p {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.footer {
+  background-color: #003d4d;
+  color: #ffffff;
+  padding: 40px 20px;
+  margin-top: 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-section h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+.footer .footer-section h3{
+    border-bottom: 0;
+}
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 1.5rem;
+}
+
+.footer-section ul li a:hover {
+  color: #b2dfdb;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.social-icons a {
+  color: #ffffff;
+  font-size: 1.8rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #b2dfdb;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 20px;
+  color: #e0f2f1;
+}
+
+/* Responsive Footer Styles */
+@media (max-width: 768px) {
+  .footer-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer-section {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 30px;
+  }
+
+  .footer-section h3 {
+      font-size: 1.2rem;
+  }
+}
+
+</style>
 
     <!-- jQuery library -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -411,5 +505,4 @@
     <script src="Resume.js"></script>
     <script src="resume2.js"></script>
 </body>
-
 </html>

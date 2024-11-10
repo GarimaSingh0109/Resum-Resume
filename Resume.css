@@ -4,6 +4,23 @@ body {
     margin: 0;
     padding: 20px;
 }
+body{
+    background: linear-gradient(135deg, #dedfe0, #e7ebf0);
+}
+.icons{
+    display: flex;
+    align-items: center;
+}
+.icons i{
+    margin-left: 1.5rem;
+}
+.icons p{
+    display: inline;
+    color: white;
+    font-size: 2.3rem;
+    margin-left: 1rem;
+    line-height: 2.3rem;
+}
 /* hero section */
 .herosection{
     height: 100vh;
@@ -16,20 +33,22 @@ body {
     position: relative;
 }
 .herocontent{
-    height: 50%;
+    height: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
     text-align: center;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 .herocontent h1{
     width: 60%;
     font-size: 5rem;
     font-weight: 800;
     color: white;
+    margin-bottom: 0;
+    border: 0;
 }
 .herocontent p{
     width: 60%;
@@ -38,7 +57,7 @@ body {
     color: white;
 }
 .herostep{
-    height: 10%;
+    height: 20%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -58,6 +77,7 @@ body {
     line-height: 2rem;
     margin: 0;
     line-height: 2.5rem;
+    border: 0;
 }
 .herostep i{
     font-size: 3rem;
@@ -114,7 +134,6 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: 5rem;
-    background-color: rgba(137, 137, 137, 0.25);
 }
 .progress-bar {
     width: 70%;
@@ -192,7 +211,7 @@ body {
     width: 50%;
 }
 #profile{
-    height: 25rem;
+    height: 17rem;
 }
 #education-fields{
     position: relative;
@@ -227,8 +246,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    flex-wrap: wrap;
     position: relative;
 }
 .achive-entry{
@@ -357,6 +374,7 @@ button:focus {
     flex-wrap: wrap; /* Allow wrapping on smaller screens */
     justify-content: space-around;
     margin-top: 20px;
+    gap: 2rem;
 }
 
 .template-card {
@@ -407,7 +425,25 @@ button:focus {
     display: flex;
     justify-content: right;
 }
-
+.premium{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+#coinicon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+#coinicon p{
+    font-size: 2rem;
+    margin: 0;
+}
+.fa-coins{
+    font-size: 2rem;
+    color: rgb(246, 180, 0);
+}
 /* Step 3 Styles */
 #step-3{
     width: 90%;
@@ -470,10 +506,6 @@ button {
 #download-resume {
     background-color: #5cb85c; /* Bootstrap success color */
     color: white;
-
-}
-
-
 }
 .ui-autocomplete {
     max-height: 150px;
@@ -482,5 +514,4 @@ button {
     border: 1px solid #ddd;
     background-color: #fff;
   }
-
-
+  

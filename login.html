@@ -5,41 +5,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Register & Login</title>
   <link rel="stylesheet" href="login.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
 <body>
-  <!-- Progress Bar -->
-  <div id="progress-container">
-    <div id="progress-bar"></div>
-</div>
 
-<!-- Navbar section -->
+<!-- header section starts --> 
 <header>
-    <a href="index.html"><h1>Resum Resume<span>.</span></h1></a>
-    <nav>
-        <ul id="nav-menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about.html">About Us</a></li>
-            <li><a href="#resume.html">Resume</a></li>
-            <li><a href="#signup.html">Sign Up</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
-    </nav>
-    <div class="nav-controls">
-      <a href="about.html" class="fas fa-info-circle"></a>
-      <a href="login.html" id="loginIcon" class="fas fa-user"></a>
-        <button id="menu-toggle" aria-label="Toggle menu">☰</button>
-    </div>
+  <a href="index.html" class="logo">Resum Resume<span>.</span></a>
+           
+  <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="resume.html">Build Resume</a>
+      <a href="RateMyResume.html">RateMyResume</a>
+      <a href="signup.html">Sign Up</a>
+      <a href="login.html">Login</a>
+  </nav>
+
+  <div class="icons">
+      <a href="about.html"><i class="fas fa-info-circle"></i></a>
+      <a href="#" ><i class="fas fa-envelope"></i></a>
+      <a href="login.html" id="loginIcon"><i class="fas fa-user"></i></a>
+      <i class="fa-solid fa-coins"></i> <p id="SkillCoins"></p></div>
 </header>
+<style>
+  body{
+      padding: 0;
+  }
+  .logo{
+      font-size: 2.3rem;
+  }
+  header{
+      height: 8rem;
+      position: relative;
+      padding-left: 3rem;
+      padding-right: 3rem;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+  }
+  footer{
+      margin-top: 5rem;
+  }
+  .navbar{
+      width: 60%;
+  }
+  .navbar a{
+      font-weight: 400;
+  }
+  .icons{
+      display: flex;
+      align-items: center;
+      width: 16%;
+  }
+  .icons a{
+      font-size: 2rem;
+      display: inline;
+      color: white;
+      margin-left: 1rem;
+      line-height: 2.3rem;
+  }
+  .icons i{
+      margin-left: 1.5rem;
+  }
+  .icons p{
+      display: inline;
+      color: white;
+      font-size: 2.3rem;
+      margin: 0;
+      margin-left: 1rem;
+      line-height: 2.3rem;
+  }
+  .fa-coins{
+      font-size: 2rem;
+      color: rgb(246, 180, 0);
+  }
+</style>
+<!-- header section ends -->
 
   <div class="container">
     <div class="forms-container">
       <div class="signin-signup">
         <form action="#" class="sign-up-form">
-          <h2 class="title">Sign up</h2>
+          <h2 class="title" style="color: rgb(75, 73, 73); font-size: 40px;">Login</h2>
           <div class="input-field">
             <i class="fas fa-user"></i>
-            <input type="text" placeholder="Username" required />
+            <input type="text" placeholder="Username" required/>
           </div>
           <div class="input-field">
             <i class="fas fa-envelope"></i>
@@ -49,60 +102,196 @@
             <i class="fas fa-lock"></i>
             <input type="password" placeholder="Password" required />
           </div>
-          <input type="submit" class="btn" value="Sign up" />
-          <p class="social-text">Or Sign up with social platforms</p>
-          <div class="social-media">
-            <a href="https://github.com/YourGitHubProfile" target="_blank">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width="40" height="40" style="margin-left: 5px;">
-            </a>
+          <!--Add Forget password link-->
+          <div class="forgot-password" style="color: rgb(53, 53, 149); text-align: end; margin: 5px 0;">
+            <a href="#" onclick="forgotPassword()">Forgot Password?</a>
           </div>
-          <input type="submit" class="btn" value="Login" />
+          <!--Made sign up button Login Button-->
+          <input type="submit" class="btn solid" value="Login" />
+
+          <!--Add link For go back to sign-up page-->
+          <p style="margin-left: 90px;margin-bottom: 5px;">Don't have an account? <a href="signup.html" target="_blank" style="color: rgba(33, 35, 156, 0.8);">Sign up here!</a></p>
+
+        <div style="background-color: antiquewhite; margin-left: 10px;text-align:center;padding:5px 30px;">
+          <div class="Social-platform" style="margin-top: 10px;">
+          <p class="social-text" > Sign up with social platforms</p>
+          </div>
+          
+          <div class="social-media" style="margin-top:10px;font-size: 20px;">
+            <a href="https://github.com/YourGitHubProfile" target="_blank" class="social-icon">
+              <i class="fab fa-github"></i>
+            </a>
+          
+            <!--Add more social media-->
+            <a href="https://www.google.com" target="_blank" class="social-icon">
+              <i class="fab fa-google"></i>
+            </a>
+          
+            <a href="https://facebook.com/YourPage" target="_blank" class="social-icon">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+
+          </div>
+        </div>
         </form>
       </div>
     </div>
   </div>
 
+  <script>
+    function forgotPassword() {
+          const email = prompt('Please enter your email address:');
+          if (email) {
+            firebase
+              .auth()
+              .sendPasswordResetEmail(email)
+              .then(() => {
+                alert('Password reset email sent!');
+              })
+              .catch((error) => {
+                console.error('Error:', error.message);
+              });
+            }
+    }
+  </script>
 
-  <footer class="footer">
-    <div class="footer-content">
-        <div class="footer-section">
-            <h3>About Us</h3>
-            <ul>
-                <li><a href="#">Our Story</a></li>
-                <li><a href="#">Team</a></li>
-                <li><a href="#">Careers</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>Services</h3>
-            <ul>
-                <li><a href="#">Resume Builder</a></li>
-                <li><a href="cv.html">CV Templates</a></li>
-                <li><a href="#">Career Advice</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>Support</h3>
-            <ul>
-                <li><a href="Faqs.html">FAQ</a></li>
-                <li><a href="comment.html">Contact Us</a></li>
-                <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>Connect With Us</h3>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2024 Resume Builder. All rights reserved.</p>
-    </div>
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+      <div class="footer-section">
+          <h3>About Us</h3>
+          <ul>
+              <li><a href="#">Our Story</a></li>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Careers</a></li>
+          </ul>
+      </div>
+      <div class="footer-section">
+          <h3>Services</h3>
+          <ul>
+              <li><a href="#">Resume Builder</a></li>
+              <li><a href="cv.html">CV Templates</a></li>
+              <li><a href="#">Career Advice</a></li>
+          </ul>
+      </div>
+      <div class="footer-section">
+          <h3>Support</h3>
+          <ul>
+              <li><a href="Faqs.html">FAQ</a></li>
+              <li><a href="comment.html">Contact Us</a></li>
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          </ul>
+      </div>
+      <div class="footer-section">
+          <h3>Connect With Us</h3>
+          <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <p>&copy; 2024 Resume Builder. All rights reserved.</p>
+  </div>
 </footer>
-  <script src="login.js"></script>
+<style>
+/* Footer */
+.footer {
+background-color: #003d4d;
+color: #ffffff;
+padding: 40px 20px;
+margin-top: 20px;
+}
+
+.footer-content {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.footer-section {
+flex: 1;
+min-width: 200px;
+margin-bottom: 20px;
+}
+
+.footer-section h3 {
+font-size: 1.3rem;
+margin-bottom: 15px;
+}
+.footer .footer-section h3{
+  border-bottom: 0;
+}
+.footer-section ul {
+list-style-type: none;
+padding: 0;
+margin: 0;
+}
+
+.footer-section ul li {
+margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+color: #ffffff;
+text-decoration: none;
+transition: color 0.3s;
+font-size: 1.5rem;
+}
+
+.footer-section ul li a:hover {
+color: #b2dfdb;
+}
+
+.social-icons {
+display: flex;
+gap: 1.2rem;
+}
+
+.social-icons a {
+color: #ffffff;
+font-size: 1.8rem;
+transition: color 0.3s;
+}
+
+.social-icons a:hover {
+color: #b2dfdb;
+}
+
+.footer-bottom {
+text-align: center;
+padding-top: 20px;
+font-size: 0.9rem;
+border-top: 1px solid rgba(255, 255, 255, 0.1);
+margin-top: 20px;
+color: #e0f2f1;
+}
+
+/* Responsive Footer Styles */
+@media (max-width: 768px) {
+.footer-content {
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-section {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+}
+}
+
+</style>
+
+<script src="login.js"></script>
+<script src="RateMyResume.js"></script>
 </body>
 </html>
