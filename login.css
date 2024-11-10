@@ -59,15 +59,19 @@ header #menu-toggle {
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+  width: 90%;
+  max-width: 500px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .forms-container {
-  background-color: #ffffff;
-  width: 90%;
-  max-width: 400px;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .title {
@@ -85,6 +89,7 @@ header #menu-toggle {
   border: 1px solid #ccc;
   padding: 0.5rem;
   border-radius: 5px;
+  width: 100%;
 }
 
 .input-field i {
@@ -117,20 +122,33 @@ header #menu-toggle {
   background-color: #02665e;
 }
 
-/* Social Media Icon Styling */
-.social-media a {
-  display: inline-block;
-  margin: 0 10px;
+/* Social Media Styling */
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-icon-frame {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #333;
+  border-radius: 50%;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
   transition: transform 0.3s;
 }
 
-.social-media a:hover {
+.social-icon-frame:hover {
   transform: scale(1.1);
 }
 
-.social-media img {
-  width: 30px;
-  height: 30px;
+.social-icon {
+  font-size: 1.5rem;
+  color: #333;
 }
 
 /* Footer Styling */
@@ -172,7 +190,7 @@ header #menu-toggle {
   font-size: 0.9rem;
 }
 
-/* Responsive Styling */
+/* Responsive Styles */
 @media (max-width: 768px) {
   header nav ul {
     display: none;
@@ -180,6 +198,11 @@ header #menu-toggle {
 
   header #menu-toggle {
     display: inline;
+  }
+
+  .container {
+    width: 100%;
+    margin-top: 20px;
   }
 
   .footer-content {
