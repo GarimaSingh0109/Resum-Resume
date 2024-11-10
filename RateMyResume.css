@@ -75,7 +75,7 @@ body{
     width: 90%;
     position: relative;
     border-radius: 3rem;
-    border: 2px solid white;
+    border: 2px solid black
 }
 .ratingHead{
     width: 100%;
@@ -92,7 +92,7 @@ body{
     background-color: gray;
     border-radius: 3rem 0 0 0;
     border-right: 1px solid white;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid black;
     cursor: pointer;
 }
 .ratingboardhead{
@@ -104,7 +104,7 @@ body{
     background-color: blue;
     border-radius: 0 3rem 0 0;
     border-left: 1px solid white;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid black;
     cursor: pointer;
 }
 .ratingHead h1{
@@ -288,7 +288,7 @@ button:hover {
     height: 100%;
     position: relative;
     border-radius: 3rem;
-    border: 2px solid white;
+    border: 2px solid black;
     display: flex;
     flex-direction: column;
 }

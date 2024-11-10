@@ -4,6 +4,9 @@ body {
     margin: 0;
     padding: 20px;
 }
+body{
+    background: linear-gradient(135deg, #dedfe0, #e7ebf0);
+}
 .icons{
     display: flex;
     align-items: center;
@@ -131,7 +134,6 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: 5rem;
-    background-color: rgba(137, 137, 137, 0.25);
 }
 .progress-bar {
     width: 70%;
