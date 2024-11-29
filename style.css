@@ -334,15 +334,15 @@ label[for="toggler"] {
 /* footer section styles */
 
 :root {
-    --deep-teal: #003d4d;
+    --deep-teal: #84cadc;
     --off-white: #f8f9fa;
-    --dark-slate: #2f4f4f;
+    --dark-slate: #14b7b7;
     --soft-gold: #d9c79e;
 }
 
 .footer {
     width: 100%;
-    background-color: var(--deep-teal);
+    background:var(--deep-teal);
     color: white;
     padding: 13px 0;
 }
@@ -357,10 +357,10 @@ label[for="toggler"] {
 
 .footer .footer-section h3 {
     font-size: 18px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-weight: 600;
     color: #fff;
-    border-bottom: 2px solid #3f10ea;
+    border-bottom: 2px solid #84cadc;
     padding-bottom: 10px;
 }
 
@@ -369,15 +369,13 @@ label[for="toggler"] {
    list-style: none;
    font-family: Verdana, Geneva, Tahoma, sans-serif;
    text-align: center;
-
-.ul {
+}
+/*.ul{
     padding: 0;
     list-style: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
-
-
-}
+ }*/
 
 .footer-bottom {
     text-align: center;
@@ -392,7 +390,7 @@ label[for="toggler"] {
 
     color: rgb(88, 88, 88);
 
-    color: #2f4f4f;
+    color:var(--off-white);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -400,21 +398,22 @@ label[for="toggler"] {
 .footer .footer-section ul li a:hover {
     color: white;
     text-decoration: none;
-
-    color: #3f10ea;
+    font-size: 20px;
+    color: var(--dark-slate);
 }
 
 .footer .footer-section .social-icons a {
     margin-right: 10px;
-    color: #2f4f4f;
+    color: var(--off-white);;
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s ease;
 }
 
 .footer .footer-section .social-icons a:hover {
-    color: #3f10ea;
+    color:var(--dark-slate);
     text-decoration: none;
+    font-size:20px;
 }
 
 .footer a {
@@ -426,11 +425,11 @@ label[for="toggler"] {
 .social-icons {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px
+    margin-top: 20px;
 }
 
 .social-icons a:hover {
-    color: var(--light-grey);
+    color: var(--off-white);
     transform: scale(1.2) translateY(-5px);
 }
 
