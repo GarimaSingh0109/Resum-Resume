@@ -128,6 +128,22 @@ Contributions are welcome! Here’s how to get started:
 
 The project uses Bootstrap’s grid system to ensure the website is fully responsive across different screen sizes. Additional media queries are included for further fine-tuning the layout for mobile devices.
 
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+
+### 💗 Contributors
+
+<a href="https://github.com/GarimaSingh010/Resum-Resume/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=GarimaSingh0109/Resum-Resume" />
+</a>
+
+
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+
+
+
 ## License 📜
 
 This project is licensed under the MIT License. See the `LICENSE` file for more information.
