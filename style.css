@@ -1,6 +1,9 @@
 :root {
     --soft-teal: #003d4d;
 }
+::-webkit-scrollbar{
+    display: none;
+}
 
 * {
     margin: 0;
