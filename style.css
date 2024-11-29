@@ -359,7 +359,7 @@ label[for="toggler"] {
     font-size: 18px;
     margin-bottom: 20px;
     font-weight: 600;
-    color: #fff;
+    color:white;
     border-bottom: 2px solid #3f10ea;
     padding-bottom: 10px;
 }
@@ -381,7 +381,7 @@ label[for="toggler"] {
 
 .footer-bottom {
     text-align: center;
-    color: #fff;
+    color: white;
     font-size: 14px;
     margin: 0px;
     margin-top: 10px;
@@ -390,9 +390,9 @@ label[for="toggler"] {
 
 .footer .footer-section ul li a {
 
-    color: rgb(88, 88, 88);
+    color:white;
 
-    color: #2f4f4f;
+    color: white;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -401,19 +401,19 @@ label[for="toggler"] {
     color: white;
     text-decoration: none;
 
-    color: #3f10ea;
+    color: white;
 }
 
 .footer .footer-section .social-icons a {
     margin-right: 10px;
-    color: #2f4f4f;
+    color: white;
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s ease;
 }
 
 .footer .footer-section .social-icons a:hover {
-    color: #3f10ea;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -430,7 +430,7 @@ label[for="toggler"] {
 }
 
 .social-icons a:hover {
-    color: var(--light-grey);
+    color: #fff;
     transform: scale(1.2) translateY(-5px);
 }
 
